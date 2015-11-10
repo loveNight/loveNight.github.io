@@ -84,6 +84,19 @@
 
   <section class="post" itemscope itemprop="blogPost">
   
+    <a href="/2015/11/10/Hexo-3-1-1-静态博客搭建指南/" title="Hexo 3.1.1 静态博客搭建指南" itemprop="url">
+  
+
+    <time datetime="2015-11-10T06:46:41.000Z" itemprop="datePublished">2015-11-10</time>
+
+
+    <h1 itemprop="name">Hexo 3.1.1 静态博客搭建指南</h1>
+
+  </a>
+</section>
+
+  <section class="post" itemscope itemprop="blogPost">
+  
     <a href="/2015/11/09/HelloWorld/" title="HelloWorld！" itemprop="url">
   
 
@@ -135,11 +148,21 @@
 		
 
 		<p class="copyright">
-		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2015 
+
+		自2015年11月9日建立以来，<span id="showDays"></span></br>
+		<script>
+		var birthDay = new Date("11/9/2015");
+		var now = new Date();
+		var duration = now.getTime() - birthDay.getTime();
+		var total= Math.floor(duration / (1000 * 60 * 60 * 24));
+		document.getElementById("showDays").innerHTML = "本站至今已安全运行 "+total+" 天";
+		</script>
+
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2015
 		
 		<a href="/about" target="_blank" title="LoveNight">LoveNight</a>
 		
-		
+
 		</p>
 </div>
 </footer>

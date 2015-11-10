@@ -4,22 +4,23 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>岁月如歌</title>
+    <title>Hexo 3.1.1 静态博客搭建指南 | 岁月如歌</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="LoveNight">
     
 
     
-    <meta name="description" content="神锋（loveNight）的技术博客，Java、Android、Python为主，穿插一些生活琐事">
-<meta property="og:type" content="website">
-<meta property="og:title" content="岁月如歌">
-<meta property="og:url" content="http://lovenight.github.io/index.html">
+    <meta name="description" content="记录本博客的搭建过程，有新内容会随时更新">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo 3.1.1 静态博客搭建指南">
+<meta property="og:url" content="http://lovenight.github.io/2015/11/10/Hexo-3-1-1-静态博客搭建指南/index.html">
 <meta property="og:site_name" content="岁月如歌">
-<meta property="og:description" content="神锋（loveNight）的技术博客，Java、Android、Python为主，穿插一些生活琐事">
+<meta property="og:description" content="记录本博客的搭建过程，有新内容会随时更新">
+<meta property="og:updated_time" content="2015-11-10T07:26:48.968Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="岁月如歌">
-<meta name="twitter:description" content="神锋（loveNight）的技术博客，Java、Android、Python为主，穿插一些生活琐事">
+<meta name="twitter:title" content="Hexo 3.1.1 静态博客搭建指南">
+<meta name="twitter:description" content="记录本博客的搭建过程，有新内容会随时更新">
 
     
     <link rel="alternative" href="/atom.xml" title="岁月如歌" type="application/atom+xml">
@@ -73,12 +74,10 @@
 </div>
     </header>
     <div id="container">
-      <div id="main">
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
   <h1 itemprop="name">
     
       <a href="/2015/11/10/Hexo-3-1-1-静态博客搭建指南/" title="Hexo 3.1.1 静态博客搭建指南" itemprop="url">Hexo 3.1.1 静态博客搭建指南</a>
@@ -92,9 +91,16 @@
     
   </p>
 </header>
-    <div class="article-content">
-        
-        <h2 id="说明">说明</h2><p><strong>注意，本文适用于hexo 3.x 版本，与2.x略有出入！</strong></p>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#说明"><span class="toc-number">1.</span> <span class="toc-text">说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置SSH"><span class="toc-number">2.</span> <span class="toc-text">配置SSH</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#搭建博客"><span class="toc-number">3.</span> <span class="toc-text">搭建博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo博客的配置"><span class="toc-number">4.</span> <span class="toc-text">hexo博客的配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#换主题"><span class="toc-number">5.</span> <span class="toc-text">换主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo使用"><span class="toc-number">6.</span> <span class="toc-text">hexo使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#生成静态页面"><span class="toc-number">6.1.</span> <span class="toc-text">生成静态页面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#本地启动"><span class="toc-number">6.2.</span> <span class="toc-text">本地启动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#写文章"><span class="toc-number">6.3.</span> <span class="toc-text">写文章</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#简单命令"><span class="toc-number">6.4.</span> <span class="toc-text">简单命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo博客的优化"><span class="toc-number">7.</span> <span class="toc-text">hexo博客的优化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#导航栏添加「关于」"><span class="toc-number">7.1.</span> <span class="toc-text">导航栏添加「关于」</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#底部添加「本站已运行XX天」"><span class="toc-number">7.2.</span> <span class="toc-text">底部添加「本站已运行XX天」</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#关闭换行符警告"><span class="toc-number">7.3.</span> <span class="toc-text">关闭换行符警告</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#rss_插件"><span class="toc-number">7.4.</span> <span class="toc-text">rss 插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#baidu-sitemap_插件"><span class="toc-number">7.5.</span> <span class="toc-text">baidu-sitemap 插件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料"><span class="toc-number">8.</span> <span class="toc-text">参考资料</span></a></li></ol>
+		
+		</div>
+		
+		<h2 id="说明">说明</h2><p><strong>注意，本文适用于hexo 3.x 版本，与2.x略有出入！</strong></p>
 <p>GitHub Pages 本用于介绍托管在 GitHub 的项目，也可以用来搭建博客，有300M免费空间。</p>
 <p>hexo是一个基于Node.js的静态博客程序，可以方便的生成静态网页托管在github和Heroku上。作者是来自台湾的<a href="https://github.com/hexojs/hexo" target="_blank" rel="external">tommy351</a>。<br>优势：</p>
 <blockquote>
@@ -246,14 +252,9 @@ hexo <span class="keyword">n</span> == hexo new # 写文章
 <p>更多插件在<a href="https://github.com/hexojs/hexo/wiki/Plugins" target="_blank" rel="external">Plugins</a></p>
 <p>hexo 3.0相较2.x的变化<a href="https://github.com/hexojs/hexo/wiki/Breaking-Changes-in-Hexo-3.0" target="_blank" rel="external">Breaking Changes in Hexo 3.0</a></p>
 <h2 id="参考资料">参考资料</h2><p><a href="http://zipperary.com/categories/hexo/" target="_blank" rel="external">hexo系列教程</a><br><a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="external">hexo你的博客</a><br><a href="http://yangjian.me/pacman/hello/introducing-pacman-theme/" target="_blank" rel="external">pacman主题介绍</a><br><a href="http://www.yingsec.com/2015/11/running-time-js/" target="_blank" rel="external">使用脚本添加“本站已运行 X 天”</a><br><a href="http://wuchong.me/blog/2014/11/20/how-to-use-jacman/" target="_blank" rel="external">如何使用 Jacman 主题</a><br><a href="http://segmentfault.com/a/1190000002592993" target="_blank" rel="external">Hexo 3.0 静态博客使用指南</a></p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
+  
+	</div>
+		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
 <div class="article-categories">
@@ -271,97 +272,47 @@ hexo <span class="keyword">n</span> == hexo new # 写文章
 
 
 
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://lovenight.github.io/2015/11/10/Hexo-3-1-1-静态博客搭建指南/" data-title="Hexo 3.1.1 静态博客搭建指南 | 岁月如歌" data-tsina="1069913250" class="share clearfix">
+	  </div>
+	
+	</div>
 
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2015/11/10/Hexo-3-1-1-静态博客搭建指南/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/11/10/Hexo-3-1-1-静态博客搭建指南/" data-count-type="comments">&nbsp;</a>
-	
-</div>
 
 </footer>
 
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/11/09/HelloWorld/" title="HelloWorld！" itemprop="url">HelloWorld！</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="LoveNight" target="_blank" itemprop="author">LoveNight</a>
-		
-  <p class="article-time">
-    <time datetime="2015-11-09T07:56:26.000Z" itemprop="datePublished"> 发表于 2015-11-09</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>按网上的教程终于配置好了Hexo，其实挺简单的，不过由于Hexo版本的原因，遇到不少坑。顺便学了SSH，push起来方便不少。</p>
-<p>稍后把此次博客搭建心得整理好发出来。</p>
-<p>以前用新浪的博客，可惜不支持代码块和Markdown，主题近十年没怎么变化，三天两头收到无聊的纸条、转发消息。后来转战CSDN，主题和Markdown非常丑，右上角定期出现广告，没法取消。有次还无故封了博客，找管理员询问得知是误操作。试了博客园，后台有无用的新闻、文章、日志分类，无法取消，默认的代码块不显示行数，Markdown比CSDN还丑。</p>
-<p>博客还没配置完，先发这篇文章试试效果。</p>
-<p>试试代码：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"Hello World"</span>)</span><br></pre></td></tr></table></figure>
-<p>试试代码：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Hello</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Hello World"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>结束</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/岁月流光，成长记录/">岁月流光，成长记录</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/hexo/">hexo</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
+   	       
+	</article>
 	
-	  	<span></span>
-		<a href="/2015/11/09/HelloWorld/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/11/09/HelloWorld/" data-count-type="comments">&nbsp;</a>
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2015/11/09/HelloWorld/"  title="HelloWorld！">
+ <strong>下一篇：</strong><br/> 
+ <span>HelloWorld！
+</span>
+</a>
+</div>
+
+</nav>
+
 	
-</div>
-
-</footer>
-
-
-    </article>
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2015/11/10/Hexo-3-1-1-静态博客搭建指南/" data-title="Hexo 3.1.1 静态博客搭建指南" data-url="http://lovenight.github.io/2015/11/10/Hexo-3-1-1-静态博客搭建指南/"></div>
+</section>
 
 
-
-
-
-
-
-</div>
+</div>  
       <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#说明"><span class="toc-number">1.</span> <span class="toc-text">说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置SSH"><span class="toc-number">2.</span> <span class="toc-text">配置SSH</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#搭建博客"><span class="toc-number">3.</span> <span class="toc-text">搭建博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo博客的配置"><span class="toc-number">4.</span> <span class="toc-text">hexo博客的配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#换主题"><span class="toc-number">5.</span> <span class="toc-text">换主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo使用"><span class="toc-number">6.</span> <span class="toc-text">hexo使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#生成静态页面"><span class="toc-number">6.1.</span> <span class="toc-text">生成静态页面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#本地启动"><span class="toc-number">6.2.</span> <span class="toc-text">本地启动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#写文章"><span class="toc-number">6.3.</span> <span class="toc-text">写文章</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#简单命令"><span class="toc-number">6.4.</span> <span class="toc-text">简单命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo博客的优化"><span class="toc-number">7.</span> <span class="toc-text">hexo博客的优化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#导航栏添加「关于」"><span class="toc-number">7.1.</span> <span class="toc-text">导航栏添加「关于」</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#底部添加「本站已运行XX天」"><span class="toc-number">7.2.</span> <span class="toc-text">底部添加「本站已运行XX天」</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#关闭换行符警告"><span class="toc-number">7.3.</span> <span class="toc-text">关闭换行符警告</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#rss_插件"><span class="toc-number">7.4.</span> <span class="toc-text">rss 插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#baidu-sitemap_插件"><span class="toc-number">7.5.</span> <span class="toc-text">baidu-sitemap 插件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料"><span class="toc-number">8.</span> <span class="toc-text">参考资料</span></a></li></ol>
+ 
+  </div>
 
 <div id="asidepart">
 <div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
@@ -523,12 +474,89 @@ $(document).ready(function(){
       m.removeClass('moveMain');
       a.css('display', 'block').removeClass('fadeOut');
       o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
         
     }
   });
 });
 </script>
 
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
 
 
 
@@ -612,4 +640,4 @@ ga('send', 'pageview');
 <!-- Tiny_search End -->
 
   </body>
- </html>
+</html>
