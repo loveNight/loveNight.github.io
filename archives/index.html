@@ -153,11 +153,17 @@
 
 		<p class="copyright">
 
-		2015年11月9日建站，<span id="showDays"></span> </br>
 
-		本文总阅读量<span id="busuanzi_value_page_pv"></span>次
-		本站访客数<span id="busuanzi_value_site_uv"></span>人次
-		本站总访问量<span id="busuanzi_value_site_pv"></span>次
+
+
+		<span id="busuanzi_value_page_pv"></span> Hits，
+		Total <span id="busuanzi_value_site_pv"></span> views，
+		您是来访的第<span id="busuanzi_value_site_uv"></span>位客人
+		</br>
+		<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+		</script>
+
+		2015年11月9日诞生，<span id="showDays"></span>，
 
 		<script>
 		var birthDay = new Date("11/9/2015");
@@ -166,8 +172,6 @@
 		var total= Math.floor(duration / (1000 * 60 * 60 * 24));
 		document.getElementById("showDays").innerHTML = "已运行 "+total+" 天";
 		</script>
-
-		</br>
 
 		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2015
 		
@@ -178,8 +182,6 @@
 
 
 
-		<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
-		</script>
 </div>
 </footer>
       <script src="/js/jquery-2.0.3.min.js"></script>
