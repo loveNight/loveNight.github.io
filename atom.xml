@@ -4,7 +4,7 @@
   <subtitle><![CDATA[莫厌追欢笑语频，寻思离乱好伤神。闲来屈指从头数，得见清平有几人]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://lovenight.github.io/"/>
-  <updated>2015-11-10T07:26:48.968Z</updated>
+  <updated>2015-11-10T08:19:11.171Z</updated>
   <id>http://lovenight.github.io/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://lovenight.github.io/2015/11/10/Hexo-3-1-1-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/"/>
     <id>http://lovenight.github.io/2015/11/10/Hexo-3-1-1-静态博客搭建指南/</id>
     <published>2015-11-10T06:46:41.000Z</published>
-    <updated>2015-11-10T07:26:48.968Z</updated>
+    <updated>2015-11-10T08:19:11.171Z</updated>
     <content type="html"><![CDATA[<h2 id="说明">说明</h2><p><strong>注意，本文适用于hexo 3.x 版本，与2.x略有出入！</strong></p>
 <p>GitHub Pages 本用于介绍托管在 GitHub 的项目，也可以用来搭建博客，有300M免费空间。</p>
 <p>hexo是一个基于Node.js的静态博客程序，可以方便的生成静态网页托管在github和Heroku上。作者是来自台湾的<a href="https://github.com/hexojs/hexo" target="_blank" rel="external">tommy351</a>。<br>优势：</p>
@@ -167,8 +167,12 @@ hexo <span class="keyword">n</span> == hexo new # 写文章
 </code></pre><p><code>_config.yml</code>添加代码：</p>
 <pre><code><span class="attribute">baidusitemap</span>:
   <span class="attribute">path</span>: baidusitemap.xml
-</code></pre><p>再把<code>baidusitemap.xml</code>提交给百度站内搜索。</p>
-<p>注册<a href="http://zhanzhang.baidu.com/?castk=LTE%3D" target="_blank" rel="external">百度站长</a>，贴吧账号无法在这里使用。</p>
+</code></pre><p>在主页后面加<code>/baidusitemap.xml</code>可以看到baidusitemap，将该网址它提交给百度搜索：</p>
+<ol>
+<li>注册[百度站长平台]并验证(<a href="http://zhanzhang.baidu.com/?castk=LTE%3D)，贴吧账号无法在这里使用。" target="_blank" rel="external">http://zhanzhang.baidu.com/?castk=LTE%3D)，贴吧账号无法在这里使用。</a></li>
+<li>设置<a href="http://zn.baidu.com/cse/home/index" target="_blank" rel="external">百度站内搜索</a></li>
+</ol>
+<p><em>遇到个难题，暂时没找到方法解决，等我摸索出来后再更新</em></p>
 <p>更多插件在<a href="https://github.com/hexojs/hexo/wiki/Plugins" target="_blank" rel="external">Plugins</a></p>
 <p>hexo 3.0相较2.x的变化<a href="https://github.com/hexojs/hexo/wiki/Breaking-Changes-in-Hexo-3.0" target="_blank" rel="external">Breaking Changes in Hexo 3.0</a></p>
 <h2 id="参考资料">参考资料</h2><p><a href="http://zipperary.com/categories/hexo/" target="_blank" rel="external">hexo系列教程</a><br><a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="external">hexo你的博客</a><br><a href="http://yangjian.me/pacman/hello/introducing-pacman-theme/" target="_blank" rel="external">pacman主题介绍</a><br><a href="http://www.yingsec.com/2015/11/running-time-js/" target="_blank" rel="external">使用脚本添加“本站已运行 X 天”</a><br><a href="http://wuchong.me/blog/2014/11/20/how-to-use-jacman/" target="_blank" rel="external">如何使用 Jacman 主题</a><br><a href="http://segmentfault.com/a/1190000002592993" target="_blank" rel="external">Hexo 3.0 静态博客使用指南</a></p>
