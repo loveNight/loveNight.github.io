@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[岁月如歌]]></title>
+  <subtitle><![CDATA[莫厌追欢笑语频，寻思离乱好伤神。闲来屈指从头数，得见清平有几人]]></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://lovenight.github.io/"/>
+  <updated>2015-11-09T13:42:11.250Z</updated>
+  <id>http://lovenight.github.io/</id>
+  
+  <author>
+    <name><![CDATA[LoveNight]]></name>
+    <email><![CDATA[286242151@qq.com]]></email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[HelloWorld！]]></title>
+    <link href="http://lovenight.github.io/2015/11/09/HelloWorld/"/>
+    <id>http://lovenight.github.io/2015/11/09/HelloWorld/</id>
+    <published>2015-11-09T07:56:26.000Z</published>
+    <updated>2015-11-09T13:42:11.250Z</updated>
+    <content type="html"><![CDATA[<p>按网上的教程终于配置好了Hexo，其实挺简单的，不过由于Hexo版本的原因，遇到不少坑。顺便学了SSH，push起来方便不少。</p>
+<p>稍后把此次博客搭建心得整理好发出来。</p>
+<p>以前用新浪的博客，可惜不支持代码块和Markdown，主题近十年没怎么变化，三天两头收到无聊的纸条、转发消息。后来转战CSDN，主题和Markdown非常丑，右上角定期出现广告，没法取消。有次还无故封了博客，找管理员询问得知是误操作。试了博客园，后台有无用的新闻、文章、日志分类，无法取消，默认的代码块不显示行数，Markdown比CSDN还丑。</p>
+<p>博客还没配置完，先发这篇文章试试效果。</p>
+<p>试试代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"Hello World"</span>)</span><br></pre></td></tr></table></figure>
+<p>试试代码：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Hello</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Hello World"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>结束</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>按网上的教程终于配置好了Hexo，其实挺简单的，不过由于Hexo版本的原因，遇到不少坑。顺便学了SSH，push起来方便不少。</p>
+<p>稍后把此次博客搭建心得整理好发出来。</p>
+<p>以前用新浪的博客，可惜不支持代码块和Markdown，主题近十年没怎么变化，三天]]>
+    </summary>
+    
+      <category term="hexo" scheme="http://lovenight.github.io/tags/hexo/"/>
+    
+      <category term="岁月流光，成长记录" scheme="http://lovenight.github.io/categories/%E5%B2%81%E6%9C%88%E6%B5%81%E5%85%89%EF%BC%8C%E6%88%90%E9%95%BF%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+</feed>
