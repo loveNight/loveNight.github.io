@@ -451,7 +451,7 @@ body >header a {
 }
 #textlogo h1.site-name {
   width: 86%;
-  font-family: "covered_by_your_graceregular";
+  font-family: "Microsoft YaHei";
   font-size: 200%;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -2078,6 +2078,7 @@ footer {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "Microsoft YaHei";
+  font-size: 0.8em;
   width: 100%;
   color: #fff;
   text-align: center;

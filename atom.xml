@@ -4,7 +4,7 @@
   <subtitle><![CDATA[莫厌追欢笑语频，寻思离乱好伤神。闲来屈指从头数，得见清平有几人]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://lovenight.github.io/"/>
-  <updated>2015-11-11T11:43:48.734Z</updated>
+  <updated>2015-11-11T12:29:36.562Z</updated>
   <id>http://lovenight.github.io/</id>
   
   <author>
@@ -19,12 +19,12 @@
     <link href="http://lovenight.github.io/2015/11/10/Hexo-3-1-1-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/"/>
     <id>http://lovenight.github.io/2015/11/10/Hexo-3-1-1-静态博客搭建指南/</id>
     <published>2015-11-10T06:46:41.000Z</published>
-    <updated>2015-11-11T11:43:48.734Z</updated>
+    <updated>2015-11-11T12:29:36.562Z</updated>
     <content type="html"><![CDATA[<p><strong>注意，本文适用于hexo 3.x 版本，与2.x略有出入！</strong></p>
 <p>GitHub Pages 本用于介绍托管在 GitHub 的项目，也可以用来搭建博客，有300M免费空间。</p>
 <p>hexo是一个基于Node.js的静态博客程序，可以方便的生成静态网页托管在github和Heroku上。作者是来自台湾的<a href="https://github.com/hexojs/hexo" target="_blank" rel="external">tommy351</a>。<br>优势：</p>
 <blockquote>
-<p>生成静态页面快<br>支持 Markdown<br>高扩展性、自订性<br>文件少、小，易理解<br>兼容于 Windows, Mac &amp; Linux<br>部署方便。日常使用仅需要hexo n、hexo g、hexo c、hexo s、hexo d 五个命令。</p>
+<p>生成静态页面快<br>支持 Markdown<br>兼容于 Windows, Mac &amp; Linux<br>部署方便。日常使用仅需五个命令。<br>高扩展性、自订性，文件少、小，易理解</p>
 </blockquote>
 <h2 id="配置SSH">配置SSH</h2><p>使用hexo博客必须配置SSH。</p>
 <p>打开git bash，输入<code>cd ~/.ssh</code>，如果果提示：No such file or directory 说明未配置SSH。</p>
@@ -131,7 +131,7 @@ hexo <span class="keyword">n</span> == hexo new # 写文章
 <p>通过 Chrome 的审查元素功能，可以看到相关CSS信息。打开博客主题文件夹下的<code>\source\css\_partial\footer.styl</code>文件，找到：</p>
 <pre><code><span class="class">.info</span>
   <span class="keyword">if</span> ShowCustomFont
-    <span class="attribute">font-family</span> <span class="string">"Microsoft YaHei"</span> <span class="comment">// 默认是font-custom-family</span>
+    <span class="attribute">font-family</span> <span class="string">"Microsoft YaHei"</span> <span class="comment">// 个人介绍字体</span>
     <span class="function"><span class="title">font-smoothing</span><span class="params">()</span></span>
     <span class="attribute">font-size</span> <span class="attribute">font-size</span>+<span class="number">50</span>
     <span class="attribute">line-height</span> <span class="number">1.3em</span>
@@ -141,11 +141,11 @@ hexo <span class="keyword">n</span> == hexo new # 写文章
 <pre><code><span class="class">.copyright</span>
   <span class="keyword">if</span> ShowCustomFont
     <span class="function"><span class="title">font-smoothing</span><span class="params">()</span></span>
-    <span class="attribute">font-family</span> <span class="string">"Microsoft YaHei"</span> <span class="comment">// 默认是 font-custom-family，改成你喜欢的字体</span>
+    <span class="attribute">font-family</span> <span class="string">"Microsoft YaHei"</span> <span class="comment">// 底栏版权行字体</span>
   <span class="keyword">else</span>
     <span class="attribute">font-family</span> <span class="attribute">font</span>-default
     <span class="attribute">font-size</span> <span class="number">0.6em</span>
-</code></pre><p>看带注释的那一行，改成你喜欢的字体的名字。</p>
+</code></pre><p>改完顺眼多了：<br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/Hexo%203.1.1%20%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/jacman%E4%B8%BB%E9%A2%98%E5%BA%95%E6%A0%8F%E4%BF%AE%E6%94%B9%E5%AD%97%E4%BD%93%E5%90%8E.png" alt=""></p>
 <h2 id="优化博客">优化博客</h2><h3 id="rss_插件">rss 插件</h3><p>1.安装rss插件</p>
 <pre><code>npm <span class="operator"><span class="keyword">install</span> hexo-generator-feed@<span class="number">1</span> <span class="comment">--save</span></span>
 </code></pre><p>2.编辑博客根目录下的<code>_config.yml</code></p>
@@ -205,7 +205,7 @@ npm <span class="keyword">install</span> hexo-generator-baidu-sitemap@<span clas
 <p>false - 不做任何检查<br>warn - 在提交时检查并警告<br>true - 在提交时检查，如果发现混用则拒绝提交</p>
 </blockquote>
 <p>建议使用最严格的 true 选项</p>
-<h2 id="参考资料">参考资料</h2><p><a href="http://zipperary.com/categories/hexo/" target="_blank" rel="external">hexo系列教程</a><br><a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="external">hexo你的博客</a><br><a href="http://yangjian.me/pacman/hello/introducing-pacman-theme/" target="_blank" rel="external">pacman主题介绍</a><br><a href="http://www.yingsec.com/2015/11/running-time-js/" target="_blank" rel="external">使用脚本添加“本站已运行 X 天”</a><br><a href="http://wuchong.me/blog/2014/11/20/how-to-use-jacman/" target="_blank" rel="external">如何使用 Jacman 主题</a><br><a href="http://segmentfault.com/a/1190000002592993" target="_blank" rel="external">Hexo 3.0 静态博客使用指南</a><br><a href="http://ibruce.info/2015/04/04/busuanzi/" target="_blank" rel="external">不蒜子-搞定你的网站计数</a><br><a href="https://github.com/hexojs/hexo/wiki/Breaking-Changes-in-Hexo-3.0" target="_blank" rel="external">Breaking Changes in Hexo 3.0</a></p>
+<h2 id="参考资料">参考资料</h2><p><a href="http://zipperary.com/categories/hexo/" target="_blank" rel="external">hexo系列教程</a><br><a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="external">hexo你的博客</a><br><a href="http://yangjian.me/pacman/hello/introducing-pacman-theme/" target="_blank" rel="external">pacman主题介绍</a><br><a href="http://www.yingsec.com/2015/11/running-time-js/" target="_blank" rel="external">使用脚本添加“本站已运行 X 天”</a><br><a href="http://wuchong.me/blog/2014/11/20/how-to-use-jacman/" target="_blank" rel="external">如何使用 Jacman 主题</a><br><a href="http://segmentfault.com/a/1190000002592993" target="_blank" rel="external">Hexo 3.0 静态博客使用指南</a><br><a href="http://ibruce.info/2015/04/04/busuanzi/" target="_blank" rel="external">不蒜子-搞定你的网站计数</a><br><a href="https://github.com/hexojs/hexo/wiki/Breaking-Changes-in-Hexo-3.0" target="_blank" rel="external">Breaking Changes in Hexo 3.0</a><br><a href="http://www.devchen.com/blog/coding/HTML/hexo-theme/" target="_blank" rel="external"></a></p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p><strong>注意，本文适用于hexo 3.x 版本，与2.x略有出入！</strong></p>
