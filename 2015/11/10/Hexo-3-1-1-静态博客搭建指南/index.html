@@ -25,7 +25,8 @@ GitHub Pages 本用于介绍托管在 GitHub 的项目，也可以用来搭建�
 hexo是一个基于Node.js的静态博客程序，可以方便的生成静态网页托管在github和Heroku上。作者是来自台湾的tommy351。优势：
 
 不可思议的快速 ─ 只要一眨眼静态文件即生成完成支持 Markdown仅需一道指令">
-<meta property="og:updated_time" content="2015-11-11T09:59:18.328Z">
+<meta property="og:image" content="http://7xo8t2.com1.z0.glb.clouddn.com/img/Hexo%203.1.1%20%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/jacman%E4%B8%BB%E9%A2%98%E9%BB%98%E8%AE%A4%E5%BA%95%E6%A0%8F%E5%AD%97%E4%BD%93.png">
+<meta property="og:updated_time" content="2015-11-11T10:49:25.187Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo 3.1.1 静态博客搭建指南">
 <meta name="twitter:description" content="注意，本文适用于hexo 3.x 版本，与2.x略有出入！
@@ -218,7 +219,16 @@ hexo <span class="keyword">n</span> == hexo new # 写文章
 <p><strong> 上面的多说评论、站长统计等需要自己申请账号，填上对应的参数</strong></p>
 <p>附 <a href="https://support.google.com/analytics/answer/1008015?hl=zh-Hans" target="_blank" rel="external">Google Analysis</a></p>
 <p>注：该主题文章中的图片默认居左，设置图片居中可用使用 <code>&lt;img src=&quot;&quot; style=&quot;display:block;margin:auto&quot;/&gt;</code>的HTML标签。</p>
-<h3 id="修改字体">修改字体</h3><h2 id="hexo博客的优化">hexo博客的优化</h2><h3 id="rss_插件">rss 插件</h3><p>1.安装rss插件</p>
+<h3 id="修改字体">修改字体</h3><p>jacman底栏的英文字体太难认了，中文也不好看。<br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/Hexo%203.1.1%20%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/jacman%E4%B8%BB%E9%A2%98%E9%BB%98%E8%AE%A4%E5%BA%95%E6%A0%8F%E5%AD%97%E4%BD%93.png" alt=""></p>
+<p>打开<code>\themes\jacman\source\css\_partial\footer.styl</code>，找到这一段：</p>
+<pre><code><span class="class">.copyright</span>
+  <span class="keyword">if</span> ShowCustomFont
+    <span class="function"><span class="title">font-smoothing</span><span class="params">()</span></span>
+    <span class="attribute">font-family</span> <span class="string">"Microsoft YaHei"</span> <span class="comment">// 默认是 font-custom-family，改成你喜欢的字体</span>
+  <span class="keyword">else</span>
+    <span class="attribute">font-family</span> <span class="attribute">font</span>-default
+    <span class="attribute">font-size</span> <span class="number">0.6em</span>
+</code></pre><h2 id="hexo博客的优化">hexo博客的优化</h2><h3 id="rss_插件">rss 插件</h3><p>1.安装rss插件</p>
 <pre><code>npm <span class="operator"><span class="keyword">install</span> hexo-generator-feed@<span class="number">1</span> <span class="comment">--save</span></span>
 </code></pre><p>2.编辑博客根目录下的<code>_config.yml</code></p>
 <pre><code>feed:
@@ -449,7 +459,8 @@ npm <span class="keyword">install</span> hexo-generator-baidu-sitemap@<span clas
 
 		2015年11月9日诞生，<span id="showDays"></span>&nbsp;&nbsp;|&nbsp;&nbsp;
 		<span id="busuanzi_value_page_pv"></span> Hits，
-		Total <span id="busuanzi_value_site_pv"></span> views
+		Total <span id="busuanzi_value_site_pv"></span> views，
+		您是第<span id="busuanzi_value_site_uv"></span>位访客
 		</br>
 
 		<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
