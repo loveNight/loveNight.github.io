@@ -1072,7 +1072,7 @@ article .article-content strong code,
 article .article-content em code,
 article .article-content table th>code,
 article .article-content table td>code {
-  font-family: Monaco, Menlo, Consolas, Courier New, monospace;
+  font-family: Monaco, Menlo, Consolas, monospace, Courier New;
   background: #eee;
   color: #d14;
   border: 1px solid #d6d6d6;
@@ -2077,7 +2077,7 @@ footer {
 .copyright {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "covered_by_your_graceregular";
+  font-family: "Microsoft YaHei";
   width: 100%;
   color: #fff;
   text-align: center;
@@ -2147,7 +2147,7 @@ footer {
   }
 }
 .article-content pre {
-  font-family: Monaco, Menlo, Consolas, Courier New, monospace;
+  font-family: Monaco, Menlo, Consolas, monospace, Courier New;
 }
 .article-content .highlight {
   overflow: auto;
@@ -2208,7 +2208,7 @@ footer {
 }
 .article-content .gist .gist-file {
   border: none;
-  font-family: Monaco, Menlo, Consolas, Courier New, monospace;
+  font-family: Monaco, Menlo, Consolas, monospace, Courier New;
   margin: 0;
 }
 .article-content .gist .gist-file .gist-data {
