@@ -11,34 +11,16 @@
     
 
     
-    <meta name="description" content="缘起最近发现知乎的登录界面改了，抓包看了看，果然登录方式也变了，会根据用户名字符串发送不同字段的POST。中午研究了一会，写了个登录知乎的工具类，可以自动处理Cookie，维持登录状态。目前仅实现登录和打开网页的功能。
-依赖的第三方库
-requests
-BeautifulSoup
-lxml 这个不装没关系，把__login()方法中的lxml改成html.parser即可。
-
-用法创建ZhihuC">
+    <meta name="description" content="知乎最近改了登录界面和登录请求，于是写了个登录知乎的工具类。首次登录需要人眼识别验证码并输入，成功后会保存Cookie，以后不再需要输验证码了。目前仅实现打开网页的功能，可用于后续的爬虫开发。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python 模拟登录知乎">
 <meta property="og:url" content="http://lovenight.github.io/2015/11/11/Python模拟登录知乎/index.html">
 <meta property="og:site_name" content="岁月如歌">
-<meta property="og:description" content="缘起最近发现知乎的登录界面改了，抓包看了看，果然登录方式也变了，会根据用户名字符串发送不同字段的POST。中午研究了一会，写了个登录知乎的工具类，可以自动处理Cookie，维持登录状态。目前仅实现登录和打开网页的功能。
-依赖的第三方库
-requests
-BeautifulSoup
-lxml 这个不装没关系，把__login()方法中的lxml改成html.parser即可。
-
-用法创建ZhihuC">
-<meta property="og:updated_time" content="2015-11-11T14:34:56.453Z">
+<meta property="og:description" content="知乎最近改了登录界面和登录请求，于是写了个登录知乎的工具类。首次登录需要人眼识别验证码并输入，成功后会保存Cookie，以后不再需要输验证码了。目前仅实现打开网页的功能，可用于后续的爬虫开发。">
+<meta property="og:updated_time" content="2015-11-12T00:54:34.718Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python 模拟登录知乎">
-<meta name="twitter:description" content="缘起最近发现知乎的登录界面改了，抓包看了看，果然登录方式也变了，会根据用户名字符串发送不同字段的POST。中午研究了一会，写了个登录知乎的工具类，可以自动处理Cookie，维持登录状态。目前仅实现登录和打开网页的功能。
-依赖的第三方库
-requests
-BeautifulSoup
-lxml 这个不装没关系，把__login()方法中的lxml改成html.parser即可。
-
-用法创建ZhihuC">
+<meta name="twitter:description" content="知乎最近改了登录界面和登录请求，于是写了个登录知乎的工具类。首次登录需要人眼识别验证码并输入，成功后会保存Cookie，以后不再需要输验证码了。目前仅实现打开网页的功能，可用于后续的爬虫开发。">
 
     
     <link rel="alternative" href="/atom.xml" title="岁月如歌" type="application/atom+xml">

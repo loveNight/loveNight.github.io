@@ -11,34 +11,22 @@
     
 
     
-    <meta name="description" content="注意，本文适用于hexo 3.x 版本，与2.x略有出入！
-GitHub Pages 本用于介绍托管在 GitHub 的项目，也可以用来搭建博客，有300M免费空间。
-hexo是一个基于Node.js的静态博客程序，可以方便的生成静态网页托管在github和Heroku上。作者是来自台湾的tommy351。优势：
-
-生成静态页面快支持 Markdown兼容于 Windows, Mac &amp;amp;">
+    <meta name="description" content="hexo 3.1.1 版的博客搭建心得。3.x 如果照 2.x 的教程照做，会出现一些莫名其妙的BUG，比如站点地图无效、Pacman主题无代码高亮、RSS无效等。Now hexo your blog！">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo 3.1.1 静态博客搭建指南">
 <meta property="og:url" content="http://lovenight.github.io/2015/11/10/Hexo-3-1-1-静态博客搭建指南/index.html">
 <meta property="og:site_name" content="岁月如歌">
-<meta property="og:description" content="注意，本文适用于hexo 3.x 版本，与2.x略有出入！
-GitHub Pages 本用于介绍托管在 GitHub 的项目，也可以用来搭建博客，有300M免费空间。
-hexo是一个基于Node.js的静态博客程序，可以方便的生成静态网页托管在github和Heroku上。作者是来自台湾的tommy351。优势：
-
-生成静态页面快支持 Markdown兼容于 Windows, Mac &amp;amp;">
+<meta property="og:description" content="hexo 3.1.1 版的博客搭建心得。3.x 如果照 2.x 的教程照做，会出现一些莫名其妙的BUG，比如站点地图无效、Pacman主题无代码高亮、RSS无效等。Now hexo your blog！">
 <meta property="og:image" content="http://7xo8t2.com1.z0.glb.clouddn.com/img/Hexo%203.1.1%20%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/%E4%B8%83%E7%89%9B%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E6%A1%86.png">
 <meta property="og:image" content="http://7xo8t2.com1.z0.glb.clouddn.com/img/Hexo%203.1.1%20%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/%E4%B8%83%E7%89%9B%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E5%90%8E.png">
 <meta property="og:image" content="http://7xo8t2.com1.z0.glb.clouddn.com/img/Hexo%203.1.1%20%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/%E4%B8%83%E7%89%9B%E5%9B%BE%E7%89%87%E5%A4%96%E9%93%BE.png">
 <meta property="og:image" content="http://7xo8t2.com1.z0.glb.clouddn.com/img/Hexo%203.1.1%20%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/jacman%E4%B8%BB%E9%A2%98%E9%BB%98%E8%AE%A4%E5%BA%95%E6%A0%8F%E7%AD%BE%E5%90%8D%E5%AD%97%E4%BD%93.png">
 <meta property="og:image" content="http://7xo8t2.com1.z0.glb.clouddn.com/img/Hexo%203.1.1%20%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/jacman%E4%B8%BB%E9%A2%98%E9%BB%98%E8%AE%A4%E5%BA%95%E6%A0%8F%E5%AD%97%E4%BD%93.png">
 <meta property="og:image" content="http://7xo8t2.com1.z0.glb.clouddn.com/img/Hexo%203.1.1%20%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/jacman%E4%B8%BB%E9%A2%98%E5%BA%95%E6%A0%8F%E4%BF%AE%E6%94%B9%E5%AD%97%E4%BD%93%E5%90%8E.png">
-<meta property="og:updated_time" content="2015-11-11T14:02:39.265Z">
+<meta property="og:updated_time" content="2015-11-12T01:01:05.125Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo 3.1.1 静态博客搭建指南">
-<meta name="twitter:description" content="注意，本文适用于hexo 3.x 版本，与2.x略有出入！
-GitHub Pages 本用于介绍托管在 GitHub 的项目，也可以用来搭建博客，有300M免费空间。
-hexo是一个基于Node.js的静态博客程序，可以方便的生成静态网页托管在github和Heroku上。作者是来自台湾的tommy351。优势：
-
-生成静态页面快支持 Markdown兼容于 Windows, Mac &amp;amp;">
+<meta name="twitter:description" content="hexo 3.1.1 版的博客搭建心得。3.x 如果照 2.x 的教程照做，会出现一些莫名其妙的BUG，比如站点地图无效、Pacman主题无代码高亮、RSS无效等。Now hexo your blog！">
 
     
     <link rel="alternative" href="/atom.xml" title="岁月如歌" type="application/atom+xml">
