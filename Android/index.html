@@ -1,0 +1,581 @@
+
+  
+    <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>Android Notes | 岁月如歌</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="LoveNight">
+    
+
+    
+    <meta name="description" content="恶补编程基础
+编程入门指南
+
+技术博客
+中国部分 Android 开发者
+国外部分 Android 开发者
+张明云：
+Trinea：阿里巴巴 Java 开发工程师 Github
+stormzhang
+mariotaku
+eclipse_xu：《Android群英会》作者徐宜生
+
+重点推荐
+Android开发最佳实践摘要：前段时间，Google公布了Android开发最佳实践的一系列课程，涉及到一些">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Android Notes">
+<meta property="og:url" content="http://lovenight.github.io/Android/index.html">
+<meta property="og:site_name" content="岁月如歌">
+<meta property="og:description" content="恶补编程基础
+编程入门指南
+
+技术博客
+中国部分 Android 开发者
+国外部分 Android 开发者
+张明云：
+Trinea：阿里巴巴 Java 开发工程师 Github
+stormzhang
+mariotaku
+eclipse_xu：《Android群英会》作者徐宜生
+
+重点推荐
+Android开发最佳实践摘要：前段时间，Google公布了Android开发最佳实践的一系列课程，涉及到一些">
+<meta property="og:image" content="https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/docs//images/activity_lifecycle.png">
+<meta property="og:image" content="https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/docs//images/fragment_lifecycle.png">
+<meta property="og:image" content="https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/docs//images/activity_fragment_lifecycle.png">
+<meta property="og:image" content="http://image.uisdc.com/wp-content/uploads/2014/12/a-10.png">
+<meta property="og:image" content="http://image.uisdc.com/wp-content/uploads/2014/12/a-11.png">
+<meta property="og:image" content="http://image.uisdc.com/wp-content/uploads/2014/12/a-22.png">
+<meta property="og:image" content="http://image.uisdc.com/wp-content/uploads/2014/12/a-23.png">
+<meta property="og:image" content="http://image.uisdc.com/wp-content/uploads/2014/12/a-30.png">
+<meta property="og:image" content="http://image.uisdc.com/wp-content/uploads/2014/12/a-33.png">
+<meta property="og:image" content="http://image.uisdc.com/wp-content/uploads/2014/12/a-36.png">
+<meta property="og:image" content="http://image.uisdc.com/wp-content/uploads/2014/12/a-39.png">
+<meta property="og:image" content="http://image.uisdc.com/wp-content/uploads/2014/12/a-48.png">
+<meta property="og:image" content="http://image.uisdc.com/wp-content/uploads/2014/12/a-49.png">
+<meta property="og:image" content="http://image.uisdc.com/wp-content/uploads/2014/12/a-59.png">
+<meta property="og:image" content="http://image.uisdc.com/wp-content/uploads/2014/12/a-82.png">
+<meta property="og:image" content="http://image.uisdc.com/wp-content/uploads/2014/12/a-91.png">
+<meta property="og:image" content="http://image.uisdc.com/wp-content/uploads/2014/12/a-104.png">
+<meta property="og:image" content="http://image.uisdc.com/wp-content/uploads/2014/12/a-106.png">
+<meta property="og:image" content="http://image.uisdc.com/wp-content/uploads/2014/12/a-113.png">
+<meta property="og:image" content="http://image.uisdc.com/wp-content/uploads/2014/12/a-119.png">
+<meta property="og:image" content="http://image.uisdc.com/wp-content/uploads/2014/12/a-121.png">
+<meta property="og:updated_time" content="2015-11-12T13:26:52.796Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android Notes">
+<meta name="twitter:description" content="恶补编程基础
+编程入门指南
+
+技术博客
+中国部分 Android 开发者
+国外部分 Android 开发者
+张明云：
+Trinea：阿里巴巴 Java 开发工程师 Github
+stormzhang
+mariotaku
+eclipse_xu：《Android群英会》作者徐宜生
+
+重点推荐
+Android开发最佳实践摘要：前段时间，Google公布了Android开发最佳实践的一系列课程，涉及到一些">
+
+    
+    <link rel="alternative" href="/atom.xml" title="岁月如歌" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+      <body>
+        <header>
+          
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="岁月如歌" title="岁月如歌"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="岁月如歌">岁月如歌</a></h1>
+				<h2 class="blog-motto">莫厌追欢笑语频，寻思离乱好伤神。闲来屈指从头数，得见清平有几人</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+						<li><a href="/Android">Android</a></li>
+					
+						<li><a href="/Python">Python</a></li>
+					
+						<li><a href="/API">API</a></li>
+					
+						<li><a href="/About">About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:lovenight.github.io">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+        </header>
+        <div id="container">
+          <div id="main" class="page" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/Android/index.html" title="Android Notes" itemprop="url">Android Notes</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="LoveNight" target="_blank" itemprop="author">LoveNight</a>
+		
+  <p class="article-time">
+    <time datetime="2015-11-12T12:41:54.000Z" itemprop="datePublished"> 发表于 2015-11-12</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#恶补编程基础"><span class="toc-number">1.</span> <span class="toc-text">恶补编程基础</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#技术博客"><span class="toc-number">2.</span> <span class="toc-text">技术博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#重点推荐"><span class="toc-number">3.</span> <span class="toc-text">重点推荐</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#开源项目"><span class="toc-number">4.</span> <span class="toc-text">开源项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#学习资料"><span class="toc-number">5.</span> <span class="toc-text">学习资料</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#开发工具"><span class="toc-number">6.</span> <span class="toc-text">开发工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#UI"><span class="toc-number">7.</span> <span class="toc-text">UI</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Material标准"><span class="toc-number">8.</span> <span class="toc-text">Material标准</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#颜色"><span class="toc-number">8.1.</span> <span class="toc-text">颜色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#图标"><span class="toc-number">8.2.</span> <span class="toc-text">图标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#图片"><span class="toc-number">8.3.</span> <span class="toc-text">图片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文字"><span class="toc-number">8.4.</span> <span class="toc-text">文字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#布局"><span class="toc-number">8.5.</span> <span class="toc-text">布局</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#组件"><span class="toc-number">8.6.</span> <span class="toc-text">组件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#经验教训"><span class="toc-number">9.</span> <span class="toc-text">经验教训</span></a></li></ol>
+		
+		</div>
+		
+		<h2 id="恶补编程基础">恶补编程基础</h2><ul>
+<li><a href="http://zhuanlan.zhihu.com/xiao-jing-mo/19959253" target="_blank" rel="external">编程入门指南</a></li>
+</ul>
+<h2 id="技术博客">技术博客</h2><ul>
+<li><a href="https://github.com/android-cn/android-dev-cn" target="_blank" rel="external">中国部分 Android 开发者</a></li>
+<li><a href="https://github.com/android-cn/android-dev-com" target="_blank" rel="external">国外部分 Android 开发者</a></li>
+<li><a href="http://zmywly8866.github.io" target="_blank" rel="external">张明云</a>：</li>
+<li><a href="http://www.trinea.cn/" target="_blank" rel="external">Trinea</a>：阿里巴巴 Java 开发工程师 <a href="https://github.com/trinea" target="_blank" rel="external">Github</a></li>
+<li><a href="http://stormzhang.com/" target="_blank" rel="external">stormzhang</a></li>
+<li><a href="https://github.com/mariotaku" target="_blank" rel="external">mariotaku</a></li>
+<li><a href="http://blog.csdn.net/eclipsexys" target="_blank" rel="external">eclipse_xu</a>：《Android群英会》作者徐宜生</li>
+</ul>
+<h2 id="重点推荐">重点推荐</h2><ul>
+<li><p><a href="http://www.csdn.net/article/2015-10-05/2825847" target="_blank" rel="external">Android开发最佳实践</a><br><strong>摘要</strong>：前段时间，Google公布了Android开发最佳实践的一系列课程，涉及到一些平时开发过程中应该保持的良好习惯以及如何使用最新的Android Design Support Library来快速实现官方推荐的Material Design样式的应用。</p>
+</li>
+<li><p><a href="http://wuchong.me/blog/2014/08/28/how-to-correctly-write-singleton-pattern/" target="_blank" rel="external">如何正确地写出单例模式</a><br><strong>摘要</strong>：单例模式算是设计模式中最容易理解，也是最容易手写代码的模式了吧。但是其中的坑却不少，所以也常作为面试题来考。本文主要对几种单例写法的整理，并分析其优缺点。很多都是一些老生常谈的问题，但如果你不知道如何创建一个线程安全的单例，不知道什么是双检锁，那这篇文章可能会帮助到你。</p>
+</li>
+</ul>
+<h2 id="开源项目">开源项目</h2><p><a href="https://github.com/Trinea/android-open-project%20Android%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%88%86%E7%B1%BB%E6%B1%87%E6%80%BB" target="_blank" rel="external">Android开源项目分类汇总</a><br><a href="http://www.verydemo.com/one_c55.html" target="_blank" rel="external">Demo大全</a><br><a href="http://project.codefrom.com/" target="_blank" rel="external">开源项目集</a> 每天更新最新，最热，最有意思的开源项目<br><a href="https://github.com/google" target="_blank" rel="external">Google项目合集</a> 供初学者学习代码和规范<br><a href="https://github.com/googlesamples" target="_blank" rel="external">GoogleSamples</a><br><a href="http://git.oschina.net/oschina/android-app" target="_blank" rel="external">开源中国客户端代码</a> 值得学习<br><a href="https://github.com/MiCode" target="_blank" rel="external">小米开源项目</a></p>
+<h2 id="学习资料">学习资料</h2><ul>
+<li>基础<br><a href="http://www.imooc.com/course/list?c=android" target="_blank" rel="external">慕课网</a><br><a href="https://www.udacity.com/course/viewer#!/c-ud853/l-1395568821/m-1643858568" target="_blank" rel="external">Developing Android Apps</a> Google和Udacity合作提供<br><a href="https://github.com/GDGNanyang/studyjam" target="_blank" rel="external">Developing Android Apps 中文 SRT 发布区</a><br><a href="http://studyjamscn.com/11-developing-android-apps" target="_blank" rel="external">Developing Android Apps 第一课中文版发布</a></li>
+</ul>
+<ul>
+<li><p>提高<br><a href="http://v.qq.com/vplus/bugly" target="_blank" rel="external">腾讯Bugly</a><br><a href="http://www.infoq.com/cn/presentations" target="_blank" rel="external">Info演讲</a>部分与Android相关<br><a href="http://club.alibabatech.org/" target="_blank" rel="external">阿里技术沙龙</a></p>
+</li>
+<li><p>常用图片<br><img src="https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/docs//images/activity_lifecycle.png" alt="Activity生命周期"><br><img src="https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/docs//images/fragment_lifecycle.png" alt="Fragment生命周期"><br><img src="https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/docs//images/activity_fragment_lifecycle.png" alt="Activity与Fragment生命周期对比"></p>
+</li>
+</ul>
+<h2 id="开发工具">开发工具</h2><ul>
+<li><p>AndroidStudio<br><a href="http://www.android-studio.org/" target="_blank" rel="external">AndroidStudio社区</a></p>
+</li>
+<li><p>Chrome插件<br><a href="https://chrome.google.com/webstore/detail/iahnhfdhidomcpggpaimmmahffihkfnj" target="_blank" rel="external">Json-handle</a>  对JSON格式的内容进行浏览和编辑，以树形图样式展现JSON文档，并可实时编辑<br><a href="https://chrome.google.com/webstore/detail/adblock-plus/cfhdojbkjhnklbpkdaibdccddilifddb?hl=zh-CN" target="_blank" rel="external">Adblock Plus</a>  屏蔽广告插件<br><a href="https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm/related" target="_blank" rel="external">Postman</a> 模拟POST请求</p>
+</li>
+<li><p>正则表达式工具<br><a href="http://www.codeproject.com/Articles/3669/Expresso-A-Tool-for-Building-and-Testing-Regular-E" target="_blank" rel="external">Expresso</a><br><a href="http://www.regexbuddy.com/" target="_blank" rel="external">RegexBuddy</a></p>
+</li>
+<li><p>翻墙<br><a href="https://www.anotherhome.net/1376" target="_blank" rel="external">Hosts文件自动配置工具</a> 软件及数据包下载<br><a href="https://shadowsocks.com/" target="_blank" rel="external">ShadowSocks</a>  ====&gt;<a href="http://www.jianshu.com/p/08ba65d1f91a" target="_blank" rel="external">使用方法</a></p>
+</li>
+</ul>
+<h2 id="UI">UI</h2><ul>
+<li><p>配色<br><a href="http://appui.mobi/" target="_blank" rel="external">APP UI</a></p>
+</li>
+<li><p>素材<br><a href="http://www.sketchappsources.com/all-free-sources.html" target="_blank" rel="external">SketchAppSources</a> Sketch资源<br><a href="http://www.easyicon.net/" target="_blank" rel="external">EasyIcon</a> 图标搜索<br><a href="http://www.toicon.com/" target="_blank" rel="external">ToIcon</a> 图标搜索<br><a href="https://thenounproject.com/" target="_blank" rel="external">Noun Project</a> 图标搜索<br><a href="http://www.uisdc.com/material-design-freebie" target="_blank" rel="external">新鲜热辣！一组实用的MATERIAL DESIGN风格素材！</a><br><a href="http://www.uisdc.com/high-quality-material-design-resource" target="_blank" rel="external">该跟上潮流了！一大波优质的MATERIAL DESIGN资源免费下载</a></p>
+</li>
+<li><p>Material Design<br><a href="http://wiki.jikexueyuan.com/project/material-design/material-design-intro/introduction.html" target="_blank" rel="external">MaterialDesign中文版</a> 极客学院<br><a href="http://www.materialpalette.com/" target="_blank" rel="external">Materialpalette</a> Material配色工具<br><a href="http://www.materialup.com/" target="_blank" rel="external">Materialup</a> Material设计灵感<br><a href="http://www.uisdc.com/tag/material-design" target="_blank" rel="external">Material</a> 优设MaterialDesign版<br><a href="http://www.uisdc.com/material-design-google-io-app" target="_blank" rel="external">超赞！谷歌设计师的MATERIAL DESIGN实践心得</a><br><a href="http://www.uisdc.com/material-design-learning-experience" target="_blank" rel="external">学霸的自学笔记！MATERIAL DESIGN设计规范学习心得</a><br><a href="http://www.uisdc.com/material-design-trends" target="_blank" rel="external">超全面总结！深聊MATERIAL DESIGN引领的设计趋势</a></p>
+</li>
+<li><p>Google Material资源<br><a href="http://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNT0dFWFBjdTNKaXM/color_swatches.zip" target="_blank" rel="external">配色方案</a><br><a href="http://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7V2s1ay1rTmM0dG8/Layout_Mobile_Whiteframe.ai" target="_blank" rel="external">界面模板：手机</a><br><a href="http://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7U2hHWS1kS1JjT0k/Layout_Tablet_Whiteframe.ai" target="_blank" rel="external">界面模板：平板</a><br><a href="http://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7UHpjdlh5bUd6Z2c/Layout_Desktop_Whiteframe.ai" target="_blank" rel="external">界面模板：桌面</a><br><a href="http://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7SUJUS0dQVktmSXc/whiteframes.ai" target="_blank" rel="external">界面模板：线框图</a><br><a href="http://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNZGNoWmJqVEhQYTQ/RobotoTTF.zip" target="_blank" rel="external">英文字体Roboto</a><br><a href="http://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B6VCDMjD5_VAbXZ5WWxPRDhSVUU/RobotoSpecimenBooklet.pdf" target="_blank" rel="external">Roboto介绍</a><br><a href="http://www.google.com/get/noto/pkgs/NotoSansCJKSC-hinted.zip" target="_blank" rel="external">中文字体Noto</a><br><a href="http://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7MGtzS0lpeFZUYmc/stickersheet_general.psd" target="_blank" rel="external">组件集psd</a><br><a href="http://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7WDR5Q25OcXVuU28/stickersheet_general.ai" target="_blank" rel="external">组件集ai</a><br><a href="http://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7Q3FVZ0FnM18yTHM/stickersheet_general.sketch" target="_blank" rel="external">组件集sketch</a><br><a href="http://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNUzJ4c1VXWDYzbTA/material-design-icons-1.0.1.zip" target="_blank" rel="external">系统图标</a></p>
+</li>
+</ul>
+<h2 id="Material标准">Material标准</h2><p><strong>完整版见<a href="http://www.uisdc.com/comprehensive-material-design-note" target="_blank" rel="external">MaterialDesign学习笔记</a></strong></p>
+<h3 id="颜色">颜色</h3><p><img src="http://image.uisdc.com/wp-content/uploads/2014/12/a-10.png" alt=""><br><img src="http://image.uisdc.com/wp-content/uploads/2014/12/a-11.png" alt=""><br>黑色：[87% 普通文字] [54% 减淡文字] [26% 禁用状态/提示文字] [12% 分隔线]<br>白色：[100% 普通文字] [70% 减淡文字] [30% 禁用状态/提示文字] [12% 分隔线]</p>
+<h3 id="图标">图标</h3><ul>
+<li><p>桌面图标尺寸：48dp x 48dp</p>
+</li>
+<li><p>小图标尺寸：24dp X 24dp，图形限制在中央20dp X 20dp区域内。<br>栅格系统。线条、空隙尽量保持2dp宽，圆角半径2dp。特殊情况相应调整。<br><img src="http://image.uisdc.com/wp-content/uploads/2014/12/a-22.png" alt=""><br><img src="http://image.uisdc.com/wp-content/uploads/2014/12/a-23.png" alt=""><br>小图标的颜色使用纯黑与纯白，通过透明度调整：<br>黑色：[54% 正常状态] [26% 禁用状态]<br>白色：[100% 正常状态] [30% 禁用状态]</p>
+</li>
+</ul>
+<h3 id="图片">图片</h3><ul>
+<li><p>图片上的文字，需要淡淡的遮罩确保其可读性。深色的遮罩透明度在20%-40%之间，浅色的遮罩透明度在40%-60%之间。</p>
+</li>
+<li><p>Android L可以从图片中提取主色，运用在其他UI元素上</p>
+</li>
+<li><p>图片的加载过程非常讲究，透明度、曝光度、饱和度3个指标依次变化，效果相当细腻。<br><img src="http://image.uisdc.com/wp-content/uploads/2014/12/a-30.png" alt=""></p>
+</li>
+</ul>
+<h3 id="文字">文字</h3><ul>
+<li><p>英文字体使用Roboto，中文字体使用Noto。<br>Roboto有6种字重：Thin、Light、Regular、Medium、Bold 和 Black<br>Noto有7种字重：Thin, Light、DemiLight、Regular、Medium、Bold 和 Black。</p>
+</li>
+<li><p>常用字号</p>
+<blockquote>
+<p>12sp 小字提示<br>14sp（桌面端13sp） 正文/按钮文字<br>16sp（桌面端15sp） 小标题<br>20sp Appbar文字<br>24sp 大标题<br>34sp/45sp/56sp/112sp 超大号文字</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="布局">布局</h3><ul>
+<li><p>所有可操作元素最小点击区域尺寸：48dp X 48dp</p>
+</li>
+<li><p>栅格系统的最小单位是8dp，一切距离、尺寸都应该是8dp的整数倍。</p>
+</li>
+<li><p>常见尺寸与距离</p>
+<blockquote>
+<p>顶部状态栏高度：24dp<br>Appbar最小高度：56dp<br>底部导航栏高度：48dp<br>悬浮按钮尺寸：56x56dp/40x40dp<br>用户头像尺寸：64x64dp/40x40dp<br>小图标点击区域：48x48dp<br>侧边抽屉到屏幕右边的距离：56dp<br>卡片间距：8dp<br>分隔线上下留白：8dp<br>大多元素的留白距离：16dp<br>屏幕左右对齐基线：16dp<br>文字左侧对齐基线：72dp</p>
+</blockquote>
+</li>
+</ul>
+<p><img src="http://image.uisdc.com/wp-content/uploads/2014/12/a-33.png" alt=""></p>
+<h3 id="组件">组件</h3><ul>
+<li><p>Bottom Sheets，列表或网格式<br><img src="http://image.uisdc.com/wp-content/uploads/2014/12/a-36.png" alt=""><br><img src="http://image.uisdc.com/wp-content/uploads/2014/12/a-39.png" alt=""></p>
+</li>
+<li><p>Cards，统一2dp圆角<br><img src="http://image.uisdc.com/wp-content/uploads/2014/12/a-48.png" alt=""><br><img src="http://image.uisdc.com/wp-content/uploads/2014/12/a-49.png" alt="这里写图片描述"></p>
+</li>
+<li><p>Dialogs<br>取消类操作项放在左边，引起变化的操作项放在右边。<br><img src="http://image.uisdc.com/wp-content/uploads/2014/12/a-59.png" alt=""></p>
+</li>
+<li><p>Grids，网格中的单元格间距是2dp或8dp</p>
+</li>
+<li><p>Lists<br>如果列表项内容文字超过3行，请改用卡片。如果列表项的主要区别在于图片，请改用网格。</p>
+</li>
+<li><p>Menus<br><img src="http://image.uisdc.com/wp-content/uploads/2014/12/a-82.png" alt=""></p>
+</li>
+<li><p>SnackBars &amp; Toasts<br><img src="http://image.uisdc.com/wp-content/uploads/2014/12/a-91.png" alt=""></p>
+</li>
+<li><p>Tabs，选中项的下划线高度是2dp。</p>
+</li>
+<li><p>Text fields，激活状态和错误状态，横线的宽度变为2dp<br><img src="http://image.uisdc.com/wp-content/uploads/2014/12/a-104.png" alt=""><br>输入框提示文字，可以在输入内容后，缩小停留在输入框左上角<br><img src="http://image.uisdc.com/wp-content/uploads/2014/12/a-106.png" alt=""><br><img src="http://image.uisdc.com/wp-content/uploads/2014/12/a-113.png" alt="这里写图片描述"></p>
+</li>
+<li><p>ToolTips<br><img src="http://image.uisdc.com/wp-content/uploads/2014/12/a-119.png" alt=""></p>
+</li>
+<li><p>Navigation Drawer<br><img src="http://image.uisdc.com/wp-content/uploads/2014/12/a-121.png" alt=""></p>
+</li>
+</ul>
+<h2 id="经验教训">经验教训</h2><ol>
+<li>小米4真机调试，除了开启开发者选项和USB调试外，必须用买手机时附带的数据线。就算小米2的数据线也不行，虽然一样能用来传输文件，但是调试时显示Unknown</li>
+<li>还是小米，写了个收短信的APP，在模拟器上测试通过。但是在小米4上却无法收到。最后发现权限管理里该APP的默认短信权限是<code>询问</code>，把它改成<code>允许</code>才成功。不知道有没有更好的解决办法，在配置文件里申请了权限还不够。</li>
+<li>电脑上的文件，在安卓上用自己写的APP打开是乱码。百度了原来安卓上使用的是utf-8编码，在IO流中指定即可。</li>
+<li>这个实际上是Java写Java工具时遇到过的坑，现在写安卓用到Calendar又想了起来。一定要加上这一句<code>calendar.setTimeZone(TimeZone.getTimeZone(&quot;GMT+8&quot;));</code>免得出现奇怪的时间问题。</li>
+<li>如果XML中注册的组件没有写<code>layout-width</code>或<code>layout-height</code>属性，则APP启动时会报错退出。</li>
+<li>Android 重写了 toString()方法，如果需要用Java默认的toString()来识别是否同一对象，需要自己实现一次。</li>
+<li>使用adb命令安装APK时，就算文件在当前目录下，也必须加一个<code>/</code>，如：<code>adb install /xxx.apk</code></li>
+</ol>
+<p>To Be Continued …</p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://lovenight.github.io/Android/index.html" data-title="Android Notes | 岁月如歌" data-tsina="1069913250" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="Android/index.html" data-title="Android Notes" data-url="http://lovenight.github.io/Android/index.html"></div>
+</section>
+
+
+</div>  
+
+        </div>
+        <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> 自古求真皆寂寞，惟挑心灯伴夜霭。 <br/>
+			The night is yet young.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/king881204" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://github.com/loveNight" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<a href="mailto:286242151@qq.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+
+		<p class="copyright">
+
+		2015年11月9日诞生，<span id="showDays"></span>&nbsp;&nbsp;|&nbsp;
+		本页点击量 <span id="busuanzi_value_page_pv"></span> 次&nbsp;&nbsp;|&nbsp;
+		本站总点击量 <span id="busuanzi_value_site_pv"></span> 次&nbsp;&nbsp;|&nbsp;
+		您是第 <span id="busuanzi_value_site_uv"></span> 位访客
+		</br>
+
+		<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+		</script>
+		<script>
+		var birthDay = new Date("11/9/2015");
+		var now = new Date();
+		var duration = now.getTime() - birthDay.getTime();
+		var total= Math.floor(duration / (1000 * 60 * 60 * 24));
+		document.getElementById("showDays").innerHTML = "已运行 "+total+" 天";
+		</script>
+
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2015
+		
+		<a href="/about" target="_blank" title="LoveNight">LoveNight</a>
+		
+
+
+		&nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/sitemap.xml">Google网站地图</a></span>
+		&nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/baidusitemap.xml">百度网站地图</a></span>
+
+		<script>
+		(function(){
+		    var bp = document.createElement('script');
+		    bp.src = '//push.zhanzhang.baidu.com/push.js';
+		    var s = document.getElementsByTagName("script")[0];
+		    s.parentNode.insertBefore(bp, s);
+		})();
+		</script>
+
+		</p>
+
+
+
+</div>
+</footer>
+        <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"jwg"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-69840176-1', 'http://lovenight.github.io/');  
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256738554'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s23.cnzz.com/z_stat.php%3Fid%3D1256738554' type='text/javascript'%3E%3C/script%3E"));</script>
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+      </body>
+     </html>
+     

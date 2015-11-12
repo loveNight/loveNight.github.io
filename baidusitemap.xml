@@ -2,6 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     
+    
+    
+    
+    
+  <url>
+    <loc>http://lovenight.github.io/2015/11/12/Python%20Queue%E7%9A%84RecursionError%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</loc>
+    <lastmod>2015-11-12T12:36:30.812Z</lastmod>
+    <data>
+        <display>
+        <title>Python Queue对象引起的RecursionError:maximum recursion depth exceeded</title>
+        <pubTime>2015-11-12T11:54:47.000Z</pubTime>
+        
+        <tag>Python </tag>
+         
+        <tag>Queue </tag>
+         
+        <tag>RecursionError </tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://lovenight.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="Python" url="http://lovenight.github.io/categories/%E7%BC%96%E7%A8%8B/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>http://lovenight.github.io/2015/11/11/Python%E6%A8%A1%E6%8B%9F%E7%99%BB%E5%BD%95%E7%9F%A5%E4%B9%8E/</loc>
     <lastmod>2015-11-12T06:25:58.203Z</lastmod>

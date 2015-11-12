@@ -1,0 +1,513 @@
+
+  
+    <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>Python Notes | 岁月如歌</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="LoveNight">
+    
+
+    
+    <meta name="description" content="Python Docs
+Python 3.5.0 documentation
+
+技术博客
+gaga salamer
+创e 一个运维工程师的python自动化运维实践。
+cwyalpha的博客 Python爬虫学习记录系列
+xlzd
+小信’Blog
+
+练习资源
+黑板客爬虫闯关
+能利用爬虫技术做到哪些很酷很有趣很有用的事情
+你是如何开始能写python爬虫？
+Python 有哪些一千行左右的经典练手项">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Python Notes">
+<meta property="og:url" content="http://lovenight.github.io/Python/index.html">
+<meta property="og:site_name" content="岁月如歌">
+<meta property="og:description" content="Python Docs
+Python 3.5.0 documentation
+
+技术博客
+gaga salamer
+创e 一个运维工程师的python自动化运维实践。
+cwyalpha的博客 Python爬虫学习记录系列
+xlzd
+小信’Blog
+
+练习资源
+黑板客爬虫闯关
+能利用爬虫技术做到哪些很酷很有趣很有用的事情
+你是如何开始能写python爬虫？
+Python 有哪些一千行左右的经典练手项">
+<meta property="og:updated_time" content="2015-11-12T13:25:40.671Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python Notes">
+<meta name="twitter:description" content="Python Docs
+Python 3.5.0 documentation
+
+技术博客
+gaga salamer
+创e 一个运维工程师的python自动化运维实践。
+cwyalpha的博客 Python爬虫学习记录系列
+xlzd
+小信’Blog
+
+练习资源
+黑板客爬虫闯关
+能利用爬虫技术做到哪些很酷很有趣很有用的事情
+你是如何开始能写python爬虫？
+Python 有哪些一千行左右的经典练手项">
+
+    
+    <link rel="alternative" href="/atom.xml" title="岁月如歌" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+      <body>
+        <header>
+          
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="岁月如歌" title="岁月如歌"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="岁月如歌">岁月如歌</a></h1>
+				<h2 class="blog-motto">莫厌追欢笑语频，寻思离乱好伤神。闲来屈指从头数，得见清平有几人</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+						<li><a href="/Android">Android</a></li>
+					
+						<li><a href="/Python">Python</a></li>
+					
+						<li><a href="/API">API</a></li>
+					
+						<li><a href="/About">About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:lovenight.github.io">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+        </header>
+        <div id="container">
+          <div id="main" class="page" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/Python/index.html" title="Python Notes" itemprop="url">Python Notes</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="LoveNight" target="_blank" itemprop="author">LoveNight</a>
+		
+  <p class="article-time">
+    <time datetime="2015-11-12T12:41:39.000Z" itemprop="datePublished"> 发表于 2015-11-12</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Python_Docs"><span class="toc-number">1.</span> <span class="toc-text">Python Docs</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#技术博客"><span class="toc-number">2.</span> <span class="toc-text">技术博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#练习资源"><span class="toc-number">3.</span> <span class="toc-text">练习资源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#学习资料"><span class="toc-number">4.</span> <span class="toc-text">学习资料</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用库"><span class="toc-number">5.</span> <span class="toc-text">常用库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IDE与编辑器"><span class="toc-number">6.</span> <span class="toc-text">IDE与编辑器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#论坛与网站"><span class="toc-number">7.</span> <span class="toc-text">论坛与网站</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#经验教训"><span class="toc-number">8.</span> <span class="toc-text">经验教训</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#os_库"><span class="toc-number">8.1.</span> <span class="toc-text">os 库</span></a></li></ol></li></ol>
+		
+		</div>
+		
+		<h2 id="Python_Docs">Python Docs</h2><ul>
+<li><a href="https://docs.python.org/3.5/index.html" target="_blank" rel="external">Python 3.5.0 documentation</a></li>
+</ul>
+<h2 id="技术博客">技术博客</h2><ul>
+<li><a href="http://aljun.me/" target="_blank" rel="external">gaga salamer</a></li>
+<li><a href="http://opslinux.com/" target="_blank" rel="external">创e</a> 一个运维工程师的python自动化运维实践。</li>
+<li><a href="http://blog.csdn.net/cwyalpha?viewmode=contents" target="_blank" rel="external">cwyalpha的博客</a> Python爬虫学习记录系列</li>
+<li><a href="http://xlzd.me/" target="_blank" rel="external">xlzd</a></li>
+<li><a href="http://playbear.github.io/" target="_blank" rel="external">小信’Blog</a></li>
+</ul>
+<h2 id="练习资源">练习资源</h2><ul>
+<li><a href="http://www.heibanke.com/lesson/crawler_ex00/" target="_blank" rel="external">黑板客爬虫闯关</a></li>
+<li><a href="http://www.zhihu.com/question/27621722" target="_blank" rel="external">能利用爬虫技术做到哪些很酷很有趣很有用的事情</a></li>
+<li><a href="http://www.zhihu.com/question/21358581" target="_blank" rel="external">你是如何开始能写python爬虫？</a></li>
+<li><a href="http://www.zhihu.com/question/31830544" target="_blank" rel="external">Python 有哪些一千行左右的经典练手项目？</a></li>
+<li><a href="http://www.zhihu.com/question/36132174" target="_blank" rel="external">有哪些网站用爬虫爬取能得到很有价值的数据？</a></li>
+</ul>
+<h2 id="学习资料">学习资料</h2><ul>
+<li><a href="http://www.cnblogs.com/vamei/archive/2012/09/13/2682778.html" target="_blank" rel="external">Python快速教程</a></li>
+<li><a href="http://cuiqingcai.com/1052.html" target="_blank" rel="external">Python爬虫学习系列教程</a></li>
+<li><a href="http://www.cnblogs.com/huxi/archive/2010/07/04/1771073.html" target="_blank" rel="external">Python正则表达式指南</a></li>
+<li><a href="http://www.pythoner.cn/course/" target="_blank" rel="external">pythoner.cn视频课程</a> 截至2015年9月30号，上面发布了7个相关视频教程， 内容覆盖了面向对象知识体系， Flask入门， Django入门， 多线程开发， 文件处理，网络爬虫，图形开发的内容。</li>
+<li><a href="http://pm.readthedocs.org/zh_CN/latest/index.html" target="_blank" rel="external">Python项目构建实践</a>  Python项目构建最佳实践。 用Python开发项目的童鞋可以看看别人的实践， 有一些指导意义。</li>
+<li><a href="http://docs.pythontab.com/flask/flask0.10/" target="_blank" rel="external">Flask 教程</a></li>
+<li><a href="http://www.pythondoc.com/flask/" target="_blank" rel="external">Flask开发文档</a></li>
+<li><a href="http://www.pythondoc.com/flask-mega-tutorial/" target="_blank" rel="external">Flask大型教程</a> 本系列是作者平时使用 Flask 微框架编写应用的经验之谈</li>
+<li><a href="http://docs.pythontab.com/tornado/introduction-to-tornado/" target="_blank" rel="external">Tornado入门教程</a></li>
+<li><a href="http://www.pythondoc.com/" target="_blank" rel="external">Python中文学习大本营</a></li>
+<li>《编写高质量代码 改善Python程序的91个建议.pdf》</li>
+<li><a href="http://www.dongwm.com/" target="_blank" rel="external">聊聊python面试这件事儿</a></li>
+</ul>
+<h2 id="常用库">常用库</h2><p><a href="https://pypi.python.org/pypi" target="_blank" rel="external">Python Package Index</a> 检索各种Python库</p>
+<p><strong>可以直接根据下面的名字用pip命令安装</strong> eg：</p>
+<pre><code>pip <span class="keyword">install</span> BeautifulSoup4
+</code></pre><ul>
+<li><a href="http://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/" target="_blank" rel="external">BeautifulSoup4</a>：从HTML或XML文件中提取数据</li>
+<li><a href="http://lxml.de/" target="_blank" rel="external">lxml</a>：HTML/XML的解析器，可与BeautifulSoup配套使用。如果安装出错请看这里：<a href="http://blog.csdn.net/kinglearnjava/article/details/49469881" target="_blank" rel="external">Python 3 安装 lxml</a></li>
+<li><a href="https://github.com/gawel/pyquery" target="_blank" rel="external">pyquery</a>：使用jquery语法解析HTML，需要先安装lxml。用法：<a href="http://blog.itpub.net/22166274/viewspace-1183937/" target="_blank" rel="external">python数据抓取之pyquery包 </a></li>
+<li><a href="https://github.com/kennethreitz/requests" target="_blank" rel="external">requests</a>：比python自带的urllib更人性化</li>
+<li>xlrd，xlwt：分别用于读、写Excel</li>
+<li><a href="http://docs.seleniumhq.org/docs/" target="_blank" rel="external">selenium</a>：用于Web应用程序测试</li>
+<li>ipython，pyreadline：ipython能够逐行显示python代码的运行结果，能够更好的调试python代码，并且有tab自动补全功能。后者是配色</li>
+<li><a href="https://github.com/aaronsw/html2text" target="_blank" rel="external">html2text</a>：从HTML中提取易于阅读的文本</li>
+<li><a href="http://pandas.pydata.org/" target="_blank" rel="external">pandas</a>：数据分析。<a href="http://pandas.pydata.org/pandas-docs/stable/cookbook.html#cookbook" target="_blank" rel="external">CookBook</a></li>
+<li><a href="https://github.com/fxsjy/jieba" target="_blank" rel="external">jieba</a>：中文分词</li>
+<li><a href="https://github.com/mozillazg/python-pinyin" target="_blank" rel="external">pypinyin</a>：将汉语转为拼音。可以用于汉字注音、排序、检索。</li>
+<li><a href="https://github.com/amoffat/sh" target="_blank" rel="external">sh</a>：可以用 Python 函数的语法去调用 shell 命令</li>
+<li><a href="https://pythonhosted.org/watchdog/" target="_blank" rel="external">Watchdog</a>：监视文件系统改动</li>
+<li><a href="https://github.com/jaraco/path.py" target="_blank" rel="external">Path</a>：简化文件系统相关操作</li>
+<li><a href="http://sphinx-doc.org/" target="_blank" rel="external">Sphinx</a>：爱上写文档</li>
+<li><a href="https://github.com/mitsuhiko/flask" target="_blank" rel="external">flask</a>：Web框架</li>
+<li><a href="https://github.com/whtsky/WeRoBot" target="_blank" rel="external">WeRoBot</a>：微信机器人框架</li>
+<li><a href="https://github.com/noamraph/tqdm" target="_blank" rel="external">tqdm</a>：在长循环中添加一个进度提示信息，用户只需要封装任意的迭代器 tqdm(iterator)。</li>
+</ul>
+<h2 id="IDE与编辑器">IDE与编辑器</h2><ul>
+<li><a href="http://www.jetbrains.com/pycharm/download/" target="_blank" rel="external">PyCharm</a></li>
+<li>Sublime Text 3 插件：<br>代码自动完成<a href="http://damnwidget.github.io/anaconda/#carousel-features" target="_blank" rel="external">Anaconda</a> 。安装后代码会因PEP 8格式检查而出现白框，在Sublime &gt; Preferences &gt; Package Settings &gt; Anaconda &gt; Settings User 中添加如下代码即可解决：<code>{&quot;anaconda_linting&quot;: false}</code>。</li>
+</ul>
+<p><a href="http://blog.csdn.net/kinglearnjava/article/details/49107253" target="_blank" rel="external">《SublimeText3 运行Python控制台不能输出中文的解决方法》</a></p>
+<h2 id="论坛与网站">论坛与网站</h2><ul>
+<li><a href="http://www.pythonfan.org/forum.php" target="_blank" rel="external">Python爱好者</a></li>
+<li><a href="http://www.pythontip.com/" target="_blank" rel="external">PythonTip</a> Python主题网站</li>
+</ul>
+<h2 id="经验教训">经验教训</h2><h3 id="os_库">os 库</h3><ul>
+<li><code>os.path.isdir()</code>方法应该传入带绝对路径的文件名，如：<code>r&#39;e:\java&#39;</code>，如果只是传入文件名，如<code>&#39;java&#39;</code>，该方法只会在当前工作目录（可以用<code>os.getcwd()</code>查看)下查找有没有同名文件夹，有则返回true</li>
+<li><code>os.listdir()</code>方法只返回文件名，需要自己用<code>os.path.join()</code>方法拼接出绝对路径。</li>
+<li><code>os.path.realpath()</code>获取绝对路径，该方法会将传入的文件名与<strong>当前工作目录</strong>拼接出绝对路径。如果要使用这个方法，必须先用<code>os.chdir()</code>改变当前工作目录！建议优先用<code>os.path.join()</code>。</li>
+<li><code>os.path.relpath()</code>获取相对路径，如果不传入命名关键字参数start，如<code>start = r&#39;C:\python&#39;</code>，则该方法会与根据当前工作目录计算相对路径，目录不同则报错。</li>
+</ul>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://lovenight.github.io/Python/index.html" data-title="Python Notes | 岁月如歌" data-tsina="1069913250" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="Python/index.html" data-title="Python Notes" data-url="http://lovenight.github.io/Python/index.html"></div>
+</section>
+
+
+</div>  
+
+        </div>
+        <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> 自古求真皆寂寞，惟挑心灯伴夜霭。 <br/>
+			The night is yet young.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/king881204" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://github.com/loveNight" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<a href="mailto:286242151@qq.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+
+		<p class="copyright">
+
+		2015年11月9日诞生，<span id="showDays"></span>&nbsp;&nbsp;|&nbsp;
+		本页点击量 <span id="busuanzi_value_page_pv"></span> 次&nbsp;&nbsp;|&nbsp;
+		本站总点击量 <span id="busuanzi_value_site_pv"></span> 次&nbsp;&nbsp;|&nbsp;
+		您是第 <span id="busuanzi_value_site_uv"></span> 位访客
+		</br>
+
+		<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+		</script>
+		<script>
+		var birthDay = new Date("11/9/2015");
+		var now = new Date();
+		var duration = now.getTime() - birthDay.getTime();
+		var total= Math.floor(duration / (1000 * 60 * 60 * 24));
+		document.getElementById("showDays").innerHTML = "已运行 "+total+" 天";
+		</script>
+
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2015
+		
+		<a href="/about" target="_blank" title="LoveNight">LoveNight</a>
+		
+
+
+		&nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/sitemap.xml">Google网站地图</a></span>
+		&nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/baidusitemap.xml">百度网站地图</a></span>
+
+		<script>
+		(function(){
+		    var bp = document.createElement('script');
+		    bp.src = '//push.zhanzhang.baidu.com/push.js';
+		    var s = document.getElementsByTagName("script")[0];
+		    s.parentNode.insertBefore(bp, s);
+		})();
+		</script>
+
+		</p>
+
+
+
+</div>
+</footer>
+        <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"jwg"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-69840176-1', 'http://lovenight.github.io/');  
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256738554'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s23.cnzz.com/z_stat.php%3Fid%3D1256738554' type='text/javascript'%3E%3C/script%3E"));</script>
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+      </body>
+     </html>
+     
