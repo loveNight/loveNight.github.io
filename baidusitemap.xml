@@ -2,6 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     
+  <url>
+    <loc>http://lovenight.github.io/2015/11/14/Python-3-json%E4%B8%8E%E6%AD%A3%E5%88%99%E5%BC%8F%E8%A7%A3%E6%9E%90%E9%80%9F%E5%BA%A6%E6%B5%8B%E8%AF%95/</loc>
+    <lastmod>2015-11-14T19:51:54.816Z</lastmod>
+    <data>
+        <display>
+        <title>Python 3 json与正则式解析速度测试</title>
+        <pubTime>2015-11-14T15:30:23.000Z</pubTime>
+        
+        <tag>Python </tag>
+         
+        <tag>json </tag>
+         
+        <tag>timeit </tag>
+         
+        <tag>正则表达式 </tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://lovenight.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="Python" url="http://lovenight.github.io/categories/%E7%BC%96%E7%A8%8B/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
     
     
