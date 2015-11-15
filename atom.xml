@@ -4,7 +4,7 @@
   <subtitle><![CDATA[莫厌追欢笑语频，寻思离乱好伤神。闲来屈指从头数，得见清平有几人]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://lovenight.github.io/"/>
-  <updated>2015-11-15T17:37:02.972Z</updated>
+  <updated>2015-11-15T18:09:48.276Z</updated>
   <id>http://lovenight.github.io/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://lovenight.github.io/2015/11/15/Hexo-NexT%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E8%AE%BE%E7%BD%AE/"/>
     <id>http://lovenight.github.io/2015/11/15/Hexo-NexT主题个性化设置/</id>
     <published>2015-11-15T13:44:19.000Z</published>
-    <updated>2015-11-15T17:37:02.972Z</updated>
+    <updated>2015-11-15T18:09:48.276Z</updated>
     <content type="html"><![CDATA[<p>最近发现款非常简洁的主题，<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">NexT</a>。先按照<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">NexT使用文档</a> 配置了一番，仍然感觉不满意，于是自己摸索了一下，作了些修改</p>
 <h2 id="添加新页面">添加新页面</h2><p>用如下命令添加新page</p>
 <pre><code>hexo <span class="keyword">new</span> page <span class="string">"Android"</span>
@@ -48,6 +48,15 @@ hexo <span class="keyword">new</span> page <span class="string">"API"</span>
   <span class="attribute">python</span>: Python
   <span class="attribute">api</span>: API
 </code></pre><p>注意这里第一列必须全为小写，否则效果是这样的：<br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/%E7%BC%96%E7%A8%8B/hexo/Hexo%20NexT%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E8%AE%BE%E7%BD%AE/NexT%20%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A0%87%E7%AD%BE.png" alt=""></p>
+<h2 id="自动弹出侧栏">自动弹出侧栏</h2><p>配置文件里写着：</p>
+<pre><code><span class="preprocessor"># Sidebar, available value:</span>
+<span class="preprocessor">#  - post    expand on posts automatically. Default.</span>
+<span class="preprocessor">#  - always  expand for all pages automatically</span>
+<span class="preprocessor">#  - hide    expand only when click on the sidebar toggle icon.</span>
+<span class="preprocessor">#  - remove  Totally remove sidebar including sidebar toggle icon.</span>
+</code></pre><p>但是当设置成<code>always</code>时，侧栏在文章页却不会自动弹出。在别的页面都能正常。</p>
+<p>在<code>\themes\next\layout/_scripts/pages/post-details.swig</code>文件里看到这段代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Expand sidebar on post detail page by default, when post has a toc.</span></span><br><span class="line">motionMiddleWares.sidebar = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> $tocContent = $(<span class="string">'.post-toc-content'</span>);</span><br><span class="line">  <span class="keyword">if</span> (CONFIG.sidebar === <span class="string">'post'</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> ($tocContent.length &gt; <span class="number">0</span> &amp;&amp; $tocContent.html().trim().length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">      displaySidebar();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>虽然没学过JS，但是看注释和 if 语句，都是仅在sidebar参数为<code>post</code>时才会自动展开，坑爹呢。在<code>if</code>里加上<code>always</code>判断，即可，修改后如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Expand sidebar on post detail page by default, when post has a toc.</span></span><br><span class="line">    motionMiddleWares.sidebar = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">var</span> $tocContent = $(<span class="string">'.post-toc-content'</span>);</span><br><span class="line">      <span class="keyword">if</span> (CONFIG.sidebar === <span class="string">'post'</span> || CONFIG.sidebar === <span class="string">'always'</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> ($tocContent.length &gt; <span class="number">0</span> &amp;&amp; $tocContent.html().trim().length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">          displaySidebar();</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;;</span><br></pre></td></tr></table></figure></p>
 <h2 id="修改底栏">修改底栏</h2><p>先准备一些代码。<a href="http://www.cnzz.com" target="_blank" rel="external">站长统计</a>，注册并获取统计代码：</p>
 <pre><code>&amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp;
 &lt;script type=<span class="string">"text/javascript"</span>&gt;var cnzz_protocol = ((<span class="string">"https:"</span> == document.location.protocol) ? <span class="string">" https://"</span> : <span class="string">" http://"</span>);document.<span class="keyword">write</span>(unescape(<span class="string">"<span class="variable">%3Cspan</span> id='cnzz_stat_icon_1256738554'<span class="variable">%3E</span><span class="variable">%3C</span>/span<span class="variable">%3E</span><span class="variable">%3Cscript</span> src='"</span> + cnzz_protocol + <span class="string">"s4.cnzz.com/z_stat.php<span class="variable">%3Fid</span><span class="variable">%3D1256738554</span>' type='text/javascript'<span class="variable">%3E</span><span class="variable">%3C</span>/script<span class="variable">%3E</span>"</span>));
