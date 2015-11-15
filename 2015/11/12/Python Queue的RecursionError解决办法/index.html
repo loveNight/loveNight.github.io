@@ -11,26 +11,17 @@
     
 
     
-    <meta name="description" content="有网友想下载2014年4月至今的新加坡PSI数据：Historical PSI Readings，看这页面比较简单就练手写了个爬虫。
-运行的时候出现RecursionError：
-Traceback (most recent call last):
-  File &quot;C:\Python 3.5\lib\multiprocessing\queues.py&quot;, line 241, in _feed">
+    <meta name="description" content="Python 爬虫遇到RecursionError:maximum recursion depth exceeded。但是代码中并未使用多线程。修改递归深度解决。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python Queue对象引起的RecursionError:maximum recursion depth exceeded">
 <meta property="og:url" content="http://lovenight.github.io/2015/11/12/Python Queue的RecursionError解决办法/index.html">
 <meta property="og:site_name" content="岁月如歌">
-<meta property="og:description" content="有网友想下载2014年4月至今的新加坡PSI数据：Historical PSI Readings，看这页面比较简单就练手写了个爬虫。
-运行的时候出现RecursionError：
-Traceback (most recent call last):
-  File &quot;C:\Python 3.5\lib\multiprocessing\queues.py&quot;, line 241, in _feed">
+<meta property="og:description" content="Python 爬虫遇到RecursionError:maximum recursion depth exceeded。但是代码中并未使用多线程。修改递归深度解决。">
 <meta property="og:image" content="http://7xo8t2.com1.z0.glb.clouddn.com/img/%E7%BC%96%E7%A8%8B/Python/Python%20Queue%E5%AF%B9%E8%B1%A1%E5%BC%95%E8%B5%B7%E7%9A%84RecursionError%3Amaximum%20recursion%20depth%20exceeded/%E4%B8%8B%E8%BD%BD%E5%BE%97%E5%88%B0%E7%9A%84csv%E6%96%87%E4%BB%B6.png">
-<meta property="og:updated_time" content="2015-11-12T12:36:30.812Z">
+<meta property="og:updated_time" content="2015-11-15T11:48:52.930Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python Queue对象引起的RecursionError:maximum recursion depth exceeded">
-<meta name="twitter:description" content="有网友想下载2014年4月至今的新加坡PSI数据：Historical PSI Readings，看这页面比较简单就练手写了个爬虫。
-运行的时候出现RecursionError：
-Traceback (most recent call last):
-  File &quot;C:\Python 3.5\lib\multiprocessing\queues.py&quot;, line 241, in _feed">
+<meta name="twitter:description" content="Python 爬虫遇到RecursionError:maximum recursion depth exceeded。但是代码中并未使用多线程。修改递归深度解决。">
 
     
     <link rel="alternative" href="/atom.xml" title="岁月如歌" type="application/atom+xml">
@@ -171,18 +162,18 @@ RecursionError: maximum recursion depth exceeded
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2015/11/14/Python-3-json与正则式解析速度测试/" title="Python 3 json与正则式解析速度测试">
+ <a href="/2015/11/13/Python-3-挑战黑板客爬虫闯关/" title="黑板客爬虫闯关之Python 3">
   <strong>上一篇：</strong><br/>
   <span>
-  Python 3 json与正则式解析速度测试</span>
+  黑板客爬虫闯关之Python 3</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2015/11/11/Python模拟登录知乎/"  title="Python 模拟登录知乎">
+<a href="/2015/11/11/Python模拟登录知乎/"  title="Python 3 模拟登录知乎">
  <strong>下一篇：</strong><br/> 
- <span>Python 模拟登录知乎
+ <span>Python 3 模拟登录知乎
 </span>
 </a>
 </div>
@@ -216,7 +207,7 @@ RecursionError: maximum recursion depth exceeded
 		<ul>
 		
 		  
-			<li><a href="/categories/编程/Python/" title="Python">Python<sup>3</sup></a></li>
+			<li><a href="/categories/编程/Python/" title="Python">Python<sup>5</sup></a></li>
 		  
 		
 		  
@@ -224,7 +215,7 @@ RecursionError: maximum recursion depth exceeded
 		  
 		
 		  
-			<li><a href="/categories/编程/" title="编程">编程<sup>4</sup></a></li>
+			<li><a href="/categories/编程/" title="编程">编程<sup>6</sup></a></li>
 		  
 		
 		  
@@ -241,7 +232,7 @@ RecursionError: maximum recursion depth exceeded
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/Python/" title="Python">Python<sup>3</sup></a></li>
+				<li><a href="/tags/Python/" title="Python">Python<sup>5</sup></a></li>
 			
 		
 			
@@ -249,11 +240,19 @@ RecursionError: maximum recursion depth exceeded
 			
 		
 			
-				<li><a href="/tags/知乎/" title="知乎">知乎<sup>1</sup></a></li>
+				<li><a href="/tags/黑板客/" title="黑板客">黑板客<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/json/" title="json">json<sup>1</sup></a></li>
+				<li><a href="/tags/爬虫/" title="爬虫">爬虫<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/多线程/" title="多线程">多线程<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/知乎/" title="知乎">知乎<sup>1</sup></a></li>
 			
 		
 			
@@ -270,6 +269,10 @@ RecursionError: maximum recursion depth exceeded
 		
 			
 				<li><a href="/tags/Queue/" title="Queue">Queue<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/json/" title="json">json<sup>1</sup></a></li>
 			
 		
 		</ul>

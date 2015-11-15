@@ -4,23 +4,23 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>HelloWorld！ | 岁月如歌</title>
+    <title>黑板客爬虫闯关之Python 3 | 岁月如歌</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="LoveNight">
     
 
     
-    <meta name="description" content="第一篇Hexo博客">
+    <meta name="description" content="未完成的黑板客爬虫闯关">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HelloWorld！">
-<meta property="og:url" content="http://lovenight.github.io/2015/11/09/HelloWorld/index.html">
+<meta property="og:title" content="黑板客爬虫闯关之Python 3">
+<meta property="og:url" content="http://lovenight.github.io/2015/11/13/Python-3-挑战黑板客爬虫闯关/index.html">
 <meta property="og:site_name" content="岁月如歌">
-<meta property="og:description" content="第一篇Hexo博客">
-<meta property="og:updated_time" content="2015-11-15T11:46:18.702Z">
+<meta property="og:description" content="未完成的黑板客爬虫闯关">
+<meta property="og:updated_time" content="2015-11-15T11:50:59.236Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HelloWorld！">
-<meta name="twitter:description" content="第一篇Hexo博客">
+<meta name="twitter:title" content="黑板客爬虫闯关之Python 3">
+<meta name="twitter:description" content="未完成的黑板客爬虫闯关">
 
     
     <link rel="alternative" href="/atom.xml" title="岁月如歌" type="application/atom+xml">
@@ -86,14 +86,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/11/09/HelloWorld/" title="HelloWorld！" itemprop="url">HelloWorld！</a>
+      <a href="/2015/11/13/Python-3-挑战黑板客爬虫闯关/" title="黑板客爬虫闯关之Python 3" itemprop="url">黑板客爬虫闯关之Python 3</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="LoveNight" target="_blank" itemprop="author">LoveNight</a>
 		
   <p class="article-time">
-    <time datetime="2015-11-09T07:56:26.000Z" itemprop="datePublished"> 发表于 2015-11-09</time>
+    <time datetime="2015-11-12T16:38:48.000Z" itemprop="datePublished"> 发表于 2015-11-13</time>
     
   </p>
 </header>
@@ -102,18 +102,27 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#第三关"><span class="toc-number">1.</span> <span class="toc-text">第三关</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第四关"><span class="toc-number">2.</span> <span class="toc-text">第四关</span></a></li></ol>
 		
 		</div>
 		
-		<p>按网上的教程终于配置好了Hexo，其实挺简单的，不过由于Hexo版本的原因，遇到不少坑。顺便学了SSH，push起来方便不少。</p>
-<p>稍后把此次博客搭建心得整理好发出来。</p>
-<p>以前用新浪的博客，可惜不支持代码块和Markdown，主题近十年没怎么变化，三天两头收到无聊的纸条、转发消息。后来转战CSDN，主题和Markdown非常丑，右上角定期出现广告，没法取消。有次还无故封了博客，找管理员询问得知是误操作。试了博客园，后台有无用的新闻、文章、日志分类，无法取消，默认的代码块不显示行数，Markdown比CSDN还丑。</p>
-<p>博客还没配置完，先发这篇文章试试效果。</p>
-<p>Python：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"Hello World"</span>)</span><br></pre></td></tr></table></figure>
-<p>Java：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Hello</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Hello World"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>结束</p>
+		<h2 id="第三关">第三关</h2><p>网址：<a href="http://www.heibanke.com/lesson/crawler_ex02/" target="_blank" rel="external">http://www.heibanke.com/lesson/crawler_ex02/</a></p>
+<p>点击上面的网址，若未登录黑板客网站，会跳转到一个<a href="http://www.heibanke.com/accounts/login/?next=/lesson/crawler_ex02/" target="_blank" rel="external">登录页面</a></p>
+<p>随便注册一个账号。登录后需要再次点击<a href="http://www.heibanke.com/lesson/crawler_ex02/" target="_blank" rel="external">第三关网址</a>。接下来就可以控制爬虫一次次试密码了。后面的代码和第二关差不多。注意Post中不能少了csrfmiddlewaretoken。上一关中虽然有这一项，但是不加也可以。不过这里必须加上这个参数。</p>
+<p>用Chrom 抓包发现Post需要提交的csrfmiddlewaretoken正好是cookie中的csrftoken</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 爬虫闯关第三关</span></span><br><span class="line">Q3_url = <span class="string">r'http://www.heibanke.com/lesson/crawler_ex02/'</span></span><br><span class="line"><span class="comment"># 登录网址</span></span><br><span class="line">login_url = <span class="string">r'http://www.heibanke.com/accounts/login/?next=/lesson/crawler_ex02/'</span></span><br><span class="line"></span><br><span class="line">username = 自己注册</span><br><span class="line">password = 自己注册</span><br><span class="line"></span><br><span class="line">s = requests.Session()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 访问页面，获取登录用的csrftoken</span></span><br><span class="line">s.get(login_url)</span><br><span class="line">csrf = s.cookies[<span class="string">"csrftoken"</span>]</span><br><span class="line"><span class="comment"># 组装POST数据</span></span><br><span class="line">data = &#123;</span><br><span class="line">    <span class="string">'username'</span>: username,</span><br><span class="line">    <span class="string">'password'</span>: password,</span><br><span class="line">    <span class="string">'csrfmiddlewaretoken'</span>: csrf</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment"># 登录</span></span><br><span class="line">s.post(login_url, data=data)</span><br><span class="line"></span><br><span class="line">s.get(Q3_url)</span><br><span class="line">data[<span class="string">"csrfmiddlewaretoken"</span>] = s.cookies[<span class="string">"csrftoken"</span>]</span><br><span class="line"><span class="comment"># 破解密码</span></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">31</span>):</span><br><span class="line">    data[<span class="string">"password"</span>] = x</span><br><span class="line">    print(<span class="string">'正在猜密码： '</span>, x)</span><br><span class="line">    html = s.post(Q3_url, data=data).text</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> <span class="string">'错误'</span> <span class="keyword">in</span> html:</span><br><span class="line">        print(<span class="string">'密码是 '</span>, x)</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
+<p>输出如下：</p>
+<pre><code>正在猜密码：  <span class="number">0</span>
+正在猜密码：  <span class="number">1</span>
+正在猜密码：  <span class="number">2</span>
+正在猜密码：  <span class="number">3</span>
+正在猜密码：  <span class="number">4</span>
+正在猜密码：  <span class="number">5</span>
+正在猜密码：  <span class="number">6</span>
+密码是  <span class="number">6</span>
+</code></pre><p>手动输密码过关！</p>
+<h2 id="第四关">第四关</h2><p>上一关结束时点击「下一关」，仍然回到第三关，需要手动改一下网址：<a href="http://www.heibanke.com/lesson/crawler_ex03/" target="_blank" rel="external">http://www.heibanke.com/lesson/crawler_ex03/</a></p>
+<p>这一关仍然需要登录。先随便输个密码，提示正确的密码在某网址里：<a href="http://www.heibanke.com/lesson/crawler_ex03/pw_list/" target="_blank" rel="external">http://www.heibanke.com/lesson/crawler_ex03/pw_list/</a>。每个页面有8对数字，分别描述了密码的位置和值。一共有13页，每个网页都特意被设置成载入很慢，足足15秒，看来必须得祭上多线程了。Lets’s go！</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -121,13 +130,13 @@
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/随笔/">随笔</a>
+  <a class="article-category-link" href="/categories/编程/">编程</a>►<a class="article-category-link" href="/categories/编程/Python/">Python</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/hexo/">hexo</a>
+  <span></span> <a href="/tags/Python/">Python</a><a href="/tags/爬虫/">爬虫</a><a href="/tags/黑板客/">黑板客</a>
   </div>
 
 </div>
@@ -136,7 +145,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://lovenight.github.io/2015/11/09/HelloWorld/" data-title="HelloWorld！ | 岁月如歌" data-tsina="1069913250" class="share clearfix">
+	  <div data-url="http://lovenight.github.io/2015/11/13/Python-3-挑战黑板客爬虫闯关/" data-title="黑板客爬虫闯关之Python 3 | 岁月如歌" data-tsina="1069913250" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -150,19 +159,27 @@
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2015/11/10/Hexo-3-1-1-静态博客搭建指南/" title="Hexo 3.1.1 静态博客搭建指南">
+ <a href="/2015/11/14/Python-3-json与正则式解析速度测试/" title="Python 3 json与正则式解析速度测试">
   <strong>上一篇：</strong><br/>
   <span>
-  Hexo 3.1.1 静态博客搭建指南</span>
+  Python 3 json与正则式解析速度测试</span>
 </a>
 </div>
 
+
+<div class="next">
+<a href="/2015/11/12/Python Queue的RecursionError解决办法/"  title="Python Queue对象引起的RecursionError:maximum recursion depth exceeded">
+ <strong>下一篇：</strong><br/> 
+ <span>Python Queue对象引起的RecursionError:maximum recursion depth exceeded
+</span>
+</a>
+</div>
 
 </nav>
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2015/11/09/HelloWorld/" data-title="HelloWorld！" data-url="http://lovenight.github.io/2015/11/09/HelloWorld/"></div>
+	<div class="ds-thread" data-thread-key="2015/11/13/Python-3-挑战黑板客爬虫闯关/" data-title="黑板客爬虫闯关之Python 3" data-url="http://lovenight.github.io/2015/11/13/Python-3-挑战黑板客爬虫闯关/"></div>
 </section>
 
 
@@ -173,7 +190,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#第三关"><span class="toc-number">1.</span> <span class="toc-text">第三关</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第四关"><span class="toc-number">2.</span> <span class="toc-text">第四关</span></a></li></ol>
  
   </div>
 
