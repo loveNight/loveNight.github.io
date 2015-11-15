@@ -1,112 +1,337 @@
-
- <!DOCTYPE HTML>
-<html lang="zh-CN">
+<!doctype html>
+<html class="theme-next   use-motion ">
 <head>
-  <meta charset="UTF-8">
-  
-    <title>Python 3 模拟登录知乎 | 岁月如歌</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
-    
-    <meta name="author" content="LoveNight">
-    
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
-    
-    <meta name="description" content="2015.11.11 测试可用的知乎登录脚本。">
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  
+    <link href='//fonts.lug.ustc.edu.cn/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Python,知乎," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="岁月如歌" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+
+
+
+
+
+
+<meta name="description" content="缘起最近发现知乎的登录界面改了，抓包看了看，果然登录方式也变了，会根据用户名字符串发送不同字段的POST。中午研究了一会，写了个登录知乎的工具类，可以自动处理Cookie，维持登录状态。目前仅实现登录和打开网页的功能。
+依赖的第三方库
+requests
+BeautifulSoup
+lxml 这个不装没关系，把__login()方法中的lxml改成html.parser即可。
+
+用法创建ZhihuC">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python 3 模拟登录知乎">
 <meta property="og:url" content="http://lovenight.github.io/2015/11/11/Python模拟登录知乎/index.html">
 <meta property="og:site_name" content="岁月如歌">
-<meta property="og:description" content="2015.11.11 测试可用的知乎登录脚本。">
-<meta property="og:updated_time" content="2015-11-15T11:47:11.474Z">
+<meta property="og:description" content="缘起最近发现知乎的登录界面改了，抓包看了看，果然登录方式也变了，会根据用户名字符串发送不同字段的POST。中午研究了一会，写了个登录知乎的工具类，可以自动处理Cookie，维持登录状态。目前仅实现登录和打开网页的功能。
+依赖的第三方库
+requests
+BeautifulSoup
+lxml 这个不装没关系，把__login()方法中的lxml改成html.parser即可。
+
+用法创建ZhihuC">
+<meta property="og:updated_time" content="2015-11-15T12:19:02.231Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python 3 模拟登录知乎">
-<meta name="twitter:description" content="2015.11.11 测试可用的知乎登录脚本。">
+<meta name="twitter:description" content="缘起最近发现知乎的登录界面改了，抓包看了看，果然登录方式也变了，会根据用户名字符串发送不同字段的POST。中午研究了一会，写了个登录知乎的工具类，可以自动处理Cookie，维持登录状态。目前仅实现登录和打开网页的功能。
+依赖的第三方库
+requests
+BeautifulSoup
+lxml 这个不装没关系，把__login()方法中的lxml改成html.parser即可。
 
-    
-    <link rel="alternative" href="/atom.xml" title="岁月如歌" type="application/atom+xml">
-    
-    
-    <link rel="icon" href="/img/favicon.ico">
-    
-    
-    <link rel="apple-touch-icon" href="/img/jacman.jpg">
-    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
-    
-    <link rel="stylesheet" href="/css/style.css" type="text/css">
+用法创建ZhihuC">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'always',
+    motion: true
+  };
+</script>
+
+  <title> Python 3 模拟登录知乎 | 岁月如歌 </title>
 </head>
 
-  <body>
-    <header>
-      
-<div>
-		
-			<div id="imglogo">
-				<a href="/"><img src="/img/logo.png" alt="岁月如歌" title="岁月如歌"/></a>
-			</div>
-			
-			<div id="textlogo">
-				<h1 class="site-name"><a href="/" title="岁月如歌">岁月如歌</a></h1>
-				<h2 class="blog-motto">莫厌追欢笑语频，寻思离乱好伤神。闲来屈指从头数，得见清平有几人</h2>
-			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
-			</a></div>
-			<nav class="animated">
-				<ul>
-					<ul>
-					 
-						<li><a href="/">Home</a></li>
-					
-						<li><a href="/archives">Archives</a></li>
-					
-						<li><a href="/Android">Android</a></li>
-					
-						<li><a href="/Python">Python</a></li>
-					
-						<li><a href="/API">API</a></li>
-					
-						<li><a href="/About">About</a></li>
-					
-					<li>
- 					
-					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
-						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
-						<input type="hidden" name="q" value="site:lovenight.github.io">
-					</form>
-					
-					</li>
-				</ul>
-			</nav>			
-</div>
-    </header>
-    <div id="container">
-      <div id="main" class="post" itemscope itemprop="blogPost">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
   
-	<article itemprop="articleBody"> 
-		<header class="article-info clearfix">
-  <h1 itemprop="name">
+
+
+
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">岁月如歌</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">莫厌追欢笑语频，寻思离乱好伤神。闲来屈指从头数，得见清平有几人</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-android">
+          <a href="/Android" rel="section">
+            
+              <i class="menu-item-icon fa fa-question-circle fa-fw"></i> <br />
+            
+            menu.android
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-python">
+          <a href="/Python" rel="section">
+            
+              <i class="menu-item-icon fa fa-question-circle fa-fw"></i> <br />
+            
+            menu.python
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-api">
+          <a href="/API" rel="section">
+            
+              <i class="menu-item-icon fa fa-question-circle fa-fw"></i> <br />
+            
+            menu.api
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/About" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
     
-      <a href="/2015/11/11/Python模拟登录知乎/" title="Python 3 模拟登录知乎" itemprop="url">Python 3 模拟登录知乎</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="LoveNight" target="_blank" itemprop="author">LoveNight</a>
-		
-  <p class="article-time">
-    <time datetime="2015-11-11T13:06:08.000Z" itemprop="datePublished"> 发表于 2015-11-11</time>
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-  </p>
-</header>
-	<div class="article-content">
-		
-		<div id="toc" class="toc-article">
-			<strong class="toc-title">文章目录</strong>
-		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#缘起"><span class="toc-number">1.</span> <span class="toc-text">缘起</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#依赖的第三方库"><span class="toc-number">2.</span> <span class="toc-text">依赖的第三方库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#用法"><span class="toc-number">3.</span> <span class="toc-text">用法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建ZhihuClient对象"><span class="toc-number">3.1.</span> <span class="toc-text">创建ZhihuClient对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#打开网页"><span class="toc-number">3.2.</span> <span class="toc-text">打开网页</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#完整代码"><span class="toc-number">4.</span> <span class="toc-text">完整代码</span></a></li></ol>
-		
-		</div>
-		
-		<h2 id="缘起">缘起</h2><p>最近发现知乎的登录界面改了，抓包看了看，果然登录方式也变了，会根据用户名字符串发送不同字段的POST。中午研究了一会，写了个登录知乎的工具类，可以自动处理Cookie，维持登录状态。目前仅实现登录和打开网页的功能。</p>
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Python 3 模拟登录知乎
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-11-11T21:06:08+08:00" content="2015-11-11">
+              2015-11-11
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/编程/" itemprop="url" rel="index">
+                    <span itemprop="name">编程</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/编程/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/11/11/Python模拟登录知乎/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/11/Python模拟登录知乎/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><h2 id="缘起">缘起</h2><p>最近发现知乎的登录界面改了，抓包看了看，果然登录方式也变了，会根据用户名字符串发送不同字段的POST。中午研究了一会，写了个登录知乎的工具类，可以自动处理Cookie，维持登录状态。目前仅实现登录和打开网页的功能。</p>
 <h2 id="依赖的第三方库">依赖的第三方库</h2><ul>
 <li><code>requests</code></li>
 <li><code>BeautifulSoup</code></li>
@@ -133,476 +358,449 @@
 <h3 id="打开网页">打开网页</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">res = client.<span class="function"><span class="title">open</span><span class="params">(url)</span></span></span><br></pre></td></tr></table></figure>
 <p>返回一个<code>Response</code>对象，其方法与属性请参照<code>requests</code>库</p>
 <h2 id="完整代码">完整代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="comment"># @Author: LoveNight</span></span><br><span class="line"><span class="comment"># @Date:   2015-11-10 10:07:05</span></span><br><span class="line"><span class="comment"># @Last Modified by:   LoveNight</span></span><br><span class="line"><span class="comment"># @Last Modified time: 2015-11-11 15:09:41</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup <span class="keyword">as</span> BS</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ZhiHuClient</span><span class="params">(object)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="string">"""连接知乎的工具类，维护一个Session</span><br><span class="line">    2015.11.11</span><br><span class="line">    """</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 网址参数是账号类型</span></span><br><span class="line">    TYPE_PHONE_NUM = <span class="string">"phone_num"</span></span><br><span class="line">    TYPE_EMAIL = <span class="string">"email"</span></span><br><span class="line">    loginURL = <span class="string">r"http://www.zhihu.com/login/&#123;0&#125;"</span></span><br><span class="line">    homeURL = <span class="string">r"http://www.zhihu.com"</span></span><br><span class="line">    captchaURL = <span class="string">r"http://www.zhihu.com/captcha.gif"</span></span><br><span class="line"></span><br><span class="line">    headers = &#123;</span><br><span class="line">        <span class="string">"User-Agent"</span>: <span class="string">"Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.71 Safari/537.36"</span>,</span><br><span class="line">        <span class="string">"Host"</span>: <span class="string">"www.zhihu.com"</span>,</span><br><span class="line">        <span class="string">"Accept-Encoding"</span>: <span class="string">"gzip, deflate"</span>,</span><br><span class="line">        <span class="string">"X-Requested-With"</span>: <span class="string">"XMLHttpRequest"</span>,</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    captchaFile = <span class="string">"captcha.gif"</span></span><br><span class="line">    cookieFile = <span class="string">"cookie"</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, username, password)</span>:</span></span><br><span class="line">        os.chdir(sys.path[<span class="number">0</span>])  <span class="comment"># 设置脚本所在目录为当前工作目录</span></span><br><span class="line">        self.__username = username</span><br><span class="line">        self.__password = password</span><br><span class="line">        self.__loginURL = self.loginURL.format(self.__getUsernameType())</span><br><span class="line">        self.__session = requests.Session()</span><br><span class="line">        self.__session.headers = self.headers  <span class="comment"># 用self调用类变量是防止将来类改名</span></span><br><span class="line">        <span class="comment"># 若已经有 cookie 则直接登录</span></span><br><span class="line">        self.__cookie = self.__loadCookie()</span><br><span class="line">        <span class="keyword">if</span> self.__cookie:</span><br><span class="line">            print(<span class="string">"检测到cookie文件，直接使用cookie登录"</span>)</span><br><span class="line">            self.__session.cookies.update(self.__cookie)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            self.__login()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 登录</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__login</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">"""</span><br><span class="line">        验证码错误返回：</span><br><span class="line">        &#123;'errcode': 1991829, 'r': 1, 'data': &#123;'captcha': '请提交正确的验证码 :('&#125;, 'msg': '请提交正确的验证码 :('&#125;</span><br><span class="line">        登录成功返回：</span><br><span class="line">        &#123;'r': 0, 'msg': '登陆成功'&#125;</span><br><span class="line">        """</span></span><br><span class="line">        <span class="comment"># 随便开个网页，获取登陆所需的_xsrf</span></span><br><span class="line">        html = self.open(self.homeURL).text</span><br><span class="line">        soup = BS(html, <span class="string">"lxml"</span>)  <span class="comment"># 需要第三方库lxml，也可以用标准库中的html.parser</span></span><br><span class="line">        _xsrf = soup.find(<span class="string">"input"</span>, &#123;<span class="string">"name"</span>: <span class="string">"_xsrf"</span>&#125;)[<span class="string">"value"</span>]</span><br><span class="line">        <span class="comment"># 下载验证码图片</span></span><br><span class="line">        <span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">            captcha = self.open(self.captchaURL).content</span><br><span class="line">            <span class="keyword">with</span> open(self.captchaFile, <span class="string">"wb"</span>) <span class="keyword">as</span> output:</span><br><span class="line">                output.write(captcha)</span><br><span class="line">            <span class="comment"># 人眼识别</span></span><br><span class="line">            print(<span class="string">"="</span> * <span class="number">50</span>)</span><br><span class="line">            print(<span class="string">"请打开脚本同目录下的 %s， 识别验证码！"</span> % self.captchaFile)</span><br><span class="line">            captcha = input(<span class="string">"请输入验证码："</span>)</span><br><span class="line">            <span class="comment"># 发送POST请求</span></span><br><span class="line">            data = &#123;</span><br><span class="line">                <span class="string">"_xsrf"</span>: _xsrf,</span><br><span class="line">                <span class="string">"password"</span>: self.__password,</span><br><span class="line">                <span class="string">"remember_me"</span>: <span class="string">"true"</span>,</span><br><span class="line">                <span class="string">"phone_num"</span>: self.__username,</span><br><span class="line">                <span class="string">"captcha"</span>: captcha</span><br><span class="line">            &#125;</span><br><span class="line">            res = self.__session.post(self.__loginURL, data=data)</span><br><span class="line">            print(<span class="string">"="</span> * <span class="number">50</span>)</span><br><span class="line">            <span class="comment"># print(res.json()) # 输出脚本信息，调试用</span></span><br><span class="line">            <span class="keyword">if</span> res.json()[<span class="string">"r"</span>] == <span class="number">0</span>:</span><br><span class="line">                print(<span class="string">"登录成功"</span>)</span><br><span class="line">                self.__saveCookie()</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                print(<span class="string">"登录失败"</span>)</span><br><span class="line">                print(<span class="string">"错误信息 ---&gt;"</span>, res.json()[<span class="string">"msg"</span>])</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__getUsernameType</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">"""判断用户名类型</span><br><span class="line">        经测试，网页的判断规则是纯数字为phone_num，其他为email</span><br><span class="line">        """</span></span><br><span class="line">        <span class="keyword">if</span> self.__username.isdigit():</span><br><span class="line">            <span class="keyword">return</span> self.TYPE_PHONE_NUM</span><br><span class="line">        <span class="keyword">return</span> self.TYPE_EMAIL</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__saveCookie</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">"""cookies 序列化到文件</span><br><span class="line">        即把dict对象转化成字符串保存</span><br><span class="line">        """</span></span><br><span class="line">        <span class="keyword">with</span> open(self.cookieFile, <span class="string">"w"</span>) <span class="keyword">as</span> output:</span><br><span class="line">            cookies = self.__session.cookies.get_dict()</span><br><span class="line">            json.dump(cookies, output)</span><br><span class="line">            print(<span class="string">"="</span> * <span class="number">50</span>)</span><br><span class="line">            print(<span class="string">"已在同目录下生成cookie文件："</span>, self.cookieFile)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__loadCookie</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">"""读取cookie文件，返回反序列化后的dict对象，没有则返回None"""</span></span><br><span class="line">        <span class="keyword">if</span> os.path.exists(self.cookieFile):</span><br><span class="line">            print(<span class="string">"="</span> * <span class="number">50</span>)</span><br><span class="line">            <span class="keyword">with</span> open(self.cookieFile, <span class="string">"r"</span>) <span class="keyword">as</span> f:</span><br><span class="line">                cookie = json.load(f)</span><br><span class="line">                <span class="keyword">return</span> cookie</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">None</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">open</span><span class="params">(self, url, delay=<span class="number">0</span>, timeout=<span class="number">10</span>)</span>:</span></span><br><span class="line">        <span class="string">"""打开网页，返回Response对象"""</span></span><br><span class="line">        <span class="keyword">if</span> delay:</span><br><span class="line">            time.sleep(delay)</span><br><span class="line">        <span class="keyword">return</span> self.__session.get(url, timeout=timeout)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    username = <span class="string">"xxx"</span></span><br><span class="line">    password = <span class="string">"xxx"</span></span><br><span class="line">    client = ZhiHuClient(username, password)</span><br><span class="line">    print(client.open(<span class="string">r"http://www.zhihu.com/"</span>).text)</span><br></pre></td></tr></table></figure>
-  
-	</div>
-		<footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/编程/">编程</a>►<a class="article-category-link" href="/categories/编程/Python/">Python</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/Python/">Python</a><a href="/tags/知乎/">知乎</a>
-  </div>
-
-</div>
-
-
-
-	<div class="article-share" id="share">
-	
-	  <div data-url="http://lovenight.github.io/2015/11/11/Python模拟登录知乎/" data-title="Python 3 模拟登录知乎 | 岁月如歌" data-tsina="1069913250" class="share clearfix">
-	  </div>
-	
-	</div>
-
-
-</footer>
-
-   	       
-	</article>
-	
-<nav class="article-nav clearfix">
- 
- <div class="prev" >
- <a href="/2015/11/12/Python Queue的RecursionError解决办法/" title="Python Queue对象引起的RecursionError:maximum recursion depth exceeded">
-  <strong>上一篇：</strong><br/>
-  <span>
-  Python Queue对象引起的RecursionError:maximum recursion depth exceeded</span>
-</a>
-</div>
-
-
-<div class="next">
-<a href="/2015/11/10/Hexo-3-1-1-静态博客搭建指南/"  title="Hexo 3.1.1 静态博客搭建指南">
- <strong>下一篇：</strong><br/> 
- <span>Hexo 3.1.1 静态博客搭建指南
 </span>
-</a>
-</div>
+      
+    </div>
 
-</nav>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Python/" rel="tag">#Python</a>
+          
+            <a href="/tags/知乎/" rel="tag">#知乎</a>
+          
+        </div>
+      
 
-	
-<section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2015/11/11/Python模拟登录知乎/" data-title="Python 3 模拟登录知乎" data-url="http://lovenight.github.io/2015/11/11/Python模拟登录知乎/"></div>
-</section>
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/11/10/Hexo-3-1-1-静态博客搭建指南/" rel="next" title="Hexo 3.1.1 静态博客搭建指南">
+                <i class="fa fa-chevron-left"></i> Hexo 3.1.1 静态博客搭建指南
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/11/12/Python Queue的RecursionError解决办法/" rel="prev" title="Python Queue对象引起的RecursionError:maximum recursion depth exceeded">
+                Python Queue对象引起的RecursionError:maximum recursion depth exceeded <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
 
 
-</div>  
 
-      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
-
-  <div id="toc" class="toc-aside">
-  <strong class="toc-title">文章目录</strong>
- 
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#缘起"><span class="toc-number">1.</span> <span class="toc-text">缘起</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#依赖的第三方库"><span class="toc-number">2.</span> <span class="toc-text">依赖的第三方库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#用法"><span class="toc-number">3.</span> <span class="toc-text">用法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建ZhihuClient对象"><span class="toc-number">3.1.</span> <span class="toc-text">创建ZhihuClient对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#打开网页"><span class="toc-number">3.2.</span> <span class="toc-text">打开网页</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#完整代码"><span class="toc-number">4.</span> <span class="toc-text">完整代码</span></a></li></ol>
- 
+    <div class="post-spread">
+      
+    </div>
   </div>
 
-<div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
-<aside class="clearfix">
 
-  
-<div class="categorieslist">
-	<p class="asidetitle">分类</p>
-		<ul>
-		
-		  
-			<li><a href="/categories/编程/Python/" title="Python">Python<sup>5</sup></a></li>
-		  
-		
-		  
-			<li><a href="/categories/编程/hexo/" title="hexo">hexo<sup>1</sup></a></li>
-		  
-		
-		  
-			<li><a href="/categories/编程/" title="编程">编程<sup>6</sup></a></li>
-		  
-		
-		  
-			<li><a href="/categories/随笔/" title="随笔">随笔<sup>1</sup></a></li>
-		  
-		
-		</ul>
-</div>
+        </div>
 
-
-  
-<div class="tagslist">
-	<p class="asidetitle">标签</p>
-		<ul class="clearfix">
-		
-			
-				<li><a href="/tags/Python/" title="Python">Python<sup>5</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/黑板客/" title="黑板客">黑板客<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/爬虫/" title="爬虫">爬虫<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/多线程/" title="多线程">多线程<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/知乎/" title="知乎">知乎<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/正则表达式/" title="正则表达式">正则表达式<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/timeit/" title="timeit">timeit<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/RecursionError/" title="RecursionError">RecursionError<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Queue/" title="Queue">Queue<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/json/" title="json">json<sup>1</sup></a></li>
-			
-		
-		</ul>
-</div>
-
-
-  <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
-</div>
-
-  <div class="linkslist">
-  <p class="asidetitle">友情链接</p>
-    <ul>
         
-          <li>
-            
-            	<a href="http://blog.csdn.net/kinglearnjava" target="_blank" title="我的CSDN博客">我的CSDN博客</a>
-            
-          </li>
+
+
         
-          <li>
-            
-            	<a href="http://blog.sina.com.cn/u/1069913250" target="_blank" title="我的新浪博客">我的新浪博客</a>
-            
-          </li>
-        
-          <li>
-            
-            	<a href="http://www.douban.com/people/songlet/photos" target="_blank" title="宋乐天的相册">宋乐天的相册</a>
-            
-          </li>
-        
-    </ul>
-</div>
-
-</aside>
-</div>
-    </div>
-    <footer><div id="footer" >
-	
-	<div class="line">
-		<span></span>
-		<div class="author"></div>
-	</div>
-	
-	
-	<section class="info">
-		<p> 自古求真皆寂寞，惟挑心灯伴夜霭。 <br/>
-			The night is yet young.</p>
-	</section>
-	 
-	<div class="social-font" class="clearfix">
-		
-		<a href="http://weibo.com/king881204" target="_blank" class="icon-weibo" title="微博"></a>
-		
-		
-		<a href="https://github.com/loveNight" target="_blank" class="icon-github" title="github"></a>
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		<a href="mailto:286242151@qq.com" target="_blank" class="icon-email" title="Email Me"></a>
-		
-	</div>
-			
-		
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2015/11/11/Python模拟登录知乎/"
+           data-title="Python 3 模拟登录知乎" data-url="http://lovenight.github.io/2015/11/11/Python模拟登录知乎/">
+      </div>
+    
+  </div>
 
 
-		<p class="copyright">
+      </div>
 
-		2015年11月9日诞生，<span id="showDays"></span>&nbsp;&nbsp;|&nbsp;
-		本页点击量 <span id="busuanzi_value_page_pv"></span> 次&nbsp;&nbsp;|&nbsp;
-		本站总点击量 <span id="busuanzi_value_site_pv"></span> 次&nbsp;&nbsp;|&nbsp;
-		您是第 <span id="busuanzi_value_site_uv"></span> 位访客
-		</br>
-
-		<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
-		</script>
-		<script>
-		var birthDay = new Date("11/9/2015");
-		var now = new Date();
-		var duration = now.getTime() - birthDay.getTime();
-		var total= Math.floor(duration / (1000 * 60 * 60 * 24));
-		document.getElementById("showDays").innerHTML = "已运行 "+total+" 天";
-		</script>
-
-		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2015
-		
-		<a href="/about" target="_blank" title="LoveNight">LoveNight</a>
-		
-
-
-		&nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/sitemap.xml">Google网站地图</a></span>
-		&nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/baidusitemap.xml">百度网站地图</a></span>
-
-		<script>
-		(function(){
-		    var bp = document.createElement('script');
-		    bp.src = '//push.zhanzhang.baidu.com/push.js';
-		    var s = document.getElementsByTagName("script")[0];
-		    s.parentNode.insertBefore(bp, s);
-		})();
-		</script>
-
-		</p>
-
-
-
-</div>
-</footer>
-    <script src="/js/jquery-2.0.3.min.js"></script>
-<script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
-<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
-
-<script type="text/javascript">
-$(document).ready(function(){ 
-  $('.navbar').click(function(){
-    $('header nav').toggleClass('shownav');
-  });
-  var myWidth = 0;
-  function getSize(){
-    if( typeof( window.innerWidth ) == 'number' ) {
-      myWidth = window.innerWidth;
-    } else if( document.documentElement && document.documentElement.clientWidth) {
-      myWidth = document.documentElement.clientWidth;
-    };
-  };
-  var m = $('#main'),
-      a = $('#asidepart'),
-      c = $('.closeaside'),
-      o = $('.openaside');
-  c.click(function(){
-    a.addClass('fadeOut').css('display', 'none');
-    o.css('display', 'block').addClass('fadeIn');
-    m.addClass('moveMain');
-  });
-  o.click(function(){
-    o.css('display', 'none').removeClass('beforeFadeIn');
-    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
-    m.removeClass('moveMain');
-  });
-  $(window).scroll(function(){
-    o.css("top",Math.max(80,260-$(this).scrollTop()));
-  });
-  
-  $(window).resize(function(){
-    getSize(); 
-    if (myWidth >= 1024) {
-      $('header nav').removeClass('shownav');
-    }else{
-      m.removeClass('moveMain');
-      a.css('display', 'block').removeClass('fadeOut');
-      o.css('display', 'none');
       
-      $('#toc.toc-aside').css('display', 'none');
         
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/avatar.jpg" alt="loveNight" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">loveNight</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">莫厌追欢笑语频，寻思离乱好伤神。闲来屈指从头数，得见清平有几人</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#缘起"><span class="nav-number">1.</span> <span class="nav-text">缘起</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#依赖的第三方库"><span class="nav-number">2.</span> <span class="nav-text">依赖的第三方库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用法"><span class="nav-number">3.</span> <span class="nav-text">用法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建ZhihuClient对象"><span class="nav-number">3.1.</span> <span class="nav-text">创建ZhihuClient对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#打开网页"><span class="nav-number">3.2.</span> <span class="nav-text">打开网页</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#完整代码"><span class="nav-number">4.</span> <span class="nav-text">完整代码</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+      
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">loveNight
+
+  &nbsp;&nbsp;|&nbsp;&nbsp;<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256738554'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1256738554' type='text/javascript'%3E%3C/script%3E"));</script>
+
+  &nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/sitemap.xml">Google网站地图</a></span>
+  &nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/baidusitemap.xml">百度网站地图</a></span>
+
+  </span>
+</div>
+
+<div class="powered-by">
+   <a class="theme-link" href="http://hexo.io">Hexo</a> 
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+
+&nbsp;&nbsp;|&nbsp;&nbsp;本页点击 <span id="busuanzi_value_page_pv"></span> 次
+&nbsp;&nbsp;|&nbsp;&nbsp;本站总点击 <span id="busuanzi_value_site_pv"></span> 次
+&nbsp;&nbsp;|&nbsp;&nbsp;您是第 <span id="busuanzi_value_site_uv"></span> 位访客
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"jwg"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+
+
+    
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
+
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
     }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
   });
-});
 </script>
 
-<script type="text/javascript">
-$(document).ready(function(){ 
-  var ai = $('.article-content>iframe'),
-      ae = $('.article-content>embed'),
-      t  = $('#toc'),
-      ta = $('#toc.toc-aside'),
-      o  = $('.openaside'),
-      c  = $('.closeaside');
-  if(ai.length>0){
-    ai.wrap('<div class="video-container" />');
-  };
-  if(ae.length>0){
-   ae.wrap('<div class="video-container" />');
-  };
-  c.click(function(){
-    ta.css('display', 'block').addClass('fadeIn');
-  });
-  o.click(function(){
-    ta.css('display', 'none');
-  });
-  $(window).scroll(function(){
-    ta.css("top",Math.max(140,320-$(this).scrollTop()));
-  });
-});
-</script>
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
 
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
 
-<script type="text/javascript">
-$(document).ready(function(){ 
-  var $this = $('.share'),
-      url = $this.attr('data-url'),
-      encodedUrl = encodeURIComponent(url),
-      title = $this.attr('data-title'),
-      tsina = $this.attr('data-tsina'),
-      description = $this.attr('description');
-  var html = [
-  '<div class="hoverqrcode clearfix"></div>',
-  '<a class="overlay" id="qrcode"></a>',
-  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
-  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
-  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
-  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
-  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
-  '<span title="Share to"></span>'
-  ].join('');
-  $this.append(html);
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
 
-  $('.hoverqrcode').hide();
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
 
-  var myWidth = 0;
-  function updatehoverqrcode(){
-    if( typeof( window.innerWidth ) == 'number' ) {
-      myWidth = window.innerWidth;
-    } else if( document.documentElement && document.documentElement.clientWidth) {
-      myWidth = document.documentElement.clientWidth;
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
     };
-    var qrsize = myWidth > 1024 ? 200:100;
-    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
-    var p = $('.article-share-qrcode').position();
-    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
-                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
-                          .qrcode(options);
-  };
-  $(window).resize(function(){
-    $('.hoverqrcode').hide();
   });
-  $('.article-share-qrcode').click(function(){
-    updatehoverqrcode();
-    $('.hoverqrcode').toggle();
-  });
-  $('.article-share-qrcode').hover(function(){}, function(){
-      $('.hoverqrcode').hide();
-  });
-});   
 </script>
 
 
 
-<script type="text/javascript">
-  var duoshuoQuery = {short_name:"jwg"};
-  (function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = '//static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0] 
-    || document.getElementsByTagName('body')[0]).appendChild(ds);
-  })();
-</script> 
+  <script type="text/javascript" src="/js/bootstrap.js"></script>
 
+  
+  
 
+  
+  
 
-
-
-
-
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){ 
-  $('.article-content').each(function(i){
-    $(this).find('img').each(function(){
-      if ($(this).parent().hasClass('fancybox')) return;
-      var alt = this.alt;
-      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
-      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
-    });
-    $(this).find('.fancybox').each(function(){
-      $(this).attr('rel', 'article' + i);
-    });
-  });
-  if($.fancybox){
-    $('.fancybox').fancybox();
-  }
-}); 
-</script>
-
-
-
-<!-- Analytics Begin -->
-
-<script type="text/javascript">
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-69840176-1', 'http://lovenight.github.io/');  
-ga('send', 'pageview');
-</script>
-
-
-
-
-
-<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256738554'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s23.cnzz.com/z_stat.php%3Fid%3D1256738554' type='text/javascript'%3E%3C/script%3E"));</script>
-
-<!-- Analytics End -->
-
-<!-- Totop Begin -->
-
-	<div id="totop">
-	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
-	</div>
-	<script src="/js/totop.js"></script>
-
-<!-- Totop End -->
-
-<!-- MathJax Begin -->
-<!-- mathjax config similar to math.stackexchange -->
-
-
-<!-- MathJax End -->
-
-<!-- Tiny_search Begin -->
-
-<!-- Tiny_search End -->
-
-  </body>
+</body>
 </html>
