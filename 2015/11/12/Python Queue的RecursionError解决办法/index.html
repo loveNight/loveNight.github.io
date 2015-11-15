@@ -68,7 +68,7 @@ Traceback (most recent call last):
 Traceback (most recent call last):
   File &quot;C:\Python 3.5\lib\multiprocessing\queues.py&quot;, line 241, in _feed">
 <meta property="og:image" content="http://7xo8t2.com1.z0.glb.clouddn.com/img/%E7%BC%96%E7%A8%8B/Python/Python%20Queue%E5%AF%B9%E8%B1%A1%E5%BC%95%E8%B5%B7%E7%9A%84RecursionError%3Amaximum%20recursion%20depth%20exceeded/%E4%B8%8B%E8%BD%BD%E5%BE%97%E5%88%B0%E7%9A%84csv%E6%96%87%E4%BB%B6.png">
-<meta property="og:updated_time" content="2015-11-15T12:19:27.206Z">
+<meta property="og:updated_time" content="2015-11-15T16:09:49.357Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python Queue对象引起的RecursionError:maximum recursion depth exceeded">
 <meta name="twitter:description" content="有网友想下载2014年4月至今的新加坡PSI数据：Historical PSI Readings，看这页面比较简单就练手写了个爬虫。
@@ -136,7 +136,7 @@ Traceback (most recent call last):
   
 
   
-    <ul id="menu" class="menu ">
+    <ul id="menu" class="menu menu-left">
       
         
         <li class="menu-item menu-item-home">
@@ -184,7 +184,7 @@ Traceback (most recent call last):
             
               <i class="menu-item-icon fa fa-question-circle fa-fw"></i> <br />
             
-            menu.android
+            android
           </a>
         </li>
       
@@ -194,7 +194,7 @@ Traceback (most recent call last):
             
               <i class="menu-item-icon fa fa-question-circle fa-fw"></i> <br />
             
-            menu.python
+            python
           </a>
         </li>
       
@@ -204,7 +204,7 @@ Traceback (most recent call last):
             
               <i class="menu-item-icon fa fa-question-circle fa-fw"></i> <br />
             
-            menu.api
+            API
           </a>
         </li>
       
@@ -224,6 +224,27 @@ Traceback (most recent call last):
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  
+  <form class="site-search-form">
+    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+  </form>
+
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'p1N1m5xSatBPY6xBpi2o','2.0.0');
+</script>
+
+
+
+    </div>
   
 </nav>
 
@@ -268,6 +289,10 @@ Traceback (most recent call last):
             <time itemprop="dateCreated" datetime="2015-11-12T19:54:47+08:00" content="2015-11-12">
               2015-11-12
             </time>
+
+            
+              <span id="busuanzi_container_page_pv">&nbsp;&nbsp;|&nbsp;&nbsp;阅读量 <span id="busuanzi_value_page_pv"></span> 次</span>
+            
           </span>
 
           
@@ -331,7 +356,8 @@ Traceback (most recent call last):
   File <span class="string">"C:\Python 3.5\lib\multiprocessing\reduction.py"</span>, line <span class="number">50</span>, <span class="keyword">in</span> dumps
     <span class="function"><span class="title">cls</span><span class="params">(buf, protocol)</span></span>.<span class="function"><span class="title">dump</span><span class="params">(obj)</span></span>
 RecursionError: maximum recursion depth exceeded
-</code></pre><p>递归深度超过限制？但是我代码中没用递归啊。翻了一下<code>queues.py</code>的源码，原来<code>multiprocessing.Queue</code>在首次调用<code>put()</code>方法时会启动一个名为<code>QueueFeederThread</code>的调度线程，用于分配数据。该线程传输数据前会先调用<code>ForkingPickler.dumps(obj)</code>将数据序列化成<code>bytes</code>，这个过程中抛出<code>RecursionError</code>。后续调用我翻了半小时也没看懂，暂时放一边吧。</p>
+</code></pre><a id="more"></a>
+<p>递归深度超过限制？但是我代码中没用递归啊。翻了一下<code>queues.py</code>的源码，原来<code>multiprocessing.Queue</code>在首次调用<code>put()</code>方法时会启动一个名为<code>QueueFeederThread</code>的调度线程，用于分配数据。该线程传输数据前会先调用<code>ForkingPickler.dumps(obj)</code>将数据序列化成<code>bytes</code>，这个过程中抛出<code>RecursionError</code>。后续调用我翻了半小时也没看懂，暂时放一边吧。</p>
 <p>Google一番得知Python有默认的递归深度限制</p>
 <pre><code><span class="prompt">&gt;&gt;</span>&gt; import sys
 <span class="prompt">&gt;&gt;</span>&gt; sys.getrecursionlimit()
@@ -388,6 +414,29 @@ RecursionError: maximum recursion depth exceeded
 
     <div class="post-spread">
       
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
     </div>
   </div>
 
@@ -441,7 +490,7 @@ RecursionError: maximum recursion depth exceeded
           <img class="site-author-image" src="/images/avatar.jpg" alt="loveNight" itemprop="image"/>
           <p class="site-author-name" itemprop="name">loveNight</p>
         </div>
-        <p class="site-description motion-element" itemprop="description">莫厌追欢笑语频，寻思离乱好伤神。闲来屈指从头数，得见清平有几人</p>
+        <p class="site-description motion-element" itemprop="description">自古求真皆寂寞，唯挑心灯伴夜霭</p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
@@ -452,7 +501,7 @@ RecursionError: maximum recursion depth exceeded
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">分类</span>
               </a>
           </div>
@@ -477,12 +526,45 @@ RecursionError: maximum recursion depth exceeded
 
         <div class="links-of-author motion-element">
           
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/loveNight" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> github
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/p/1005051069913250" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> weibo
+                  
+                </a>
+              </span>
+            
+          
         </div>
 
         
         
 
         <div class="links-of-author motion-element">
+          
+            <p class="site-author-name">友情链接</p>
+            
+              <span class="links-of-author-item">
+                <a href="http://blog.csdn.net/kinglearnjava" target="_blank">我的CSDN博客</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://blog.sina.com.cn/u/1069913250" target="_blank">我的新浪博客</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.douban.com/people/songlet/photos" target="_blank">宋乐天的相册</a>
+              </span>
+            
           
         </div>
 
@@ -545,10 +627,7 @@ RecursionError: maximum recursion depth exceeded
 </div>
 
 
-
-
-&nbsp;&nbsp;|&nbsp;&nbsp;本页点击 <span id="busuanzi_value_page_pv"></span> 次
-&nbsp;&nbsp;|&nbsp;&nbsp;本站总点击 <span id="busuanzi_value_site_pv"></span> 次
+&nbsp;&nbsp;|&nbsp;&nbsp;总点击 <span id="busuanzi_value_site_pv"></span> 次
 &nbsp;&nbsp;|&nbsp;&nbsp;您是第 <span id="busuanzi_value_site_uv"></span> 位访客
 
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">

@@ -56,21 +56,18 @@
 
 
 <meta name="description" content="晚上忽然想到个问题，解析Json数据，用正则式和json包，哪个更快？
-写了段代码测试：
-123456789101112131415161718192021222324252627282930313233#!/usr/bin/env python# -*- coding: utf-8 -*-# @Author: loveNight# @Date:   2015-10-28 19:59:24impo">
+写了段代码测试：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python 3 json与正则式解析速度测试">
 <meta property="og:url" content="http://lovenight.github.io/2015/11/14/Python-3-json与正则式解析速度测试/index.html">
 <meta property="og:site_name" content="岁月如歌">
 <meta property="og:description" content="晚上忽然想到个问题，解析Json数据，用正则式和json包，哪个更快？
-写了段代码测试：
-123456789101112131415161718192021222324252627282930313233#!/usr/bin/env python# -*- coding: utf-8 -*-# @Author: loveNight# @Date:   2015-10-28 19:59:24impo">
-<meta property="og:updated_time" content="2015-11-15T12:19:33.796Z">
+写了段代码测试：">
+<meta property="og:updated_time" content="2015-11-15T16:09:59.450Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python 3 json与正则式解析速度测试">
 <meta name="twitter:description" content="晚上忽然想到个问题，解析Json数据，用正则式和json包，哪个更快？
-写了段代码测试：
-123456789101112131415161718192021222324252627282930313233#!/usr/bin/env python# -*- coding: utf-8 -*-# @Author: loveNight# @Date:   2015-10-28 19:59:24impo">
+写了段代码测试：">
 
 
 
@@ -132,7 +129,7 @@
   
 
   
-    <ul id="menu" class="menu ">
+    <ul id="menu" class="menu menu-left">
       
         
         <li class="menu-item menu-item-home">
@@ -180,7 +177,7 @@
             
               <i class="menu-item-icon fa fa-question-circle fa-fw"></i> <br />
             
-            menu.android
+            android
           </a>
         </li>
       
@@ -190,7 +187,7 @@
             
               <i class="menu-item-icon fa fa-question-circle fa-fw"></i> <br />
             
-            menu.python
+            python
           </a>
         </li>
       
@@ -200,7 +197,7 @@
             
               <i class="menu-item-icon fa fa-question-circle fa-fw"></i> <br />
             
-            menu.api
+            API
           </a>
         </li>
       
@@ -220,6 +217,27 @@
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  
+  <form class="site-search-form">
+    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+  </form>
+
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'p1N1m5xSatBPY6xBpi2o','2.0.0');
+</script>
+
+
+
+    </div>
   
 </nav>
 
@@ -264,6 +282,10 @@
             <time itemprop="dateCreated" datetime="2015-11-14T23:30:23+08:00" content="2015-11-14">
               2015-11-14
             </time>
+
+            
+              <span id="busuanzi_container_page_pv">&nbsp;&nbsp;|&nbsp;&nbsp;阅读量 <span id="busuanzi_value_page_pv"></span> 次</span>
+            
           </span>
 
           
@@ -321,6 +343,7 @@
       
         <span itemprop="articleBody"><p>晚上忽然想到个问题，解析Json数据，用正则式和json包，哪个更快？</p>
 <p>写了段代码测试：</p>
+<a id="more"></a>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="comment"># @Author: loveNight</span></span><br><span class="line"><span class="comment"># @Date:   2015-10-28 19:59:24</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">import</span> timeit</span><br><span class="line"></span><br><span class="line">url = <span class="string">r"http://image.baidu.com/search/acjson?tn=resultjson_com&amp;ipn=rj&amp;ct=201326592&amp;is=&amp;fp=result&amp;queryWord=%E9%95%BF%E8%80%85%E8%9B%A4&amp;cl=2&amp;lm=-1&amp;ie=utf-8&amp;oe=utf-8&amp;adpicid=&amp;st=&amp;z=&amp;ic=&amp;word=%E9%95%BF%E8%80%85%E8%9B%A4&amp;s=&amp;se=&amp;tab=&amp;width=&amp;height=&amp;face=&amp;istype=&amp;qc=&amp;nc=1&amp;fr=&amp;pn=60&amp;rn=60&amp;gsm=3c&amp;1447527816768="</span></span><br><span class="line">re_url = re.compile(<span class="string">r'"objURL":"(.*?)".*?"fromPageTitle":"(.*?)"'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 这串JSON编码有问题，必须手动指定utf-8</span></span><br><span class="line">html = requests.get(url).content.decode(<span class="string">"utf-8"</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">byRe</span><span class="params">(html)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> re_url.findall(html)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">byJson</span><span class="params">(html)</span>:</span></span><br><span class="line">    data = json.loads(html)</span><br><span class="line">    <span class="keyword">return</span> [[x[<span class="string">"objURL"</span>], x[<span class="string">"fromPageTitle"</span>]] <span class="keyword">for</span> x <span class="keyword">in</span> data[<span class="string">"data"</span>] <span class="keyword">if</span> <span class="string">"objURL"</span> <span class="keyword">in</span> x.keys() <span class="keyword">and</span> <span class="string">"fromPageTitle"</span> <span class="keyword">in</span> x.keys()]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">timeJson = timeit.timeit(</span><br><span class="line">    <span class="string">"byJson(html)"</span>, <span class="string">"from __main__ import byJson; from __main__ import html"</span>, number=<span class="number">10000</span>)</span><br><span class="line">print(<span class="string">"Json解析一万次"</span>, timeJson, <span class="string">"秒"</span>)</span><br><span class="line"></span><br><span class="line">timeRe = timeit.timeit(</span><br><span class="line">    <span class="string">"byRe(html)"</span>, <span class="string">"from __main__ import byRe; from __main__ import html"</span>, number=<span class="number">10000</span>)</span><br><span class="line">print(<span class="string">"Re解析一万次"</span>, timeRe, <span class="string">"秒"</span>)</span><br></pre></td></tr></table></figure>
 <p>运行结果：</p>
 <pre><code>Json解析一万次 <span class="number">14.212283402</span>610288 秒
@@ -373,6 +396,29 @@ Re解析一万次 <span class="number">9.27284899</span><span class="number">334
 
 
     <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
       
     </div>
   </div>
@@ -427,7 +473,7 @@ Re解析一万次 <span class="number">9.27284899</span><span class="number">334
           <img class="site-author-image" src="/images/avatar.jpg" alt="loveNight" itemprop="image"/>
           <p class="site-author-name" itemprop="name">loveNight</p>
         </div>
-        <p class="site-description motion-element" itemprop="description">莫厌追欢笑语频，寻思离乱好伤神。闲来屈指从头数，得见清平有几人</p>
+        <p class="site-description motion-element" itemprop="description">自古求真皆寂寞，唯挑心灯伴夜霭</p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
@@ -438,7 +484,7 @@ Re解析一万次 <span class="number">9.27284899</span><span class="number">334
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">分类</span>
               </a>
           </div>
@@ -463,12 +509,45 @@ Re解析一万次 <span class="number">9.27284899</span><span class="number">334
 
         <div class="links-of-author motion-element">
           
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/loveNight" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> github
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/p/1005051069913250" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> weibo
+                  
+                </a>
+              </span>
+            
+          
         </div>
 
         
         
 
         <div class="links-of-author motion-element">
+          
+            <p class="site-author-name">友情链接</p>
+            
+              <span class="links-of-author-item">
+                <a href="http://blog.csdn.net/kinglearnjava" target="_blank">我的CSDN博客</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://blog.sina.com.cn/u/1069913250" target="_blank">我的新浪博客</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.douban.com/people/songlet/photos" target="_blank">宋乐天的相册</a>
+              </span>
+            
           
         </div>
 
@@ -531,10 +610,7 @@ Re解析一万次 <span class="number">9.27284899</span><span class="number">334
 </div>
 
 
-
-
-&nbsp;&nbsp;|&nbsp;&nbsp;本页点击 <span id="busuanzi_value_page_pv"></span> 次
-&nbsp;&nbsp;|&nbsp;&nbsp;本站总点击 <span id="busuanzi_value_site_pv"></span> 次
+&nbsp;&nbsp;|&nbsp;&nbsp;总点击 <span id="busuanzi_value_site_pv"></span> 次
 &nbsp;&nbsp;|&nbsp;&nbsp;您是第 <span id="busuanzi_value_site_uv"></span> 位访客
 
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">

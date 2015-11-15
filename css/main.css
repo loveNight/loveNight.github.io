@@ -186,7 +186,7 @@ th {
 body {
   position: relative;
   font-family: Lato, "PingFang SC", "Microsoft YaHei", sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 2;
   color: #555;
   background: #fff;
@@ -471,7 +471,7 @@ pre,
 }
 pre,
 code {
-  font-family: "Input Mono", "PT Mono", Consolas, Monaco, Menlo, monospace;
+  font-family: Monaco, Menlo, monospace, "Input Mono", "PT Mono", Consolas;
 }
 code {
   word-break: break-all;
@@ -961,7 +961,7 @@ body {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #3be011;
+  background: #d2edc3;
 }
 .sidebar-nav {
   margin: 0 0 20px;
@@ -1198,7 +1198,7 @@ body {
 .post-body .figure .caption {
   margin: 10px auto 15px;
   text-align: center;
-  font-size: 14px;
+  font-size: 15px;
   color: #999;
   font-weight: bold;
   line-height: 1;
@@ -2135,7 +2135,7 @@ ul li {
 }
 .post-more-link a {
   padding: 0;
-  font-size: 14px;
+  font-size: 15px;
   color: #666;
   background: none;
   border: none;

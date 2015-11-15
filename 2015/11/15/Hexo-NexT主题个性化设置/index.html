@@ -60,10 +60,9 @@
 hexo new page &quot;Android&quot;
 hexo new page &quot;Python&quot;
 hexo new page &quot;API&quot;
-然后在主题配置文件里添加：
+然后在主题配置文件\themes\next\_config.yml添加：
 menu:
-  home: /
-  categories: /categories">
+  home: /">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo NexT主题个性化设置">
 <meta property="og:url" content="http://lovenight.github.io/2015/11/15/Hexo-NexT主题个性化设置/index.html">
@@ -73,12 +72,11 @@ menu:
 hexo new page &quot;Android&quot;
 hexo new page &quot;Python&quot;
 hexo new page &quot;API&quot;
-然后在主题配置文件里添加：
+然后在主题配置文件\themes\next\_config.yml添加：
 menu:
-  home: /
-  categories: /categories">
+  home: /">
 <meta property="og:image" content="http://7xo8t2.com1.z0.glb.clouddn.com/img/%E7%BC%96%E7%A8%8B/hexo/Hexo%20NexT%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E8%AE%BE%E7%BD%AE/NexT%20%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A0%87%E7%AD%BE.png">
-<meta property="og:updated_time" content="2015-11-15T14:55:00.155Z">
+<meta property="og:updated_time" content="2015-11-15T17:09:33.030Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo NexT主题个性化设置">
 <meta name="twitter:description" content="最近发现款非常简洁的主题，NexT。先按照NexT使用文档 配置了一番，仍然感觉不满意，于是自己摸索了一下，作了些修改
@@ -86,10 +84,9 @@ menu:
 hexo new page &quot;Android&quot;
 hexo new page &quot;Python&quot;
 hexo new page &quot;API&quot;
-然后在主题配置文件里添加：
+然后在主题配置文件\themes\next\_config.yml添加：
 menu:
-  home: /
-  categories: /categories">
+  home: /">
 
 
 
@@ -151,7 +148,7 @@ menu:
   
 
   
-    <ul id="menu" class="menu ">
+    <ul id="menu" class="menu menu-left">
       
         
         <li class="menu-item menu-item-home">
@@ -199,7 +196,7 @@ menu:
             
               <i class="menu-item-icon fa fa-question-circle fa-fw"></i> <br />
             
-            menu.android
+            android
           </a>
         </li>
       
@@ -209,7 +206,7 @@ menu:
             
               <i class="menu-item-icon fa fa-question-circle fa-fw"></i> <br />
             
-            menu.python
+            python
           </a>
         </li>
       
@@ -219,7 +216,7 @@ menu:
             
               <i class="menu-item-icon fa fa-question-circle fa-fw"></i> <br />
             
-            menu.api
+            API
           </a>
         </li>
       
@@ -239,6 +236,27 @@ menu:
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  
+  <form class="site-search-form">
+    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+  </form>
+
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'p1N1m5xSatBPY6xBpi2o','2.0.0');
+</script>
+
+
+
+    </div>
   
 </nav>
 
@@ -283,6 +301,10 @@ menu:
             <time itemprop="dateCreated" datetime="2015-11-15T21:44:19+08:00" content="2015-11-15">
               2015-11-15
             </time>
+
+            
+              <span id="busuanzi_container_page_pv">&nbsp;&nbsp;|&nbsp;&nbsp;阅读量 <span id="busuanzi_value_page_pv"></span> 次</span>
+            
           </span>
 
           
@@ -343,17 +365,17 @@ menu:
 <pre><code>hexo <span class="keyword">new</span> page <span class="string">"Android"</span>
 hexo <span class="keyword">new</span> page <span class="string">"Python"</span>
 hexo <span class="keyword">new</span> page <span class="string">"API"</span>
-</code></pre><p>然后在主题配置文件里添加：</p>
+</code></pre><p>然后在主题配置文件<code>\themes\next\_config.yml</code>添加：</p>
 <pre><code><span class="attribute">menu</span>:
   <span class="attribute">home</span>: /
   <span class="attribute">categories</span>: /categories
   <span class="attribute">archives</span>: /archives
   <span class="attribute">tags</span>: /tags
-  <span class="attribute">Android</span>: /Android
+  <span class="attribute">Android</span>: /Android  # 加在这里
   <span class="attribute">Python</span>: /Python
   <span class="attribute">API</span>: /API
-</code></pre><p>但是显示效果却是这样的：<br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/%E7%BC%96%E7%A8%8B/hexo/Hexo%20NexT%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E8%AE%BE%E7%BD%AE/NexT%20%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A0%87%E7%AD%BE.png" alt=""></p>
-<p><del>打开<code>\themes\next\languages\zh-Hans.yml</code>，这是简体中文的配置文件，如果你的博客用的是其他语言，请打开对应的文件。</del></p>
+</code></pre><a id="more"></a>
+<p>打开<code>\themes\next\languages\zh-Hans.yml</code>，这是简体中文的配置文件，如果你的博客用的是其他语言，请打开对应的文件。</p>
 <pre><code><span class="attribute">menu</span>:
   <span class="attribute">home</span>: 首页
   <span class="attribute">archives</span>: 归档
@@ -362,10 +384,11 @@ hexo <span class="keyword">new</span> page <span class="string">"API"</span>
   <span class="attribute">about</span>: 关于
   <span class="attribute">search</span>: 搜索
   <span class="attribute">commonweal</span>: 公益<span class="number">404</span>
-  <span class="attribute">Android</span>: Android
-  <span class="attribute">Python</span>: Python
-  <span class="attribute">API</span>: API
-</code></pre><h2 id="修改底栏">修改底栏</h2><p>先准备一些代码。<a href="http://www.cnzz.com" target="_blank" rel="external">站长统计</a>，注册并获取统计代码：</p>
+  <span class="attribute">android</span>: Android
+  <span class="attribute">python</span>: Python
+  <span class="attribute">api</span>: API
+</code></pre><p>注意这里第一列必须全为小写，否则效果是这样的：<br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/%E7%BC%96%E7%A8%8B/hexo/Hexo%20NexT%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E8%AE%BE%E7%BD%AE/NexT%20%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A0%87%E7%AD%BE.png" alt=""></p>
+<h2 id="修改底栏">修改底栏</h2><p>先准备一些代码。<a href="http://www.cnzz.com" target="_blank" rel="external">站长统计</a>，注册并获取统计代码：</p>
 <pre><code>&amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp;
 &lt;script type=<span class="string">"text/javascript"</span>&gt;var cnzz_protocol = ((<span class="string">"https:"</span> == document.location.protocol) ? <span class="string">" https://"</span> : <span class="string">" http://"</span>);document.<span class="keyword">write</span>(unescape(<span class="string">"<span class="variable">%3Cspan</span> id='cnzz_stat_icon_1256738554'<span class="variable">%3E</span><span class="variable">%3C</span>/span<span class="variable">%3E</span><span class="variable">%3Cscript</span> src='"</span> + cnzz_protocol + <span class="string">"s4.cnzz.com/z_stat.php<span class="variable">%3Fid</span><span class="variable">%3D1256738554</span>' type='text/javascript'<span class="variable">%3E</span><span class="variable">%3C</span>/script<span class="variable">%3E</span>"</span>));
 &lt;<span class="regexp">/script&gt;</span>
@@ -395,7 +418,10 @@ npm <span class="keyword">install</span> hexo-generator-baidu-sitemap@<span clas
     s.parentNode.insertBefore(bp, s);
 })();
 </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-</code></pre><p>下面把这些代码全加入模板中，打开<code>\themes\next\layout\_partials\footer.swig</code>，修改后的文件内容为：<br><figure class="highlight twig"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"copyright"</span> &gt;</span></span><br><span class="line">  </span><span class="template_tag">&#123;% <span class="keyword">set</span> current = <span class="function"><span class="keyword">date</span><span class="params">(Date.now()</span></span>, "YYYY") %&#125;</span><span class="xml"></span><br><span class="line">  &amp;copy; </span><span class="template_tag">&#123;% <span class="keyword">if</span> theme.since and theme.since != current %&#125;</span><span class="xml"> </span><span class="variable">&#123;&#123; theme.since &#125;&#125;</span><span class="xml"> - </span><span class="template_tag">&#123;% <span class="keyword">endif</span> %&#125;</span><span class="xml"></span><br><span class="line">  <span class="tag">&lt;<span class="title">span</span> <span class="attribute">itemprop</span>=<span class="value">"copyrightYear"</span>&gt;</span></span><span class="variable">&#123;&#123; current &#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"with-love"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"icon-next-heart fa fa-heart"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"author"</span> <span class="attribute">itemprop</span>=<span class="value">"copyrightHolder"</span>&gt;</span></span><span class="variable">&#123;&#123; config.author &#125;&#125;</span><span class="xml"></span><br><span class="line"></span><br><span class="line">  &amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp;<span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"><span class="keyword">var</span> cnzz_protocol = ((<span class="string">"https:"</span> == <span class="built_in">document</span>.location.protocol) ? <span class="string">" https://"</span> : <span class="string">" http://"</span>);<span class="built_in">document</span>.write(<span class="built_in">unescape</span>(<span class="string">"%3Cspan id='cnzz_stat_icon_1256738554'%3E%3C/span%3E%3Cscript src='"</span> + cnzz_protocol + <span class="string">"s4.cnzz.com/z_stat.php%3Fid%3D1256738554' type='text/javascript'%3E%3C/script%3E"</span>));</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  &amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp;<span class="tag">&lt;<span class="title">span</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"/sitemap.xml"</span>&gt;</span>Google网站地图<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br><span class="line">  &amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp;<span class="tag">&lt;<span class="title">span</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"/baidusitemap.xml"</span>&gt;</span>百度网站地图<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"powered-by"</span>&gt;</span></span><br><span class="line">  </span><span class="variable">&#123;&#123; __('footer.powered', '&lt;a class="theme-link" href="http://hexo.io"&gt;Hexo&lt;/a&gt;') &#125;&#125;</span><span class="xml"></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"theme-info"</span>&gt;</span></span><br><span class="line">  </span><span class="variable">&#123;&#123; __('footer.theme') &#125;&#125;</span><span class="xml"> -</span><br><span class="line">  <span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"theme-link"</span> <span class="attribute">href</span>=<span class="value">"https://github.com/iissnan/hexo-theme-next"</span>&gt;</span></span><br><span class="line">    NexT</span><span class="template_tag">&#123;% <span class="keyword">if</span> theme.scheme %&#125;</span><span class="xml">.</span><span class="variable">&#123;&#123; theme.scheme &#125;&#125;</span><span class="xml"></span><span class="template_tag">&#123;% <span class="keyword">endif</span> %&#125;</span><span class="xml"></span><br><span class="line">  <span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp;本页点击 <span class="tag">&lt;<span class="title">span</span> <span class="attribute">id</span>=<span class="value">"busuanzi_value_page_pv"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span> 次</span><br><span class="line">&amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp;本站总点击 <span class="tag">&lt;<span class="title">span</span> <span class="attribute">id</span>=<span class="value">"busuanzi_value_site_pv"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span> 次</span><br><span class="line">&amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp;您是第 <span class="tag">&lt;<span class="title">span</span> <span class="attribute">id</span>=<span class="value">"busuanzi_value_site_uv"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span> 位访客</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">async</span> <span class="attribute">src</span>=<span class="value">"https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;</span><span class="undefined"></span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript"></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> bp = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</span><br><span class="line">    bp.src = <span class="string">'//push.zhanzhang.baidu.com/push.js'</span>;</span><br><span class="line">    <span class="keyword">var</span> s = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"script"</span>)[<span class="number">0</span>];</span><br><span class="line">    s.parentNode.insertBefore(bp, s);</span><br><span class="line">&#125;)();</span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><span class="template_tag">&#123;% <span class="function"><span class="keyword">block</span></span> footer %&#125;</span><span class="xml"></span><span class="template_tag">&#123;% <span class="keyword">endblock</span> %&#125;</span><span class="xml"></span></span><br></pre></td></tr></table></figure></p>
+</code></pre><p>下面把这些代码全加入模板中，打开<code>\themes\next\layout\_partials\footer.swig</code>，修改后的文件内容为：<br><figure class="highlight twig"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"copyright"</span> &gt;</span></span><br><span class="line">  </span><span class="template_tag">&#123;% <span class="keyword">set</span> current = <span class="function"><span class="keyword">date</span><span class="params">(Date.now()</span></span>, "YYYY") %&#125;</span><span class="xml"></span><br><span class="line">  &amp;copy; </span><span class="template_tag">&#123;% <span class="keyword">if</span> theme.since and theme.since != current %&#125;</span><span class="xml"> </span><span class="variable">&#123;&#123; theme.since &#125;&#125;</span><span class="xml"> - </span><span class="template_tag">&#123;% <span class="keyword">endif</span> %&#125;</span><span class="xml"></span><br><span class="line">  <span class="tag">&lt;<span class="title">span</span> <span class="attribute">itemprop</span>=<span class="value">"copyrightYear"</span>&gt;</span></span><span class="variable">&#123;&#123; current &#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"with-love"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"icon-next-heart fa fa-heart"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"author"</span> <span class="attribute">itemprop</span>=<span class="value">"copyrightHolder"</span>&gt;</span></span><span class="variable">&#123;&#123; config.author &#125;&#125;</span><span class="xml"></span><br><span class="line"></span><br><span class="line">  &amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp;<span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"><span class="keyword">var</span> cnzz_protocol = ((<span class="string">"https:"</span> == <span class="built_in">document</span>.location.protocol) ? <span class="string">" https://"</span> : <span class="string">" http://"</span>);<span class="built_in">document</span>.write(<span class="built_in">unescape</span>(<span class="string">"%3Cspan id='cnzz_stat_icon_1256738554'%3E%3C/span%3E%3Cscript src='"</span> + cnzz_protocol + <span class="string">"s4.cnzz.com/z_stat.php%3Fid%3D1256738554' type='text/javascript'%3E%3C/script%3E"</span>));</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  &amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp;<span class="tag">&lt;<span class="title">span</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"/sitemap.xml"</span>&gt;</span>Google网站地图<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br><span class="line">  &amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp;<span class="tag">&lt;<span class="title">span</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"/baidusitemap.xml"</span>&gt;</span>百度网站地图<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"powered-by"</span>&gt;</span></span><br><span class="line">  </span><span class="variable">&#123;&#123; __('footer.powered', '&lt;a class="theme-link" href="http://hexo.io"&gt;Hexo&lt;/a&gt;') &#125;&#125;</span><span class="xml"></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"theme-info"</span>&gt;</span></span><br><span class="line">  </span><span class="variable">&#123;&#123; __('footer.theme') &#125;&#125;</span><span class="xml"> -</span><br><span class="line">  <span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"theme-link"</span> <span class="attribute">href</span>=<span class="value">"https://github.com/iissnan/hexo-theme-next"</span>&gt;</span></span><br><span class="line">    NexT</span><span class="template_tag">&#123;% <span class="keyword">if</span> theme.scheme %&#125;</span><span class="xml">.</span><span class="variable">&#123;&#123; theme.scheme &#125;&#125;</span><span class="xml"></span><span class="template_tag">&#123;% <span class="keyword">endif</span> %&#125;</span><span class="xml"></span><br><span class="line">  <span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp;总点击 <span class="tag">&lt;<span class="title">span</span> <span class="attribute">id</span>=<span class="value">"busuanzi_value_site_pv"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span> 次</span><br><span class="line">&amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp;您是第 <span class="tag">&lt;<span class="title">span</span> <span class="attribute">id</span>=<span class="value">"busuanzi_value_site_uv"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span> 位访客</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">async</span> <span class="attribute">src</span>=<span class="value">"https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;</span><span class="undefined"></span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript"></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> bp = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</span><br><span class="line">    bp.src = <span class="string">'//push.zhanzhang.baidu.com/push.js'</span>;</span><br><span class="line">    <span class="keyword">var</span> s = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"script"</span>)[<span class="number">0</span>];</span><br><span class="line">    s.parentNode.insertBefore(bp, s);</span><br><span class="line">&#125;)();</span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><span class="template_tag">&#123;% <span class="function"><span class="keyword">block</span></span> footer %&#125;</span><span class="xml"></span><span class="template_tag">&#123;% <span class="keyword">endblock</span> %&#125;</span><span class="xml"></span></span><br></pre></td></tr></table></figure></p>
+<h2 id="参考资料">参考资料</h2><ul>
+<li><a href="http://www.selfrebuild.net/2015/06/24/Github-Hexo-Next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E5%AE%9A%E5%88%B6/" target="_blank" rel="external">Hexo博客优化 - Next主题个性化定制</a></li>
+</ul>
 </span>
       
     </div>
@@ -435,6 +461,29 @@ npm <span class="keyword">install</span> hexo-generator-baidu-sitemap@<span clas
 
 
     <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
       
     </div>
   </div>
@@ -489,7 +538,7 @@ npm <span class="keyword">install</span> hexo-generator-baidu-sitemap@<span clas
           <img class="site-author-image" src="/images/avatar.jpg" alt="loveNight" itemprop="image"/>
           <p class="site-author-name" itemprop="name">loveNight</p>
         </div>
-        <p class="site-description motion-element" itemprop="description">莫厌追欢笑语频，寻思离乱好伤神。闲来屈指从头数，得见清平有几人</p>
+        <p class="site-description motion-element" itemprop="description">自古求真皆寂寞，唯挑心灯伴夜霭</p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
@@ -500,7 +549,7 @@ npm <span class="keyword">install</span> hexo-generator-baidu-sitemap@<span clas
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">分类</span>
               </a>
           </div>
@@ -525,12 +574,45 @@ npm <span class="keyword">install</span> hexo-generator-baidu-sitemap@<span clas
 
         <div class="links-of-author motion-element">
           
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/loveNight" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> github
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/p/1005051069913250" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> weibo
+                  
+                </a>
+              </span>
+            
+          
         </div>
 
         
         
 
         <div class="links-of-author motion-element">
+          
+            <p class="site-author-name">友情链接</p>
+            
+              <span class="links-of-author-item">
+                <a href="http://blog.csdn.net/kinglearnjava" target="_blank">我的CSDN博客</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://blog.sina.com.cn/u/1069913250" target="_blank">我的新浪博客</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.douban.com/people/songlet/photos" target="_blank">宋乐天的相册</a>
+              </span>
+            
           
         </div>
 
@@ -546,7 +628,7 @@ npm <span class="keyword">install</span> hexo-generator-baidu-sitemap@<span clas
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#添加新页面"><span class="nav-number">1.</span> <span class="nav-text">添加新页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改底栏"><span class="nav-number">2.</span> <span class="nav-text">修改底栏</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#添加新页面"><span class="nav-number">1.</span> <span class="nav-text">添加新页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改底栏"><span class="nav-number">2.</span> <span class="nav-text">修改底栏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">3.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
@@ -593,10 +675,7 @@ npm <span class="keyword">install</span> hexo-generator-baidu-sitemap@<span clas
 </div>
 
 
-
-
-&nbsp;&nbsp;|&nbsp;&nbsp;本页点击 <span id="busuanzi_value_page_pv"></span> 次
-&nbsp;&nbsp;|&nbsp;&nbsp;本站总点击 <span id="busuanzi_value_site_pv"></span> 次
+&nbsp;&nbsp;|&nbsp;&nbsp;总点击 <span id="busuanzi_value_site_pv"></span> 次
 &nbsp;&nbsp;|&nbsp;&nbsp;您是第 <span id="busuanzi_value_site_uv"></span> 位访客
 
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
