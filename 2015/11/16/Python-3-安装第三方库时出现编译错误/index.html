@@ -37,7 +37,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="hexo," />
+  <meta name="keywords" content="Python,lxml,numpy,vcvarsall.bat," />
 
 
 
@@ -55,22 +55,22 @@
 
 
 
-<meta name="description" content="按网上的教程终于配置好了Hexo，其实挺简单的，不过由于Hexo版本的原因，遇到不少坑。顺便学了SSH，push起来方便不少。
-稍后把此次博客搭建心得整理好发出来。
-以前用新浪的博客，可惜不支持代码块和Markdown，主题近十年没怎么变化，三天两头收到无聊的纸条、转发消息。后来转战CSDN，主题和Markdown非常丑，右上角定期出现广告，没法取消。有次还无故封了博客，找管理员询问得知是误操作。">
+<meta name="description" content="安装 numpy 时出现如下错误：
+Python的部分库在安装时要临时编译，找不到编译器就报错。类似的库还有lxml等。根据提示装了Visual C++ 10.0 仍然报错。微软的网站上只找到 Python 2.7 用的VC编译器（我是Python 3.4）。经过一番搜索终于解决。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HelloWorld！">
-<meta property="og:url" content="http://lovenight.github.io/2015/11/09/HelloWorld/index.html">
+<meta property="og:title" content="Python 3 安装第三方库时出现编译错误">
+<meta property="og:url" content="http://lovenight.github.io/2015/11/16/Python-3-安装第三方库时出现编译错误/index.html">
 <meta property="og:site_name" content="岁月如歌">
-<meta property="og:description" content="按网上的教程终于配置好了Hexo，其实挺简单的，不过由于Hexo版本的原因，遇到不少坑。顺便学了SSH，push起来方便不少。
-稍后把此次博客搭建心得整理好发出来。
-以前用新浪的博客，可惜不支持代码块和Markdown，主题近十年没怎么变化，三天两头收到无聊的纸条、转发消息。后来转战CSDN，主题和Markdown非常丑，右上角定期出现广告，没法取消。有次还无故封了博客，找管理员询问得知是误操作。">
-<meta property="og:updated_time" content="2015-11-15T16:08:50.967Z">
+<meta property="og:description" content="安装 numpy 时出现如下错误：
+Python的部分库在安装时要临时编译，找不到编译器就报错。类似的库还有lxml等。根据提示装了Visual C++ 10.0 仍然报错。微软的网站上只找到 Python 2.7 用的VC编译器（我是Python 3.4）。经过一番搜索终于解决。">
+<meta property="og:image" content="http://7xo8t2.com1.z0.glb.clouddn.com/img/%E7%BC%96%E7%A8%8B/Python/Python%203%20%E5%AE%89%E8%A3%85%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E6%97%B6%E5%87%BA%E7%8E%B0%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF/numpy%E5%AE%89%E8%A3%85%E5%87%BA%E9%94%99.jpg">
+<meta property="og:image" content="http://7xo8t2.com1.z0.glb.clouddn.com/img/%E7%BC%96%E7%A8%8B/Python/Python%203%20%E5%AE%89%E8%A3%85%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E6%97%B6%E5%87%BA%E7%8E%B0%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF/whl%E4%B8%8B%E8%BD%BD.jpg">
+<meta property="og:image" content="http://7xo8t2.com1.z0.glb.clouddn.com/img/%E7%BC%96%E7%A8%8B/Python/Python%203%20%E5%AE%89%E8%A3%85%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E6%97%B6%E5%87%BA%E7%8E%B0%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF/%E5%AE%89%E8%A3%85%E7%BB%93%E6%9E%9C.jpg">
+<meta property="og:updated_time" content="2015-11-16T06:33:07.781Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HelloWorld！">
-<meta name="twitter:description" content="按网上的教程终于配置好了Hexo，其实挺简单的，不过由于Hexo版本的原因，遇到不少坑。顺便学了SSH，push起来方便不少。
-稍后把此次博客搭建心得整理好发出来。
-以前用新浪的博客，可惜不支持代码块和Markdown，主题近十年没怎么变化，三天两头收到无聊的纸条、转发消息。后来转战CSDN，主题和Markdown非常丑，右上角定期出现广告，没法取消。有次还无故封了博客，找管理员询问得知是误操作。">
+<meta name="twitter:title" content="Python 3 安装第三方库时出现编译错误">
+<meta name="twitter:description" content="安装 numpy 时出现如下错误：
+Python的部分库在安装时要临时编译，找不到编译器就报错。类似的库还有lxml等。根据提示装了Visual C++ 10.0 仍然报错。微软的网站上只找到 Python 2.7 用的VC编译器（我是Python 3.4）。经过一番搜索终于解决。">
 
 
 
@@ -82,7 +82,7 @@
   };
 </script>
 
-  <title> HelloWorld！ | 岁月如歌 </title>
+  <title> Python 3 安装第三方库时出现编译错误 | 岁月如歌 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -283,7 +283,7 @@
             
             
               
-                HelloWorld！
+                Python 3 安装第三方库时出现编译错误
               
             
           </h1>
@@ -292,8 +292,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-11-09T15:56:26+08:00" content="2015-11-09">
-              2015-11-09
+            <time itemprop="dateCreated" datetime="2015-11-16T13:59:56+08:00" content="2015-11-16">
+              2015-11-16
             </time>
           </span>
 
@@ -306,8 +306,8 @@
               &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/随笔/" itemprop="url" rel="index">
-                    <span itemprop="name">随笔</span>
+                  <a href="/categories/编程/" itemprop="url" rel="index">
+                    <span itemprop="name">编程</span>
                   </a>
                 </span>
 
@@ -318,8 +318,8 @@
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/随笔/瞬间/" itemprop="url" rel="index">
-                    <span itemprop="name">瞬间</span>
+                  <a href="/categories/编程/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
                   </a>
                 </span>
 
@@ -334,8 +334,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/11/09/HelloWorld/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/09/HelloWorld/" itemprop="commentsCount"></span>
+                <a href="/2015/11/16/Python-3-安装第三方库时出现编译错误/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/16/Python-3-安装第三方库时出现编译错误/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -354,15 +354,18 @@
       
 
       
-        <span itemprop="articleBody"><p>按网上的教程终于配置好了Hexo，其实挺简单的，不过由于Hexo版本的原因，遇到不少坑。顺便学了SSH，push起来方便不少。</p>
-<p>稍后把此次博客搭建心得整理好发出来。</p>
-<p>以前用新浪的博客，可惜不支持代码块和Markdown，主题近十年没怎么变化，三天两头收到无聊的纸条、转发消息。后来转战CSDN，主题和Markdown非常丑，右上角定期出现广告，没法取消。有次还无故封了博客，找管理员询问得知是误操作。试了博客园，后台有无用的新闻、文章、日志分类，无法取消，默认的代码块不显示行数，Markdown比CSDN还丑。</p>
+        <span itemprop="articleBody"><p>安装 numpy 时出现如下错误：<br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/%E7%BC%96%E7%A8%8B/Python/Python%203%20%E5%AE%89%E8%A3%85%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E6%97%B6%E5%87%BA%E7%8E%B0%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF/numpy%E5%AE%89%E8%A3%85%E5%87%BA%E9%94%99.jpg" alt=""></p>
+<p>Python的部分库在安装时要临时编译，找不到编译器就报错。类似的库还有lxml等。根据提示装了Visual C++ 10.0 仍然报错。微软的网站上只找到 Python 2.7 用的VC编译器（我是Python 3.4）。经过一番搜索终于解决。</p>
 <a id="more"></a>
-<p>博客还没配置完，先发这篇文章试试效果。</p>
-<p>Python：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"Hello World"</span>)</span><br></pre></td></tr></table></figure>
-<p>Java：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Hello</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Hello World"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>结束</p>
+<p>以numpy为例，步骤如下：</p>
+<h2 id="安装wheel">安装wheel</h2><pre><code>pip <span class="keyword">install</span> wheel
+</code></pre><h2 id="下载编译好的_-whl文件">下载编译好的 .whl文件</h2><p>在<a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy" target="_blank" rel="external">Python Extension Packages for Windows</a>下载对应的文件。<br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/%E7%BC%96%E7%A8%8B/Python/Python%203%20%E5%AE%89%E8%A3%85%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E6%97%B6%E5%87%BA%E7%8E%B0%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF/whl%E4%B8%8B%E8%BD%BD.jpg" alt=""></p>
+<p>英文提示是说vanilla版测试得较少，而且与本页的其他二进制包不兼容，那我们选择mkl版。cp应该是指CPython，后面的数字是Python版本。我下载了<code>numpy‑1.9.3+mkl‑cp34‑none‑win32.whl</code>版本，注意不要改文件名，否则后续步骤会报错。</p>
+<h2 id="安装-whl文件">安装.whl文件</h2><p>命令行定位到.whl文件所在目录，安装命令为：</p>
+<pre><code>pip <span class="keyword">install</span> 带后缀的完整文件名
+</code></pre><p>这么长的文件名，手输容易出错，可以先在命令行输入<code>pip install</code>，然后右键单击CMD窗口标题栏，选<code>编辑</code> -&gt; <code>粘贴</code>。如图：<br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/%E7%BC%96%E7%A8%8B/Python/Python%203%20%E5%AE%89%E8%A3%85%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E6%97%B6%E5%87%BA%E7%8E%B0%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF/%E5%AE%89%E8%A3%85%E7%BB%93%E6%9E%9C.jpg" alt=""></p>
+<h2 id="扩展阅读">扩展阅读</h2><p>以前一直用pip安装第三方库，现在出现个wheel，搞不清楚它们之间的关联。还有网上搜东西时经常看到的easy install是什么玩意？</p>
+<p>找到一篇文章，可以理清这些工具之间的脉络：<a href="http://zengrong.net/post/2169.htm" target="_blank" rel="external">Python 包管理工具解惑</a></p>
 </span>
       
     </div>
@@ -371,7 +374,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/hexo/" rel="tag">#hexo</a>
+            <a href="/tags/Python/" rel="tag">#Python</a>
+          
+            <a href="/tags/lxml/" rel="tag">#lxml</a>
+          
+            <a href="/tags/numpy/" rel="tag">#numpy</a>
+          
+            <a href="/tags/vcvarsall-bat/" rel="tag">#vcvarsall.bat</a>
           
         </div>
       
@@ -380,13 +389,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2015/11/15/Hexo-NexT主题个性化设置/" rel="next" title="Hexo NexT主题个性化设置">
+                <i class="fa fa-chevron-left"></i> Hexo NexT主题个性化设置
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/11/10/Hexo-3-1-1-静态博客搭建指南/" rel="prev" title="Hexo 3.1.1 静态博客搭建指南">
-                Hexo 3.1.1 静态博客搭建指南 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -436,8 +445,8 @@
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/11/09/HelloWorld/"
-           data-title="HelloWorld！" data-url="http://lovenight.github.io/2015/11/09/HelloWorld/">
+      <div class="ds-thread" data-thread-key="2015/11/16/Python-3-安装第三方库时出现编译错误/"
+           data-title="Python 3 安装第三方库时出现编译错误" data-url="http://lovenight.github.io/2015/11/16/Python-3-安装第三方库时出现编译错误/">
       </div>
     
   </div>
@@ -567,7 +576,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装wheel"><span class="nav-number">1.</span> <span class="nav-text">安装wheel</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载编译好的_-whl文件"><span class="nav-number">2.</span> <span class="nav-text">下载编译好的 .whl文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-whl文件"><span class="nav-number">3.</span> <span class="nav-text">安装.whl文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#扩展阅读"><span class="nav-number">4.</span> <span class="nav-text">扩展阅读</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
