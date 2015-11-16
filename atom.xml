@@ -474,7 +474,7 @@ RecursionError: maximum recursion depth exceeded
     <link href="http://lovenight.github.io/2015/11/10/Hexo-3-1-1-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/"/>
     <id>http://lovenight.github.io/2015/11/10/Hexo-3-1-1-静态博客搭建指南/</id>
     <published>2015-11-10T06:46:41.000Z</published>
-    <updated>2015-11-15T17:13:30.626Z</updated>
+    <updated>2015-11-16T08:22:24.406Z</updated>
     <content type="html"><![CDATA[<p><strong>注意，本文适用于hexo 3.x 版本，与2.x略有出入！</strong></p>
 <p>GitHub Pages 本用于介绍托管在 GitHub 的项目，也可以用来搭建博客，有300M免费空间。</p>
 <p>hexo是一个基于Node.js的静态博客程序，可以方便的生成静态网页托管在github和Heroku上。作者是来自台湾的<a href="https://github.com/hexojs/hexo" target="_blank" rel="external">tommy351</a>。<br>优势：</p>
@@ -674,6 +674,8 @@ npm <span class="keyword">install</span> hexo-generator-baidu-sitemap@<span clas
 <p>false - 不做任何检查<br>warn - 在提交时检查并警告<br>true - 在提交时检查，如果发现混用则拒绝提交</p>
 </blockquote>
 <p>建议使用最严格的 true 选项</p>
+<h3 id="项目主页添加README">项目主页添加README</h3><p>Github上博客的仓库主页空荡荡的，没有README。如果把README.md放入source文件夹，<code>hexo g</code>生成时会被解析成html文件，放到public文件夹，生成时又会自动删除。</p>
+<p>解决方法很简单，在source目录下新建文件<code>README.mdown</code>，在里面写README即可。<code>hexo g</code>会把它复制到public文件夹，且不会被解析成html</p>
 <h2 id="参考资料">参考资料</h2><ul>
 <li><a href="http://zipperary.com/categories/hexo/" target="_blank" rel="external">hexo系列教程</a></li>
 <li><a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="external">hexo你的博客</a></li>
