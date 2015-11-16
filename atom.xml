@@ -16,8 +16,8 @@
   
   <entry>
     <title><![CDATA[Python 3 安装第三方库时出现编译错误]]></title>
-    <link href="http://lovenight.github.io/2015/11/16/Python-3-%E5%AE%89%E8%A3%85%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E6%97%B6%E5%87%BA%E7%8E%B0%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF/"/>
-    <id>http://lovenight.github.io/2015/11/16/Python-3-安装第三方库时出现编译错误/</id>
+    <link href="http://lovenight.github.io/2015/11/16/Python/Python-3-%E5%AE%89%E8%A3%85%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E6%97%B6%E5%87%BA%E7%8E%B0%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF/"/>
+    <id>http://lovenight.github.io/2015/11/16/Python/Python-3-安装第三方库时出现编译错误/</id>
     <published>2015-11-16T05:59:56.000Z</published>
     <updated>2015-11-16T06:33:07.781Z</updated>
     <content type="html"><![CDATA[<p>安装 numpy 时出现如下错误：<br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/%E7%BC%96%E7%A8%8B/Python/Python%203%20%E5%AE%89%E8%A3%85%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E6%97%B6%E5%87%BA%E7%8E%B0%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF/numpy%E5%AE%89%E8%A3%85%E5%87%BA%E9%94%99.jpg" alt=""></p>
@@ -55,16 +55,17 @@
   
   <entry>
     <title><![CDATA[Hexo NexT主题个性化设置]]></title>
-    <link href="http://lovenight.github.io/2015/11/15/Hexo-NexT%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E8%AE%BE%E7%BD%AE/"/>
-    <id>http://lovenight.github.io/2015/11/15/Hexo-NexT主题个性化设置/</id>
+    <link href="http://lovenight.github.io/2015/11/15/Hexo/Hexo-NexT%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E8%AE%BE%E7%BD%AE/"/>
+    <id>http://lovenight.github.io/2015/11/15/Hexo/Hexo-NexT主题个性化设置/</id>
     <published>2015-11-15T13:44:19.000Z</published>
-    <updated>2015-11-16T05:57:03.843Z</updated>
+    <updated>2015-11-16T06:45:22.937Z</updated>
     <content type="html"><![CDATA[<p>最近发现款非常简洁的主题，<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">NexT</a>。先按照<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">NexT使用文档</a> 配置了一番，仍然感觉不满意，于是自己摸索了一下，作了些修改</p>
 <h2 id="添加新_Page">添加新 Page</h2><p>用如下命令添加新page</p>
 <pre><code>hexo <span class="keyword">new</span> page <span class="string">"Android"</span>
 hexo <span class="keyword">new</span> page <span class="string">"Python"</span>
 hexo <span class="keyword">new</span> page <span class="string">"API"</span>
-</code></pre><p>然后在主题配置文件<code>\themes\next\_config.yml</code>添加：</p>
+</code></pre><a id="more"></a>
+<p>然后在主题配置文件<code>\themes\next\_config.yml</code>添加：</p>
 <pre><code><span class="attribute">menu</span>:
   <span class="attribute">home</span>: /
   <span class="attribute">categories</span>: /categories
@@ -73,8 +74,7 @@ hexo <span class="keyword">new</span> page <span class="string">"API"</span>
   <span class="attribute">Android</span>: /Android  # 加在这里
   <span class="attribute">Python</span>: /Python
   <span class="attribute">API</span>: /API
-</code></pre><a id="more"></a>
-<p>打开<code>\themes\next\languages\zh-Hans.yml</code>，这是简体中文的配置文件，如果你的博客用的是其他语言，请打开对应的文件。</p>
+</code></pre><p>打开<code>\themes\next\languages\zh-Hans.yml</code>，这是简体中文的配置文件，如果你的博客用的是其他语言，请打开对应的文件。</p>
 <pre><code><span class="attribute">menu</span>:
   <span class="attribute">home</span>: 首页
   <span class="attribute">archives</span>: 归档
@@ -154,15 +154,6 @@ npm <span class="keyword">install</span> hexo-generator-baidu-sitemap@<span clas
 <pre><code>hexo <span class="keyword">new</span> page <span class="string">"Android"</span>
 hexo <span class="keyword">new</span> page <span class="string">"Python"</span>
 hexo <span class="keyword">new</span> page <span class="string">"API"</span>
-</code></pre><p>然后在主题配置文件<code>\themes\next\_config.yml</code>添加：</p>
-<pre><code><span class="attribute">menu</span>:
-  <span class="attribute">home</span>: /
-  <span class="attribute">categories</span>: /categories
-  <span class="attribute">archives</span>: /archives
-  <span class="attribute">tags</span>: /tags
-  <span class="attribute">Android</span>: /Android  # 加在这里
-  <span class="attribute">Python</span>: /Python
-  <span class="attribute">API</span>: /API
 </code></pre>]]>
     
     </summary>
@@ -179,18 +170,18 @@ hexo <span class="keyword">new</span> page <span class="string">"API"</span>
   
   <entry>
     <title><![CDATA[Python 3 多线程下载百度图片搜索结果]]></title>
-    <link href="http://lovenight.github.io/2015/11/15/Python-3-%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B8%8B%E8%BD%BD%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87%E6%90%9C%E7%B4%A2%E7%BB%93%E6%9E%9C/"/>
-    <id>http://lovenight.github.io/2015/11/15/Python-3-多线程下载百度图片搜索结果/</id>
+    <link href="http://lovenight.github.io/2015/11/15/Python/Python-3-%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B8%8B%E8%BD%BD%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87%E6%90%9C%E7%B4%A2%E7%BB%93%E6%9E%9C/"/>
+    <id>http://lovenight.github.io/2015/11/15/Python/Python-3-多线程下载百度图片搜索结果/</id>
     <published>2015-11-15T10:58:36.000Z</published>
-    <updated>2015-11-15T16:10:23.474Z</updated>
+    <updated>2015-11-16T06:45:57.578Z</updated>
     <content type="html"><![CDATA[<p>今天来搜一搜「他」：<a href="http://www.baidu.com/s?wd=%E9%95%BF%E8%80%85%E8%9B%A4&amp;tn=87048150_dg&amp;ie=utf8" target="_blank" rel="external">百度图片搜索结果</a>。<br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/%E7%BC%96%E7%A8%8B/Python/Python%203%20%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B8%8B%E8%BD%BD%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87%E6%90%9C%E7%B4%A2%E7%BB%93%E6%9E%9C%E4%BB%96.png" alt="搜索结果"></p>
 <h2 id="下载简单页面">下载简单页面</h2><p>查看网页源码，发现同一张图片有四种网址：</p>
+<a id="more"></a>
 <pre><code>"thumbURL": "http://img1.imgtn.bdimg.com/it/u=<span class="number">757023778</span>,<span class="number">2840825931</span>&amp;fm=21&amp;gp=0.jpg",
 "middleURL": "http://img1.imgtn.bdimg.com/it/u=<span class="number">757023778</span>,<span class="number">2840825931</span>&amp;fm=21&amp;gp=0.jpg",
 "hoverURL": "http://img1.imgtn.bdimg.com/it/u=<span class="number">757023778</span>,<span class="number">2840825931</span>&amp;fm=23&amp;gp=0.jpg",
 "objURL": "http://imgsrc.baidu.com/forum/w=580/sign=b3bcc<span class="number">2f88a5494</span>ee<span class="number">87220f111</span>df<span class="number">4e0e1/78</span>fed309b3de<span class="number">9c82913</span>abac<span class="number">86a81800a18</span>d84344.jpg",
-</code></pre><a id="more"></a>
-<p>经测试，前三种都有反爬虫措施，用浏览器可以打开，但是刷新一次就403 Forbidden。用爬虫获取不到图片。</p>
+</code></pre><p>经测试，前三种都有反爬虫措施，用浏览器可以打开，但是刷新一次就403 Forbidden。用爬虫获取不到图片。</p>
 <p>第四种objURL是指图片的源网址，获取该网址会出现三种情况：</p>
 <ol>
 <li>正常。继续下载</li>
@@ -322,12 +313,7 @@ word=<span class="preprocessor">%</span>E<span class="number">9</span><span clas
 ]]></content>
     <summary type="html">
     <![CDATA[<p>今天来搜一搜「他」：<a href="http://www.baidu.com/s?wd=%E9%95%BF%E8%80%85%E8%9B%A4&amp;tn=87048150_dg&amp;ie=utf8">百度图片搜索结果</a>。<br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/%E7%BC%96%E7%A8%8B/Python/Python%203%20%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B8%8B%E8%BD%BD%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87%E6%90%9C%E7%B4%A2%E7%BB%93%E6%9E%9C%E4%BB%96.png" alt="搜索结果"></p>
-<h2 id="下载简单页面">下载简单页面</h2><p>查看网页源码，发现同一张图片有四种网址：</p>
-<pre><code>"thumbURL": "http://img1.imgtn.bdimg.com/it/u=<span class="number">757023778</span>,<span class="number">2840825931</span>&amp;fm=21&amp;gp=0.jpg",
-"middleURL": "http://img1.imgtn.bdimg.com/it/u=<span class="number">757023778</span>,<span class="number">2840825931</span>&amp;fm=21&amp;gp=0.jpg",
-"hoverURL": "http://img1.imgtn.bdimg.com/it/u=<span class="number">757023778</span>,<span class="number">2840825931</span>&amp;fm=23&amp;gp=0.jpg",
-"objURL": "http://imgsrc.baidu.com/forum/w=580/sign=b3bcc<span class="number">2f88a5494</span>ee<span class="number">87220f111</span>df<span class="number">4e0e1/78</span>fed309b3de<span class="number">9c82913</span>abac<span class="number">86a81800a18</span>d84344.jpg",
-</code></pre>]]>
+<h2 id="下载简单页面">下载简单页面</h2><p>查看网页源码，发现同一张图片有四种网址：</p>]]>
     
     </summary>
     
@@ -343,8 +329,8 @@ word=<span class="preprocessor">%</span>E<span class="number">9</span><span clas
   
   <entry>
     <title><![CDATA[Python 3 json与正则式解析速度测试]]></title>
-    <link href="http://lovenight.github.io/2015/11/14/Python-3-json%E4%B8%8E%E6%AD%A3%E5%88%99%E5%BC%8F%E8%A7%A3%E6%9E%90%E9%80%9F%E5%BA%A6%E6%B5%8B%E8%AF%95/"/>
-    <id>http://lovenight.github.io/2015/11/14/Python-3-json与正则式解析速度测试/</id>
+    <link href="http://lovenight.github.io/2015/11/14/Python/Python-3-json%E4%B8%8E%E6%AD%A3%E5%88%99%E5%BC%8F%E8%A7%A3%E6%9E%90%E9%80%9F%E5%BA%A6%E6%B5%8B%E8%AF%95/"/>
+    <id>http://lovenight.github.io/2015/11/14/Python/Python-3-json与正则式解析速度测试/</id>
     <published>2015-11-14T15:30:23.000Z</published>
     <updated>2015-11-15T16:09:59.450Z</updated>
     <content type="html"><![CDATA[<p>晚上忽然想到个问题，解析Json数据，用正则式和json包，哪个更快？</p>
@@ -377,49 +363,9 @@ Re解析一万次 <span class="number">9.27284899</span><span class="number">334
   </entry>
   
   <entry>
-    <title><![CDATA[黑板客爬虫闯关之Python 3]]></title>
-    <link href="http://lovenight.github.io/2015/11/13/Python-3-%E6%8C%91%E6%88%98%E9%BB%91%E6%9D%BF%E5%AE%A2%E7%88%AC%E8%99%AB%E9%97%AF%E5%85%B3/"/>
-    <id>http://lovenight.github.io/2015/11/13/Python-3-挑战黑板客爬虫闯关/</id>
-    <published>2015-11-12T16:38:48.000Z</published>
-    <updated>2015-11-15T12:19:08.543Z</updated>
-    <content type="html"><![CDATA[<h2 id="第三关">第三关</h2><p>网址：<a href="http://www.heibanke.com/lesson/crawler_ex02/" target="_blank" rel="external">http://www.heibanke.com/lesson/crawler_ex02/</a></p>
-<p>点击上面的网址，若未登录黑板客网站，会跳转到一个<a href="http://www.heibanke.com/accounts/login/?next=/lesson/crawler_ex02/" target="_blank" rel="external">登录页面</a></p>
-<p>随便注册一个账号。登录后需要再次点击<a href="http://www.heibanke.com/lesson/crawler_ex02/" target="_blank" rel="external">第三关网址</a>。接下来就可以控制爬虫一次次试密码了。后面的代码和第二关差不多。注意Post中不能少了csrfmiddlewaretoken。上一关中虽然有这一项，但是不加也可以。不过这里必须加上这个参数。</p>
-<p>用Chrom 抓包发现Post需要提交的csrfmiddlewaretoken正好是cookie中的csrftoken</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 爬虫闯关第三关</span></span><br><span class="line">Q3_url = <span class="string">r'http://www.heibanke.com/lesson/crawler_ex02/'</span></span><br><span class="line"><span class="comment"># 登录网址</span></span><br><span class="line">login_url = <span class="string">r'http://www.heibanke.com/accounts/login/?next=/lesson/crawler_ex02/'</span></span><br><span class="line"></span><br><span class="line">username = 自己注册</span><br><span class="line">password = 自己注册</span><br><span class="line"></span><br><span class="line">s = requests.Session()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 访问页面，获取登录用的csrftoken</span></span><br><span class="line">s.get(login_url)</span><br><span class="line">csrf = s.cookies[<span class="string">"csrftoken"</span>]</span><br><span class="line"><span class="comment"># 组装POST数据</span></span><br><span class="line">data = &#123;</span><br><span class="line">    <span class="string">'username'</span>: username,</span><br><span class="line">    <span class="string">'password'</span>: password,</span><br><span class="line">    <span class="string">'csrfmiddlewaretoken'</span>: csrf</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment"># 登录</span></span><br><span class="line">s.post(login_url, data=data)</span><br><span class="line"></span><br><span class="line">s.get(Q3_url)</span><br><span class="line">data[<span class="string">"csrfmiddlewaretoken"</span>] = s.cookies[<span class="string">"csrftoken"</span>]</span><br><span class="line"><span class="comment"># 破解密码</span></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">31</span>):</span><br><span class="line">    data[<span class="string">"password"</span>] = x</span><br><span class="line">    print(<span class="string">'正在猜密码： '</span>, x)</span><br><span class="line">    html = s.post(Q3_url, data=data).text</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> <span class="string">'错误'</span> <span class="keyword">in</span> html:</span><br><span class="line">        print(<span class="string">'密码是 '</span>, x)</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
-<p>输出如下：</p>
-<pre><code>正在猜密码：  <span class="number">0</span>
-正在猜密码：  <span class="number">1</span>
-正在猜密码：  <span class="number">2</span>
-正在猜密码：  <span class="number">3</span>
-正在猜密码：  <span class="number">4</span>
-正在猜密码：  <span class="number">5</span>
-正在猜密码：  <span class="number">6</span>
-密码是  <span class="number">6</span>
-</code></pre><p>手动输密码过关！</p>
-<h2 id="第四关">第四关</h2><p>上一关结束时点击「下一关」，仍然回到第三关，需要手动改一下网址：<a href="http://www.heibanke.com/lesson/crawler_ex03/" target="_blank" rel="external">http://www.heibanke.com/lesson/crawler_ex03/</a></p>
-<p>这一关仍然需要登录。先随便输个密码，提示正确的密码在某网址里：<a href="http://www.heibanke.com/lesson/crawler_ex03/pw_list/" target="_blank" rel="external">http://www.heibanke.com/lesson/crawler_ex03/pw_list/</a>。每个页面有8对数字，分别描述了密码的位置和值。一共有13页，每个网页都特意被设置成载入很慢，足足15秒，看来必须得祭上多线程了。Lets’s go！</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h2 id="第三关">第三关</h2><p>网址：<a href="http://www.heibanke.com/lesson/crawler_ex02/" target="_blank" rel="external">http://www.heibanke.com/les]]>
-    </summary>
-    
-      <category term="Python" scheme="http://lovenight.github.io/tags/Python/"/>
-    
-      <category term="爬虫" scheme="http://lovenight.github.io/tags/%E7%88%AC%E8%99%AB/"/>
-    
-      <category term="黑板客" scheme="http://lovenight.github.io/tags/%E9%BB%91%E6%9D%BF%E5%AE%A2/"/>
-    
-      <category term="编程" scheme="http://lovenight.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-      <category term="Python" scheme="http://lovenight.github.io/categories/%E7%BC%96%E7%A8%8B/Python/"/>
-    
-  </entry>
-  
-  <entry>
     <title><![CDATA[Python Queue对象引起的RecursionError:maximum recursion depth exceeded]]></title>
-    <link href="http://lovenight.github.io/2015/11/12/Python%20Queue%E7%9A%84RecursionError%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/"/>
-    <id>http://lovenight.github.io/2015/11/12/Python Queue的RecursionError解决办法/</id>
+    <link href="http://lovenight.github.io/2015/11/12/Python/Python%20Queue%E7%9A%84RecursionError%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/"/>
+    <id>http://lovenight.github.io/2015/11/12/Python/Python Queue的RecursionError解决办法/</id>
     <published>2015-11-12T11:54:47.000Z</published>
     <updated>2015-11-15T16:09:49.357Z</updated>
     <content type="html"><![CDATA[<p>有网友想下载2014年4月至今的新加坡PSI数据：<a href="http://www.nea.gov.sg/anti-pollution-radiation-protection/air-pollution-control/psi/historical-psi-readings/year/2015/month/1/day/1" target="_blank" rel="external">Historical PSI Readings</a>，看这页面比较简单就练手写了个爬虫。</p>
@@ -470,8 +416,8 @@ RecursionError: maximum recursion depth exceeded
   
   <entry>
     <title><![CDATA[Python 3 模拟登录知乎]]></title>
-    <link href="http://lovenight.github.io/2015/11/11/Python%E6%A8%A1%E6%8B%9F%E7%99%BB%E5%BD%95%E7%9F%A5%E4%B9%8E/"/>
-    <id>http://lovenight.github.io/2015/11/11/Python模拟登录知乎/</id>
+    <link href="http://lovenight.github.io/2015/11/11/Python/Python%E6%A8%A1%E6%8B%9F%E7%99%BB%E5%BD%95%E7%9F%A5%E4%B9%8E/"/>
+    <id>http://lovenight.github.io/2015/11/11/Python/Python模拟登录知乎/</id>
     <published>2015-11-11T13:06:08.000Z</published>
     <updated>2015-11-15T16:09:01.817Z</updated>
     <content type="html"><![CDATA[<h2 id="缘起">缘起</h2><p>最近发现知乎的登录界面改了，抓包看了看，果然登录方式也变了，会根据用户名字符串发送不同字段的POST。中午研究了一会，写了个登录知乎的工具类，可以自动处理Cookie，维持登录状态。目前仅实现登录和打开网页的功能。</p>
@@ -525,8 +471,8 @@ RecursionError: maximum recursion depth exceeded
   
   <entry>
     <title><![CDATA[Hexo 3.1.1 静态博客搭建指南]]></title>
-    <link href="http://lovenight.github.io/2015/11/10/Hexo-3-1-1-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/"/>
-    <id>http://lovenight.github.io/2015/11/10/Hexo-3-1-1-静态博客搭建指南/</id>
+    <link href="http://lovenight.github.io/2015/11/10/Hexo/Hexo-3-1-1-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/"/>
+    <id>http://lovenight.github.io/2015/11/10/Hexo/Hexo-3-1-1-静态博客搭建指南/</id>
     <published>2015-11-10T06:46:41.000Z</published>
     <updated>2015-11-15T17:13:30.626Z</updated>
     <content type="html"><![CDATA[<p><strong>注意，本文适用于hexo 3.x 版本，与2.x略有出入！</strong></p>

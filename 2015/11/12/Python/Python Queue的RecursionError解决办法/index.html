@@ -37,7 +37,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Python,lxml,numpy,vcvarsall.bat," />
+  <meta name="keywords" content="Python,Queue,RecursionError," />
 
 
 
@@ -55,22 +55,26 @@
 
 
 
-<meta name="description" content="安装 numpy 时出现如下错误：
-Python的部分库在安装时要临时编译，找不到编译器就报错。类似的库还有lxml等。根据提示装了Visual C++ 10.0 仍然报错。微软的网站上只找到 Python 2.7 用的VC编译器（我是Python 3.4）。经过一番搜索终于解决。">
+<meta name="description" content="有网友想下载2014年4月至今的新加坡PSI数据：Historical PSI Readings，看这页面比较简单就练手写了个爬虫。
+运行的时候出现RecursionError：
+Traceback (most recent call last):
+  File &quot;C:\Python 3.5\lib\multiprocessing\queues.py&quot;, line 241, in _feed">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python 3 安装第三方库时出现编译错误">
-<meta property="og:url" content="http://lovenight.github.io/2015/11/16/Python-3-安装第三方库时出现编译错误/index.html">
+<meta property="og:title" content="Python Queue对象引起的RecursionError:maximum recursion depth exceeded">
+<meta property="og:url" content="http://lovenight.github.io/2015/11/12/Python/Python Queue的RecursionError解决办法/index.html">
 <meta property="og:site_name" content="岁月如歌">
-<meta property="og:description" content="安装 numpy 时出现如下错误：
-Python的部分库在安装时要临时编译，找不到编译器就报错。类似的库还有lxml等。根据提示装了Visual C++ 10.0 仍然报错。微软的网站上只找到 Python 2.7 用的VC编译器（我是Python 3.4）。经过一番搜索终于解决。">
-<meta property="og:image" content="http://7xo8t2.com1.z0.glb.clouddn.com/img/%E7%BC%96%E7%A8%8B/Python/Python%203%20%E5%AE%89%E8%A3%85%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E6%97%B6%E5%87%BA%E7%8E%B0%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF/numpy%E5%AE%89%E8%A3%85%E5%87%BA%E9%94%99.jpg">
-<meta property="og:image" content="http://7xo8t2.com1.z0.glb.clouddn.com/img/%E7%BC%96%E7%A8%8B/Python/Python%203%20%E5%AE%89%E8%A3%85%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E6%97%B6%E5%87%BA%E7%8E%B0%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF/whl%E4%B8%8B%E8%BD%BD.jpg">
-<meta property="og:image" content="http://7xo8t2.com1.z0.glb.clouddn.com/img/%E7%BC%96%E7%A8%8B/Python/Python%203%20%E5%AE%89%E8%A3%85%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E6%97%B6%E5%87%BA%E7%8E%B0%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF/%E5%AE%89%E8%A3%85%E7%BB%93%E6%9E%9C.jpg">
-<meta property="og:updated_time" content="2015-11-16T06:33:07.781Z">
+<meta property="og:description" content="有网友想下载2014年4月至今的新加坡PSI数据：Historical PSI Readings，看这页面比较简单就练手写了个爬虫。
+运行的时候出现RecursionError：
+Traceback (most recent call last):
+  File &quot;C:\Python 3.5\lib\multiprocessing\queues.py&quot;, line 241, in _feed">
+<meta property="og:image" content="http://7xo8t2.com1.z0.glb.clouddn.com/img/%E7%BC%96%E7%A8%8B/Python/Python%20Queue%E5%AF%B9%E8%B1%A1%E5%BC%95%E8%B5%B7%E7%9A%84RecursionError%3Amaximum%20recursion%20depth%20exceeded/%E4%B8%8B%E8%BD%BD%E5%BE%97%E5%88%B0%E7%9A%84csv%E6%96%87%E4%BB%B6.png">
+<meta property="og:updated_time" content="2015-11-15T16:09:49.357Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python 3 安装第三方库时出现编译错误">
-<meta name="twitter:description" content="安装 numpy 时出现如下错误：
-Python的部分库在安装时要临时编译，找不到编译器就报错。类似的库还有lxml等。根据提示装了Visual C++ 10.0 仍然报错。微软的网站上只找到 Python 2.7 用的VC编译器（我是Python 3.4）。经过一番搜索终于解决。">
+<meta name="twitter:title" content="Python Queue对象引起的RecursionError:maximum recursion depth exceeded">
+<meta name="twitter:description" content="有网友想下载2014年4月至今的新加坡PSI数据：Historical PSI Readings，看这页面比较简单就练手写了个爬虫。
+运行的时候出现RecursionError：
+Traceback (most recent call last):
+  File &quot;C:\Python 3.5\lib\multiprocessing\queues.py&quot;, line 241, in _feed">
 
 
 
@@ -82,7 +86,7 @@ Python的部分库在安装时要临时编译，找不到编译器就报错。�
   };
 </script>
 
-  <title> Python 3 安装第三方库时出现编译错误 | 岁月如歌 </title>
+  <title> Python Queue对象引起的RecursionError:maximum recursion depth exceeded | 岁月如歌 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -283,7 +287,7 @@ Python的部分库在安装时要临时编译，找不到编译器就报错。�
             
             
               
-                Python 3 安装第三方库时出现编译错误
+                Python Queue对象引起的RecursionError:maximum recursion depth exceeded
               
             
           </h1>
@@ -292,8 +296,8 @@ Python的部分库在安装时要临时编译，找不到编译器就报错。�
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-11-16T13:59:56+08:00" content="2015-11-16">
-              2015-11-16
+            <time itemprop="dateCreated" datetime="2015-11-12T19:54:47+08:00" content="2015-11-12">
+              2015-11-12
             </time>
           </span>
 
@@ -334,8 +338,8 @@ Python的部分库在安装时要临时编译，找不到编译器就报错。�
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/11/16/Python-3-安装第三方库时出现编译错误/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/16/Python-3-安装第三方库时出现编译错误/" itemprop="commentsCount"></span>
+                <a href="/2015/11/12/Python/Python Queue的RecursionError解决办法/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/12/Python/Python Queue的RecursionError解决办法/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -354,18 +358,26 @@ Python的部分库在安装时要临时编译，找不到编译器就报错。�
       
 
       
-        <span itemprop="articleBody"><p>安装 numpy 时出现如下错误：<br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/%E7%BC%96%E7%A8%8B/Python/Python%203%20%E5%AE%89%E8%A3%85%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E6%97%B6%E5%87%BA%E7%8E%B0%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF/numpy%E5%AE%89%E8%A3%85%E5%87%BA%E9%94%99.jpg" alt=""></p>
-<p>Python的部分库在安装时要临时编译，找不到编译器就报错。类似的库还有lxml等。根据提示装了Visual C++ 10.0 仍然报错。微软的网站上只找到 Python 2.7 用的VC编译器（我是Python 3.4）。经过一番搜索终于解决。</p>
-<a id="more"></a>
-<p>以numpy为例，步骤如下：</p>
-<h2 id="安装wheel">安装wheel</h2><pre><code>pip <span class="keyword">install</span> wheel
-</code></pre><h2 id="下载编译好的_-whl文件">下载编译好的 .whl文件</h2><p>在<a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy" target="_blank" rel="external">Python Extension Packages for Windows</a>下载对应的文件。<br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/%E7%BC%96%E7%A8%8B/Python/Python%203%20%E5%AE%89%E8%A3%85%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E6%97%B6%E5%87%BA%E7%8E%B0%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF/whl%E4%B8%8B%E8%BD%BD.jpg" alt=""></p>
-<p>英文提示是说vanilla版测试得较少，而且与本页的其他二进制包不兼容，那我们选择mkl版。cp应该是指CPython，后面的数字是Python版本。我下载了<code>numpy‑1.9.3+mkl‑cp34‑none‑win32.whl</code>版本，注意不要改文件名，否则后续步骤会报错。</p>
-<h2 id="安装-whl文件">安装.whl文件</h2><p>命令行定位到.whl文件所在目录，安装命令为：</p>
-<pre><code>pip <span class="keyword">install</span> 带后缀的完整文件名
-</code></pre><p>这么长的文件名，手输容易出错，可以先在命令行输入<code>pip install</code>，然后右键单击CMD窗口标题栏，选<code>编辑</code> -&gt; <code>粘贴</code>。如图：<br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/%E7%BC%96%E7%A8%8B/Python/Python%203%20%E5%AE%89%E8%A3%85%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E6%97%B6%E5%87%BA%E7%8E%B0%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF/%E5%AE%89%E8%A3%85%E7%BB%93%E6%9E%9C.jpg" alt=""></p>
-<h2 id="扩展阅读">扩展阅读</h2><p>以前一直用pip安装第三方库，现在出现个wheel，搞不清楚它们之间的关联。还有网上搜东西时经常看到的easy install是什么玩意？</p>
-<p>找到一篇文章，可以理清这些工具之间的脉络：<a href="http://zengrong.net/post/2169.htm" target="_blank" rel="external">Python 包管理工具解惑</a></p>
+        <span itemprop="articleBody"><p>有网友想下载2014年4月至今的新加坡PSI数据：<a href="http://www.nea.gov.sg/anti-pollution-radiation-protection/air-pollution-control/psi/historical-psi-readings/year/2015/month/1/day/1" target="_blank" rel="external">Historical PSI Readings</a>，看这页面比较简单就练手写了个爬虫。</p>
+<p>运行的时候出现<code>RecursionError</code>：</p>
+<pre><code>Traceback (most recent call last):
+  File <span class="string">"C:\Python 3.5\lib\multiprocessing\queues.py"</span>, line <span class="number">241</span>, <span class="keyword">in</span> _feed
+    obj = ForkingPickler.<span class="function"><span class="title">dumps</span><span class="params">(obj)</span></span>
+  File <span class="string">"C:\Python 3.5\lib\multiprocessing\reduction.py"</span>, line <span class="number">50</span>, <span class="keyword">in</span> dumps
+    <span class="function"><span class="title">cls</span><span class="params">(buf, protocol)</span></span>.<span class="function"><span class="title">dump</span><span class="params">(obj)</span></span>
+RecursionError: maximum recursion depth exceeded
+</code></pre><a id="more"></a>
+<p>递归深度超过限制？但是我代码中没用递归啊。翻了一下<code>queues.py</code>的源码，原来<code>multiprocessing.Queue</code>在首次调用<code>put()</code>方法时会启动一个名为<code>QueueFeederThread</code>的调度线程，用于分配数据。该线程传输数据前会先调用<code>ForkingPickler.dumps(obj)</code>将数据序列化成<code>bytes</code>，这个过程中抛出<code>RecursionError</code>。后续调用我翻了半小时也没看懂，暂时放一边吧。</p>
+<p>Google一番得知Python有默认的递归深度限制</p>
+<pre><code><span class="prompt">&gt;&gt;</span>&gt; import sys
+<span class="prompt">&gt;&gt;</span>&gt; sys.getrecursionlimit()
+<span class="number">1000</span>
+</code></pre><p>把它设置得大一点，比如一百万：</p>
+<pre><code>sys.<span class="function"><span class="title">setrecursionlimit</span><span class="params">(<span class="number">1000000</span>)</span></span>
+</code></pre><p>再次执行脚本，果然不再报错。</p>
+<p>附代码：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="comment"># @Author: loveNight</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> csv</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"><span class="keyword">from</span> multiprocessing <span class="keyword">import</span> Queue</span><br><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime, timedelta</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup <span class="keyword">as</span> BS</span><br><span class="line"><span class="keyword">from</span> multiprocessing.dummy <span class="keyword">import</span> Pool</span><br><span class="line"></span><br><span class="line">sys.setrecursionlimit(<span class="number">1000000</span>) <span class="comment"># 递归深度，默认只有900</span></span><br><span class="line">os.chdir(sys.path[<span class="number">0</span>])</span><br><span class="line"></span><br><span class="line">url_pattern = <span class="string">r"http://www.nea.gov.sg/anti-pollution-radiation-protection/air-pollution-control/psi/historical-psi-readings/year/&#123;0&#125;/month/&#123;1&#125;/day/&#123;2&#125;"</span></span><br><span class="line"><span class="comment"># 表头</span></span><br><span class="line">table_header = [<span class="string">"Year"</span>, <span class="string">"Month"</span>, <span class="string">"Day"</span>, <span class="string">"Time"</span>, <span class="string">"North"</span>,</span><br><span class="line">                <span class="string">"East"</span>, <span class="string">"West"</span>, <span class="string">"Central"</span>, <span class="string">"Overall Singapore"</span>]</span><br><span class="line"></span><br><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">"Accept-Encoding"</span>: <span class="string">"gzip,deflate,sdch"</span>,</span><br><span class="line">    <span class="string">"User-Agent"</span>: <span class="string">"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.122 Safari/537.36 SE 2.X MetaSr 1.0"</span>,</span><br><span class="line">    <span class="string">"Host"</span>: <span class="string">"www.nea.gov.sg"</span>,</span><br><span class="line">&#125;</span><br><span class="line">session = requests.Session()</span><br><span class="line">session.headers = headers</span><br><span class="line">delay = <span class="number">0</span>  <span class="comment"># 网络请求之间的间隔</span></span><br><span class="line"></span><br><span class="line">QUIT = <span class="string">"Quit"</span></span><br><span class="line">queue = Queue()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 要下载的日期</span></span><br><span class="line">dt = datetime(<span class="number">2014</span>, <span class="number">4</span>, <span class="number">1</span>)</span><br><span class="line">dt_now = datetime.now()</span><br><span class="line">todo = []</span><br><span class="line"><span class="keyword">while</span> dt &lt;= dt_now:</span><br><span class="line">    todo.append(dt)</span><br><span class="line">    dt += timedelta(days=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 打开网页</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getPage</span><span class="params">(url)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> delay:</span><br><span class="line">        time.sleep(delay)</span><br><span class="line">    <span class="keyword">return</span> session.get(url).text</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 写入文件</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">save</span><span class="params">(filename)</span>:</span></span><br><span class="line">    start = time.time()</span><br><span class="line">    <span class="keyword">with</span> open(filename, <span class="string">"w"</span>, newline=<span class="string">""</span>) <span class="keyword">as</span> output:</span><br><span class="line">        writer = csv.writer(output)</span><br><span class="line">        writer.writerow(table_header)</span><br><span class="line">        <span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">            lines = queue.get()</span><br><span class="line">            <span class="keyword">if</span> isinstance(lines, str) <span class="keyword">and</span> lines == QUIT:</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                print(<span class="string">"拿到数据，正在写入"</span>, datetime.now())</span><br><span class="line">                writer.writerows(lines)</span><br><span class="line">    print(<span class="string">"写入完成！用时 %s "</span> % (time.time() - start))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 解析指定日期的页面</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">resolvePage</span><span class="params">(dt)</span>:</span></span><br><span class="line">    year = dt.year</span><br><span class="line">    month = dt.month</span><br><span class="line">    day = dt.day</span><br><span class="line">    html = getPage(url_pattern.format(year, month, day))</span><br><span class="line">    soup = BS(html, <span class="string">"lxml"</span>)  <span class="comment"># 需要安装第三方库lxml，也可以使用自带的html.parser</span></span><br><span class="line">    table = soup.find(name=<span class="string">"table"</span>, class_=<span class="string">"text_psinormal"</span>)</span><br><span class="line">    <span class="keyword">if</span> table:</span><br><span class="line">        trs = table.find_all(<span class="string">"tr"</span>)</span><br><span class="line">        trs = trs[<span class="number">2</span>:]  <span class="comment"># 去除表头</span></span><br><span class="line">        lines = []</span><br><span class="line">        <span class="keyword">for</span> tr <span class="keyword">in</span> trs:</span><br><span class="line">            datas = [year, month, day] + [x <span class="keyword">for</span> x <span class="keyword">in</span> tr.strings <span class="keyword">if</span> x != <span class="string">"\n"</span>]</span><br><span class="line">            lines.append(datas)</span><br><span class="line">        queue.put(lines) <span class="comment"># 传入整张表</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 开始下载</span></span><br><span class="line">filename = <span class="string">"data.csv"</span></span><br><span class="line">t = threading.Thread(target=save, args=(filename,))</span><br><span class="line">t.daemon = <span class="keyword">True</span></span><br><span class="line">t.start()</span><br><span class="line"></span><br><span class="line">pool = Pool(<span class="number">30</span>)</span><br><span class="line">pool.map(resolvePage, todo)</span><br><span class="line">pool.close()</span><br><span class="line">pool.join()</span><br><span class="line"></span><br><span class="line">queue.put(QUIT)</span><br></pre></td></tr></table></figure></p>
+<p>下载用时127秒。</p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/%E7%BC%96%E7%A8%8B/Python/Python%20Queue%E5%AF%B9%E8%B1%A1%E5%BC%95%E8%B5%B7%E7%9A%84RecursionError%3Amaximum%20recursion%20depth%20exceeded/%E4%B8%8B%E8%BD%BD%E5%BE%97%E5%88%B0%E7%9A%84csv%E6%96%87%E4%BB%B6.png" alt="下载得到的.csv文件，可用Excel打开"></p>
 </span>
       
     </div>
@@ -376,11 +388,9 @@ Python的部分库在安装时要临时编译，找不到编译器就报错。�
           
             <a href="/tags/Python/" rel="tag">#Python</a>
           
-            <a href="/tags/lxml/" rel="tag">#lxml</a>
+            <a href="/tags/Queue/" rel="tag">#Queue</a>
           
-            <a href="/tags/numpy/" rel="tag">#numpy</a>
-          
-            <a href="/tags/vcvarsall-bat/" rel="tag">#vcvarsall.bat</a>
+            <a href="/tags/RecursionError/" rel="tag">#RecursionError</a>
           
         </div>
       
@@ -389,13 +399,17 @@ Python的部分库在安装时要临时编译，找不到编译器就报错。�
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/11/15/Hexo-NexT主题个性化设置/" rel="next" title="Hexo NexT主题个性化设置">
-                <i class="fa fa-chevron-left"></i> Hexo NexT主题个性化设置
+              <a href="/2015/11/11/Python/Python模拟登录知乎/" rel="next" title="Python 3 模拟登录知乎">
+                <i class="fa fa-chevron-left"></i> Python 3 模拟登录知乎
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/11/14/Python/Python-3-json与正则式解析速度测试/" rel="prev" title="Python 3 json与正则式解析速度测试">
+                Python 3 json与正则式解析速度测试 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -445,8 +459,8 @@ Python的部分库在安装时要临时编译，找不到编译器就报错。�
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/11/16/Python-3-安装第三方库时出现编译错误/"
-           data-title="Python 3 安装第三方库时出现编译错误" data-url="http://lovenight.github.io/2015/11/16/Python-3-安装第三方库时出现编译错误/">
+      <div class="ds-thread" data-thread-key="2015/11/12/Python/Python Queue的RecursionError解决办法/"
+           data-title="Python Queue对象引起的RecursionError:maximum recursion depth exceeded" data-url="http://lovenight.github.io/2015/11/12/Python/Python Queue的RecursionError解决办法/">
       </div>
     
   </div>
@@ -490,7 +504,7 @@ Python的部分库在安装时要临时编译，找不到编译器就报错。�
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -504,7 +518,7 @@ Python的部分库在安装时要临时编译，找不到编译器就报错。�
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-count">13</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
@@ -526,7 +540,7 @@ Python的部分库在安装时要临时编译，找不到编译器就报错。�
               <span class="links-of-author-item">
                 <a href="https://github.com/loveNight" target="_blank">
                   
-                    <i class="fa fa-globe"></i> github
+                    <i class="fa fa-globe"></i> Github
                   
                 </a>
               </span>
@@ -534,7 +548,15 @@ Python的部分库在安装时要临时编译，找不到编译器就报错。�
               <span class="links-of-author-item">
                 <a href="http://weibo.com/p/1005051069913250" target="_blank">
                   
-                    <i class="fa fa-globe"></i> weibo
+                    <i class="fa fa-weibo"></i> Weibo
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="286242151@qq.com" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> Email
                   
                 </a>
               </span>
@@ -557,10 +579,6 @@ Python的部分库在安装时要临时编译，找不到编译器就报错。�
                 <a href="http://blog.sina.com.cn/u/1069913250" target="_blank">我的新浪博客</a>
               </span>
             
-              <span class="links-of-author-item">
-                <a href="http://www.douban.com/people/songlet/photos" target="_blank">宋乐天的相册</a>
-              </span>
-            
           
         </div>
 
@@ -576,7 +594,7 @@ Python的部分库在安装时要临时编译，找不到编译器就报错。�
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装wheel"><span class="nav-number">1.</span> <span class="nav-text">安装wheel</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载编译好的_-whl文件"><span class="nav-number">2.</span> <span class="nav-text">下载编译好的 .whl文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-whl文件"><span class="nav-number">3.</span> <span class="nav-text">安装.whl文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#扩展阅读"><span class="nav-number">4.</span> <span class="nav-text">扩展阅读</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

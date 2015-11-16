@@ -37,7 +37,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Python,爬虫,黑板客," />
+  <meta name="keywords" content="Python,json,timeit,正则表达式," />
 
 
 
@@ -55,25 +55,19 @@
 
 
 
-<meta name="description" content="第三关网址：http://www.heibanke.com/lesson/crawler_ex02/
-点击上面的网址，若未登录黑板客网站，会跳转到一个登录页面
-随便注册一个账号。登录后需要再次点击第三关网址。接下来就可以控制爬虫一次次试密码了。后面的代码和第二关差不多。注意Post中不能少了csrfmiddlewaretoken。上一关中虽然有这一项，但是不加也可以。不过这里必须加上这个参数。
-用">
+<meta name="description" content="晚上忽然想到个问题，解析Json数据，用正则式和json包，哪个更快？
+写了段代码测试：">
 <meta property="og:type" content="article">
-<meta property="og:title" content="黑板客爬虫闯关之Python 3">
-<meta property="og:url" content="http://lovenight.github.io/2015/11/13/Python-3-挑战黑板客爬虫闯关/index.html">
+<meta property="og:title" content="Python 3 json与正则式解析速度测试">
+<meta property="og:url" content="http://lovenight.github.io/2015/11/14/Python/Python-3-json与正则式解析速度测试/index.html">
 <meta property="og:site_name" content="岁月如歌">
-<meta property="og:description" content="第三关网址：http://www.heibanke.com/lesson/crawler_ex02/
-点击上面的网址，若未登录黑板客网站，会跳转到一个登录页面
-随便注册一个账号。登录后需要再次点击第三关网址。接下来就可以控制爬虫一次次试密码了。后面的代码和第二关差不多。注意Post中不能少了csrfmiddlewaretoken。上一关中虽然有这一项，但是不加也可以。不过这里必须加上这个参数。
-用">
-<meta property="og:updated_time" content="2015-11-15T12:19:08.543Z">
+<meta property="og:description" content="晚上忽然想到个问题，解析Json数据，用正则式和json包，哪个更快？
+写了段代码测试：">
+<meta property="og:updated_time" content="2015-11-15T16:09:59.450Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="黑板客爬虫闯关之Python 3">
-<meta name="twitter:description" content="第三关网址：http://www.heibanke.com/lesson/crawler_ex02/
-点击上面的网址，若未登录黑板客网站，会跳转到一个登录页面
-随便注册一个账号。登录后需要再次点击第三关网址。接下来就可以控制爬虫一次次试密码了。后面的代码和第二关差不多。注意Post中不能少了csrfmiddlewaretoken。上一关中虽然有这一项，但是不加也可以。不过这里必须加上这个参数。
-用">
+<meta name="twitter:title" content="Python 3 json与正则式解析速度测试">
+<meta name="twitter:description" content="晚上忽然想到个问题，解析Json数据，用正则式和json包，哪个更快？
+写了段代码测试：">
 
 
 
@@ -85,7 +79,7 @@
   };
 </script>
 
-  <title> 黑板客爬虫闯关之Python 3 | 岁月如歌 </title>
+  <title> Python 3 json与正则式解析速度测试 | 岁月如歌 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -286,7 +280,7 @@
             
             
               
-                黑板客爬虫闯关之Python 3
+                Python 3 json与正则式解析速度测试
               
             
           </h1>
@@ -295,8 +289,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-11-13T00:38:48+08:00" content="2015-11-13">
-              2015-11-13
+            <time itemprop="dateCreated" datetime="2015-11-14T23:30:23+08:00" content="2015-11-14">
+              2015-11-14
             </time>
           </span>
 
@@ -337,8 +331,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/11/13/Python-3-挑战黑板客爬虫闯关/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/13/Python-3-挑战黑板客爬虫闯关/" itemprop="commentsCount"></span>
+                <a href="/2015/11/14/Python/Python-3-json与正则式解析速度测试/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/14/Python/Python-3-json与正则式解析速度测试/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -357,23 +351,14 @@
       
 
       
-        <span itemprop="articleBody"><h2 id="第三关">第三关</h2><p>网址：<a href="http://www.heibanke.com/lesson/crawler_ex02/" target="_blank" rel="external">http://www.heibanke.com/lesson/crawler_ex02/</a></p>
-<p>点击上面的网址，若未登录黑板客网站，会跳转到一个<a href="http://www.heibanke.com/accounts/login/?next=/lesson/crawler_ex02/" target="_blank" rel="external">登录页面</a></p>
-<p>随便注册一个账号。登录后需要再次点击<a href="http://www.heibanke.com/lesson/crawler_ex02/" target="_blank" rel="external">第三关网址</a>。接下来就可以控制爬虫一次次试密码了。后面的代码和第二关差不多。注意Post中不能少了csrfmiddlewaretoken。上一关中虽然有这一项，但是不加也可以。不过这里必须加上这个参数。</p>
-<p>用Chrom 抓包发现Post需要提交的csrfmiddlewaretoken正好是cookie中的csrftoken</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 爬虫闯关第三关</span></span><br><span class="line">Q3_url = <span class="string">r'http://www.heibanke.com/lesson/crawler_ex02/'</span></span><br><span class="line"><span class="comment"># 登录网址</span></span><br><span class="line">login_url = <span class="string">r'http://www.heibanke.com/accounts/login/?next=/lesson/crawler_ex02/'</span></span><br><span class="line"></span><br><span class="line">username = 自己注册</span><br><span class="line">password = 自己注册</span><br><span class="line"></span><br><span class="line">s = requests.Session()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 访问页面，获取登录用的csrftoken</span></span><br><span class="line">s.get(login_url)</span><br><span class="line">csrf = s.cookies[<span class="string">"csrftoken"</span>]</span><br><span class="line"><span class="comment"># 组装POST数据</span></span><br><span class="line">data = &#123;</span><br><span class="line">    <span class="string">'username'</span>: username,</span><br><span class="line">    <span class="string">'password'</span>: password,</span><br><span class="line">    <span class="string">'csrfmiddlewaretoken'</span>: csrf</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment"># 登录</span></span><br><span class="line">s.post(login_url, data=data)</span><br><span class="line"></span><br><span class="line">s.get(Q3_url)</span><br><span class="line">data[<span class="string">"csrfmiddlewaretoken"</span>] = s.cookies[<span class="string">"csrftoken"</span>]</span><br><span class="line"><span class="comment"># 破解密码</span></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">31</span>):</span><br><span class="line">    data[<span class="string">"password"</span>] = x</span><br><span class="line">    print(<span class="string">'正在猜密码： '</span>, x)</span><br><span class="line">    html = s.post(Q3_url, data=data).text</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> <span class="string">'错误'</span> <span class="keyword">in</span> html:</span><br><span class="line">        print(<span class="string">'密码是 '</span>, x)</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
-<p>输出如下：</p>
-<pre><code>正在猜密码：  <span class="number">0</span>
-正在猜密码：  <span class="number">1</span>
-正在猜密码：  <span class="number">2</span>
-正在猜密码：  <span class="number">3</span>
-正在猜密码：  <span class="number">4</span>
-正在猜密码：  <span class="number">5</span>
-正在猜密码：  <span class="number">6</span>
-密码是  <span class="number">6</span>
-</code></pre><p>手动输密码过关！</p>
-<h2 id="第四关">第四关</h2><p>上一关结束时点击「下一关」，仍然回到第三关，需要手动改一下网址：<a href="http://www.heibanke.com/lesson/crawler_ex03/" target="_blank" rel="external">http://www.heibanke.com/lesson/crawler_ex03/</a></p>
-<p>这一关仍然需要登录。先随便输个密码，提示正确的密码在某网址里：<a href="http://www.heibanke.com/lesson/crawler_ex03/pw_list/" target="_blank" rel="external">http://www.heibanke.com/lesson/crawler_ex03/pw_list/</a>。每个页面有8对数字，分别描述了密码的位置和值。一共有13页，每个网页都特意被设置成载入很慢，足足15秒，看来必须得祭上多线程了。Lets’s go！</p>
+        <span itemprop="articleBody"><p>晚上忽然想到个问题，解析Json数据，用正则式和json包，哪个更快？</p>
+<p>写了段代码测试：</p>
+<a id="more"></a>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="comment"># @Author: loveNight</span></span><br><span class="line"><span class="comment"># @Date:   2015-10-28 19:59:24</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">import</span> timeit</span><br><span class="line"></span><br><span class="line">url = <span class="string">r"http://image.baidu.com/search/acjson?tn=resultjson_com&amp;ipn=rj&amp;ct=201326592&amp;is=&amp;fp=result&amp;queryWord=%E9%95%BF%E8%80%85%E8%9B%A4&amp;cl=2&amp;lm=-1&amp;ie=utf-8&amp;oe=utf-8&amp;adpicid=&amp;st=&amp;z=&amp;ic=&amp;word=%E9%95%BF%E8%80%85%E8%9B%A4&amp;s=&amp;se=&amp;tab=&amp;width=&amp;height=&amp;face=&amp;istype=&amp;qc=&amp;nc=1&amp;fr=&amp;pn=60&amp;rn=60&amp;gsm=3c&amp;1447527816768="</span></span><br><span class="line">re_url = re.compile(<span class="string">r'"objURL":"(.*?)".*?"fromPageTitle":"(.*?)"'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 这串JSON编码有问题，必须手动指定utf-8</span></span><br><span class="line">html = requests.get(url).content.decode(<span class="string">"utf-8"</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">byRe</span><span class="params">(html)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> re_url.findall(html)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">byJson</span><span class="params">(html)</span>:</span></span><br><span class="line">    data = json.loads(html)</span><br><span class="line">    <span class="keyword">return</span> [[x[<span class="string">"objURL"</span>], x[<span class="string">"fromPageTitle"</span>]] <span class="keyword">for</span> x <span class="keyword">in</span> data[<span class="string">"data"</span>] <span class="keyword">if</span> <span class="string">"objURL"</span> <span class="keyword">in</span> x.keys() <span class="keyword">and</span> <span class="string">"fromPageTitle"</span> <span class="keyword">in</span> x.keys()]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">timeJson = timeit.timeit(</span><br><span class="line">    <span class="string">"byJson(html)"</span>, <span class="string">"from __main__ import byJson; from __main__ import html"</span>, number=<span class="number">10000</span>)</span><br><span class="line">print(<span class="string">"Json解析一万次"</span>, timeJson, <span class="string">"秒"</span>)</span><br><span class="line"></span><br><span class="line">timeRe = timeit.timeit(</span><br><span class="line">    <span class="string">"byRe(html)"</span>, <span class="string">"from __main__ import byRe; from __main__ import html"</span>, number=<span class="number">10000</span>)</span><br><span class="line">print(<span class="string">"Re解析一万次"</span>, timeRe, <span class="string">"秒"</span>)</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<pre><code>Json解析一万次 <span class="number">14.212283402</span>610288 秒
+Re解析一万次 <span class="number">9.27284899</span><span class="number">3345992</span> 秒
+</code></pre><p>看来还是正则表达式更快。不了解这两者的实现，暂无法作更进一步的分析。</p>
 </span>
       
     </div>
@@ -384,9 +369,11 @@
           
             <a href="/tags/Python/" rel="tag">#Python</a>
           
-            <a href="/tags/爬虫/" rel="tag">#爬虫</a>
+            <a href="/tags/json/" rel="tag">#json</a>
           
-            <a href="/tags/黑板客/" rel="tag">#黑板客</a>
+            <a href="/tags/timeit/" rel="tag">#timeit</a>
+          
+            <a href="/tags/正则表达式/" rel="tag">#正则表达式</a>
           
         </div>
       
@@ -395,7 +382,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/11/12/Python Queue的RecursionError解决办法/" rel="next" title="Python Queue对象引起的RecursionError:maximum recursion depth exceeded">
+              <a href="/2015/11/12/Python/Python Queue的RecursionError解决办法/" rel="next" title="Python Queue对象引起的RecursionError:maximum recursion depth exceeded">
                 <i class="fa fa-chevron-left"></i> Python Queue对象引起的RecursionError:maximum recursion depth exceeded
               </a>
             
@@ -403,8 +390,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/11/14/Python-3-json与正则式解析速度测试/" rel="prev" title="Python 3 json与正则式解析速度测试">
-                Python 3 json与正则式解析速度测试 <i class="fa fa-chevron-right"></i>
+              <a href="/2015/11/15/Python/Python-3-多线程下载百度图片搜索结果/" rel="prev" title="Python 3 多线程下载百度图片搜索结果">
+                Python 3 多线程下载百度图片搜索结果 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -455,8 +442,8 @@
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/11/13/Python-3-挑战黑板客爬虫闯关/"
-           data-title="黑板客爬虫闯关之Python 3" data-url="http://lovenight.github.io/2015/11/13/Python-3-挑战黑板客爬虫闯关/">
+      <div class="ds-thread" data-thread-key="2015/11/14/Python/Python-3-json与正则式解析速度测试/"
+           data-title="Python 3 json与正则式解析速度测试" data-url="http://lovenight.github.io/2015/11/14/Python/Python-3-json与正则式解析速度测试/">
       </div>
     
   </div>
@@ -500,7 +487,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -514,7 +501,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-count">13</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
@@ -536,7 +523,7 @@
               <span class="links-of-author-item">
                 <a href="https://github.com/loveNight" target="_blank">
                   
-                    <i class="fa fa-globe"></i> github
+                    <i class="fa fa-globe"></i> Github
                   
                 </a>
               </span>
@@ -544,7 +531,15 @@
               <span class="links-of-author-item">
                 <a href="http://weibo.com/p/1005051069913250" target="_blank">
                   
-                    <i class="fa fa-globe"></i> weibo
+                    <i class="fa fa-weibo"></i> Weibo
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="286242151@qq.com" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> Email
                   
                 </a>
               </span>
@@ -567,10 +562,6 @@
                 <a href="http://blog.sina.com.cn/u/1069913250" target="_blank">我的新浪博客</a>
               </span>
             
-              <span class="links-of-author-item">
-                <a href="http://www.douban.com/people/songlet/photos" target="_blank">宋乐天的相册</a>
-              </span>
-            
           
         </div>
 
@@ -586,7 +577,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第三关"><span class="nav-number">1.</span> <span class="nav-text">第三关</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第四关"><span class="nav-number">2.</span> <span class="nav-text">第四关</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
