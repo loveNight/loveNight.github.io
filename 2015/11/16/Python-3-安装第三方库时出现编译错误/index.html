@@ -37,7 +37,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Python,json,timeit,正则表达式," />
+  <meta name="keywords" content="Python,lxml,numpy,vcvarsall.bat," />
 
 
 
@@ -55,19 +55,22 @@
 
 
 
-<meta name="description" content="晚上忽然想到个问题，解析Json数据，用正则式和json包，哪个更快？
-写了段代码测试：">
+<meta name="description" content="安装 numpy 时出现如下错误：
+Python的部分库在安装时要临时编译，找不到编译器就报错。类似的库还有lxml等。根据提示装了Visual C++ 10.0 仍然报错。微软的网站上只找到 Python 2.7 用的VC编译器（我是Python 3.4）。经过一番搜索终于解决。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python 3 json与正则式解析速度测试">
-<meta property="og:url" content="http://lovenight.github.io/2015/11/14/Python/Python-3-json与正则式解析速度测试/index.html">
+<meta property="og:title" content="Python 3 安装第三方库时出现编译错误">
+<meta property="og:url" content="http://lovenight.github.io/2015/11/16/Python-3-安装第三方库时出现编译错误/index.html">
 <meta property="og:site_name" content="岁月如歌">
-<meta property="og:description" content="晚上忽然想到个问题，解析Json数据，用正则式和json包，哪个更快？
-写了段代码测试：">
-<meta property="og:updated_time" content="2015-11-15T16:09:59.450Z">
+<meta property="og:description" content="安装 numpy 时出现如下错误：
+Python的部分库在安装时要临时编译，找不到编译器就报错。类似的库还有lxml等。根据提示装了Visual C++ 10.0 仍然报错。微软的网站上只找到 Python 2.7 用的VC编译器（我是Python 3.4）。经过一番搜索终于解决。">
+<meta property="og:image" content="http://7xo8t2.com1.z0.glb.clouddn.com/img/%E7%BC%96%E7%A8%8B/Python/Python%203%20%E5%AE%89%E8%A3%85%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E6%97%B6%E5%87%BA%E7%8E%B0%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF/numpy%E5%AE%89%E8%A3%85%E5%87%BA%E9%94%99.jpg">
+<meta property="og:image" content="http://7xo8t2.com1.z0.glb.clouddn.com/img/%E7%BC%96%E7%A8%8B/Python/Python%203%20%E5%AE%89%E8%A3%85%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E6%97%B6%E5%87%BA%E7%8E%B0%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF/whl%E4%B8%8B%E8%BD%BD.jpg">
+<meta property="og:image" content="http://7xo8t2.com1.z0.glb.clouddn.com/img/%E7%BC%96%E7%A8%8B/Python/Python%203%20%E5%AE%89%E8%A3%85%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E6%97%B6%E5%87%BA%E7%8E%B0%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF/%E5%AE%89%E8%A3%85%E7%BB%93%E6%9E%9C.jpg">
+<meta property="og:updated_time" content="2015-11-16T06:33:07.781Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python 3 json与正则式解析速度测试">
-<meta name="twitter:description" content="晚上忽然想到个问题，解析Json数据，用正则式和json包，哪个更快？
-写了段代码测试：">
+<meta name="twitter:title" content="Python 3 安装第三方库时出现编译错误">
+<meta name="twitter:description" content="安装 numpy 时出现如下错误：
+Python的部分库在安装时要临时编译，找不到编译器就报错。类似的库还有lxml等。根据提示装了Visual C++ 10.0 仍然报错。微软的网站上只找到 Python 2.7 用的VC编译器（我是Python 3.4）。经过一番搜索终于解决。">
 
 
 
@@ -79,7 +82,7 @@
   };
 </script>
 
-  <title> Python 3 json与正则式解析速度测试 | 岁月如歌 </title>
+  <title> Python 3 安装第三方库时出现编译错误 | 岁月如歌 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -280,7 +283,7 @@
             
             
               
-                Python 3 json与正则式解析速度测试
+                Python 3 安装第三方库时出现编译错误
               
             
           </h1>
@@ -289,8 +292,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-11-14T23:30:23+08:00" content="2015-11-14">
-              2015-11-14
+            <time itemprop="dateCreated" datetime="2015-11-16T13:59:56+08:00" content="2015-11-16">
+              2015-11-16
             </time>
           </span>
 
@@ -331,8 +334,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/11/14/Python/Python-3-json与正则式解析速度测试/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/14/Python/Python-3-json与正则式解析速度测试/" itemprop="commentsCount"></span>
+                <a href="/2015/11/16/Python-3-安装第三方库时出现编译错误/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/16/Python-3-安装第三方库时出现编译错误/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -351,14 +354,18 @@
       
 
       
-        <span itemprop="articleBody"><p>晚上忽然想到个问题，解析Json数据，用正则式和json包，哪个更快？</p>
-<p>写了段代码测试：</p>
+        <span itemprop="articleBody"><p>安装 numpy 时出现如下错误：<br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/%E7%BC%96%E7%A8%8B/Python/Python%203%20%E5%AE%89%E8%A3%85%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E6%97%B6%E5%87%BA%E7%8E%B0%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF/numpy%E5%AE%89%E8%A3%85%E5%87%BA%E9%94%99.jpg" alt=""></p>
+<p>Python的部分库在安装时要临时编译，找不到编译器就报错。类似的库还有lxml等。根据提示装了Visual C++ 10.0 仍然报错。微软的网站上只找到 Python 2.7 用的VC编译器（我是Python 3.4）。经过一番搜索终于解决。</p>
 <a id="more"></a>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="comment"># @Author: loveNight</span></span><br><span class="line"><span class="comment"># @Date:   2015-10-28 19:59:24</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">import</span> timeit</span><br><span class="line"></span><br><span class="line">url = <span class="string">r"http://image.baidu.com/search/acjson?tn=resultjson_com&amp;ipn=rj&amp;ct=201326592&amp;is=&amp;fp=result&amp;queryWord=%E9%95%BF%E8%80%85%E8%9B%A4&amp;cl=2&amp;lm=-1&amp;ie=utf-8&amp;oe=utf-8&amp;adpicid=&amp;st=&amp;z=&amp;ic=&amp;word=%E9%95%BF%E8%80%85%E8%9B%A4&amp;s=&amp;se=&amp;tab=&amp;width=&amp;height=&amp;face=&amp;istype=&amp;qc=&amp;nc=1&amp;fr=&amp;pn=60&amp;rn=60&amp;gsm=3c&amp;1447527816768="</span></span><br><span class="line">re_url = re.compile(<span class="string">r'"objURL":"(.*?)".*?"fromPageTitle":"(.*?)"'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 这串JSON编码有问题，必须手动指定utf-8</span></span><br><span class="line">html = requests.get(url).content.decode(<span class="string">"utf-8"</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">byRe</span><span class="params">(html)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> re_url.findall(html)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">byJson</span><span class="params">(html)</span>:</span></span><br><span class="line">    data = json.loads(html)</span><br><span class="line">    <span class="keyword">return</span> [[x[<span class="string">"objURL"</span>], x[<span class="string">"fromPageTitle"</span>]] <span class="keyword">for</span> x <span class="keyword">in</span> data[<span class="string">"data"</span>] <span class="keyword">if</span> <span class="string">"objURL"</span> <span class="keyword">in</span> x.keys() <span class="keyword">and</span> <span class="string">"fromPageTitle"</span> <span class="keyword">in</span> x.keys()]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">timeJson = timeit.timeit(</span><br><span class="line">    <span class="string">"byJson(html)"</span>, <span class="string">"from __main__ import byJson; from __main__ import html"</span>, number=<span class="number">10000</span>)</span><br><span class="line">print(<span class="string">"Json解析一万次"</span>, timeJson, <span class="string">"秒"</span>)</span><br><span class="line"></span><br><span class="line">timeRe = timeit.timeit(</span><br><span class="line">    <span class="string">"byRe(html)"</span>, <span class="string">"from __main__ import byRe; from __main__ import html"</span>, number=<span class="number">10000</span>)</span><br><span class="line">print(<span class="string">"Re解析一万次"</span>, timeRe, <span class="string">"秒"</span>)</span><br></pre></td></tr></table></figure>
-<p>运行结果：</p>
-<pre><code>Json解析一万次 <span class="number">14.212283402</span>610288 秒
-Re解析一万次 <span class="number">9.27284899</span><span class="number">3345992</span> 秒
-</code></pre><p>看来还是正则表达式更快。不了解这两者的实现，暂无法作更进一步的分析。</p>
+<p>以numpy为例，步骤如下：</p>
+<h2 id="安装wheel">安装wheel</h2><pre><code>pip <span class="keyword">install</span> wheel
+</code></pre><h2 id="下载编译好的_-whl文件">下载编译好的 .whl文件</h2><p>在<a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy" target="_blank" rel="external">Python Extension Packages for Windows</a>下载对应的文件。<br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/%E7%BC%96%E7%A8%8B/Python/Python%203%20%E5%AE%89%E8%A3%85%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E6%97%B6%E5%87%BA%E7%8E%B0%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF/whl%E4%B8%8B%E8%BD%BD.jpg" alt=""></p>
+<p>英文提示是说vanilla版测试得较少，而且与本页的其他二进制包不兼容，那我们选择mkl版。cp应该是指CPython，后面的数字是Python版本。我下载了<code>numpy‑1.9.3+mkl‑cp34‑none‑win32.whl</code>版本，注意不要改文件名，否则后续步骤会报错。</p>
+<h2 id="安装-whl文件">安装.whl文件</h2><p>命令行定位到.whl文件所在目录，安装命令为：</p>
+<pre><code>pip <span class="keyword">install</span> 带后缀的完整文件名
+</code></pre><p>这么长的文件名，手输容易出错，可以先在命令行输入<code>pip install</code>，然后右键单击CMD窗口标题栏，选<code>编辑</code> -&gt; <code>粘贴</code>。如图：<br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/%E7%BC%96%E7%A8%8B/Python/Python%203%20%E5%AE%89%E8%A3%85%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E6%97%B6%E5%87%BA%E7%8E%B0%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF/%E5%AE%89%E8%A3%85%E7%BB%93%E6%9E%9C.jpg" alt=""></p>
+<h2 id="扩展阅读">扩展阅读</h2><p>以前一直用pip安装第三方库，现在出现个wheel，搞不清楚它们之间的关联。还有网上搜东西时经常看到的easy install是什么玩意？</p>
+<p>找到一篇文章，可以理清这些工具之间的脉络：<a href="http://zengrong.net/post/2169.htm" target="_blank" rel="external">Python 包管理工具解惑</a></p>
 </span>
       
     </div>
@@ -369,11 +376,11 @@ Re解析一万次 <span class="number">9.27284899</span><span class="number">334
           
             <a href="/tags/Python/" rel="tag">#Python</a>
           
-            <a href="/tags/json/" rel="tag">#json</a>
+            <a href="/tags/lxml/" rel="tag">#lxml</a>
           
-            <a href="/tags/timeit/" rel="tag">#timeit</a>
+            <a href="/tags/numpy/" rel="tag">#numpy</a>
           
-            <a href="/tags/正则表达式/" rel="tag">#正则表达式</a>
+            <a href="/tags/vcvarsall-bat/" rel="tag">#vcvarsall.bat</a>
           
         </div>
       
@@ -382,17 +389,13 @@ Re解析一万次 <span class="number">9.27284899</span><span class="number">334
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/11/12/Python/Python Queue的RecursionError解决办法/" rel="next" title="Python Queue对象引起的RecursionError:maximum recursion depth exceeded">
-                <i class="fa fa-chevron-left"></i> Python Queue对象引起的RecursionError:maximum recursion depth exceeded
+              <a href="/2015/11/15/Hexo-NexT主题个性化设置/" rel="next" title="Hexo NexT主题个性化设置">
+                <i class="fa fa-chevron-left"></i> Hexo NexT主题个性化设置
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/11/15/Python/Python-3-多线程下载百度图片搜索结果/" rel="prev" title="Python 3 多线程下载百度图片搜索结果">
-                Python 3 多线程下载百度图片搜索结果 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -442,8 +445,8 @@ Re解析一万次 <span class="number">9.27284899</span><span class="number">334
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/11/14/Python/Python-3-json与正则式解析速度测试/"
-           data-title="Python 3 json与正则式解析速度测试" data-url="http://lovenight.github.io/2015/11/14/Python/Python-3-json与正则式解析速度测试/">
+      <div class="ds-thread" data-thread-key="2015/11/16/Python-3-安装第三方库时出现编译错误/"
+           data-title="Python 3 安装第三方库时出现编译错误" data-url="http://lovenight.github.io/2015/11/16/Python-3-安装第三方库时出现编译错误/">
       </div>
     
   </div>
@@ -577,7 +580,7 @@ Re解析一万次 <span class="number">9.27284899</span><span class="number">334
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装wheel"><span class="nav-number">1.</span> <span class="nav-text">安装wheel</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载编译好的_-whl文件"><span class="nav-number">2.</span> <span class="nav-text">下载编译好的 .whl文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-whl文件"><span class="nav-number">3.</span> <span class="nav-text">安装.whl文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#扩展阅读"><span class="nav-number">4.</span> <span class="nav-text">扩展阅读</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
