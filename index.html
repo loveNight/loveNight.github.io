@@ -358,24 +358,979 @@
 
       
         
-          <span itemprop="articleBody">
-            
-              <p>subprocess最早在2.4版本引入，用来代替多个旧模块和函数:</p>
+          <p>subprocess最早在2.4版本引入，用来代替多个旧模块和函数:</p>
 <blockquote>
 <p>os.system<br>os.open<br>os.spawn<em><br>os.popen</em><br>popen2.<em><br>commands.</em></p>
 </blockquote>
-<h2 id="API说明">API说明</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 运行由args指定的命令，结束后返回return code</span></span><br><span class="line">subprocess.call([<span class="string">"ping"</span>, <span class="string">"www.baidu.com"</span>])</span><br><span class="line">subprocess.call(<span class="string">"exit 1"</span>, shell=<span class="keyword">True</span>)  <span class="comment"># 使用Shell解释整个字符串，或运行Shell内的命令</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 返回输出值。若返回码为非零，则抛出 CalledProcessError异常</span></span><br><span class="line">subprocess.check_output(<span class="string">"hexo -v"</span>, shell=<span class="keyword">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 更灵活</span></span><br><span class="line">p = subprocess.Popen([<span class="string">"ping"</span>,<span class="string">"www.baidu.com"</span>], stdout=subprocess.PIPE)</span><br><span class="line"><span class="comment"># 也可以 p = subprocess.Popen("ping www.baidu.com", stdout=subprocess.PIPE, shell=True)</span></span><br><span class="line">p.wait()  <span class="comment"># 阻塞父进程，直到子进程完成</span></span><br><span class="line">p.stdout.read().decode(<span class="string">'gbk'</span>) <span class="comment"># 读取输出结果，注意Windows 终端输出是GBK编码。需要Popen指定了stdout</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 利用subprocess.PIPE将多个子进程的输入和输出连接在一起</span></span><br><span class="line">p1 = subprocess.Popen([<span class="string">"ls"</span>,<span class="string">"-l"</span>], stdout=subprocess.PIPE)</span><br><span class="line">p2 = subprocess.Popen([<span class="string">"wc"</span>], stdin=p1.stdout,stdout=subprocess.PIPE)</span><br><span class="line">out = p2.communicate() <span class="comment"># 阻塞父进程，直到子进程完成，此方法可以带参数，传给子进程</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用communicate()方法向子进程传输二进制数据</span></span><br><span class="line">p = subprocess.Popen([<span class="string">'adb shell'</span>], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)</span><br><span class="line">output, err = p.communicate(<span class="string">b'adb help\nexit\n'</span>)</span><br><span class="line">print(output.decode(<span class="string">'utf-8'</span>))</span><br><span class="line">print(<span class="string">'Exit code:'</span>, p.returncode)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 其他方法</span></span><br><span class="line">p.terminate() <span class="comment"># 停止子程序</span></span><br><span class="line">p.kill() <span class="comment"># 杀死子进程</span></span><br></pre></td></tr></table></figure>
-<h2 id="应用实例">应用实例</h2><h3 id="简单例子">简单例子</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 调用系统中cmd命令,显示命令执行的结果:</span></span><br><span class="line">x=subprocess.check_output([<span class="string">"echo"</span>, <span class="string">"Hello World!"</span>], shell=<span class="keyword">True</span>) <span class="comment"># echo是shell命令，必须指定参数为True</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 在python中显示文件内容:</span></span><br><span class="line">y=subprocess.check_output([<span class="string">"type"</span>, <span class="string">"app2.cpp"</span>], shell=<span class="keyword">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看ipconfig -all命令的输出,并将将输出保存到文件tmp.log中:</span></span><br><span class="line">handle = open(<span class="string">r'd:\tmp.log'</span>,<span class="string">'wb'</span>)</span><br><span class="line">subprocess.Popen([<span class="string">'ipconfig'</span>,<span class="string">'-all'</span>], stdout=handle)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看网络设置ipconfig -all,保存到变量中</span></span><br><span class="line">p = subprocess.Popen([<span class="string">'ipconfig'</span>,<span class="string">'-all'</span>], stdout=subprocess.PIPE,shell=<span class="keyword">True</span>)</span><br><span class="line">output, err = p.communicate()</span><br><span class="line"></span><br><span class="line"><span class="comment">#  频繁和子线程通信，不能使用communicate()</span></span><br><span class="line"><span class="comment"># 因为communicate通信一次之后即关闭了管道</span></span><br><span class="line">p = subprocess.Popen([<span class="string">"wc"</span>], stdin=subprocess.PIPE,stdout=subprocess.PIPE,shell=<span class="keyword">True</span>)</span><br><span class="line">p.stdin.write(<span class="string">'your command'</span>)</span><br><span class="line">p.stdin.flush()</span><br></pre></td></tr></table></figure>
-<h3 id="连续输入和输出">连续输入和输出</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># test.py</span></span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">    line = sys.stdin.readline()</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> line:<span class="keyword">break</span></span><br><span class="line">    sys.stdout.write(line)</span><br><span class="line">    sys.stdout.flush()</span><br><span class="line"></span><br><span class="line"><span class="comment"># run.py</span></span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">from</span> subprocess <span class="keyword">import</span> *</span><br><span class="line">proc = Popen(<span class="string">'./test.py'</span>,stdin=PIPE,stdout=PIPE,shell=<span class="keyword">True</span>)</span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> sys.stdin: <span class="comment"># 这一步脚本会接收键盘输入</span></span><br><span class="line">    proc.stdin.write(line)</span><br><span class="line">    proc.stdin.flush()</span><br><span class="line">    output = proc.stdout.readline()</span><br><span class="line">    sys.stdout.write(output)</span><br></pre></td></tr></table></figure>
-<h3 id="实时获取子进程输出">实时获取子进程输出</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> subprocess</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    p = subprocess.Popen(<span class="string">"python  -u sub.py"</span>, stdout = subprocess.PIPE, stderr=subprocess.STDOUT)</span><br><span class="line">    <span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">        line = p.stdout.readline()</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> line:</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        print(line)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
-<p>或者</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> subprocess</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">p = subprocess.Popen(<span class="string">'ping 127.0.0.1 -n 10'</span>, stdout=subprocess.PIPE)</span><br><span class="line"><span class="keyword">while</span> p.poll() == <span class="keyword">None</span>: <span class="comment"># 检查子进程是否已经结束</span></span><br><span class="line">    print(p.stdout.readline())</span><br><span class="line">    time.sleep(<span class="number">1</span>)</span><br><span class="line">print(p.stdout.read())</span><br><span class="line">print(<span class="string">'returen code:'</span>, p.returncode)</span><br></pre></td></tr></table></figure>
-<h1 id="参考资料">参考资料</h1><ul>
-<li><a href="http://blog.chinaunix.net/uid-26000296-id-4461522.html" target="_blank" rel="external">python子进程模块subprocess详解与应用实例 之一</a></li>
-</ul>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/11/17/Python笔记之subprocess——子进程模块/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
 
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
             
+            
+              
+                
+                <a class="post-title-link" href="/2015/11/16/Python-3-安装第三方库时出现编译错误/" itemprop="url">
+                  Python 3 安装第三方库时出现编译错误
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-11-16T13:59:56+08:00" content="2015-11-16">
+              2015-11-16
+            </time>
           </span>
+
+          
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/编程/" itemprop="url" rel="index">
+                    <span itemprop="name">编程</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/编程/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/11/16/Python-3-安装第三方库时出现编译错误/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/16/Python-3-安装第三方库时出现编译错误/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>安装 numpy 时出现如下错误：<br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/%E7%BC%96%E7%A8%8B/Python/Python%203%20%E5%AE%89%E8%A3%85%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E6%97%B6%E5%87%BA%E7%8E%B0%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF/numpy%E5%AE%89%E8%A3%85%E5%87%BA%E9%94%99.jpg" alt=""></p>
+<p>Python的部分库在安装时要临时编译，找不到编译器就报错。类似的库还有lxml等。根据提示装了Visual C++ 10.0 仍然报错。微软的网站上只找到 Python 2.7 用的VC编译器（我是Python 3.4）。经过一番搜索终于解决。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/11/16/Python-3-安装第三方库时出现编译错误/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/11/15/Hexo-NexT主题个性化设置/" itemprop="url">
+                  Hexo NexT主题个性化设置
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-11-15T21:44:19+08:00" content="2015-11-15">
+              2015-11-15
+            </time>
+          </span>
+
+          
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/编程/" itemprop="url" rel="index">
+                    <span itemprop="name">编程</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/编程/hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">hexo</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/11/15/Hexo-NexT主题个性化设置/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/15/Hexo-NexT主题个性化设置/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>最近发现款非常简洁的主题，<a href="https://github.com/iissnan/hexo-theme-next">NexT</a>。先按照<a href="http://theme-next.iissnan.com/">NexT使用文档</a> 配置了一番，仍然感觉不满意，于是自己摸索了一下，作了些修改</p>
+<h2 id="添加新_Page">添加新 Page</h2><p>用如下命令添加新page</p>
+<pre><code>hexo <span class="keyword">new</span> page <span class="string">"Android"</span>
+hexo <span class="keyword">new</span> page <span class="string">"Python"</span>
+hexo <span class="keyword">new</span> page <span class="string">"API"</span>
+</code></pre>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/11/15/Hexo-NexT主题个性化设置/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/11/15/Python-3-多线程下载百度图片搜索结果/" itemprop="url">
+                  Python 3 多线程下载百度图片搜索结果
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-11-15T18:58:36+08:00" content="2015-11-15">
+              2015-11-15
+            </time>
+          </span>
+
+          
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/编程/" itemprop="url" rel="index">
+                    <span itemprop="name">编程</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/编程/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/11/15/Python-3-多线程下载百度图片搜索结果/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/15/Python-3-多线程下载百度图片搜索结果/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>今天来搜一搜「他」：<a href="http://www.baidu.com/s?wd=%E9%95%BF%E8%80%85%E8%9B%A4&amp;tn=87048150_dg&amp;ie=utf8">百度图片搜索结果</a>。<br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/%E7%BC%96%E7%A8%8B/Python/Python%203%20%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B8%8B%E8%BD%BD%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87%E6%90%9C%E7%B4%A2%E7%BB%93%E6%9E%9C%E4%BB%96.png" alt="搜索结果"></p>
+<h2 id="下载简单页面">下载简单页面</h2><p>查看网页源码，发现同一张图片有四种网址：</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/11/15/Python-3-多线程下载百度图片搜索结果/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/11/14/Python-3-json与正则式解析速度测试/" itemprop="url">
+                  Python 3 json与正则式解析速度测试
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-11-14T23:30:23+08:00" content="2015-11-14">
+              2015-11-14
+            </time>
+          </span>
+
+          
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/编程/" itemprop="url" rel="index">
+                    <span itemprop="name">编程</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/编程/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/11/14/Python-3-json与正则式解析速度测试/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/14/Python-3-json与正则式解析速度测试/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>晚上忽然想到个问题，解析Json数据，用正则式和json包，哪个更快？</p>
+<p>写了段代码测试：</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/11/14/Python-3-json与正则式解析速度测试/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/11/12/Python Queue的RecursionError解决办法/" itemprop="url">
+                  Python Queue对象引起的RecursionError:maximum recursion depth exceeded
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-11-12T19:54:47+08:00" content="2015-11-12">
+              2015-11-12
+            </time>
+          </span>
+
+          
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/编程/" itemprop="url" rel="index">
+                    <span itemprop="name">编程</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/编程/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/11/12/Python Queue的RecursionError解决办法/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/12/Python Queue的RecursionError解决办法/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>有网友想下载2014年4月至今的新加坡PSI数据：<a href="http://www.nea.gov.sg/anti-pollution-radiation-protection/air-pollution-control/psi/historical-psi-readings/year/2015/month/1/day/1">Historical PSI Readings</a>，看这页面比较简单就练手写了个爬虫。</p>
+<p>运行的时候出现<code>RecursionError</code>：</p>
+<pre><code>Traceback (most recent call last):
+  File <span class="string">"C:\Python 3.5\lib\multiprocessing\queues.py"</span>, line <span class="number">241</span>, <span class="keyword">in</span> _feed
+    obj = ForkingPickler.<span class="function"><span class="title">dumps</span><span class="params">(obj)</span></span>
+  File <span class="string">"C:\Python 3.5\lib\multiprocessing\reduction.py"</span>, line <span class="number">50</span>, <span class="keyword">in</span> dumps
+    <span class="function"><span class="title">cls</span><span class="params">(buf, protocol)</span></span>.<span class="function"><span class="title">dump</span><span class="params">(obj)</span></span>
+RecursionError: maximum recursion depth exceeded
+</code></pre>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/11/12/Python Queue的RecursionError解决办法/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/11/11/Python模拟登录知乎/" itemprop="url">
+                  Python 3 模拟登录知乎
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-11-11T21:06:08+08:00" content="2015-11-11">
+              2015-11-11
+            </time>
+          </span>
+
+          
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/编程/" itemprop="url" rel="index">
+                    <span itemprop="name">编程</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/编程/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/11/11/Python模拟登录知乎/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/11/Python模拟登录知乎/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <h2 id="缘起">缘起</h2><p>最近发现知乎的登录界面改了，抓包看了看，果然登录方式也变了，会根据用户名字符串发送不同字段的POST。中午研究了一会，写了个登录知乎的工具类，可以自动处理Cookie，维持登录状态。目前仅实现登录和打开网页的功能。</p>
+<h2 id="依赖的第三方库">依赖的第三方库</h2><ul>
+<li><code>requests</code></li>
+<li><code>BeautifulSoup</code></li>
+<li><code>lxml</code> 这个不装没关系，把<code>__login()</code>方法中的<code>lxml</code>改成<code>html.parser</code>即可。</li>
+</ul>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/11/11/Python模拟登录知乎/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/11/10/Hexo-3-1-1-静态博客搭建指南/" itemprop="url">
+                  Hexo 3.1.1 静态博客搭建指南
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-11-10T14:46:41+08:00" content="2015-11-10">
+              2015-11-10
+            </time>
+          </span>
+
+          
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/编程/" itemprop="url" rel="index">
+                    <span itemprop="name">编程</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/编程/hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">hexo</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/11/10/Hexo-3-1-1-静态博客搭建指南/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/10/Hexo-3-1-1-静态博客搭建指南/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p><strong>注意，本文适用于hexo 3.x 版本，与2.x略有出入！</strong></p>
+<p>GitHub Pages 本用于介绍托管在 GitHub 的项目，也可以用来搭建博客，有300M免费空间。</p>
+<p>hexo是一个基于Node.js的静态博客程序，可以方便的生成静态网页托管在github和Heroku上。作者是来自台湾的<a href="https://github.com/hexojs/hexo">tommy351</a>。<br>优势：</p>
+<blockquote>
+<p>生成静态页面快<br>支持 Markdown<br>兼容于 Windows, Mac &amp; Linux<br>部署方便。日常使用仅需五个命令。<br>高扩展性、自订性，文件少、小，易理解</p>
+</blockquote>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/11/10/Hexo-3-1-1-静态博客搭建指南/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/11/09/HelloWorld/" itemprop="url">
+                  HelloWorld！
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-11-09T15:56:26+08:00" content="2015-11-09">
+              2015-11-09
+            </time>
+          </span>
+
+          
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/随笔/" itemprop="url" rel="index">
+                    <span itemprop="name">随笔</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/随笔/瞬间/" itemprop="url" rel="index">
+                    <span itemprop="name">瞬间</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/11/09/HelloWorld/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/09/HelloWorld/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>按网上的教程终于配置好了Hexo，其实挺简单的，不过由于Hexo版本的原因，遇到不少坑。顺便学了SSH，push起来方便不少。</p>
+<p>稍后把此次博客搭建心得整理好发出来。</p>
+<p>以前用新浪的博客，可惜不支持代码块和Markdown，主题近十年没怎么变化，三天两头收到无聊的纸条、转发消息。后来转战CSDN，主题和Markdown非常丑，右上角定期出现广告，没法取消。有次还无故封了博客，找管理员询问得知是误操作。试了博客园，后台有无用的新闻、文章、日志分类，无法取消，默认的代码块不显示行数，Markdown比CSDN还丑。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/11/09/HelloWorld/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
