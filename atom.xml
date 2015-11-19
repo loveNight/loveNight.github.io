@@ -500,7 +500,7 @@ RecursionError: maximum recursion depth exceeded
     <link href="http://lovenight.github.io/2015/11/10/Hexo-3-1-1-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/"/>
     <id>http://lovenight.github.io/2015/11/10/Hexo-3-1-1-静态博客搭建指南/</id>
     <published>2015-11-10T06:46:41.000Z</published>
-    <updated>2015-11-19T13:04:59.015Z</updated>
+    <updated>2015-11-19T13:11:28.906Z</updated>
     <content type="html"><![CDATA[<p><strong>注意，本文适用于hexo 3.x 版本，与2.x略有出入！</strong></p>
 <p>GitHub Pages 本用于介绍托管在 GitHub 的项目，也可以用来搭建博客，有300M免费空间。</p>
 <p>hexo是一个基于Node.js的静态博客程序，可以方便的生成静态网页托管在github和Heroku上。作者是来自台湾的<a href="https://github.com/hexojs/hexo" target="_blank" rel="external">tommy351</a>。<br>优势：</p>
@@ -771,8 +771,8 @@ hexo <span class="keyword">new</span> page <span class="string">"API"</span>
 <p>false - 不做任何检查<br>warn - 在提交时检查并警告<br>true - 在提交时检查，如果发现混用则拒绝提交</p>
 </blockquote>
 <p>建议使用最严格的 true 选项</p>
-<h2 id="博客部署的message">博客部署的message</h2><p><code>\node_modules\hexo-deployer-git\README.md</code>文件找到这一句：<br><figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">The</span> <span class="default"><span class="keyword">default</span> commit message is `<span class="type">Site</span> updated: &#123;&#123; now<span class="container">('<span class="type">YYYY</span>-<span class="type">MM</span>-<span class="type">DD</span> <span class="type">HH</span>:<span class="title">mm</span>:<span class="title">ss'</span>)</span> &#125;&#125;`.</span></span><br></pre></td></tr></table></figure></p>
-<p>改得个性化一点：<br><figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">The</span> <span class="default"><span class="keyword">default</span> commit message is `这个勤奋的家伙又更新了: &#123;&#123; now<span class="container">('<span class="type">YYYY</span>-<span class="type">MM</span>-<span class="type">DD</span> <span class="type">HH</span>:<span class="title">mm</span>:<span class="title">ss'</span>)</span> &#125;&#125;`.</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="博客部署的message">博客部署的message</h2><p><code>\node_modules\hexo-deployer-git\lib\deployer.js</code>文件末尾找到这一句：<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="constant">Site</span> <span class="symbol">updated:</span> <span class="expansion">&#123;&#123; now(<span class="string">'YYYY-MM-DD HH:mm:ss'</span>) &#125;&#125;</span>.</span><br></pre></td></tr></table></figure></p>
+<p>改得个性化一点：<br><figure class="highlight handlebars"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">这个勤奋的家伙又更新了: </span><span class="expression">&#123;&#123; <span class="variable">now</span>(\'<span class="variable">YYYY-MM-DD</span> <span class="variable">HH</span>:<span class="variable">mm</span>:<span class="variable">ss</span>\') &#125;&#125;</span><span class="xml">.</span></span><br></pre></td></tr></table></figure></p>
 <hr>
 <h1 id="参考资料">参考资料</h1><ul>
 <li><a href="http://zipperary.com/categories/hexo/" target="_blank" rel="external">hexo系列教程</a></li>
