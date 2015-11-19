@@ -78,7 +78,7 @@ hexo是一个基于Node.js的静态博客程序，可以方便的生成静态网
 <meta property="og:image" content="http://7xo8t2.com1.z0.glb.clouddn.com/img/%E7%BC%96%E7%A8%8B/hexo/Hexo%20NexT%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E8%AE%BE%E7%BD%AE/%E6%B7%BB%E5%8A%A0%E4%BB%A3%E7%A0%81.png">
 <meta property="og:image" content="http://7xo8t2.com1.z0.glb.clouddn.com/img/%E7%BC%96%E7%A8%8B/hexo/Hexo%20NexT%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E8%AE%BE%E7%BD%AE/%E6%B7%BB%E5%8A%A0%E9%98%85%E8%AF%BB%E9%87%8F%E6%95%88%E6%9E%9C.png">
 <meta property="og:image" content="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/19/15/55/46/%E5%A4%9A%E8%AF%B4userid.jpg">
-<meta property="og:updated_time" content="2015-11-19T07:59:58.031Z">
+<meta property="og:updated_time" content="2015-11-19T08:44:02.703Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo 3.1.1 静态博客搭建指南">
 <meta name="twitter:description" content="注意，本文适用于hexo 3.x 版本，与2.x略有出入！
@@ -597,12 +597,10 @@ hexo <span class="keyword">new</span> page <span class="string">"API"</span>
 <p>效果：<br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/%E7%BC%96%E7%A8%8B/hexo/Hexo%20NexT%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E8%AE%BE%E7%BD%AE/%E6%B7%BB%E5%8A%A0%E9%98%85%E8%AF%BB%E9%87%8F%E6%95%88%E6%9E%9C.png" alt="添加了阅读量统计"></p>
 <h2 id="embed-js本地化">embed.js本地化</h2><p>使用Chrome抓包可以得到多说评论核心脚本embed.js的远程文件地址：</p>
 <pre><code><span class="string">http:</span><span class="comment">//static.duoshuo.com/embed.js</span>
-</code></pre><p>在浏览器中打开，右键另存为，放到博客目录下的<code>source</code>文件夹中，当你生成静态页面，它会被移到public文件夹下。</p>
-<p>在博客根目录下使用git bash运行命令：</p>
-<pre><code><span class="keyword">grep</span> <span class="string">'http://static.duoshuo.com/embed.js'</span> -r .<span class="regexp">/</span>
-</code></pre><p>搜到大量结果，其中<code>./deploy_git</code>和<code>./public</code>文件夹的搜索结果都是已生成的静态博客文件，不用管。最后一条指出了主题内用到embed.js的文件：<code>\themes\next\layout\_scripts\comments\duoshuo.swig</code>。搜索<code>//static.duoshuo.com/embed.js</code>，把一级域名换成博客首页，比如我改成：<code>//lovenight.github.io/embed.js</code>。</p>
+</code></pre><p>在浏览器中打开，右键另存为，放到<code>\theme\next\source\js\</code>文件夹中。</p>
+<p>再打开<code>\themes\next\layout\_scripts\comments\duoshuo.swig</code>。搜索<code>//static.duoshuo.com/embed.js</code>，把它改成<code>/js/embed.js</code>。</p>
 <p>如法炮制，把加载慢的.js都本地化。目前Github的响应速度非常快。</p>
-<h2 id="多说评论添加博主标记">多说评论添加博主标记</h2><p>打开上一步本地化的<code>embed.js</code>，在最顶部添加如下代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//管理员判断开始</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sskadmin</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> ssk = <span class="string">''</span>;</span><br><span class="line">    <span class="keyword">if</span>(e.user_id==【多说id】)&#123;</span><br><span class="line">        ssk = <span class="string">'&lt;div style="position: absolute;margin-left:300px;"&gt;&lt;img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/19/14/34/39/sskdsadmin.png" width="195" height="89"&gt;&lt;/div&gt;'</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ssk;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//管理员判断结束</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="多说评论添加博主标记">多说评论添加博主标记</h2><p>打开上一步本地化的<code>embed.js</code>，在最顶部添加如下代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//管理员判断开始</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sskadmin</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> ssk = <span class="string">''</span>;</span><br><span class="line">    <span class="keyword">if</span>(e.user_id==【多说id】)&#123;</span><br><span class="line">        ssk = <span class="string">'&lt;span class="sskadmin"&gt;博主'</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ssk;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//管理员判断结束</span></span><br></pre></td></tr></table></figure></p>
 <p>上面的多说id需要在博客中找一条你自己的留言：<br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/19/15/55/46/%E5%A4%9A%E8%AF%B4userid.jpg" alt="多说userid.jpg"></p>
 <p>然后搜索</p>
 <pre><code>data-qqt-account=<span class="string">"'+(r.qqt_account||"</span><span class="string">")+'"</span>&gt;'+u(r.<span class="property">name</span>)+<span class="string">"&lt;/span&gt;"</span>),
@@ -963,7 +961,7 @@ hexo <span class="keyword">new</span> page <span class="string">"API"</span>
       var ds = document.createElement('script');
       ds.type = 'text/javascript';ds.async = true;
       ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//lovenight.github.io/embed.js';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '/js/embed.js';
       ds.charset = 'UTF-8';
       (document.getElementsByTagName('head')[0]
       || document.getElementsByTagName('body')[0]).appendChild(ds);
