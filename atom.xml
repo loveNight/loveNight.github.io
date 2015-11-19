@@ -500,7 +500,7 @@ RecursionError: maximum recursion depth exceeded
     <link href="http://lovenight.github.io/2015/11/10/Hexo-3-1-1-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/"/>
     <id>http://lovenight.github.io/2015/11/10/Hexo-3-1-1-静态博客搭建指南/</id>
     <published>2015-11-10T06:46:41.000Z</published>
-    <updated>2015-11-19T12:21:03.562Z</updated>
+    <updated>2015-11-19T12:35:44.843Z</updated>
     <content type="html"><![CDATA[<p><strong>注意，本文适用于hexo 3.x 版本，与2.x略有出入！</strong></p>
 <p>GitHub Pages 本用于介绍托管在 GitHub 的项目，也可以用来搭建博客，有300M免费空间。</p>
 <p>hexo是一个基于Node.js的静态博客程序，可以方便的生成静态网页托管在github和Heroku上。作者是来自台湾的<a href="https://github.com/hexojs/hexo" target="_blank" rel="external">tommy351</a>。<br>优势：</p>
@@ -788,6 +788,7 @@ hexo <span class="keyword">new</span> page <span class="string">"API"</span>
 <li><a href="https://www.mxgw.info/t/filename-too-long-in-git.html" target="_blank" rel="external">win下面的git客户端提示FIlename too long解决方法</a></li>
 <li><a href="http://wsgzao.github.io/post/duoshuo" target="_blank" rel="external">多说自定义CSS动感头像和多说评论显示User Agent的那些小事</a></li>
 <li><a href="http://www.vsay.cn/one-more-custom-css-lets-you-say-comments-city.html" target="_blank" rel="external">多说自定义CSS 让你的多说评论动感起来</a></li>
+<li><a href="http://moxfive.xyz/2015/09/29/duoshuo-style/" target="_blank" rel="external">多说样式折腾记录 — 添加 UA 浏览器标识、旋转头像等</a></li>
 </ul>
 ]]></content>
     <summary type="html">
@@ -800,7 +801,15 @@ hexo <span class="keyword">new</span> page <span class="string">"API"</span>
     
     </summary>
     
+      <category term="CSS" scheme="http://lovenight.github.io/tags/CSS/"/>
+    
+      <category term="JavaScript" scheme="http://lovenight.github.io/tags/JavaScript/"/>
+    
+      <category term="UA" scheme="http://lovenight.github.io/tags/UA/"/>
+    
       <category term="hexo" scheme="http://lovenight.github.io/tags/hexo/"/>
+    
+      <category term="多说" scheme="http://lovenight.github.io/tags/%E5%A4%9A%E8%AF%B4/"/>
     
       <category term="编程" scheme="http://lovenight.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
     

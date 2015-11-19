@@ -6,9 +6,9 @@ Github Pages + Hexo 搭建的个人博客：[岁月如歌](http://lovenight.gith
 
 
 
-## 搭建过程
+## 搭建心得
 
-1. [Hexo 3.1.1 静态博客搭建指南](http://lovenight.github.io/2015/11/10/Hexo-3-1-1-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/)：刚搭建的时候使用 Jacman 主题
-2. [Hexo NexT主题个性化设置](http://lovenight.github.io/2015/11/15/Hexo-NexT%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E8%AE%BE%E7%BD%AE/)：后来改成NexT主题
+[Hexo 3.1.1 静态博客搭建指南](http://lovenight.github.io/2015/11/10/Hexo-3-1-1-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/)：刚搭建的时候使用 Jacman 主题
+
 
 
