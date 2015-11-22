@@ -4,7 +4,7 @@
   <subtitle><![CDATA[莫厌追欢笑语频，寻思离乱好伤神。闲来屈指从头数，得见清平有几人]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://lovenight.github.io/"/>
-  <updated>2015-11-18T10:37:58.312Z</updated>
+  <updated>2015-11-22T03:52:23.734Z</updated>
   <id>http://lovenight.github.io/</id>
   
   <author>
@@ -13,6 +13,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[趣图收集]]></title>
+    <link href="http://lovenight.github.io/2015/11/22/%E8%B6%A3%E5%9B%BE%E6%94%B6%E9%9B%86/"/>
+    <id>http://lovenight.github.io/2015/11/22/趣图收集/</id>
+    <published>2015-11-22T03:49:21.000Z</published>
+    <updated>2015-11-22T03:52:23.734Z</updated>
+    <content type="html"><![CDATA[<blockquote class="blockquote-center">收集一些有趣的图片，不定期更新</blockquote>
+
+
+<ul>
+<li>常被知乎ers拿来调侃戴了绿帽的题主<br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/22/11/49/8/Mario.jpg" alt="Mario.jpg"></li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<blockquote class="blockquote-center">收集一些有趣的图片，不定期更新</blockquote>
+
+
+<ul>
+<li>常被知乎ers拿来调侃戴了绿帽的题主<br><img src="http://7xo8t2.com1.z0.glb.clou]]>
+    </summary>
+    
+      <category term="图片" scheme="http://lovenight.github.io/tags/%E5%9B%BE%E7%89%87/"/>
+    
+      <category term="搞笑有趣" scheme="http://lovenight.github.io/tags/%E6%90%9E%E7%AC%91%E6%9C%89%E8%B6%A3/"/>
+    
+      <category term="随笔" scheme="http://lovenight.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="图说" scheme="http://lovenight.github.io/categories/%E9%9A%8F%E7%AC%94/%E5%9B%BE%E8%AF%B4/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[向百度推送hexo博客所有链接的Python脚本]]></title>
