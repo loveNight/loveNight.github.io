@@ -2,6 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     
+  <url>
+    <loc>http://lovenight.github.io/2015/11/23/Python-%E6%A8%A1%E6%8B%9F%E7%99%BB%E5%BD%95%E6%96%B0%E6%B5%AA%E5%BE%AE%E5%8D%9A/</loc>
+    <lastmod>2015-11-23T14:27:19.250Z</lastmod>
+    <data>
+        <display>
+        <title>Python 模拟登录新浪微博的两种方法</title>
+        <pubTime>2015-11-23T11:32:14.000Z</pubTime>
+        
+        <tag>Python </tag>
+         
+        <tag>新浪微博 </tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://lovenight.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="Python" url="http://lovenight.github.io/categories/%E7%BC%96%E7%A8%8B/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
     
   <url>

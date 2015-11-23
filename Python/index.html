@@ -89,7 +89,7 @@ xlzd
 能利用爬虫技术做到哪些很酷很有趣很有用的事情
 你是如何开始能写python爬虫？
 Pyth">
-<meta property="og:updated_time" content="2015-11-23T06:56:02.515Z">
+<meta property="og:updated_time" content="2015-11-23T08:40:04.656Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python Notes">
 <meta name="twitter:description" content="Python Docs
@@ -354,6 +354,13 @@ Pyth">
 <h2 id="常用库">常用库</h2><p><a href="https://pypi.python.org/pypi" target="_blank" rel="external">Python Package Index</a> 检索各种Python库</p>
 <p><strong>可以直接根据下面的名字用pip命令安装</strong> eg：</p>
 <pre><code>pip <span class="keyword">install</span> BeautifulSoup4
+</code></pre><p>批量安装第三方库：</p>
+<pre><code>pip install -r requirements.txt --allow-<span class="built_in">all</span>-<span class="type">external</span>
+</code></pre><p>其中，<code>requirments.txt</code>的内容为:</p>
+<pre><code>Flask==<span class="number">0.9</span>
+Jinja2==<span class="number">2.7</span><span class="number">.2</span>
+Werkzeug==<span class="number">0.8</span><span class="number">.3</span>
+gunicorn==<span class="number">0.17</span><span class="number">.2</span>
 </code></pre><ul>
 <li><a href="http://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/" target="_blank" rel="external">BeautifulSoup4</a>：从HTML或XML文件中提取数据</li>
 <li><a href="http://lxml.de/" target="_blank" rel="external">lxml</a>：HTML/XML的解析器，可与BeautifulSoup配套使用。如果安装出错请看这里：<a href="http://blog.csdn.net/kinglearnjava/article/details/49469881" target="_blank" rel="external">Python 3 安装 lxml</a></li>
@@ -447,7 +454,7 @@ Pyth">
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-count">13</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -461,7 +468,7 @@ Pyth">
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">21</span>
+              <span class="site-state-item-count">22</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
