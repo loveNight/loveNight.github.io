@@ -4,7 +4,7 @@
   <subtitle><![CDATA[莫厌追欢笑语频，寻思离乱好伤神。闲来屈指从头数，得见清平有几人]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://lovenight.github.io/"/>
-  <updated>2015-11-30T10:43:21.125Z</updated>
+  <updated>2015-11-30T11:19:41.093Z</updated>
   <id>http://lovenight.github.io/</id>
   
   <author>
@@ -15,13 +15,13 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[使用ShadowSocks翻墙]]></title>
+    <title><![CDATA[翻墙三策]]></title>
     <link href="http://lovenight.github.io/2015/11/30/%E7%BF%BB%E5%A2%99%E4%B8%89%E7%AD%96/"/>
     <id>http://lovenight.github.io/2015/11/30/翻墙三策/</id>
     <published>2015-11-30T08:44:18.000Z</published>
-    <updated>2015-11-30T10:43:21.125Z</updated>
+    <updated>2015-11-30T11:19:41.093Z</updated>
     <content type="html"><![CDATA[<p><blockquote class="blockquote-center">将仲子兮，无逾我墙，无折我树桑。岂敢爱之？畏我诸兄。——《国风·郑风·将仲子》</blockquote><br>天朝早早建了高墙，将不少网站挡在墙外。有段时间也对外面的世界非常好奇，正好邮箱里时不时收到的反动邮件都会送一张梯子，看了看，墙外也没什么新鲜好玩的事物。</p>
-<p>接触编程之后经常要上各种国外网站，Google更是不可缺少的工具，准备一张样子非常重要。Go-Agent风评不错，但是步骤繁琐，令人望而却步。目前找到这三种梯子：</p>
+<p>接触编程之后经常要上各种国外网站，Google更是不可缺少的工具，准备一张梯子非常重要。Go-Agent风评不错，但是步骤繁琐，令人望而却步。目前找到这三种梯子：</p>
 <a id="more"></a>
 <hr>
 <h1 id="Hosts文件配置工具">Hosts文件配置工具</h1><p>下载地址和教程：<a href="https://www.anotherhome.net/1376" target="_blank" rel="external">Hosts文件自动配置工具</a></p>
@@ -47,7 +47,7 @@
 ]]></content>
     <summary type="html">
     <![CDATA[<p><blockquote class="blockquote-center">将仲子兮，无逾我墙，无折我树桑。岂敢爱之？畏我诸兄。——《国风·郑风·将仲子》</blockquote><br>天朝早早建了高墙，将不少网站挡在墙外。有段时间也对外面的世界非常好奇，正好邮箱里时不时收到的反动邮件都会送一张梯子，看了看，墙外也没什么新鲜好玩的事物。</p>
-<p>接触编程之后经常要上各种国外网站，Google更是不可缺少的工具，准备一张样子非常重要。Go-Agent风评不错，但是步骤繁琐，令人望而却步。目前找到这三种梯子：</p>]]>
+<p>接触编程之后经常要上各种国外网站，Google更是不可缺少的工具，准备一张梯子非常重要。Go-Agent风评不错，但是步骤繁琐，令人望而却步。目前找到这三种梯子：</p>]]>
     
     </summary>
     
