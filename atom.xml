@@ -4,7 +4,7 @@
   <subtitle><![CDATA[莫厌追欢笑语频，寻思离乱好伤神。闲来屈指从头数，得见清平有几人]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://lovenight.github.io/"/>
-  <updated>2015-11-25T05:50:08.593Z</updated>
+  <updated>2015-11-30T02:14:46.609Z</updated>
   <id>http://lovenight.github.io/</id>
   
   <author>
@@ -13,6 +13,262 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[我的Sublime Text 3 配置]]></title>
+    <link href="http://lovenight.github.io/2015/11/30/%E6%88%91%E7%9A%84Sublime-Text-3-%E9%85%8D%E7%BD%AE/"/>
+    <id>http://lovenight.github.io/2015/11/30/我的Sublime-Text-3-配置/</id>
+    <published>2015-11-30T02:04:37.000Z</published>
+    <updated>2015-11-30T02:14:46.609Z</updated>
+    <content type="html"><![CDATA[<h1 id="下载">下载</h1><ul>
+<li><a href="http://www.sublimetext.com/3" target="_blank" rel="external">Sublime Text 3 官方下载地址</a></li>
+<li><a href="http://pan.baidu.com/s/1sj02k2L" target="_blank" rel="external">Sublime Text 3 汉化破解版</a></li>
+</ul>
+<hr>
+<h1 id="资料：">资料：</h1><ul>
+<li><a href="http://sublime-text.readthedocs.org/en/latest/index.html" target="_blank" rel="external">Sublime Text 非官方文档</a></li>
+</ul>
+<hr>
+<h1 id="技巧">技巧</h1><p><code>-用户</code>或<code>-User</code>后缀的菜单项，其对应的配置文件都保存在<code>Packages\User</code>文件夹下，将它们上传到Github，便于同步。</p>
+<a id="more"></a>
+<hr>
+<h1 id="个人最常用的快捷键">个人最常用的快捷键</h1><p>快捷键完整版见后文，这里只列个人习惯。</p>
+<p>四种 Goto ：<br>Ctrl + P  文件定位<br>Ctrl + ;  词语定位 #<br>Ctrl + R  函数定位 @<br>Ctrl + G  行号定位 :</p>
+<p>括号前后移动光标：Ctrl + M<br>以单词为单位前后移动光标：Ctrl + Left/Right<br>Ctrl+→ 向右单位性地移动光标，快速移动光标。<br>重新打开刚刚关闭的标签页：Ctrl + Shift + T<br>当前行与上/下一行交换位置：Shift + Ctrl + Up/Down<br>向光标前插入一行：Shift + Ctrl + Enter<br>向光标后插入一行：Ctrl + Enter<br>复制光标所在整行，插入到下一行：Ctrl + Shift + D<br>合并选中的多行代码为一行：Ctrl + J<br>快速折叠文件内所有函数：Ctrl + K + 1 （数字表示级别）</p>
+<hr>
+<h1 id="插件">插件</h1><p>先装插件管理器(Package Control)：<a href="https://packagecontrol.io/installation" target="_blank" rel="external">https://packagecontrol.io/installation</a></p>
+<p><strong>安装插件</strong>：Ctrl+Shift+P，输入install，等待几秒后出现插件列表，输插件名再回车就能自动安装。下文插件名加链接的可以点进去学习使用方法。建议安装插件后都进设置菜单配置一下。<br><strong>删除插件</strong>：Ctrl+Shift+P，输入remove package，选择插件再回车。</p>
+<ul>
+<li><strong>ConvertToUTF8</strong>：GBK编码兼容。</li>
+<li><strong>FileHeader</strong>：文件模板，可自动更新修改时间。<br>Ctrl+Shift+A 插入文件头。<code>Packages\FileHeader\template</code>中的 body 对应文件模板，header 对应文件头</li>
+<li><strong>JsFormat</strong>：javascript格式化，包括Json。切换Syntax后按 Ctrl+Alt+F 格式化。</li>
+<li><a href="https://wakatime.com/" target="_blank" rel="external"><strong>wakatime</strong></a>：自动记录code时间，支持多种编辑器和IDE。<br>先到官网注册，登录后在右上角点用户名，选择<code>Setting</code>，左侧选<code>Account</code>，复制Api Key。Sublime中安装此插件会用到。以后就可以登录网站查看自己的code时间统计图。</li>
+<li><a href="http://colorsublime.com/" target="_blank" rel="external"><strong>ColorSublime</strong></a>：用来安装其官网上的所有主题。<br>安装此插件后，Ctrl+Shift+P，输入install theme并回车，等待片刻即缓存其官网所有主题到本地，按上下键可以即时预览效果，回车键安装。</li>
+<li><a href="https://github.com/gornostal/Modific" target="_blank" rel="external"><strong>Git</strong></a>：如其名，还没学会使用</li>
+<li><a href="https://github.com/gornostal/Modific" target="_blank" rel="external"><strong>Modific</strong></a>：高亮相对于上次Git或SVN提交有所变动的行。</li>
+<li><a href="https://github.com/spadgos/sublime-jsdocs" target="_blank" rel="external"><strong>DocBlockr</strong></a>：生成Java风格的函数注释，用法与效果都和Eclipse相同。</li>
+<li><a href="https://github.com/aziz/PlainTasks" target="_blank" rel="external"><strong>PlainTasks</strong></a>：待办事件表</li>
+<li><a href="https://packagecontrol.io/packages/ColorPicker" target="_blank" rel="external"><strong>ColorPicker</strong></a>：需要输入颜色时，可直接打开调色板选颜色。快捷键Ctrl+Shift+C，与ConvertToUTF8冲突，在<code>Packages\ConvertToUTF8</code>下找到对应操作系统的<code>Default.sublime-keymap</code>文件，把快捷键改掉</li>
+<li><a href="https://github.com/facelessuser/TabsExtra" target="_blank" rel="external"><strong>TabsExtra</strong></a>：安装后右键单击Sublime里的文件标签，选clone就能在新标签中打开同一文件。配合Alt+Shift+2可以方便地分屏浏览。</li>
+<li><a href="http://damnwidget.github.io/anaconda/" target="_blank" rel="external"><strong>Anaconda</strong></a>：Python代码自动补全、PEP8格式化等</li>
+<li><a href="http://docs.emmet.io/" target="_blank" rel="external"><strong>Emment</strong></a>：快速编写HTML和CSS代码</li>
+</ul>
+<hr>
+<h1 id="代码段_Snippet">代码段 Snippet</h1><p>以Eclipse中常用的syso为例，把它照搬到Sublime Text中：</p>
+<p>单击菜单中的<code>工具</code>，<code>新代码段...</code>，删掉默认内容，粘贴下方代码并保存到<code>Packages\User\Java Snippets</code>文件夹，文件名为<code>Print.sublime-snippet</code>。写Java代码时只须输入<code>syso</code>再按回车就能快速插入<code>System.out.println()</code> 了。</p>
+<p>后缀必须是<code>.sublime-snippet</code>，文件名可以自由命名，目录结构也可以随意更改，只要在<code>Packages\User\</code>下就行。每个文件中只能写包含一个<code>&lt;snippet&gt;</code>结点<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">snippet</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 快速补全的内容 --&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 1表示第一个输入点，1后加冒号和字符表示默认值 --&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 如System.out.println($&#123;1:"Hello World"&#125;)，可输入多行代码 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">content</span>&gt;</span><span class="cdata">&lt;![CDATA[System.out.println($&#123;1&#125;);]]&gt;</span><span class="tag">&lt;/<span class="title">content</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- 触发字符 --&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- Eclipse中可以用syso快速插入Java的输出语句 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">tabTrigger</span>&gt;</span>syso<span class="tag">&lt;/<span class="title">tabTrigger</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- 指定的语法才会触发，可选 --&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 此处的语法指的是Ctrl+Shift+P，Set Syntax中设置的语法 --&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 必须把完整的语言名写在后缀中 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">scope</span>&gt;</span>source.java<span class="tag">&lt;/<span class="title">scope</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- 触发时的提示 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">description</span>&gt;</span>System.out.println()<span class="tag">&lt;/<span class="title">description</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">snippet</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>Sublime Text 3 为每种语法（Syntax）都设置了Snippet。</p>
+<p>查看方法：把Sublime Text 3 根目录下<code>Packages</code>文件夹中任意文件复制出来，改后缀为<code>.rar</code>，解压缩。后缀为<code>.sublime-snippet</code>的就是了。可以用Sublime打开。</p>
+<hr>
+<h1 id="设置">设置</h1><h2 id="Sublime_Text_设置">Sublime Text 设置</h2><p><code>首选项</code>，<code>设置-用户</code><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 开启选中范围内搜索</span></span><br><span class="line">    <span class="string">"auto_find_in_selection"</span>: <span class="literal">true</span>,</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 侧边栏文件夹显示加粗，区别于文件</span></span><br><span class="line">    <span class="string">"bold_folder_labels"</span>: <span class="literal">true</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">"color_scheme"</span>: <span class="string">"Packages/Color Scheme - Default/Solarized (Dark).tmTheme"</span>,</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 使用 unix 风格的换行符</span></span><br><span class="line">    <span class="string">"default_line_ending"</span>: <span class="string">"unix"</span>,</span><br><span class="line"></span><br><span class="line">    <span class="comment">// true则禁用Emmet的tab键功能</span></span><br><span class="line">    <span class="comment">// "disable_tab_abbreviations": true,</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 右侧代码预览时给所在区域加上边框</span></span><br><span class="line">    <span class="string">"draw_minimap_border"</span>: <span class="literal">true</span>,</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 保证在文件保存时，在结尾插入一个换行符。</span></span><br><span class="line">    <span class="comment">// 这样 git 提交时不会生产额外的 diff</span></span><br><span class="line">    <span class="string">"ensure_newline_at_eof_on_save"</span>: <span class="literal">true</span>,</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 默认显示行号右侧的代码段闭合展开三角号</span></span><br><span class="line">    <span class="string">"fade_fold_buttons"</span>: <span class="literal">false</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">"font_face"</span>: <span class="string">"Microsoft YaHei Mono"</span>,</span><br><span class="line">    <span class="string">"font_size"</span>: <span class="number">13</span>,</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 当前行高亮</span></span><br><span class="line">    <span class="string">"highlight_line"</span>: <span class="literal">true</span>,</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 高亮未保存文件</span></span><br><span class="line">    <span class="string">"highlight_modified_tabs"</span>: <span class="literal">true</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">"ignored_packages"</span>:</span><br><span class="line">    [</span><br><span class="line">        <span class="string">"Vintage"</span></span><br><span class="line">    ],</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 窗口失焦立即保存文件</span></span><br><span class="line">    <span class="string">"save_on_focus_lost"</span>: <span class="literal">true</span>,</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 自动移除行尾多余空格</span></span><br><span class="line">    <span class="string">"trim_trailing_white_space_on_save"</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="string">"trim_automatic_white_space"</span>: <span class="literal">true</span>,</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 关闭自动更新</span></span><br><span class="line">    <span class="string">"update_check"</span>: <span class="literal">false</span>,</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 自动换行</span></span><br><span class="line">    <span class="string">"word_wrap"</span>: <span class="string">"true"</span>，</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Tab转空格</span></span><br><span class="line">    <span class="string">"translate_tabs_to_spaces"</span>: <span class="literal">true</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="Anaconda_设置">Anaconda 设置</h2><p><code>首选项</code>，<code>插件设置</code>，<code>Anaconda</code>，<code>Settings - User</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="comment">//忽略各种空格不对, 超过80字, import的函数没有使用的提醒,</span></span><br><span class="line">    <span class="string">"pep8_ignore"</span>: [<span class="string">"E501"</span>, <span class="string">"W292"</span>, <span class="string">"E303"</span>, <span class="string">"W391"</span>, <span class="string">"E225"</span>, <span class="string">"E302"</span>, <span class="string">"W293"</span>, <span class="string">"E402"</span>],</span><br><span class="line">    <span class="string">"pyflakes_explicit_ignore"</span>:</span><br><span class="line">    [</span><br><span class="line">        <span class="string">"UnusedImport"</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="comment">//保存文件后自动pep8格式化</span></span><br><span class="line">    <span class="string">"auto_formatting"</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="comment">//库函数的提示</span></span><br><span class="line">    <span class="string">"enable_signatures_tooltip"</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="string">"merge_signatures_and_doc"</span>:<span class="literal">true</span>,</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span><br><span class="line">        Set is a false to disable Anaconda Linting totally</span><br><span class="line">    */</span></span><br><span class="line">    <span class="string">"anaconda_linting"</span>: <span class="literal">false</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="快捷键设置">快捷键设置</h2><p><code>首选项</code>，<code>按键绑定-用户</code>：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line"><span class="comment">// 代码提示</span></span><br><span class="line">&#123; <span class="string">"keys"</span>: [<span class="string">"alt+space"</span>], <span class="string">"command"</span>: <span class="string">"auto_complete"</span> &#125;,</span><br><span class="line">&#123; <span class="string">"keys"</span>: [<span class="string">"alt+space"</span>], <span class="string">"command"</span>: <span class="string">"replace_completion_with_auto_complete"</span>, <span class="string">"context"</span>:</span><br><span class="line">  [</span><br><span class="line">    &#123; <span class="string">"key"</span>: <span class="string">"last_command"</span>, <span class="string">"operator"</span>: <span class="string">"equal"</span>, <span class="string">"operand"</span>: <span class="string">"insert_best_completion"</span> &#125;,</span><br><span class="line">    &#123; <span class="string">"key"</span>: <span class="string">"auto_complete_visible"</span>, <span class="string">"operator"</span>: <span class="string">"equal"</span>, <span class="string">"operand"</span>: <span class="literal">false</span> &#125;,</span><br><span class="line">    &#123; <span class="string">"key"</span>: <span class="string">"setting.tab_completion"</span>, <span class="string">"operator"</span>: <span class="string">"equal"</span>, <span class="string">"operand"</span>: <span class="literal">true</span> &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;,</span><br><span class="line"></span><br><span class="line"><span class="comment">// 跳转到函数定义</span></span><br><span class="line">&#123; <span class="string">"keys"</span>: [<span class="string">"ctrl+alt+d"</span>], <span class="string">"command"</span>: <span class="string">"goto_definition"</span> &#125;,</span><br><span class="line">]</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h1 id="编译系统">编译系统</h1><h2 id="编译运行Java">编译运行Java</h2><p>Sublime Text 3默认将文件存为UTF-8编码，如果要手动输命令编译Sublime Text 3 写的Java源文件，必须加<code>-encoding UTF-8</code>参数</p>
+<h3 id="方法一：">方法一：</h3><p>打开Sublime Text 3，依次点击<code>工具</code>、<code>编译系统</code>、<code>新编译系统</code>，粘贴下面的代码并保存为<code>My-----Java.sublime-build</code>。文件名加这么多斜杠是为了能在菜单中一眼找出来。</p>
+<p>然后按Ctrl+Shift+P，输入<code>My---</code>，选择<code>Build With:My-----Java</code>并回车，即可将刚才的文件设置为当前编译系统。Ctrl+B编译，Ctrl+Shift+B运行。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 命令和参数，未指定路径则在PATH环境变量中找</span></span><br><span class="line">    <span class="string">"cmd"</span>: [<span class="string">"javac"</span>,<span class="string">"-encoding"</span>,<span class="string">"UTF-8"</span>,<span class="string">"-d"</span>,<span class="string">"."</span>,<span class="string">"$file"</span>],</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 可选。获取cmd的错误输出</span></span><br><span class="line">    <span class="string">"file_regex"</span>: <span class="string">"^(...*?):([0-9]*):?([0-9]*)"</span>,</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 可选。`工具`菜单中`编译`为`自动`时生效</span></span><br><span class="line">    <span class="string">"selector"</span>: <span class="string">"source.java"</span>,</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 可选。输出"cmd"的编码。必须是合法的Python编码，缺省为"UTF-8"</span></span><br><span class="line">    <span class="string">"encoding"</span>:<span class="string">"GBK"</span>,</span><br><span class="line"></span><br><span class="line">    <span class="comment">// variants 可选。用来替代主构建系统的备选。如果构建系统的"selector"与激活的文件匹配，变量"name"则会出现在 Command Palette 中。</span></span><br><span class="line">    <span class="string">"variants"</span>:</span><br><span class="line">        [</span><br><span class="line">            &#123;</span><br><span class="line"></span><br><span class="line">                 <span class="comment">// 仅在"variants"中是合法的 (详见 variants)。用来标识系统中不同的构建系统。如果"name"是"Run" ,则会显示在Tools | Build System 菜单下，并且可以使用Ctrl + Shift + B调用</span></span><br><span class="line">                <span class="string">"name"</span>: <span class="string">"Run"</span>,</span><br><span class="line"></span><br><span class="line">                <span class="comment">// 可选。如果该选项为"true" ，"cmd"则可以通过shell运行。</span></span><br><span class="line">                <span class="string">"shell"</span>: <span class="literal">true</span>,</span><br><span class="line"></span><br><span class="line">                <span class="string">"cmd"</span> :  [<span class="string">"start"</span>,<span class="string">"cmd"</span>,<span class="string">"/c"</span>, <span class="string">"java $&#123;file_base_name&#125; &amp;echo. &amp; pause"</span>],</span><br><span class="line">                <span class="comment">// /c是执行完命令后关闭cmd窗口,</span></span><br><span class="line">                <span class="comment">// /k是执行完命令后不关闭cmd窗口。</span></span><br><span class="line">                <span class="comment">// echo. 相当于输入一个回车</span></span><br><span class="line">                <span class="comment">// pause命令使cmd窗口按任意键后才关闭</span></span><br><span class="line"></span><br><span class="line">                <span class="comment">// 可选。在运行首行的"cmd"前会切换到该目录。运行结束后会切换到原来的目录。</span></span><br><span class="line">                <span class="string">"working_dir"</span>: <span class="string">"$&#123;file_path&#125;"</span>,</span><br><span class="line"></span><br><span class="line">                <span class="string">"encoding"</span>:<span class="string">"GBK"</span></span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 还有：</span></span><br><span class="line">    <span class="comment">// line_regex 可选。当"cmd"的错误输出中，file_regex与该行不匹配，如果line_regex存在，并且确实与当前行匹配， 则遍历整个缓冲区，直到与file regex匹配的行出现，并用这两个匹配决定最终要跳转的文件或行。</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// target 可选。运行的Sublime Text命令，缺省为"exec" (Packages/Default/exec.py)。该命令从 .build-system中获取配置数据。用来替代缺省的构建系统命令。注意，如果你希望替代构建系统的缺省命令，请在.sublime-build 文件中专门设置。</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// env 可选。在环境变量被传递给"cmd"前，将他们封装成词典。</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// path 可选。该选项可以在调用"cmd"前替换当前进程的PATH 。原来的 PATH 将在运行后恢复。使用这个选项可以在不修改系统设置的前提下将目录添加到 PATH 中。</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="方法二：">方法二：</h3><p>在JDK的bin目录下新建<code>runJava.bat</code>文件：</p>
+<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">@echo</span> off</span><br><span class="line">cd <span class="variable">%~</span>dp1</span><br><span class="line">echo Compiling <span class="variable">%~</span>nx1......</span><br><span class="line"><span class="keyword">if</span> exist <span class="variable">%~</span>n1.class (</span><br><span class="line">    del <span class="variable">%~</span>n1.class</span><br><span class="line">)</span><br><span class="line">javac -encoding UTF-<span class="number">8</span> <span class="variable">%~</span>nx1</span><br><span class="line"><span class="keyword">if</span> exist <span class="variable">%~</span>n1.class (</span><br><span class="line">    echo ------Output------</span><br><span class="line">    java <span class="variable">%~</span>n1</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>用上面的方法新建并设置为当前编译系统，按Ctrl+B即可编译+运行，这种方法的缺点是无法在控制台输入，如果程序需要输入内容，则直接报错<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"> <span class="string">"shell_cmd"</span>: <span class="string">"runJava.bat \"$file\""</span>,</span><br><span class="line"> <span class="string">"file_regex"</span>: <span class="string">"^(...*?):([0-9]*):?([0-9]*)"</span>,</span><br><span class="line"> <span class="string">"selector"</span>: <span class="string">"source.java"</span>,</span><br><span class="line"> <span class="string">"encoding"</span>: <span class="string">"GBK"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="运行_Python">运行 Python</h2><p>用法同上，仅粘贴代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"shell_cmd"</span>: <span class="string">"python -u \"$file\""</span>,</span><br><span class="line">    <span class="string">"file_regex"</span>: <span class="string">"^[ ]*File \"(...*?)\", line ([0-9]*)"</span>,</span><br><span class="line">    <span class="string">"selector"</span>: <span class="string">"source.python"</span>,</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 默认是utf-8，控制台无法输出中文。</span></span><br><span class="line">    <span class="comment">// Window Code Page 936，指的是GBK编码</span></span><br><span class="line">    <span class="string">"encoding"</span>:<span class="string">"cp936"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h1 id="快捷键汇总">快捷键汇总</h1><h2 id="选择类">选择类</h2><blockquote>
+<ul>
+<li>Ctrl+D 选中光标所占的文本，继续操作则会选中下一个相同的文本。</li>
+<li>Alt+F3 选中文本按下快捷键，即可一次性选择全部的相同文本进行同时编辑。举个栗子：快速选中并更改所有相同的变量名、函数名等。</li>
+<li>Ctrl+L 选中整行，继续操作则继续选择下一行，效果和 Shift+↓ 效果一样。</li>
+<li>Ctrl+Shift+L 先选中多行，再按下快捷键，会在每行行尾插入光标，即可同时编辑这些行。</li>
+<li>Ctrl+Shift+M 选择括号内的内容（继续选择父括号）。举个栗子：快速选中删除函数中的代码，重写函数体代码或重写括号内里的内容。</li>
+<li>Ctrl+M 光标移动至括号内结束或开始的位置。</li>
+<li>Ctrl+Enter 在下一行插入新行。举个栗子：即使光标不在行尾，也能快速向下插入一行。</li>
+<li>Ctrl+Shift+Enter 在上一行插入新行。举个栗子：即使光标不在行首，也能快速向上插入一行。</li>
+<li>Ctrl+Shift+[ 选中代码，按下快捷键，折叠代码。</li>
+<li>Ctrl+Shift+] 选中代码，按下快捷键，展开代码。</li>
+<li>Ctrl+K+0 展开所有折叠代码。</li>
+<li>Ctrl+← 向左单位性地移动光标，快速移动光标。</li>
+<li>Ctrl+→ 向右单位性地移动光标，快速移动光标。</li>
+<li>shift+↑ 向上选中多行。</li>
+<li>shift+↓ 向下选中多行。</li>
+<li>Shift+← 向左选中文本。</li>
+<li>Shift+→ 向右选中文本。</li>
+<li>Ctrl+Shift+← 向左单位性地选中文本。</li>
+<li>Ctrl+Shift+→ 向右单位性地选中文本。</li>
+<li>Ctrl+Shift+↑ 将光标所在行和上一行代码互换（将光标所在行插入到上一行之前）。</li>
+<li>Ctrl+Shift+↓ 将光标所在行和下一行代码互换（将光标所在行插入到下一行之后）。</li>
+<li>Ctrl+Alt+↑ 向上添加多行光标，可同时编辑多行。</li>
+<li>Ctrl+Alt+↓ 向下添加多行光标，可同时编辑多行。</li>
+</ul>
+</blockquote>
+<h2 id="编辑类">编辑类</h2><blockquote>
+<ul>
+<li>Ctrl+J 合并选中的多行代码为一行。举个栗子：将多行格式的CSS属性合并为一行。</li>
+<li>Ctrl+Shift+D 复制光标所在整行，插入到下一行。</li>
+<li>Tab 向右缩进。只对光标后（或者选中的）的代码有效</li>
+<li>Shift+Tab 向左缩进。</li>
+<li>Ctrl+[ 向左缩进。对整行有效</li>
+<li>Ctrl+] 向右缩进。对整行有效</li>
+<li>Ctrl+K+K 从光标处开始删除代码至行尾。按住Ctrl，按两次K。</li>
+<li>Ctrl+Shift+K 删除整行。</li>
+<li>Ctrl+/ 注释单行。</li>
+<li>Ctrl+Shift+/ 注释多行。</li>
+<li>Ctrl+K+U 转换大写。</li>
+<li>Ctrl+K+L 转换小写。</li>
+<li>Ctrl+Z 撤销。</li>
+<li>Ctrl+Y 恢复撤销。</li>
+<li>Ctrl+U 软撤销，感觉和 Gtrl+Z 一样。</li>
+<li>Ctrl+F2 设置书签，F2切换书签</li>
+<li>Ctrl+T 左右字母互换。</li>
+<li>F6 单词检测拼写</li>
+</ul>
+</blockquote>
+<h2 id="搜索类">搜索类</h2><blockquote>
+<ul>
+<li>Ctrl+F 打开底部搜索框，查找关键字。</li>
+<li>Ctrl+shift+F 在文件夹内查找，与普通编辑器不同的地方是sublime允许添加多个文件夹进行查找，略高端，未研究。</li>
+<li>Ctrl+P 打开搜索框。举个栗子：1、输入当前项目中的文件名，快速搜索文件，2、输入@和关键字，查找文件中函数名，3、输入：和数字，跳转到文件中该行代码，4、输入#和关键字，查找变量名。</li>
+<li>Ctrl+G 打开搜索框，自动带：，输入数字跳转到该行代码。举个栗子：在页面代码比较长的文件中快速定位。</li>
+<li>Ctrl+R 打开搜索框，自动带@，输入关键字，查找文件中的函数名。举个栗子：在函数较多的页面快速查找某个函数。</li>
+<li>Ctrl+： 打开搜索框，自动带#，输入关键字，查找文件中的变量名、属性名等。</li>
+<li>Esc 退出光标多行选择，退出搜索框，命令框等。</li>
+<li>Ctrl+Shift+P 打开命令框。场景栗子：打开命名框，输入关键字，调用sublime text或插件的功能，例如使用package安装插件。</li>
+</ul>
+</blockquote>
+<h2 id="显示类">显示类</h2><blockquote>
+<ul>
+<li>Ctrl+Tab 按文件浏览过的顺序，切换当前窗口的标签页。</li>
+<li>Ctrl+PageDown 向左切换当前窗口的标签页。</li>
+<li>Ctrl+PageUp 向右切换当前窗口的标签页。</li>
+<li>Alt+Shift+1 窗口分屏，恢复默认1屏（非小键盘的数字）</li>
+<li>Alt+Shift+2 左右分屏-2列</li>
+<li>Alt+Shift+3 左右分屏-3列</li>
+<li>Alt+Shift+4 左右分屏-4列</li>
+<li>Alt+Shift+5 等分4屏</li>
+<li>Alt+Shift+8 垂直分屏-2屏</li>
+<li>Alt+Shift+9 垂直分屏-3屏</li>
+<li>Ctrl+K+B 开启/关闭侧边栏。</li>
+<li>F11 全屏模式</li>
+<li>Shift+F11 免打扰模式</li>
+</ul>
+</blockquote>
+<hr>
+<h2 id="多重选择（Multi-Selection）">多重选择（Multi-Selection）</h2><p>多重选择功能允许在页面中同时存在多个光标，让很多本来需要正则表达式、高级搜索和替换才能完成的任务也变得游刃有余了。</p>
+<p>激活多重选择的方法有两几种：</p>
+<blockquote>
+<ul>
+<li>按住 Ctrl 然后在页面中希望中现光标的位置点击。</li>
+<li>选择数行文本，然后按下 Shift + Ctrl + L。</li>
+<li>通过反复按下 Ctrl + D 即可将全文中与光标当前所在位置的词相同的词逐一加入选择，而直接按下 Alt+F3即可一次性选择所有相同的词。</li>
+<li>按下鼠标中键来进行垂直方向的纵列选择，也可以进入多重编辑状态。</li>
+</ul>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="下载">下载</h1><ul>
+<li><a href="http://www.sublimetext.com/3">Sublime Text 3 官方下载地址</a></li>
+<li><a href="http://pan.baidu.com/s/1sj02k2L">Sublime Text 3 汉化破解版</a></li>
+</ul>
+<hr>
+<h1 id="资料：">资料：</h1><ul>
+<li><a href="http://sublime-text.readthedocs.org/en/latest/index.html">Sublime Text 非官方文档</a></li>
+</ul>
+<hr>
+<h1 id="技巧">技巧</h1><p><code>-用户</code>或<code>-User</code>后缀的菜单项，其对应的配置文件都保存在<code>Packages\User</code>文件夹下，将它们上传到Github，便于同步。</p>]]>
+    
+    </summary>
+    
+      <category term="Sublime Text" scheme="http://lovenight.github.io/tags/Sublime-Text/"/>
+    
+      <category term="编程" scheme="http://lovenight.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="Sublime Text" scheme="http://lovenight.github.io/categories/%E7%BC%96%E7%A8%8B/Sublime-Text/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[白云外的一阵风]]></title>
+    <link href="http://lovenight.github.io/2015/11/28/%E7%99%BD%E4%BA%91%E5%A4%96%E7%9A%84%E4%B8%80%E9%98%B5%E9%A3%8E/"/>
+    <id>http://lovenight.github.io/2015/11/28/白云外的一阵风/</id>
+    <published>2015-11-28T15:52:06.000Z</published>
+    <updated>2015-11-30T01:26:17.171Z</updated>
+    <content type="html"><![CDATA[<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/29/4/2/35/%E9%B2%9C%E8%8A%B1.jpg" alt="鲜花.jpg"></p>
+<p>年龄一大，难免要操心终生大事——操心的不是我，而是各路亲戚。我只想着如何避免这些事，老婆孩子是一条枷锁，使自己的下半生不得自由。可惜事与愿违，越来越大的压力，使我很难再坚持这样的做法。母亲身体不好，每次谈及这方面的事，总是说自己这几年还可以帮忙带带小孩，再晚就带不动了。听到心里总感觉无限心酸。</p>
+<a id="more"></a>
+<p>但我自己又很明确自己的心意，可能由于荷尔蒙作怪，以前羡慕过别人成双成对，也曾经狂热地喜欢过女神。不过从来没有想过成家后会怎么样——也许是因为女神压根没令我看到这方面的希望，我才没想。只有生病躺在床上一动不动的时候，才会觉得有个人在一边照顾也挺好。这样的想法挺自私的。把付出看作是对自己的限制，不想承受，却又偶尔希望接受他人的照顾。</p>
+<p>迫于压力而结婚，既对不起我自己，也对不起女方。女生总对婚姻有无限向往，而我并不是值得托付终生居家过日子的人，也不想往那个方向作出改变。事情陷入了死结，究竟要怎么办呢？等吧。</p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/29/2/15/5/%E9%87%91%E6%80%9D%E7%BE%8E%E5%A9%9A%E7%A4%BC7.jpg?imageMogr2/thumbnail/500x500" alt="金思美婚礼7.jpg"></p>
+<p>这两年是同龄人结婚的高发期，像我这种朋友挺少的人，光是这一年也参加了三次婚宴，一次订婚。朋友圈里各种晒婚礼、晒大肚子、晒小孩，仍然没有什么成家的想法。朋友圈里的照片看上去光鲜又精彩，但是和一些朋友多聊了聊，婚姻又没有TA们想象得那么好。</p>
+<p>正在码字的时候，又收到毛驴的微信，12月20日在金华结婚。打算到时候坐鸡爷或猪爷的车一块过去，挺热闹的。</p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/29/2/15/5/%E5%AE%8F.jpg" alt="宏.jpg"></p>
+<p>晚上和同学吃饭，聊到自己不想结婚，同学说，「你还没遇到能令你想结婚的人」。这是青春期情窦初开时就听过的话，那时有一种盲目的信仰，就如鸡汤里说的那样，总有一天你会遇上一个人，惊艳了时光，温柔了岁月，让你觉得所有的等待都是值得的。然而作为一名理科生，看看男女比例，就知道总得有一大波人打光棍儿。</p>
+<p>学了术数之后，遇到最多的是各路痴男怨女，不管卦主年龄几何，都喜欢问目前遇到的谁谁是不是真命天子/女。其实这方面并没有正缘、真命之类的说法，人与人之间的因缘不同，缘深纠葛多，缘浅轻易散，来来去去就是这么一回事，没有永恒长久的伴侣，最多也只能持续数十年。更多人没有走到生命的尽头，感情已经产生了无法弥补的裂痕，有的干脆离婚，有的貌合神离，依旧维持着僵硬的关系。印象中最惨的一个人，年近四十仍然单身，还问自己能不能遇到真爱。可怜的人啊，爱只是大脑中编织的美梦，易碎也易醒。</p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/29/2/15/5/%E5%AE%8F2.jpg" alt="宏2.jpg"></p>
+<p>那时候对爱情有什么样的幻想，现在已经记不起来了。可能就像这只火锅，什么玩意都往里加，倾尽最美好的想象。有部韩国电影《建筑学概论》有一幕类似的场景，女主角喝辣汤时哭着说，「我感觉目前的生活就跟辣汤一样，也不知里面放了什么，只是辣而已」。结合电影前期的铺垫，这句台词令人非常触动。</p>
+<p>我的生活也非常简单，只是淡而已。今年加了另一种味道：相亲。过年时村后面有户老太太——我完全没印象——跑来和我妈说，她外孙女年初一要来村里上坟，让我到时候过去见见。</p>
+<p>乡下什么都好，只是没有茶楼、咖啡厅之类聊天的地方，相亲习俗都是男方直接去女方家里。这我非常难以接受，在城市生活久了，习惯男女双方感情稳定下来才见家长。姐姐也是定下来要结婚，才把姐夫带回家来。在那之前我们全都以为她还单身。城里的这种习惯，有一个原因是男女双方往往有一方是或者都是外地人，去对方家里不方便。然而乡下那种小地方，骑个电瓶车，五分钟就到了。要是去镇上找家店吃个饭反而不如直接去对方家更方便。</p>
+<p>在我的坚持反对下，年初这一「劫」总算躲了过去。不过我妈又在盘算着这次过年让我再去见见。那老太太一再夸口外孙女非常漂亮。要是真漂亮，这么大还没嫁出去，不是眼光高就是性格不好相处。像我这样不想结婚的还只是极少数吧，目前还没见过第二个。</p>
+<p>拜年的时候，二阿姨突然说，她朋友的朋友的女儿在附近村子里，让我也去见见。我急中生智想了个借口说自己最近一直感冒咳嗽停不下来，去了对方家里一直嗽形象不好。于是拿来女方的手机号让我自己联系。</p>
+<p>女方话不多，大部分时间都是我在问，顺便介绍下自己的情况。平时也找不到什么共同话题。对方并不讳言自己的懒——懒得读书，懒得学习。每天没话找话聊也蛮辛苦，后来约出来见了一次，就没下文了。奇葩的是刚坐下来就说自己离不开手机，一直低头玩，有一搭没一搭了聊了大半小时，对方手机没电，就走了。我自己一个人继续吃自助餐到再也塞不下为止。</p>
+<p>半年后我再点开她朋友圈，发现一条状态都看不到，看来已经把我删了。</p>
+<p>后来小阿姨介绍了个丽水的妹子，加好友聊了两次，又是查户口式一问一答的聊天，联系了两次后就再没下文了。</p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/29/2/15/5/%E6%B9%96%E5%BF%83%E5%A1%98%E5%9F%8E%E5%8C%97%E5%A4%A7%E9%85%92%E5%BA%97.jpg?imageMogr2/thumbnail/500x500" alt="湖心塘城北大酒店.jpg"><br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/29/2/15/5/%E9%87%91%E6%B3%A2%E8%AE%A2%E5%A9%9A7.jpg" alt="金波订婚7.jpg"></p>
+<p>村里小伙伴订婚，酒席摆在湖心塘的城北大酒店。这几年回来得太少，都没注意到它什么时候开建。同桌的老太太们见了我都问这是谁。看来我这几年真是太瘦了，得加把劲增个肥。小伙伴的未婚妻是他高中同学，富家女。女方的父亲说对男方没什么要求，只要自己女儿喜欢就够了。但是订婚必须做做样子，男方送过去68万当面收下，私下里会还回去，就只是图个面子。小伙伴东借西借，又找银行工作的亲戚贷了一部分，总算凑齐了钱。</p>
+<p>小伙伴的母亲也蛮热心的，早几年就一直嚷嚷着要给我介绍和小伙伴未婚妻同村的一个妹子。据说也在杭州工作，是动车的乘务员。在家挺勤快，为人朴实，不追求化妆打扮，老实人，适合居家过日子。说这番话的是小伙伴的外婆，和这位传说中的妹子是邻居。外婆老是感慨谁要是娶了这个妹子，就是捡了块宝。</p>
+<p>都快把妹子夸到天上去了，我很不以为然。貌似我也被夸得形象非常高大，以至于妹子的母亲问小伙伴外婆：男方这么优秀，会不会看上我女儿。优秀吗？真要是属于婚恋市场上的优秀，那就不会打二十几年老光棍了。</p>
+<p>以前我用「还早，同学们都没结婚」推了几次。不过今年这些挡箭牌们一个个都结婚，每次我往外地跑，我妈都知道。这下推不掉，只好拿了号码加了微信。一如既往一问一答，发消息倒是必回，只是经常过一两小时甚至第二天才回复。生活习惯、兴趣爱好之类问完之后就没共同语言，又开始没话找话之旅。对方也不咸不淡地回着。</p>
+<p>小伙伴的外婆闲不住，看妹子回了家就跑过去，问男的（也就是我）有没有给她打电话——老人不懂微信、短信，只知道打电话。又和小伙伴的母亲（下面改称介绍人吧）商量要不要安排我们在这次订婚酒席上见个面……还好这馊主意没人同意，否则真尴尬得要死。</p>
+<p>从介绍人那边传过来的消息，妹子每次回家，家人也盘问相亲的事。妹子都说还在联系。我估计她肯一次次回我这些无聊的短信，也是迫于家人的压力吧，只需隔几天回复一两条消息，就可以在家人盘问的时候淡定地说出这四个字「还在联系」，得一时清静，躲过各种唠叨。</p>
+<p>我也是这么想和这么做的。这种奇葩的默契真让人无奈。</p>
+<p>好景不长，很快热心的介绍人就给我扔了个重磅炸弹。她两头打探消息，发现我和妹子「还在联系」快两个月了，估摸着有戏，打算过年的时候让我上门去见见。我……这让我怎么拒绝。太忙没空？就五分钟的路，过去吃顿晚饭的时间总有吧。没感觉？这不还在联系吗怎么会没感觉。</p>
+<p>思前想后，避免上门相亲的唯一方法就是我直接在杭州和妹子见个面，然后被拒绝。从妹子各种冷淡的反应、从不主动发消息可以看得出来对我没什么想法。两人的兴趣爱好相差太大，一直聊不起来。每次我辛辛苦苦想了个话题，三两句就聊不下去。</p>
+<p>约了两次，妹子都恰好没空。要命的是都会阐述要做什么事，然后补上一句：下次吧。搞得我也分不清楚这是真没空还是假没空。管它呢继续约，就当应付家人也好。</p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/29/2/15/5/%E5%A7%91%E5%A7%91%E5%AE%B6.jpg?imageMogr2/thumbnail/500x500" alt="姑姑家.jpg"><br>前阵子姑姑问想找什么样的对象，我想了半天居然答不上来。外貌？我自己长得也不咋的，没资格提要求。学历？只能说明考试能力。性格？聊得来最重要。家世？自己家境也一般，不挑别人了。</p>
+<p>姑姑让我打一段自我介绍，我写了两句，也想不到别的能说啥。她拿过手机又摁了半天，发了出去。然后给了我个号码，说是她们学校的小学教师，89年，天津人，在下沙读书，毕业后就留在了杭州。在手机上聊了两次，就互不联系了。介绍人倒是蛮热心，经常两边问怎么了，还跟我姑姑说女方抱怨我不主动，姑父就把我教育了一番。我想想不如见个面表现差劲一点把人吓退算了，结果对方回我周末没空。后来就再没联系过。</p>
+<hr>
+<p>顺手放些近期拍的照片</p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/29/2/15/5/%E6%8A%98%E5%8F%A0%E6%9E%9C%E7%9B%98.jpg?imageMogr2/thumbnail/500x500" alt="折叠果盘.jpg"><br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/29/2/15/5/%E5%B1%95%E5%BC%80%E6%9E%9C%E7%9B%98.jpg" alt="展开果盘.jpg"></p>
+<p>姑父的诊所里第一次见到这种折叠果盘。把玩的时候收到条蒋太公的微信，说在杭州等飞机。出了诊所匆匆赶了过去。</p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/29/22/2/33/%E8%92%8B%E5%A4%AA%E5%85%AC.jpg?imageMogr2/thumbnail/500x500" alt="蒋太公.jpg"><br>六年多没见，一块吃了顿饭，聊了聊近况，又带他在聊近找菜市场买某种羊肉，可惜跑了许多家都没找到。</p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/29/2/15/5/%E5%85%AC%E4%BA%A4%E4%B8%8A%E7%9A%84%E5%A6%B9%E5%AD%90.jpg?imageMogr2/thumbnail/500x500" alt="公交上的妹子.jpg"></p>
+<p>有天在公交车上看到个妹子不错，正好这位置正对着她，偷偷拍了一张。</p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/29/2/15/5/%E5%B0%8F%E7%BE%8E%E5%A5%B3.jpg?imageMogr2/thumbnail/600x600" alt="小美女.jpg"></p>
+<p>外甥女非要玩我外套上的扣子，解开又扣上，玩得不亦乐乎。</p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/29/2/15/5/%E6%97%A0%E8%BE%B9%E8%90%BD%E6%9C%A8.jpg" alt="无边落木.jpg"><br>一早出门，满地落叶。</p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/29/2/15/5/%E5%BF%83%E9%85%B8%E7%9A%84%E4%BA%8C%E8%83%A1.jpg?imageMogr2/thumbnail/500x500" alt="心酸的二胡.jpg"><br>玉泉校区对面街上的二胡，听了一会，放了几个硬币上去。</p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/29/2/15/5/%E8%AE%B8%E4%BB%99.jpg?imageMogr2/thumbnail/700x700" alt="许仙.jpg"><br>近来转战SegmentFault，问答氛围比知乎好多了，唯一差点的是人气。选了这张照片作为头像，网名叫<a href="http://segmentfault.com/u/xuxian" target="_blank" rel="external">许仙</a></p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/29/2/15/5/%E8%BF%9C%E6%9C%9B%E9%92%B1%E5%A1%98%E6%B1%9F.jpg?imageMogr2/thumbnail/700x700" alt="远望钱塘江.jpg"><br>去办了张市民卡，顺便在附近的印象城玩了玩。远处是钱塘江，对面是滨江。鸡爷的房子就买在那一块儿，一百多平，四百万。</p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/29/2/15/5/85%E5%BA%A6.jpg?imageMogr2/thumbnail/500x500" alt="85度.jpg"><br>冬天回家路过都会进来喝一杯暖暖身子。</p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/29/2/15/5/Exciting%EF%BC%81.jpg" alt="Exciting！.jpg"><br>六石居然也有不知道高到哪里去的华莱士，真是Exciting！</p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/29/2/15/5/%E8%A2%AB%E7%83%AB%E7%9A%84%E8%80%81%E9%BC%A0.jpg?imageMogr2/thumbnail/500x500" alt="被烫的老鼠.jpg"><br>六石路边有家药酒店的老板在用开水烫笼子里的老鼠，可怜的小家伙。</p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/29/2/15/5/%E5%85%AD%E7%9F%B3%E5%B9%BF%E5%9C%BA.jpg?imageMogr2/thumbnail/700x700" alt="六石广场.jpg"><br>六石的综合广场，老人们在晒粮食，边上还有好几个孕妇在晒太阳，非常惬意。</p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/29/2/15/5/%E5%85%AD%E7%9F%B3%E7%BE%8E%E9%A3%9F%E8%A1%97.jpg?imageMogr2/thumbnail/700x700" alt="六石美食街.jpg"><br>六石居然办了美食街。</p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/29/2/15/5/%E5%85%AD%E7%9F%B3%E6%8C%96%E6%8E%98%E6%9C%BA.jpg?imageMogr2/thumbnail/700x700" alt="六石挖掘机.jpg"><br>挖掘机要从娃娃抓起。</p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/29/2/15/5/%E5%85%AD%E4%B8%AD.jpg?imageMogr2/thumbnail/700x700" alt="六中.jpg"><br>初中母校，亮明身份仍然不肯放我进去。</p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/29/2/15/5/IMG_20151025_134126_HDR.jpg?imageMogr2/thumbnail/500x500" alt="玉泉某教学楼"><br>去和老蔡吃了顿饭聊了聊，路上已经忘了这教学楼编号是多少。教四？教二？</p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/29/2/15/5/IMG_20151025_145844_HDR.jpg?imageMogr2/thumbnail/700x700" alt="市民中心的广场"><br>市民中心的广场，视野开阔。</p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/29/2/15/5/%E6%9D%91%E9%87%8C%E6%9C%89%E4%B8%AA%E5%A4%A7%E5%8F%94%E4%B9%9F%E5%8F%AB%E8%BF%99%E5%90%8D.jpg?imageMogr2/thumbnail/700x700" alt="村里有个大叔也叫这名.jpg"><br>村里有个大叔也叫这个名字，和我同一辈。</p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/29/2/15/5/%E4%B8%9C%E4%B8%AD.jpg?imageMogr2/thumbnail/700x700" alt="东中.jpg"><br>高中母校，匆匆而过。</p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/29/2/15/5/%E5%85%AC%E4%BA%A4%E8%BD%A6%E4%B8%8A%E7%8E%A9%E8%80%8D.jpg?imageMogr2/thumbnail/500x500" alt="公交车上玩耍.jpg"><br>杭州的公交车，乘车不忘玩耍。一边的母亲照顾两个孩子，蛮辛苦。</p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/29/2/15/5/%E5%BE%88%E5%BF%AB%E8%A2%AB%E5%9F%8E%E7%AE%A1%E6%94%B6%E6%91%8A.jpg?imageMogr2/thumbnail/700x700" alt="很快被城管收摊.jpg"><br>路过买了碗炒粉干，城管过来收摊。小贩说再炒一份就走。城管老爷一怒，抢走了煤气罐。</p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/29/2/15/5/%E9%87%91%E6%80%9D%E7%BE%8E%E5%A9%9A%E7%A4%BC%E6%99%9A%E4%B8%8A%E8%87%AA%E5%B7%B1%E6%89%BE%E7%9A%84%E4%BD%8F%E5%AE%BF3.jpg?imageMogr2/thumbnail/700x700" alt="金思美婚礼晚上自己找的住宿3.jpg"><br>金华参加金思美的婚礼，晚上在火车站对面找了家七天连锁酒店住下，177元。</p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/29/2/15/5/%E5%B9%B3%E8%A1%8C%E7%94%B5%E6%A2%AF.jpg?imageMogr2/thumbnail/500x500" alt="步行电梯.jpg"><br>与地面平等的电梯，或者说是一条传送带。</p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/29/2/15/5/%E5%A4%A9%E9%9B%A8.jpg?imageMogr2/thumbnail/700x700" alt="天雨.jpg"><br>雨夜</p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/29/22/2/33/Me.jpg?imageMogr2/thumbnail/500x500" alt="Me.jpg"><br>晚上剪了头发，自拍一张。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/29/4/2/35/%E9%B2%9C%E8%8A%B1.jpg" alt="鲜花.jpg"></p>
+<p>年龄一大，难免要操心终生大事——操心的不是我，而是各路亲戚。我只想着如何避免这些事，老婆孩子是一条枷锁，使自己的下半生不得自由。可惜事与愿违，越来越大的压力，使我很难再坚持这样的做法。母亲身体不好，每次谈及这方面的事，总是说自己这几年还可以帮忙带带小孩，再晚就带不动了。听到心里总感觉无限心酸。</p>]]>
+    
+    </summary>
+    
+      <category term="相亲" scheme="http://lovenight.github.io/tags/%E7%9B%B8%E4%BA%B2/"/>
+    
+      <category term="随笔" scheme="http://lovenight.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="瞬间" scheme="http://lovenight.github.io/categories/%E9%9A%8F%E7%AC%94/%E7%9E%AC%E9%97%B4/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Python 发新浪微博的脚本]]></title>
@@ -621,7 +877,7 @@ RecursionError: maximum recursion depth exceeded
     <link href="http://lovenight.github.io/2015/11/10/Hexo-3-1-1-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/"/>
     <id>http://lovenight.github.io/2015/11/10/Hexo-3-1-1-静态博客搭建指南/</id>
     <published>2015-11-10T06:46:41.000Z</published>
-    <updated>2015-11-19T13:19:03.656Z</updated>
+    <updated>2015-11-30T01:26:17.156Z</updated>
     <content type="html"><![CDATA[<p><strong>注意，本文适用于hexo 3.x 版本，与2.x略有出入！</strong></p>
 <p>GitHub Pages 本用于介绍托管在 GitHub 的项目，也可以用来搭建博客，有300M免费空间。</p>
 <p>hexo是一个基于Node.js的静态博客程序，可以方便的生成静态网页托管在github和Heroku上。作者是来自台湾的<a href="https://github.com/hexojs/hexo" target="_blank" rel="external">tommy351</a>。<br>优势：</p>
@@ -900,6 +1156,7 @@ hexo <span class="keyword">new</span> page <span class="string">"API"</span>
 <p>建议使用最严格的 true 选项</p>
 <h2 id="博客部署的message">博客部署的message</h2><p><code>\node_modules\hexo-deployer-git\lib\deployer.js</code>文件末尾找到这一句：<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="constant">Site</span> <span class="symbol">updated:</span> <span class="expansion">&#123;&#123; now(<span class="string">'YYYY-MM-DD HH:mm:ss'</span>) &#125;&#125;</span>.</span><br></pre></td></tr></table></figure></p>
 <p>改得个性化一点：<br><figure class="highlight handlebars"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">这个勤奋的家伙又更新了: </span><span class="expression">&#123;&#123; <span class="variable">now</span>(\'<span class="variable">YYYY-MM-DD</span> <span class="variable">HH</span>:<span class="variable">mm</span>:<span class="variable">ss</span>\') &#125;&#125;</span><span class="xml">.</span></span><br></pre></td></tr></table></figure></p>
+<p>在Github对应项目中可以看到效果：<br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/29/21/53/44/%E5%8F%88%E6%9B%B4%E6%96%B0%E4%BA%86.png" alt="又更新了.png"></p>
 <hr>
 <h1 id="参考资料">参考资料</h1><ul>
 <li><a href="http://zipperary.com/categories/hexo/" target="_blank" rel="external">hexo系列教程</a></li>

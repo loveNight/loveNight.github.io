@@ -80,7 +80,8 @@ hexo是一个基于Node.js的静态博客程序，可以方便的生成静态网
 <meta property="og:image" content="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/19/15/55/46/%E5%A4%9A%E8%AF%B4userid.jpg">
 <meta property="og:image" content="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/19/19/33/4/%E6%98%BEUA%E3%80%81OS%E3%80%81Root%E4%BF%A1%E6%81%AF.jpg">
 <meta property="og:image" content="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/19/17/37/21/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%A4%9A%E8%AF%B4CSS.jpg">
-<meta property="og:updated_time" content="2015-11-19T13:19:03.656Z">
+<meta property="og:image" content="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/29/21/53/44/%E5%8F%88%E6%9B%B4%E6%96%B0%E4%BA%86.png">
+<meta property="og:updated_time" content="2015-11-30T01:26:17.156Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo 3.1.1 静态博客搭建指南">
 <meta name="twitter:description" content="注意，本文适用于hexo 3.x 版本，与2.x略有出入！
@@ -659,6 +660,7 @@ hexo <span class="keyword">new</span> page <span class="string">"API"</span>
 <p>建议使用最严格的 true 选项</p>
 <h2 id="博客部署的message">博客部署的message</h2><p><code>\node_modules\hexo-deployer-git\lib\deployer.js</code>文件末尾找到这一句：<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="constant">Site</span> <span class="symbol">updated:</span> <span class="expansion">&#123;&#123; now(<span class="string">'YYYY-MM-DD HH:mm:ss'</span>) &#125;&#125;</span>.</span><br></pre></td></tr></table></figure></p>
 <p>改得个性化一点：<br><figure class="highlight handlebars"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">这个勤奋的家伙又更新了: </span><span class="expression">&#123;&#123; <span class="variable">now</span>(\'<span class="variable">YYYY-MM-DD</span> <span class="variable">HH</span>:<span class="variable">mm</span>:<span class="variable">ss</span>\') &#125;&#125;</span><span class="xml">.</span></span><br></pre></td></tr></table></figure></p>
+<p>在Github对应项目中可以看到效果：<br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/29/21/53/44/%E5%8F%88%E6%9B%B4%E6%96%B0%E4%BA%86.png" alt="又更新了.png"></p>
 <hr>
 <h1 id="参考资料">参考资料</h1><ul>
 <li><a href="http://zipperary.com/categories/hexo/" target="_blank" rel="external">hexo系列教程</a></li>
@@ -811,21 +813,21 @@ hexo <span class="keyword">new</span> page <span class="string">"API"</span>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">14</span>
+              <span class="site-state-item-count">16</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">7</span>
               <span class="site-state-item-name">分类</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">22</span>
+              <span class="site-state-item-count">24</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
@@ -864,6 +866,22 @@ hexo <span class="keyword">new</span> page <span class="string">"API"</span>
                 <a href="mailto:286242151@qq.com" target="_blank">
                   
                     <i class="fa fa-globe"></i> Email
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://segmentfault.com/u/xuxian" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> SegmentFault
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/wu-wu-4-90" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> Zhihu
                   
                 </a>
               </span>
