@@ -4,7 +4,7 @@
   <subtitle><![CDATA[莫厌追欢笑语频，寻思离乱好伤神。闲来屈指从头数，得见清平有几人]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://lovenight.github.io/"/>
-  <updated>2015-11-30T02:14:46.609Z</updated>
+  <updated>2015-11-30T04:24:24.953Z</updated>
   <id>http://lovenight.github.io/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://lovenight.github.io/2015/11/30/%E6%88%91%E7%9A%84Sublime-Text-3-%E9%85%8D%E7%BD%AE/"/>
     <id>http://lovenight.github.io/2015/11/30/我的Sublime-Text-3-配置/</id>
     <published>2015-11-30T02:04:37.000Z</published>
-    <updated>2015-11-30T02:14:46.609Z</updated>
+    <updated>2015-11-30T04:24:24.953Z</updated>
     <content type="html"><![CDATA[<h1 id="下载">下载</h1><ul>
 <li><a href="http://www.sublimetext.com/3" target="_blank" rel="external">Sublime Text 3 官方下载地址</a></li>
 <li><a href="http://pan.baidu.com/s/1sj02k2L" target="_blank" rel="external">Sublime Text 3 汉化破解版</a></li>
@@ -35,6 +35,7 @@
 <h1 id="个人最常用的快捷键">个人最常用的快捷键</h1><p>快捷键完整版见后文，这里只列个人习惯。</p>
 <p>四种 Goto ：<br>Ctrl + P  文件定位<br>Ctrl + ;  词语定位 #<br>Ctrl + R  函数定位 @<br>Ctrl + G  行号定位 :</p>
 <p>括号前后移动光标：Ctrl + M<br>以单词为单位前后移动光标：Ctrl + Left/Right<br>Ctrl+→ 向右单位性地移动光标，快速移动光标。<br>重新打开刚刚关闭的标签页：Ctrl + Shift + T<br>当前行与上/下一行交换位置：Shift + Ctrl + Up/Down<br>向光标前插入一行：Shift + Ctrl + Enter<br>向光标后插入一行：Ctrl + Enter<br>复制光标所在整行，插入到下一行：Ctrl + Shift + D<br>合并选中的多行代码为一行：Ctrl + J<br>快速折叠文件内所有函数：Ctrl + K + 1 （数字表示级别）</p>
+<p>代码格式化： Ctrl + Shift + P，输入reindent lines。（一般输几个字母就出现了命令，直接回车）</p>
 <hr>
 <h1 id="插件">插件</h1><p>先装插件管理器(Package Control)：<a href="https://packagecontrol.io/installation" target="_blank" rel="external">https://packagecontrol.io/installation</a></p>
 <p><strong>安装插件</strong>：Ctrl+Shift+P，输入install，等待几秒后出现插件列表，输插件名再回车就能自动安装。下文插件名加链接的可以点进去学习使用方法。建议安装插件后都进设置菜单配置一下。<br><strong>删除插件</strong>：Ctrl+Shift+P，输入remove package，选择插件再回车。</p>

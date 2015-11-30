@@ -55,44 +55,32 @@
 
 <meta name="description" content="常用代码和知识点速查
 
-
-七牛图片处理限定长边，生成不超过500x500的缩略图，在网址后加：
-?imageMogr2/thumbnail/500x500
-
-命令行简易Web服务：cd 进入指定文件夹，执行
-python -m http.server 8000
-其他电脑用浏览器打开本机IP:8000即可当FTP使用
-强制删除文件夹可用help 命令名查询相关帮助
-rd /s /q 路径\文件夹名">
+pip 常用命令pip --help                        # 帮助文档
+pip install SomePackage           # 安装最新版本
+pip install SomePackage==1.0.4    # 安装指定版本
+pip install &apos;SomePackage&amp;gt;=1.0.4&apos;  # 限制最低版本
+pip uni">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Other Notes">
 <meta property="og:url" content="http://lovenight.github.io/Notes/index.html">
 <meta property="og:site_name" content="岁月如歌">
 <meta property="og:description" content="常用代码和知识点速查
 
-
-七牛图片处理限定长边，生成不超过500x500的缩略图，在网址后加：
-?imageMogr2/thumbnail/500x500
-
-命令行简易Web服务：cd 进入指定文件夹，执行
-python -m http.server 8000
-其他电脑用浏览器打开本机IP:8000即可当FTP使用
-强制删除文件夹可用help 命令名查询相关帮助
-rd /s /q 路径\文件夹名">
-<meta property="og:updated_time" content="2015-11-30T01:26:17.140Z">
+pip 常用命令pip --help                        # 帮助文档
+pip install SomePackage           # 安装最新版本
+pip install SomePackage==1.0.4    # 安装指定版本
+pip install &apos;SomePackage&amp;gt;=1.0.4&apos;  # 限制最低版本
+pip uni">
+<meta property="og:updated_time" content="2015-11-30T07:06:04.593Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Other Notes">
 <meta name="twitter:description" content="常用代码和知识点速查
 
-
-七牛图片处理限定长边，生成不超过500x500的缩略图，在网址后加：
-?imageMogr2/thumbnail/500x500
-
-命令行简易Web服务：cd 进入指定文件夹，执行
-python -m http.server 8000
-其他电脑用浏览器打开本机IP:8000即可当FTP使用
-强制删除文件夹可用help 命令名查询相关帮助
-rd /s /q 路径\文件夹名">
+pip 常用命令pip --help                        # 帮助文档
+pip install SomePackage           # 安装最新版本
+pip install SomePackage==1.0.4    # 安装指定版本
+pip install &apos;SomePackage&amp;gt;=1.0.4&apos;  # 限制最低版本
+pip uni">
 
 
 
@@ -305,7 +293,20 @@ rd /s /q 路径\文件夹名">
     
       <blockquote class="blockquote-center">常用代码和知识点速查</blockquote>
 
-
+<h1 id="pip_常用命令">pip 常用命令</h1><pre><code>pip --help                        <span class="comment"># 帮助文档</span>
+pip <span class="keyword">install</span> SomePackage           <span class="comment"># 安装最新版本</span>
+pip <span class="keyword">install</span> SomePackage==<span class="number">1.0</span>.<span class="number">4</span>    <span class="comment"># 安装指定版本</span>
+pip <span class="keyword">install</span> 'SomePackage&gt;=<span class="number">1.0</span>.<span class="number">4</span>'  <span class="comment"># 限制最低版本</span>
+pip uninstall SomePackage         <span class="comment"># 卸载</span>
+pip list                          <span class="comment"># 查看已安装</span>
+pip list --outdated               <span class="comment"># 查看可升级</span>
+pip <span class="keyword">install</span> --upgrade SomePackage <span class="comment"># 升级</span>
+pip show --files SomePackage      <span class="comment"># 相关文件及路径等信息</span>
+pip freeze &gt; F:\requirements.txt  <span class="comment"># 导出所有第三方库到文件</span>
+pip <span class="keyword">install</span> -r requirements.txt   <span class="comment"># 根据文件安装对应的软件包</span>
+<span class="comment"># 下面是批量升级所有可更新的第三方库，需要在git bash中运行</span>
+pip list --outdated | grep '^[a-z]* (' | cut -d <span class="string">" "</span> -f <span class="number">1</span> | xargs pip <span class="keyword">install</span> -U
+</code></pre><hr>
 <h1 id="七牛图片处理">七牛图片处理</h1><p>限定长边，生成不超过500x500的缩略图，在网址后加：</p>
 <pre><code>?imageMogr2/thumbnail/<span class="number">500</span>x500
 </code></pre><hr>
@@ -763,7 +764,7 @@ String[] <span class="function"><span class="title">split</span><span class="par
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#七牛图片处理"><span class="nav-number">1.</span> <span class="nav-text">七牛图片处理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#命令行"><span class="nav-number">2.</span> <span class="nav-text">命令行</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#简易Web服务："><span class="nav-number">2.1.</span> <span class="nav-text">简易Web服务：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#强制删除文件夹"><span class="nav-number">2.2.</span> <span class="nav-text">强制删除文件夹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#强制删除文件"><span class="nav-number">2.3.</span> <span class="nav-text">强制删除文件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo博客之NexT主题"><span class="nav-number">3.</span> <span class="nav-text">Hexo博客之NexT主题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#独立居中的引用"><span class="nav-number">3.1.</span> <span class="nav-text">独立居中的引用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#突破容器限制宽度的图片"><span class="nav-number">3.2.</span> <span class="nav-text">突破容器限制宽度的图片</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正则表达式"><span class="nav-number">4.</span> <span class="nav-text">正则表达式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#技术文章"><span class="nav-number">4.1.</span> <span class="nav-text">技术文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正则表达式工具"><span class="nav-number">4.2.</span> <span class="nav-text">正则表达式工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正则表达式知识"><span class="nav-number">4.3.</span> <span class="nav-text">正则表达式知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#捕获组"><span class="nav-number">4.4.</span> <span class="nav-text">捕获组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#非捕获组"><span class="nav-number">4.5.</span> <span class="nav-text">非捕获组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注释"><span class="nav-number">4.6.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正则式之python篇"><span class="nav-number">4.7.</span> <span class="nav-text">正则式之python篇</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正则式之Java篇"><span class="nav-number">4.8.</span> <span class="nav-text">正则式之Java篇</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#pip_常用命令"><span class="nav-number">1.</span> <span class="nav-text">pip 常用命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#七牛图片处理"><span class="nav-number">2.</span> <span class="nav-text">七牛图片处理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#命令行"><span class="nav-number">3.</span> <span class="nav-text">命令行</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#简易Web服务："><span class="nav-number">3.1.</span> <span class="nav-text">简易Web服务：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#强制删除文件夹"><span class="nav-number">3.2.</span> <span class="nav-text">强制删除文件夹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#强制删除文件"><span class="nav-number">3.3.</span> <span class="nav-text">强制删除文件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo博客之NexT主题"><span class="nav-number">4.</span> <span class="nav-text">Hexo博客之NexT主题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#独立居中的引用"><span class="nav-number">4.1.</span> <span class="nav-text">独立居中的引用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#突破容器限制宽度的图片"><span class="nav-number">4.2.</span> <span class="nav-text">突破容器限制宽度的图片</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正则表达式"><span class="nav-number">5.</span> <span class="nav-text">正则表达式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#技术文章"><span class="nav-number">5.1.</span> <span class="nav-text">技术文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正则表达式工具"><span class="nav-number">5.2.</span> <span class="nav-text">正则表达式工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正则表达式知识"><span class="nav-number">5.3.</span> <span class="nav-text">正则表达式知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#捕获组"><span class="nav-number">5.4.</span> <span class="nav-text">捕获组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#非捕获组"><span class="nav-number">5.5.</span> <span class="nav-text">非捕获组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注释"><span class="nav-number">5.6.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正则式之python篇"><span class="nav-number">5.7.</span> <span class="nav-text">正则式之python篇</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正则式之Java篇"><span class="nav-number">5.8.</span> <span class="nav-text">正则式之Java篇</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
