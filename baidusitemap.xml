@@ -2,6 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     
+  <url>
+    <loc>http://lovenight.github.io/2015/11/30/Wifi%E8%BF%9E%E6%8E%A5Android%E7%9C%9F%E6%9C%BA%E8%B0%83%E8%AF%95/</loc>
+    <lastmod>2015-12-01T05:02:08.015Z</lastmod>
+    <data>
+        <display>
+        <title>Wifi连接Android真机调试</title>
+        <pubTime>2015-11-30T08:29:43.000Z</pubTime>
+        
+        <tag>Android </tag>
+         
+        <tag>真机调试 </tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://lovenight.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="Android" url="http://lovenight.github.io/categories/%E7%BC%96%E7%A8%8B/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>http://lovenight.github.io/2015/11/28/%E7%99%BD%E4%BA%91%E5%A4%96%E7%9A%84%E4%B8%80%E9%98%B5%E9%A3%8E/</loc>
@@ -72,31 +97,6 @@
           
              
               <breadCrumb title="翻墙" url="http://lovenight.github.io/categories/%E5%AE%9E%E7%94%A8/%E7%BF%BB%E5%A2%99/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://lovenight.github.io/2015/11/30/Wifi%E8%BF%9E%E6%8E%A5Android%E7%9C%9F%E6%9C%BA%E8%B0%83%E8%AF%95/</loc>
-    <lastmod>2015-11-30T11:13:55.671Z</lastmod>
-    <data>
-        <display>
-        <title>Wifi连接Android真机调试</title>
-        <pubTime>2015-11-30T08:29:43.000Z</pubTime>
-        
-        <tag>Android </tag>
-         
-        <tag>真机调试 </tag>
-         
-         
-           
-             
-              <breadCrumb title="编程" url="http://lovenight.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
-          
-             
-              <breadCrumb title="Android" url="http://lovenight.github.io/categories/%E7%BC%96%E7%A8%8B/Android/"/>
           
         </display>
     </data>
