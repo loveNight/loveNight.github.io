@@ -4,7 +4,7 @@
   <subtitle><![CDATA[莫厌追欢笑语频，寻思离乱好伤神。闲来屈指从头数，得见清平有几人]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://lovenight.github.io/"/>
-  <updated>2015-11-30T11:19:41.093Z</updated>
+  <updated>2015-12-01T01:32:36.328Z</updated>
   <id>http://lovenight.github.io/</id>
   
   <author>
@@ -13,6 +13,51 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[bat拖曳获取文件信息]]></title>
+    <link href="http://lovenight.github.io/2015/12/01/bat%E6%8B%96%E6%9B%B3%E8%8E%B7%E5%8F%96%E6%96%87%E4%BB%B6%E4%BF%A1%E6%81%AF/"/>
+    <id>http://lovenight.github.io/2015/12/01/bat拖曳获取文件信息/</id>
+    <published>2015-11-30T16:19:51.000Z</published>
+    <updated>2015-12-01T01:32:36.328Z</updated>
+    <content type="html"><![CDATA[<p>有时候我们需要使用命令行处理文件，需要定期、多次重复时，手动输入或者复制粘贴路径和文件名效率非常低下。此时可以使用bat命令减轻工作量。</p>
+<p>bat是Windows下的批处理文件，每一行都是一条DOS命令。</p>
+<a id="more"></a>
+<h1 id="获取文件属性">获取文件属性</h1><pre><code>@<span class="keyword">echo</span> off
+<span class="keyword">echo</span> 无后缀名： %~n1
+<span class="keyword">echo</span> 有后缀名： %~nx1
+<span class="keyword">echo</span> 绝对路径： %<span class="number">1</span>
+<span class="keyword">echo</span> 短路径名的绝对路径： %~s1
+<span class="keyword">echo</span> 驱动器和路径： %~dp1
+<span class="keyword">echo</span> 驱动器： %~d1
+<span class="keyword">echo</span> 路径： %~p1
+<span class="keyword">echo</span> 文件属性： %~a1
+<span class="keyword">echo</span> 日期/时间： %~t1
+<span class="keyword">echo</span> 文件大小： %~z1
+<span class="built_in">pause</span>
+</code></pre><p>把上述命令存入txt文件，将后缀名改为.bat。随便找个文件拖到.bat文件的图标上：<br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/12/1/0/24/39/3.png" alt="3.png"></p>
+<h1 id="简单demo：编译运行Java文件">简单demo：编译运行Java文件</h1><p>初学Java时用命令行编译和运行，每次都要cd入目录，手输javac和java命令，非常不便。于是偷懒写了个.bat文件：</p>
+<pre><code>@echo off
+javac <span class="preprocessor">%</span>~<span class="label">nx1</span>
+java <span class="preprocessor">%</span>~<span class="label">n1</span>
+pause
+</code></pre><p>每次写完一拖就搞定！</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>有时候我们需要使用命令行处理文件，需要定期、多次重复时，手动输入或者复制粘贴路径和文件名效率非常低下。此时可以使用bat命令减轻工作量。</p>
+<p>bat是Windows下的批处理文件，每一行都是一条DOS命令。</p>]]>
+    
+    </summary>
+    
+      <category term="bat" scheme="http://lovenight.github.io/tags/bat/"/>
+    
+      <category term="批处理" scheme="http://lovenight.github.io/tags/%E6%89%B9%E5%A4%84%E7%90%86/"/>
+    
+      <category term="编程" scheme="http://lovenight.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="bat" scheme="http://lovenight.github.io/categories/%E7%BC%96%E7%A8%8B/bat/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[翻墙三策]]></title>
@@ -285,7 +330,7 @@ start adbd
     <link href="http://lovenight.github.io/2015/11/28/%E7%99%BD%E4%BA%91%E5%A4%96%E7%9A%84%E4%B8%80%E9%98%B5%E9%A3%8E/"/>
     <id>http://lovenight.github.io/2015/11/28/白云外的一阵风/</id>
     <published>2015-11-28T15:52:06.000Z</published>
-    <updated>2015-11-30T01:26:17.171Z</updated>
+    <updated>2015-12-01T01:32:36.375Z</updated>
     <content type="html"><![CDATA[<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/29/4/2/35/%E9%B2%9C%E8%8A%B1.jpg" alt="鲜花.jpg"></p>
 <p>年龄一大，难免要操心终生大事——操心的不是我，而是各路亲戚。我只想着如何避免这些事，老婆孩子是一条枷锁，使自己的下半生不得自由。可惜事与愿违，越来越大的压力，使我很难再坚持这样的做法。母亲身体不好，每次谈及这方面的事，总是说自己这几年还可以帮忙带带小孩，再晚就带不动了。听到心里总感觉无限心酸。</p>
 <a id="more"></a>
@@ -349,6 +394,7 @@ start adbd
 <p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/29/2/15/5/%E5%B9%B3%E8%A1%8C%E7%94%B5%E6%A2%AF.jpg?imageMogr2/thumbnail/500x500" alt="步行电梯.jpg"><br>与地面平等的电梯，或者说是一条传送带。</p>
 <p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/29/2/15/5/%E5%A4%A9%E9%9B%A8.jpg?imageMogr2/thumbnail/700x700" alt="天雨.jpg"><br>雨夜</p>
 <p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/29/22/2/33/Me.jpg?imageMogr2/thumbnail/500x500" alt="Me.jpg"><br>晚上剪了头发，自拍一张。</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="http://music.163.com/outchain/player?type=2&id=5238208&auto=1&height=66"></iframe>
 ]]></content>
     <summary type="html">
     <![CDATA[<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/29/4/2/35/%E9%B2%9C%E8%8A%B1.jpg" alt="鲜花.jpg"></p>
