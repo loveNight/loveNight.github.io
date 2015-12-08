@@ -4,7 +4,7 @@
   <subtitle><![CDATA[莫厌追欢笑语频，寻思离乱好伤神。闲来屈指从头数，得见清平有几人]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://lovenight.github.io/"/>
-  <updated>2015-12-01T01:32:36.328Z</updated>
+  <updated>2015-12-08T08:43:34.015Z</updated>
   <id>http://lovenight.github.io/</id>
   
   <author>
@@ -13,6 +13,80 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Android真机调试时DDMS无法查看/data目录]]></title>
+    <link href="http://lovenight.github.io/2015/12/08/Android%E7%9C%9F%E6%9C%BA%E8%B0%83%E8%AF%95%E6%97%B6DDMS%E6%97%A0%E6%B3%95%E6%9F%A5%E7%9C%8B-data%E7%9B%AE%E5%BD%95/"/>
+    <id>http://lovenight.github.io/2015/12/08/Android真机调试时DDMS无法查看-data目录/</id>
+    <published>2015-12-08T08:38:16.000Z</published>
+    <updated>2015-12-08T08:43:34.015Z</updated>
+    <content type="html"><![CDATA[<p>如题。<code>/data</code>的文件权限是<code>drwxrwx--x</code>。</p>
+<ul>
+<li>第一位代表文件类型，d是directory目录；</li>
+<li>后三位代表创建者的权限，r读，w写，x执行</li>
+<li>再后三位代表同组者的权限</li>
+<li>最后三位是其他人的权限，这里只有x执行</li>
+</ul>
+<p>只需要用adb命令修改权限就可以了</p>
+<pre><code>adb <span class="keyword">shell</span> <span class="keyword">su</span> -c <span class="string">"chmod 777 /data"</span>
+</code></pre><p>子目录需要使用同样的命令修改权限才可操作。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>如题。<code>/data</code>的文件权限是<code>drwxrwx--x</code>。</p>
+<ul>
+<li>第一位代表文件类型，d是directory目录；</li>
+<li>后三位代表创建者的权限，r读，w写，x执行</li>
+<li>再后三位代表同]]>
+    </summary>
+    
+      <category term="Android" scheme="http://lovenight.github.io/tags/Android/"/>
+    
+      <category term="DDMS" scheme="http://lovenight.github.io/tags/DDMS/"/>
+    
+      <category term="adb" scheme="http://lovenight.github.io/tags/adb/"/>
+    
+      <category term="真机调试" scheme="http://lovenight.github.io/tags/%E7%9C%9F%E6%9C%BA%E8%B0%83%E8%AF%95/"/>
+    
+      <category term="编程" scheme="http://lovenight.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="Android" scheme="http://lovenight.github.io/categories/%E7%BC%96%E7%A8%8B/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[自占此次相亲结果如何]]></title>
+    <link href="http://lovenight.github.io/2015/12/06/%E8%87%AA%E5%8D%A0%E4%B8%8E%E7%8E%8BDY%E7%9B%B8%E4%BA%B2%E5%8F%91%E5%B1%95%E5%A6%82%E4%BD%95/"/>
+    <id>http://lovenight.github.io/2015/12/06/自占与王DY相亲发展如何/</id>
+    <published>2015-12-06T10:43:34.000Z</published>
+    <updated>2015-12-07T02:21:20.031Z</updated>
+    <content type="html"><![CDATA[<p>过段时间与西后里的王DY见面，自占将来会不会有发展。</p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/12/6/18/46/3/%E4%B8%8E%E7%8E%8BDY%E6%9C%89%E6%B2%A1%E6%9C%89%E5%8F%91%E5%B1%95.jpg" alt="与王DY有没有发展.jpg"></p>
+<a id="more"></a>
+<p>财爻戌土持世，休囚又逢日建辰土来冲，为自己经济状况不佳。子孙伏而不出，后继乏力。明年寅月冲开四爻官鬼申金，生旺子孙午火，跳槽加薪之象。正好符合我自己的计划。</p>
+<p>妻财两现，以初爻丑土为用，丑土月耗日扶又入空亡，兼之变卦六冲，这次相亲没戏。</p>
+<p>应爻亥水临月，对方的条件好很多。飞神亥水生合伏神寅木，临勾陈，表示和一位朋友非常合得来，暗生情愫。但是亥水入日墓，动弹不得，女方不会主动。三爻官鬼酉金动化回头克，克尽无用，不生应爻，这位朋友对她没有情意。</p>
+<p>六爻中并不需要参考爻辞，这里只有一爻独发，不妨看看。有时与事暗合，爻辞参与占断，会有神来之笔。</p>
+<blockquote>
+<p>九三。井渫不食。为我心恻。可用汲。王明。并受其福。</p>
+</blockquote>
+<p>三爻的位置是中部偏下，井水里的杂质已经沉淀到了底部，此段井水可以饮用，但是没有人来取食，只因五爻的阳爻所阻。上卦为坎，坎为忧，故称心恻。不过五爻的阻碍并不会持续太久，清除之后，三爻位置处的井水就可以顺利打上来饮用了。五爻为尊位，对应到人事，就是最尊贵的「王」。「王明」即疏通五爻，上下皆受其福。</p>
+<p>光看这爻辞，症结都在九五爻，只要九五一通，皆大欢喜。难道关键在我身上？怎么和六爻的分析结果截然相反。暂且记录下来，且看结果如何。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>过段时间与西后里的王DY见面，自占将来会不会有发展。</p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/12/6/18/46/3/%E4%B8%8E%E7%8E%8BDY%E6%9C%89%E6%B2%A1%E6%9C%89%E5%8F%91%E5%B1%95.jpg" alt="与王DY有没有发展.jpg"></p>]]>
+    
+    </summary>
+    
+      <category term="六爻" scheme="http://lovenight.github.io/tags/%E5%85%AD%E7%88%BB/"/>
+    
+      <category term="相亲" scheme="http://lovenight.github.io/tags/%E7%9B%B8%E4%BA%B2/"/>
+    
+      <category term="术数" scheme="http://lovenight.github.io/categories/%E6%9C%AF%E6%95%B0/"/>
+    
+      <category term="六爻" scheme="http://lovenight.github.io/categories/%E6%9C%AF%E6%95%B0/%E5%85%AD%E7%88%BB/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[bat拖曳获取文件信息]]></title>
@@ -508,7 +582,7 @@ start adbd
     <link href="http://lovenight.github.io/2015/11/22/%E8%B6%A3%E5%9B%BE%E6%94%B6%E9%9B%86/"/>
     <id>http://lovenight.github.io/2015/11/22/趣图收集/</id>
     <published>2015-11-22T03:49:21.000Z</published>
-    <updated>2015-12-06T08:23:17.718Z</updated>
+    <updated>2015-12-07T06:36:05.046Z</updated>
     <content type="html"><![CDATA[<blockquote class="blockquote-center">收集一些有趣、有触动的图片，不定期更新</blockquote>
 
 <a id="more"></a>
@@ -521,6 +595,8 @@ start adbd
 <h3 id="送给花式钓鱼的楼主">送给花式钓鱼的楼主</h3><p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/25/0/7/23/%E4%B8%80%E7%BD%91%E6%8D%9E%E4%BA%86%E5%A4%9A%E5%B0%91%E9%B1%BC.jpg" alt="一网捞了多少鱼.jpg"></p>
 <hr>
 <h3 id="蛤里发！">蛤里发！</h3><p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/12/4/12/10/52/%E8%9B%A4%E9%87%8C%E5%8F%91.jpg" alt="蛤里发.jpg"></p>
+<hr>
+<h3 id="中央已经决定了">中央已经决定了</h3><p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/12/5/20/13/52/%E4%B8%AD%E5%A4%AE%E5%B7%B2%E7%BB%8F%E5%86%B3%E5%AE%9A%E4%BA%86%EF%BC%8C%E4%BD%A0%E6%9D%A5%E5%BD%93%E6%80%BB%E4%B9%A6%E8%AE%B0.jpg?imageMogr2/thumbnail/500x500" alt="中央已经决定了，你来当总书记.jpg"></p>
 <hr>
 <h3 id="你神经病啊！">你神经病啊！</h3><p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/12/6/16/21/36/%E4%BD%A0%E7%A5%9E%E7%BB%8F%E7%97%85%E5%95%8A%EF%BC%81.jpg" alt="你神经病啊！.jpg"></p>
 <hr>
@@ -642,7 +718,7 @@ start adbd
     <link href="http://lovenight.github.io/2015/11/17/Python%E7%AC%94%E8%AE%B0%E4%B9%8Bsubprocess%E2%80%94%E2%80%94%E5%AD%90%E8%BF%9B%E7%A8%8B%E6%A8%A1%E5%9D%97/"/>
     <id>http://lovenight.github.io/2015/11/17/Python笔记之subprocess——子进程模块/</id>
     <published>2015-11-16T16:09:31.000Z</published>
-    <updated>2015-11-16T17:40:09.316Z</updated>
+    <updated>2015-12-07T03:30:45.953Z</updated>
     <content type="html"><![CDATA[<p>subprocess最早在2.4版本引入，用来代替多个旧模块和函数:</p>
 <blockquote>
 <p>os.system<br>os.open<br>os.spawn<em><br>os.popen</em><br>popen2.<em><br>commands.</em></p>
@@ -654,7 +730,7 @@ start adbd
 <h3 id="实时获取子进程输出">实时获取子进程输出</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> subprocess</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    p = subprocess.Popen(<span class="string">"python  -u sub.py"</span>, stdout = subprocess.PIPE, stderr=subprocess.STDOUT)</span><br><span class="line">    <span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">        line = p.stdout.readline()</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> line:</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        print(line)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
 <p>或者</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> subprocess</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">p = subprocess.Popen(<span class="string">'ping 127.0.0.1 -n 10'</span>, stdout=subprocess.PIPE)</span><br><span class="line"><span class="keyword">while</span> p.poll() == <span class="keyword">None</span>: <span class="comment"># 检查子进程是否已经结束</span></span><br><span class="line">    print(p.stdout.readline())</span><br><span class="line">    time.sleep(<span class="number">1</span>)</span><br><span class="line">print(p.stdout.read())</span><br><span class="line">print(<span class="string">'returen code:'</span>, p.returncode)</span><br></pre></td></tr></table></figure>
-<h1 id="参考资料">参考资料</h1><ul>
+<h2 id="参考资料">参考资料</h2><ul>
 <li><a href="http://blog.chinaunix.net/uid-26000296-id-4461522.html" target="_blank" rel="external">python子进程模块subprocess详解与应用实例 之一</a></li>
 </ul>
 ]]></content>

@@ -63,7 +63,7 @@ os.systemos.openos.spawnos.popenpopen2.commands.">
 <meta property="og:description" content="subprocess最早在2.4版本引入，用来代替多个旧模块和函数:
 
 os.systemos.openos.spawnos.popenpopen2.commands.">
-<meta property="og:updated_time" content="2015-11-16T17:40:09.316Z">
+<meta property="og:updated_time" content="2015-12-07T03:30:45.953Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python笔记之subprocess——子进程模块">
 <meta name="twitter:description" content="subprocess最早在2.4版本引入，用来代替多个旧模块和函数:
@@ -373,7 +373,7 @@ os.systemos.openos.spawnos.popenpopen2.commands.">
 <h3 id="实时获取子进程输出">实时获取子进程输出</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> subprocess</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    p = subprocess.Popen(<span class="string">"python  -u sub.py"</span>, stdout = subprocess.PIPE, stderr=subprocess.STDOUT)</span><br><span class="line">    <span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">        line = p.stdout.readline()</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> line:</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        print(line)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
 <p>或者</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> subprocess</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">p = subprocess.Popen(<span class="string">'ping 127.0.0.1 -n 10'</span>, stdout=subprocess.PIPE)</span><br><span class="line"><span class="keyword">while</span> p.poll() == <span class="keyword">None</span>: <span class="comment"># 检查子进程是否已经结束</span></span><br><span class="line">    print(p.stdout.readline())</span><br><span class="line">    time.sleep(<span class="number">1</span>)</span><br><span class="line">print(p.stdout.read())</span><br><span class="line">print(<span class="string">'returen code:'</span>, p.returncode)</span><br></pre></td></tr></table></figure>
-<h1 id="参考资料">参考资料</h1><ul>
+<h2 id="参考资料">参考资料</h2><ul>
 <li><a href="http://blog.chinaunix.net/uid-26000296-id-4461522.html" target="_blank" rel="external">python子进程模块subprocess详解与应用实例 之一</a></li>
 </ul>
 </span>
@@ -503,21 +503,21 @@ os.systemos.openos.spawnos.popenpopen2.commands.">
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">19</span>
+              <span class="site-state-item-count">21</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-count">13</span>
               <span class="site-state-item-name">分类</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">31</span>
+              <span class="site-state-item-count">34</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
@@ -601,7 +601,7 @@ os.systemos.openos.spawnos.popenpopen2.commands.">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#API说明"><span class="nav-number">1.</span> <span class="nav-text">API说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#应用实例"><span class="nav-number">2.</span> <span class="nav-text">应用实例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一些简单例子"><span class="nav-number">2.1.</span> <span class="nav-text">一些简单例子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#连续输入和输出"><span class="nav-number">2.2.</span> <span class="nav-text">连续输入和输出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实时获取子进程输出"><span class="nav-number">2.3.</span> <span class="nav-text">实时获取子进程输出</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number"></span> <span class="nav-text">参考资料</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#API说明"><span class="nav-number">1.</span> <span class="nav-text">API说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#应用实例"><span class="nav-number">2.</span> <span class="nav-text">应用实例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一些简单例子"><span class="nav-number">2.1.</span> <span class="nav-text">一些简单例子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#连续输入和输出"><span class="nav-number">2.2.</span> <span class="nav-text">连续输入和输出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实时获取子进程输出"><span class="nav-number">2.3.</span> <span class="nav-text">实时获取子进程输出</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">3.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
