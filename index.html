@@ -376,21 +376,21 @@
 
       
         
-          <span itemprop="articleBody">
-            
-              <p>如题。<code>/data</code>的文件权限是<code>drwxrwx--x</code>。</p>
+          <h1 id="问题与解决方法">问题与解决方法</h1><p>如题。<code>/data</code>的文件权限是<code>drwxrwx--x</code>。</p>
 <ul>
-<li>第一位代表文件类型，d是directory目录；</li>
-<li>后三位代表创建者的权限，r读，w写，x执行</li>
-<li>再后三位代表同组者的权限</li>
-<li>最后三位是其他人的权限，这里只有x执行</li>
+<li>第一位d代表文件类型，d是directory目录；</li>
+<li>后三位rwx代表创建者的权限，r读，w写，x执行</li>
+<li>再后三rwx位代表同组者的权限</li>
+<li>最后三位–x是其他人的权限，这里只有x执行，将它改成rwx即可。</li>
 </ul>
-<p>只需要用adb命令修改权限就可以了</p>
+<p>在cmd中运行adb命令</p>
 <pre><code>adb <span class="keyword">shell</span> <span class="keyword">su</span> -c <span class="string">"chmod 777 /data"</span>
 </code></pre><p>子目录需要使用同样的命令修改权限才可操作。</p>
-
-            
-          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/12/08/Android真机调试时DDMS无法查看-data目录/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
 

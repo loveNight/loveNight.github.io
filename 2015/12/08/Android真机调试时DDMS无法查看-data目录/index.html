@@ -53,43 +53,43 @@
 
 
 
-<meta name="description" content="如题。/data的文件权限是drwxrwx--x。
+<meta name="description" content="问题与解决方法如题。/data的文件权限是drwxrwx--x。
 
-第一位代表文件类型，d是directory目录；
-后三位代表创建者的权限，r读，w写，x执行
-再后三位代表同组者的权限
-最后三位是其他人的权限，这里只有x执行
+第一位d代表文件类型，d是directory目录；
+后三位rwx代表创建者的权限，r读，w写，x执行
+再后三rwx位代表同组者的权限
+最后三位–x是其他人的权限，这里只有x执行，将它改成rwx即可。
 
-只需要用adb命令修改权限就可以了
+在cmd中运行adb命令
 adb shell su -c &quot;chmod 777 /data&quot;
-子目录需要使用同样的命令修改权限才可操作。">
+子目录需要使用同样的命令修改权限才可">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android真机调试时DDMS无法查看/data目录">
 <meta property="og:url" content="http://lovenight.github.io/2015/12/08/Android真机调试时DDMS无法查看-data目录/index.html">
 <meta property="og:site_name" content="岁月如歌">
-<meta property="og:description" content="如题。/data的文件权限是drwxrwx--x。
+<meta property="og:description" content="问题与解决方法如题。/data的文件权限是drwxrwx--x。
 
-第一位代表文件类型，d是directory目录；
-后三位代表创建者的权限，r读，w写，x执行
-再后三位代表同组者的权限
-最后三位是其他人的权限，这里只有x执行
+第一位d代表文件类型，d是directory目录；
+后三位rwx代表创建者的权限，r读，w写，x执行
+再后三rwx位代表同组者的权限
+最后三位–x是其他人的权限，这里只有x执行，将它改成rwx即可。
 
-只需要用adb命令修改权限就可以了
+在cmd中运行adb命令
 adb shell su -c &quot;chmod 777 /data&quot;
-子目录需要使用同样的命令修改权限才可操作。">
-<meta property="og:updated_time" content="2015-12-08T08:43:34.015Z">
+子目录需要使用同样的命令修改权限才可">
+<meta property="og:updated_time" content="2015-12-08T10:35:48.812Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android真机调试时DDMS无法查看/data目录">
-<meta name="twitter:description" content="如题。/data的文件权限是drwxrwx--x。
+<meta name="twitter:description" content="问题与解决方法如题。/data的文件权限是drwxrwx--x。
 
-第一位代表文件类型，d是directory目录；
-后三位代表创建者的权限，r读，w写，x执行
-再后三位代表同组者的权限
-最后三位是其他人的权限，这里只有x执行
+第一位d代表文件类型，d是directory目录；
+后三位rwx代表创建者的权限，r读，w写，x执行
+再后三rwx位代表同组者的权限
+最后三位–x是其他人的权限，这里只有x执行，将它改成rwx即可。
 
-只需要用adb命令修改权限就可以了
+在cmd中运行adb命令
 adb shell su -c &quot;chmod 777 /data&quot;
-子目录需要使用同样的命令修改权限才可操作。">
+子目录需要使用同样的命令修改权限才可">
 
 
 
@@ -383,16 +383,55 @@ adb shell su -c &quot;chmod 777 /data&quot;
       
 
       
-        <span itemprop="articleBody"><p>如题。<code>/data</code>的文件权限是<code>drwxrwx--x</code>。</p>
+        <span itemprop="articleBody"><h1 id="问题与解决方法">问题与解决方法</h1><p>如题。<code>/data</code>的文件权限是<code>drwxrwx--x</code>。</p>
 <ul>
-<li>第一位代表文件类型，d是directory目录；</li>
-<li>后三位代表创建者的权限，r读，w写，x执行</li>
-<li>再后三位代表同组者的权限</li>
-<li>最后三位是其他人的权限，这里只有x执行</li>
+<li>第一位d代表文件类型，d是directory目录；</li>
+<li>后三位rwx代表创建者的权限，r读，w写，x执行</li>
+<li>再后三rwx位代表同组者的权限</li>
+<li>最后三位–x是其他人的权限，这里只有x执行，将它改成rwx即可。</li>
 </ul>
-<p>只需要用adb命令修改权限就可以了</p>
+<p>在cmd中运行adb命令</p>
 <pre><code>adb <span class="keyword">shell</span> <span class="keyword">su</span> -c <span class="string">"chmod 777 /data"</span>
 </code></pre><p>子目录需要使用同样的命令修改权限才可操作。</p>
+<a id="more"></a>
+<hr>
+<h1 id="chmod_命令">chmod 命令</h1><h2 id="说明">说明</h2><p>Linux/Unix 的档案调用权限分为三级 : 档案拥有者、群组、其他。利用 chmod 可以藉以控制档案如何被他人所调用。</p>
+<pre><code>chmod [-cfvR] [--help] [--version] mode file...
+参数说明：
+-<span class="ruby">c <span class="symbol">:</span> 若该档案权限确实已经更改，才显示其更改动作
+</span>-<span class="ruby">f <span class="symbol">:</span> 若该档案权限无法被更改也不要显示错误讯息
+</span>-<span class="ruby">v <span class="symbol">:</span> 显示权限变更的详细资料
+</span>-<span class="ruby"><span class="constant">R</span> <span class="symbol">:</span> 对目前目录下的所有档案与子目录进行相同的权限变更(即以递回的方式逐个变更)
+</span>-<span class="ruby">-help <span class="symbol">:</span> 显示辅助说明
+</span>-<span class="ruby">-version <span class="symbol">:</span> 显示版本
+</span>mode: 权限设定字串，格式如下 : [ugoa...][[+-=][rwxX]...][,...]，其中
+    u 表示该档案的拥有者user
+    g 表示与该档案的拥有者属于同一个群体者group
+    o 表示其他以外的人other
+    a 表示这三者皆是all
+    + 表示增加权限、- 表示取消权限、= 表示唯一设定权限。
+    r 表示可读取，w 表示可写入，x 表示可执行，X 表示只有当该档案是个子目录或者该档案已经被设定过为可执行。
+    -<span class="ruby">----------------
+</span>    也可以用数字来表示权限如 chmod 777 file，三个数字分别表示user、group、other权限
+        r=4，w=2，x=1。7表示rwx，依次类推
+</code></pre><h2 id="范例">范例</h2><h3 id="所有人皆可读取">所有人皆可读取</h3><pre><code>chmod <span class="literal">a</span>+r file1 file2
+</code></pre><h3 id="拥有者、同组者可写入，其他人不可写入">拥有者、同组者可写入，其他人不可写入</h3><pre><code>chmod ug+w,o-w <span class="type">file</span>
+</code></pre><h3 id="只有该档案拥有者可以执行">只有该档案拥有者可以执行</h3><pre><code>chmod <span class="keyword">u</span>+x <span class="keyword">file</span>
+</code></pre><h3 id="当前目录下的所有档案与子目录皆设为任何人可读取">当前目录下的所有档案与子目录皆设为任何人可读取</h3><pre><code>chmod -R <span class="literal">a</span>+r *
+</code></pre><h3 id="所有人皆可读写执行">所有人皆可读写执行</h3><pre><code>chmod <span class="operator">a</span>=rwx <span class="built_in">file</span>
+chmod <span class="number">777</span> <span class="built_in">file</span>    <span class="comment"># 与上等效</span>
+</code></pre><h3 id="创建者、同组者读写执行，其他人仅执行">创建者、同组者读写执行，其他人仅执行</h3><pre><code>chmod ug=rwx,o=x <span class="type">file</span>
+chmod <span class="number">771</span> <span class="type">file</span>    <span class="comment"># 与上等效</span>
+</code></pre><h3 id="使程序拥有root权限">使程序拥有root权限</h3><pre><code>chmod <span class="number">4755</span> filename
+</code></pre><p>　　</p>
+<hr>
+<h1 id="Linux常用命令全集">Linux常用命令全集</h1><ul>
+<li><a href="http://itlab.idcquan.com/linux/special/linuxcom/" target="_blank" rel="external">Linux常用命令全集</a></li>
+</ul>
+<hr>
+<h1 id="参考资料">参考资料</h1><ul>
+<li><a href="http://blog.csdn.net/jason_wks/article/details/7310364" target="_blank" rel="external">Eclipse DDMS 无法查看手机/data/data</a></li>
+</ul>
 </span>
       
 
@@ -618,7 +657,7 @@ adb shell su -c &quot;chmod 777 /data&quot;
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#问题与解决方法"><span class="nav-number">1.</span> <span class="nav-text">问题与解决方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#chmod_命令"><span class="nav-number">2.</span> <span class="nav-text">chmod 命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#说明"><span class="nav-number">2.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#范例"><span class="nav-number">2.2.</span> <span class="nav-text">范例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#所有人皆可读取"><span class="nav-number">2.2.1.</span> <span class="nav-text">所有人皆可读取</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#拥有者、同组者可写入，其他人不可写入"><span class="nav-number">2.2.2.</span> <span class="nav-text">拥有者、同组者可写入，其他人不可写入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#只有该档案拥有者可以执行"><span class="nav-number">2.2.3.</span> <span class="nav-text">只有该档案拥有者可以执行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#当前目录下的所有档案与子目录皆设为任何人可读取"><span class="nav-number">2.2.4.</span> <span class="nav-text">当前目录下的所有档案与子目录皆设为任何人可读取</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#所有人皆可读写执行"><span class="nav-number">2.2.5.</span> <span class="nav-text">所有人皆可读写执行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建者、同组者读写执行，其他人仅执行"><span class="nav-number">2.2.6.</span> <span class="nav-text">创建者、同组者读写执行，其他人仅执行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使程序拥有root权限"><span class="nav-number">2.2.7.</span> <span class="nav-text">使程序拥有root权限</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Linux常用命令全集"><span class="nav-number">3.</span> <span class="nav-text">Linux常用命令全集</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number">4.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
