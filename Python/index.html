@@ -81,7 +81,7 @@ cwyalpha的博客 Python爬虫学习记录系列
 xlzd
 小信’Blog
 离别歌：乌云核心白帽子、混迹于各大社区的伪装程序猿，喜欢各种代码与审计、linux运维与内网、python web开">
-<meta property="og:updated_time" content="2015-12-10T06:39:13.218Z">
+<meta property="og:updated_time" content="2015-12-10T11:02:45.796Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python Notes">
 <meta name="twitter:description" content="Python Docs
@@ -422,15 +422,489 @@ pip list --outdated | grep '^[a-z]* (' | cut -d <span class="string">" "</span> 
 <h3 id="多序列同时迭代">多序列同时迭代</h3><p><strong>注：Iterator指惰性序列</strong>，list、turple等是Iteratable，但不是Iterator<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line">b = [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">### 以下都是Iterator，可作用于二个或以上序列</span></span><br><span class="line">zip(a, b)   <span class="comment"># (1,'a'), (2, 'b'), (3, 'c')</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> itertools <span class="keyword">import</span> zip_longest</span><br><span class="line">zip_longest(a, b)   <span class="comment"># (1, 'a'), (2, 'b'), (3, 'c'), (4, None)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> itertools <span class="keyword">import</span> chain</span><br><span class="line">chain(a, b)   <span class="comment"># [1, 2, 3, 4, 'a', 'b', 'c']</span></span><br></pre></td></tr></table></figure></p>
 <h3 id="嵌套序列变平">嵌套序列变平</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> Iterable</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">flatten</span><span class="params">(items, ignore_types=<span class="params">(str, bytes)</span>)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> items:</span><br><span class="line">        <span class="keyword">if</span> isinstance(x, Iterable) <span class="keyword">and</span> <span class="keyword">not</span> isinstance(x, ignore_types):</span><br><span class="line">            <span class="keyword">yield</span> <span class="keyword">from</span> flatten(x)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">yield</span> x</span><br><span class="line"></span><br><span class="line">items = [<span class="number">1</span>, <span class="number">2</span>, [<span class="number">3</span>, <span class="number">4</span>, [<span class="number">5</span>, <span class="number">6</span>], <span class="number">7</span>], <span class="number">8</span>]</span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> flatten(items):</span><br><span class="line">    print(x)</span><br></pre></td></tr></table></figure>
 <h3 id="迭代多个有序排列数组（多路归并排序）">迭代多个有序排列数组（多路归并排序）</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> heapq</span><br><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> Iterator</span><br><span class="line">a = [<span class="number">1</span>, <span class="number">4</span>, <span class="number">7</span>, <span class="number">10</span>]</span><br><span class="line">b = [<span class="number">2</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">11</span>]</span><br><span class="line">heapq.merge(a, b) <span class="comment"># 1, 2, 4, 5, 6, 7, 10, 11</span></span><br></pre></td></tr></table></figure>
-<h3 id="一行筛质数：">一行筛质数：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">filter(<span class="keyword">lambda</span> x: all(map(<span class="keyword">lambda</span> p: x % p != <span class="number">0</span>, range(<span class="number">2</span>, x))), range(<span class="number">2</span>, n))</span><br></pre></td></tr></table></figure>
-<h3 id="读取_csv_文件：">读取 csv 文件：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> open(<span class="string">'t.csv'</span>, <span class="string">'r'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    rows = [line.strip().split(<span class="string">','</span>) <span class="keyword">for</span> line <span class="keyword">in</span> f.readlines()]</span><br></pre></td></tr></table></figure>
-<h3 id="对_array_按照第二列降序排序并取前_10_个：">对 array 按照第二列降序排序并取前 10 个：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sorted(array, key=<span class="keyword">lambda</span> x: x[<span class="number">1</span>], reverse=<span class="keyword">True</span>)[:<span class="number">10</span>]</span><br></pre></td></tr></table></figure>
-<h3 id="对两个字符串（这里假设等长）做异或操作：">对两个字符串（这里假设等长）做异或操作：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">""</span>.join([chr(ord(x) ^ ord(y)) <span class="keyword">for</span> (x, y) <span class="keyword">in</span> zip(a, b)])</span><br></pre></td></tr></table></figure>
-<h3 id="转置矩阵：">转置矩阵：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">m = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>]]</span><br><span class="line">zip(*m)   <span class="comment"># *是把list中的项当成可选参数传进去</span></span><br></pre></td></tr></table></figure>
-<h3 id="简易Web服务：">简易Web服务：</h3><p>终端输入：<code>python -m http.server 8000</code><br>浏览器打开<code>localhost:8000</code>即可当FTP使用</p>
+<h3 id="一行筛质数">一行筛质数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">filter(<span class="keyword">lambda</span> x: all(map(<span class="keyword">lambda</span> p: x % p != <span class="number">0</span>, range(<span class="number">2</span>, x))), range(<span class="number">2</span>, n))</span><br></pre></td></tr></table></figure>
+<h3 id="读取_csv_文件">读取 csv 文件</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> open(<span class="string">'t.csv'</span>, <span class="string">'r'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    rows = [line.strip().split(<span class="string">','</span>) <span class="keyword">for</span> line <span class="keyword">in</span> f.readlines()]</span><br></pre></td></tr></table></figure>
+<h3 id="对_array_按照第二列降序排序并取前_10_个">对 array 按照第二列降序排序并取前 10 个</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sorted(array, key=<span class="keyword">lambda</span> x: x[<span class="number">1</span>], reverse=<span class="keyword">True</span>)[:<span class="number">10</span>]</span><br></pre></td></tr></table></figure>
+<h3 id="对两个字符串（这里假设等长）做异或操作">对两个字符串（这里假设等长）做异或操作</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">""</span>.join([chr(ord(x) ^ ord(y)) <span class="keyword">for</span> (x, y) <span class="keyword">in</span> zip(a, b)])</span><br></pre></td></tr></table></figure>
+<h3 id="转置矩阵">转置矩阵</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">m = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>]]</span><br><span class="line">zip(*m)   <span class="comment"># *是把list中的项当成可选参数传进去</span></span><br></pre></td></tr></table></figure>
+<h3 id="简易Web服务">简易Web服务</h3><p>终端输入：<code>python -m http.server 8000</code><br>浏览器打开<code>localhost:8000</code>即可当FTP使用</p>
 <h3 id="链式比较：">链式比较：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">3</span></span><br><span class="line">b = <span class="number">1</span></span><br><span class="line"><span class="number">1</span> &lt;= b &lt;= a &lt; <span class="number">10</span>  <span class="comment">#True</span></span><br></pre></td></tr></table></figure>
 <h3 id="真值测试">真值测试</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="string">'Tim'</span></span><br><span class="line">langs = [<span class="string">'AS3'</span>, <span class="string">'Lua'</span>, <span class="string">'C'</span>]</span><br><span class="line">info = &#123;<span class="string">'name'</span>: <span class="string">'Tim'</span>, <span class="string">'sex'</span>: <span class="string">'Male'</span>, <span class="string">'age'</span>:<span class="number">23</span> &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> name <span class="keyword">and</span> langs <span class="keyword">and</span> info:</span><br><span class="line">    print(<span class="string">'All True!'</span>)  <span class="comment">#All True!</span></span><br></pre></td></tr></table></figure>
 <h3 id="字典默认值">字典默认值</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">dic = &#123;<span class="string">'name'</span>:<span class="string">'Tim'</span>, <span class="string">'age'</span>:<span class="number">23</span>&#125;</span><br><span class="line"></span><br><span class="line">dic[<span class="string">'workage'</span>] = dic.get(<span class="string">'workage'</span>,<span class="number">0</span>) + <span class="number">1</span></span><br><span class="line"><span class="comment">#dic = &#123;'age': 23, 'workage': 1, 'name': 'Tim'&#125;</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="面试宝典">面试宝典</h2><p>网上搜集的面试题</p>
+<h3 id="到底什么是Python？">到底什么是Python？</h3><p><strong>为什么提这个问题</strong>：如果你应聘的是一个Python开发岗位，你就应该知道这是门什么样的语言，以及它为什么这么酷。以及它哪里不好。</p>
+<p><strong>关键点</strong>：</p>
+<ul>
+<li>Python是一种解释型语言。这就是说，与C语言和C的衍生语言不同，Python代码在运行之前不需要编译。其他解释型语言还包括PHP和Ruby。</li>
+<li>Python是动态类型语言，指的是你在声明变量时，不需要说明变量的类型。你可以直接编写类似x=111和x=”I’m a string”这样的代码，程序不会报错。</li>
+<li>Python非常适合面向对象的编程（OOP），因为它支持通过组合（composition）与继承（inheritance）的方式定义类（class）。Python中没有访问说明符（access<br>specifier，类似C++中的public和private），这么设计的依据是“大家都是成年人了”。</li>
+<li>在Python语言中，函数是第一类对象（first-class objects）。这指的是它们可以被指定给变量，函数既能返回函数类型，也可以接受函数作为输入。类（class）也是第一类对象。</li>
+<li>Python代码编写快，但是运行速度比编译语言通常要慢。好在Python允许加入基于C语言编写的扩展，因此我们能够优化代码，消除瓶颈，这点通常是可以实现的。numpy就是一个很好地例子，它的运行速度真的非常快，因为很多算术运算其实并不是通过Python实现的。</li>
+<li>Python用途非常广泛——网络应用，自动化，科学建模，大数据应用，等等。它也常被用作“胶水语言”，帮助其他语言和组件改善运行状况。</li>
+<li>Python让困难的事情变得容易，因此程序员可以专注于算法和数据结构的设计，而不用处理底层的细节。</li>
+</ul>
+<h3 id="补充缺失的代码">补充缺失的代码</h3><p><strong>为什么提这个问题？</strong></p>
+<ul>
+<li>说明面试者对与操作系统交互的基础知识</li>
+<li>递归真是太好用啦</li>
+</ul>
+<pre><code><span class="function"><span class="keyword">def</span> <span class="title">print_directory_contents</span><span class="params">(sPath)</span>:</span>
+    <span class="string">"""
+    这个函数接受文件夹的名称作为输入参数，
+    返回该文件夹中文件的路径，
+    以及其包含文件夹中文件的路径。
+
+    """</span>
+    <span class="comment"># 补充代码</span>
+</code></pre><p><strong>答案</strong>：</p>
+<pre><code>def <span class="function"><span class="title">print_directory_contents</span><span class="params">(sPath)</span></span>:
+    import os
+    <span class="keyword">for</span> sChild <span class="keyword">in</span> os.<span class="function"><span class="title">listdir</span><span class="params">(sPath)</span></span>:
+        sChildPath = os<span class="class">.path</span><span class="class">.join</span>(sPath,sChild)
+        <span class="keyword">if</span> os<span class="class">.path</span><span class="class">.isdir</span>(sChildPath):
+            <span class="function"><span class="title">print_directory_contents</span><span class="params">(sChildPath)</span></span>
+        <span class="keyword">else</span>:
+            print sChildPath
+</code></pre><p><strong>特别要注意以下几点：</strong></p>
+<ul>
+<li>命名规范要统一。如果样本代码中能够看出命名规范，遵循其已有的规范。</li>
+<li>递归函数需要递归并终止。确保你明白其中的原理，否则你将面临无休无止的调用栈（callstack）。</li>
+<li>我们使用os模块与操作系统进行交互，同时做到交互方式是可以跨平台的。你可以把代码写成<code>sChildPath = sPath + &#39;/&#39; + sChild</code>，但是这个在Windows系统上会出错。</li>
+<li>熟悉基础模块是非常有价值的，但是别想破脑袋都背下来，记住Google是你工作中的良师益友。</li>
+<li>如果你不明白代码的预期功能，就大胆提问。</li>
+<li>坚持KISS原则！保持简单，不过脑子就能懂！</li>
+</ul>
+<h3 id="阅读下面的代码，写出A0，A1至An的最终值">阅读下面的代码，写出A0，A1至An的最终值</h3><p><strong>为什么提这个问题？</strong></p>
+<ul>
+<li>列表解析（list comprehension）十分节约时间，对很多人来说也是一个大的学习障碍。</li>
+<li>如果你读懂了这些代码，就很可能可以写下正确地值。</li>
+<li>其中部分代码故意写的怪怪的。因为你共事的人之中也会有怪人。</li>
+</ul>
+<pre><code>A0 = dict(zip((<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>),(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>)))
+A1 = range(<span class="number">10</span>)
+A2 = [i <span class="keyword">for</span> i <span class="keyword">in</span> A1 <span class="keyword">if</span> i <span class="keyword">in</span> A0]
+A3 = [A0[s] <span class="keyword">for</span> s <span class="keyword">in</span> A0]
+A4 = [i <span class="keyword">for</span> i <span class="keyword">in</span> A1 <span class="keyword">if</span> i <span class="keyword">in</span> A3]
+A5 = <span class="comment">{i:i*i for i in A1}</span>
+A6 = [[i,i*i] <span class="keyword">for</span> i <span class="keyword">in</span> A1]
+</code></pre><p><strong>答案：</strong></p>
+<pre><code>A0 = {<span class="string">'a'</span>: <span class="number">1</span>, <span class="string">'c'</span>: <span class="number">3</span>, <span class="string">'b'</span>: <span class="number">2</span>, <span class="string">'e'</span>: <span class="number">5</span>, <span class="string">'d'</span>: <span class="number">4</span>} <span class="preprocessor"># 顺序不固定</span>
+A1 = [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]
+A2 = []
+A3 = [<span class="number">1</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">4</span>]
+A4 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]
+A5 = {<span class="number">0</span>: <span class="number">0</span>, <span class="number">1</span>: <span class="number">1</span>, <span class="number">2</span>: <span class="number">4</span>, <span class="number">3</span>: <span class="number">9</span>, <span class="number">4</span>: <span class="number">16</span>, <span class="number">5</span>: <span class="number">25</span>, <span class="number">6</span>: <span class="number">36</span>, <span class="number">7</span>: <span class="number">49</span>, <span class="number">8</span>: <span class="number">64</span>, <span class="number">9</span>: <span class="number">81</span>}
+A6 = [[<span class="number">0</span>, <span class="number">0</span>], [<span class="number">1</span>, <span class="number">1</span>], [<span class="number">2</span>, <span class="number">4</span>], [<span class="number">3</span>, <span class="number">9</span>], [<span class="number">4</span>, <span class="number">16</span>], [<span class="number">5</span>, <span class="number">25</span>], [<span class="number">6</span>, <span class="number">36</span>], [<span class="number">7</span>, <span class="number">49</span>], [<span class="number">8</span>, <span class="number">64</span>], [<span class="number">9</span>, <span class="number">81</span>]]
+</code></pre><h3 id="Python的多线程是个好主意吗？">Python的多线程是个好主意吗？</h3><p><strong>为什么提这个问题？</strong></p>
+<p>因为GIL就是个混账东西（A-hole）。很多人花费大量的时间，试图寻找自己多线程代码中的瓶颈，直到他们明白GIL的存在。</p>
+<p><strong>答案：</strong></p>
+<p>Python并不支持真正意义上的多线程。Python中提供了多线程包，但是如果你想通过多线程提高代码的速度，使用多线程包并不是个好主意。Python中有一个被称为Global Interpreter Lock（GIL）的东西，它会确保任何时候你的多个线程中，只有一个被执行。线程的执行速度非常之快，会让你误以为线程是并行执行的，但是实际上都是轮流执行。经过GIL这一道关卡处理，会增加执行的开销。这意味着，如果你想提高代码的运行速度，使用threading包并不是一个很好的方法。</p>
+<p>不过还是有很多理由促使我们使用threading包的。如果你想同时执行一些任务，而且不考虑效率问题，那么使用这个包是完全没问题的，而且也很方便。但是大部分情况下，并不是这么一回事，你会希望把多线程的部分外包给操作系统完成（通过开启多个进程），或者是某些调用你的Python代码的外部程序（例如Spark或Hadoop），又或者是你的Python代码调用的其他代码（例如，你可以在Python中调用C函数，用于处理开销较大的多线程工作）。</p>
+<h3 id="你如何管理不同版本的代码？">你如何管理不同版本的代码？</h3><p><strong>为什么提这个问题？</strong></p>
+<p>因为没有版本控制的代码，就像没有杯子的咖啡。有时候我们需要写一些一次性的、可以随手扔掉的脚本，这种情况下不作版本控制没关系。但是如果你面对的是大量的代码，使用版本控制系统是有利的。版本控制能够帮你追踪谁对代码库做了什么操作；发现新引入了什么bug；管理你的软件的不同版本和发行版；在团队成员中分享源代码；部署及其他自动化处理。它能让你回滚到出现问题之前的版本，单凭这点就特别棒了。还有其他的好功能。怎么一个棒字了得！</p>
+<p><strong>答案：</strong></p>
+<p>版本管理！被问到这个问题的时候，你应该要表现得很兴奋，甚至告诉他们你是如何使用Git（或是其他你最喜欢的工具）追踪自己和奶奶的书信往来。我偏向于使用Git作为版本控制系统（VCS），但还有其他的选择，比如subversion（SVN）。</p>
+<h3 id="下面代码会输出什么？">下面代码会输出什么？</h3><pre><code>def <span class="function"><span class="title">f</span><span class="params">(x,L=[])</span></span>:
+    <span class="keyword">for</span> <span class="tag">i</span> <span class="keyword">in</span> <span class="function"><span class="title">range</span><span class="params">(x)</span></span>:
+        L.<span class="function"><span class="title">append</span><span class="params">(i*i)</span></span>
+    print L
+
+<span class="function"><span class="title">f</span><span class="params">(<span class="number">2</span>)</span></span>
+<span class="function"><span class="title">f</span><span class="params">(<span class="number">3</span>,[<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>])</span></span>
+<span class="function"><span class="title">f</span><span class="params">(<span class="number">3</span>)</span></span>
+</code></pre><p><strong>答案</strong></p>
+<pre><code>[<span class="number">0</span>, <span class="number">1</span>]
+[<span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">4</span>]
+[<span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">4</span>]
+</code></pre><p>第三个函数使用了之前内存地址中存储的旧列表。</p>
+<h3 id="猴子补丁（monkey_patching）是什么？这种做法好吗？">猴子补丁（monkey patching）是什么？这种做法好吗？</h3><p><strong>为什么提这个问题？</strong></p>
+<p>答对这个问题说明你对单元测试的方法有一定了解。你如果提到要避免“猴子补丁”，可以说明你不是那种喜欢花里胡哨代码的程序员（公司里就有这种人，跟他们共事真是糟糕透了），而是更注重可维护性。还记得KISS原则码？答对这个问题还说明你明白一些Python底层运作的方式，函数实际是如何存储、调用等等。</p>
+<p>另外：如果你没读过mock模块的话，真的值得花时间读一读。这个模块非常有用。</p>
+<p><strong>答案：</strong></p>
+<p>“猴子补丁”就是指，在函数或对象已经定义之后，再去改变它们的行为。</p>
+<p>举个例子：</p>
+<pre><code>import datetime
+datetime<span class="class">.datetime</span><span class="class">.now</span> = lambda: datetime.<span class="function"><span class="title">datetime</span><span class="params">(<span class="number">2012</span>, <span class="number">12</span>, <span class="number">12</span>)</span></span>
+</code></pre><p>大部分情况下，这是种很不好的做法 - 因为函数在代码库中的行为最好是都保持一致。打“猴子补丁”的原因可能是为了测试。mock包对实现这个目的很有帮助。</p>
+<h3 id="解释*args，**kwargs的含义与用途">解释<code>*args</code>，<code>**kwargs</code>的含义与用途</h3><p><strong>为什么提这个问题？</strong></p>
+<p>有时候，我们需要往函数中传入未知个数的参数或关键词参数。有时候，我们也希望把参数或关键词参数储存起来，以备以后使用。有时候，仅仅是为了节省时间。</p>
+<p><strong>答案</strong></p>
+<p>如果我们不确定要往函数中传入多少个参数，或者我们想往函数中以列表和元组的形式传参数时，那就使要用<code>*args</code>；如果我们不知道要往函数中传入多少个关键词参数，或者想传入字典的值作为关键词参数时，那就要使用<code>**kwargs</code>。<code>args</code>和<code>kwargs</code>这两个标识符是约定俗成的用法，你当然还可以用<code>*bob</code>和<code>**billy</code>，但是这样就并不太妥。</p>
+<p>下面是具体的示例：</p>
+<pre><code>def <span class="function">f</span>(*args,**kwargs)<span class="value">: print args, kwargs
+
+l = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]
+t = (<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>)
+d = {<span class="string">'a'</span>:<span class="number">7</span>,<span class="string">'b'</span>:<span class="number">8</span>,<span class="string">'c'</span>:<span class="number">9</span>}
+
+<span class="function">f</span>()
+<span class="function">f</span>(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)                    # (<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>) {}
+<span class="function">f</span>(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="string">"groovy"</span>)           # (<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="string">'groovy'</span>) {}
+<span class="function">f</span>(a=<span class="number">1</span>,b=<span class="number">2</span>,c=<span class="number">3</span>)              # () {<span class="string">'a'</span>: <span class="number">1</span>, <span class="string">'c'</span>: <span class="number">3</span>, <span class="string">'b'</span>: <span class="number">2</span>}
+<span class="function">f</span>(a=<span class="number">1</span>,b=<span class="number">2</span>,c=<span class="number">3</span>,zzz=<span class="string">"hi"</span>)     # () {<span class="string">'a'</span>: <span class="number">1</span>, <span class="string">'c'</span>: <span class="number">3</span>, <span class="string">'b'</span>: <span class="number">2</span>, <span class="string">'zzz'</span>: <span class="string">'hi'</span>}
+<span class="function">f</span>(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,a=<span class="number">1</span>,b=<span class="number">2</span>,c=<span class="number">3</span>)        # (<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>) {<span class="string">'a'</span>: <span class="number">1</span>, <span class="string">'c'</span>: <span class="number">3</span>, <span class="string">'b'</span>: <span class="number">2</span>}
+
+<span class="function">f</span>(*l,**d)                   # (<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>) {<span class="string">'a'</span>: <span class="number">7</span>, <span class="string">'c'</span>: <span class="number">9</span>, <span class="string">'b'</span>: <span class="number">8</span>}
+<span class="function">f</span>(*t,**d)                   # (<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>) {<span class="string">'a'</span>: <span class="number">7</span>, <span class="string">'c'</span>: <span class="number">9</span>, <span class="string">'b'</span>: <span class="number">8</span>}
+<span class="function">f</span>(<span class="number">1</span>,<span class="number">2</span>,*t)                   # (<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>) {}
+<span class="function">f</span>(q=<span class="string">"winning"</span>,**d)          # () {<span class="string">'a'</span>: <span class="number">7</span>, <span class="string">'q'</span>: <span class="string">'winning'</span>, <span class="string">'c'</span>: <span class="number">9</span>, <span class="string">'b'</span>: <span class="number">8</span>}
+<span class="function">f</span>(<span class="number">1</span>,<span class="number">2</span>,*t,q=<span class="string">"winning"</span>,**d)   # (<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>) {<span class="string">'a'</span>: <span class="number">7</span>, <span class="string">'q'</span>: <span class="string">'winning'</span>, <span class="string">'c'</span>: <span class="number">9</span>, <span class="string">'b'</span>: <span class="number">8</span>}
+
+def <span class="function">f2</span>(arg1,arg2,*args,**kwargs): print arg1,arg2, args, kwargs
+
+<span class="function">f2</span>(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)                       # <span class="number">1</span> <span class="number">2</span> (<span class="number">3</span>,) {}
+<span class="function">f2</span>(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="string">"groovy"</span>)              # <span class="number">1</span> <span class="number">2</span> (<span class="number">3</span>, <span class="string">'groovy'</span>) {}
+<span class="function">f2</span>(arg1=<span class="number">1</span>,arg2=<span class="number">2</span>,c=<span class="number">3</span>)           # <span class="number">1</span> <span class="number">2</span> () {<span class="string">'c'</span>: <span class="number">3</span>}
+<span class="function">f2</span>(arg1=<span class="number">1</span>,arg2=<span class="number">2</span>,c=<span class="number">3</span>,zzz=<span class="string">"hi"</span>)  # <span class="number">1</span> <span class="number">2</span> () {<span class="string">'c'</span>: <span class="number">3</span>, <span class="string">'zzz'</span>: <span class="string">'hi'</span>}
+<span class="function">f2</span>(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,a=<span class="number">1</span>,b=<span class="number">2</span>,c=<span class="number">3</span>)           # <span class="number">1</span> <span class="number">2</span> (<span class="number">3</span>,) {<span class="string">'a'</span>: <span class="number">1</span>, <span class="string">'c'</span>: <span class="number">3</span>, <span class="string">'b'</span>: <span class="number">2</span>}
+
+<span class="function">f2</span>(*l,**d)                   # <span class="number">1</span> <span class="number">2</span> (<span class="number">3</span>,) {<span class="string">'a'</span>: <span class="number">7</span>, <span class="string">'c'</span>: <span class="number">9</span>, <span class="string">'b'</span>: <span class="number">8</span>}
+<span class="function">f2</span>(*t,**d)                   # <span class="number">4</span> <span class="number">5</span> (<span class="number">6</span>,) {<span class="string">'a'</span>: <span class="number">7</span>, <span class="string">'c'</span>: <span class="number">9</span>, <span class="string">'b'</span>: <span class="number">8</span>}
+<span class="function">f2</span>(<span class="number">1</span>,<span class="number">2</span>,*t)                   # <span class="number">1</span> <span class="number">2</span> (<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>) {}
+<span class="function">f2</span>(<span class="number">1</span>,<span class="number">1</span>,q=<span class="string">"winning"</span>,**d)      # <span class="number">1</span> <span class="number">1</span> () {<span class="string">'a'</span>: <span class="number">7</span>, <span class="string">'q'</span>: <span class="string">'winning'</span>, <span class="string">'c'</span>: <span class="number">9</span>, <span class="string">'b'</span>: <span class="number">8</span>}
+<span class="function">f2</span>(<span class="number">1</span>,<span class="number">2</span>,*t,q=<span class="string">"winning"</span>,**d)   # <span class="number">1</span> <span class="number">2</span> (<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>) {<span class="string">'a'</span>: <span class="number">7</span>, <span class="string">'q'</span>: <span class="string">'winning'</span>, <span class="string">'c'</span>: <span class="number">9</span>, <span class="string">'b'</span>: <span class="number">8</span>}</span>
+</code></pre><h3 id="介绍@classmethod,_@staticmethod,_@property">介绍@classmethod, @staticmethod, @property</h3><p><strong>回答背景知识</strong></p>
+<p>这些都是装饰器（decorator）。装饰器是一种特殊的函数，要么接受函数作为输入参数，并返回一个函数，要么接受一个类作为输入参数，并返回一个类。@标记是语法糖（syntactic sugar），可以让你以简单易读得方式装饰目标对象。</p>
+<pre><code><span class="decorator">@my_decorator</span>
+<span class="function"><span class="keyword">def</span> <span class="title">my_func</span><span class="params">(stuff)</span>:</span>
+    do_things
+Is equivalent to
+
+<span class="function"><span class="keyword">def</span> <span class="title">my_func</span><span class="params">(stuff)</span>:</span>
+    do_things
+
+my_func = my_decorator(my_func)
+</code></pre><p><strong>真正的答案</strong></p>
+<p>@classmethod, @staticmethod和@property这三个装饰器的使用对象是在类中定义的函数。下面的例子展示了它们的用法和行为：</p>
+<pre><code><span class="class"><span class="keyword">class</span> <span class="title">MyClass</span><span class="params">(object)</span>:</span>
+    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span>
+        self._some_property = <span class="string">"properties are nice"</span>
+        self._some_other_property = <span class="string">"VERY nice"</span>
+    <span class="function"><span class="keyword">def</span> <span class="title">normal_method</span><span class="params">(*args,**kwargs)</span>:</span>
+        <span class="keyword">print</span> <span class="string">"calling normal_method({0},{1})"</span>.format(args,kwargs)
+<span class="decorator">    @classmethod</span>
+    <span class="function"><span class="keyword">def</span> <span class="title">class_method</span><span class="params">(*args,**kwargs)</span>:</span>
+        <span class="keyword">print</span> <span class="string">"calling class_method({0},{1})"</span>.format(args,kwargs)
+<span class="decorator">    @staticmethod</span>
+    <span class="function"><span class="keyword">def</span> <span class="title">static_method</span><span class="params">(*args,**kwargs)</span>:</span>
+        <span class="keyword">print</span> <span class="string">"calling static_method({0},{1})"</span>.format(args,kwargs)
+<span class="decorator">    @property</span>
+    <span class="function"><span class="keyword">def</span> <span class="title">some_property</span><span class="params">(self,*args,**kwargs)</span>:</span>
+        <span class="keyword">print</span> <span class="string">"calling some_property getter({0},{1},{2})"</span>.format(self,args,kwargs)
+        <span class="keyword">return</span> self._some_property
+<span class="decorator">    @some_property.setter</span>
+    <span class="function"><span class="keyword">def</span> <span class="title">some_property</span><span class="params">(self,*args,**kwargs)</span>:</span>
+        <span class="keyword">print</span> <span class="string">"calling some_property setter({0},{1},{2})"</span>.format(self,args,kwargs)
+        self._some_property = args[<span class="number">0</span>]
+<span class="decorator">    @property</span>
+    <span class="function"><span class="keyword">def</span> <span class="title">some_other_property</span><span class="params">(self,*args,**kwargs)</span>:</span>
+        <span class="keyword">print</span> <span class="string">"calling some_other_property getter({0},{1},{2})"</span>.format(self,args,kwargs)
+        <span class="keyword">return</span> self._some_other_property
+
+o = MyClass()
+<span class="comment"># 未装饰的方法还是正常的行为方式，需要当前的类实例（self）作为第一个参数。</span>
+
+o.normal_method
+<span class="comment"># &lt;bound method MyClass.normal_method of &lt;__main__.MyClass instance at 0x7fdd2537ea28&gt;&gt;</span>
+
+o.normal_method()
+<span class="comment"># normal_method((&lt;__main__.MyClass instance at 0x7fdd2537ea28&gt;,),{})</span>
+
+o.normal_method(<span class="number">1</span>,<span class="number">2</span>,x=<span class="number">3</span>,y=<span class="number">4</span>)
+<span class="comment"># normal_method((&lt;__main__.MyClass instance at 0x7fdd2537ea28&gt;, 1, 2),{'y': 4, 'x': 3})</span>
+
+<span class="comment"># 类方法的第一个参数永远是该类</span>
+
+o.class_method
+<span class="comment"># &lt;bound method classobj.class_method of &lt;class __main__.MyClass at 0x7fdd2536a390&gt;&gt;</span>
+
+o.class_method()
+<span class="comment"># class_method((&lt;class __main__.MyClass at 0x7fdd2536a390&gt;,),{})</span>
+
+o.class_method(<span class="number">1</span>,<span class="number">2</span>,x=<span class="number">3</span>,y=<span class="number">4</span>)
+<span class="comment"># class_method((&lt;class __main__.MyClass at 0x7fdd2536a390&gt;, 1, 2),{'y': 4, 'x': 3})</span>
+
+<span class="comment"># 静态方法（static method）中除了你调用时传入的参数以外，没有其他的参数。</span>
+
+o.static_method
+<span class="comment"># &lt;function static_method at 0x7fdd25375848&gt;</span>
+
+o.static_method()
+<span class="comment"># static_method((),{})</span>
+
+o.static_method(<span class="number">1</span>,<span class="number">2</span>,x=<span class="number">3</span>,y=<span class="number">4</span>)
+<span class="comment"># static_method((1, 2),{'y': 4, 'x': 3})</span>
+
+<span class="comment"># @property是实现getter和setter方法的一种方式。直接调用它们是错误的。</span>
+<span class="comment"># “只读”属性可以通过只定义getter方法，不定义setter方法实现。</span>
+
+o.some_property
+<span class="comment"># 调用some_property的getter(&lt;__main__.MyClass instance at 0x7fb2b70877e8&gt;,(),{})</span>
+<span class="comment"># 'properties are nice'</span>
+<span class="comment"># “属性”是很好的功能</span>
+
+o.some_property()
+<span class="comment"># calling some_property getter(&lt;__main__.MyClass instance at 0x7fb2b70877e8&gt;,(),{})</span>
+<span class="comment"># Traceback (most recent call last):</span>
+<span class="comment">#   File "&lt;stdin&gt;", line 1, in &lt;module&gt;</span>
+<span class="comment"># TypeError: 'str' object is not callable</span>
+
+o.some_other_property
+<span class="comment"># calling some_other_property getter(&lt;__main__.MyClass instance at 0x7fb2b70877e8&gt;,(),{})</span>
+<span class="comment"># 'VERY nice'</span>
+
+<span class="comment"># o.some_other_property()</span>
+<span class="comment"># calling some_other_property getter(&lt;__main__.MyClass instance at 0x7fb2b70877e8&gt;,(),{})</span>
+<span class="comment"># Traceback (most recent call last):</span>
+<span class="comment">#   File "&lt;stdin&gt;", line 1, in &lt;module&gt;</span>
+<span class="comment"># TypeError: 'str' object is not callable</span>
+
+o.some_property = <span class="string">"groovy"</span>
+<span class="comment"># calling some_property setter(&lt;__main__.MyClass object at 0x7fb2b7077890&gt;,('groovy',),{})</span>
+
+o.some_property
+<span class="comment"># calling some_property getter(&lt;__main__.MyClass object at 0x7fb2b7077890&gt;,(),{})</span>
+<span class="comment"># 'groovy'</span>
+
+o.some_other_property = <span class="string">"very groovy"</span>
+<span class="comment"># Traceback (most recent call last):</span>
+<span class="comment">#   File "&lt;stdin&gt;", line 1, in &lt;module&gt;</span>
+<span class="comment"># AttributeError: can't set attribute</span>
+
+o.some_other_property
+<span class="comment"># calling some_other_property getter(&lt;__main__.MyClass object at 0x7fb2b7077890&gt;,(),{})</span>
+</code></pre><h3 id="说明下列代码的输出结果">说明下列代码的输出结果</h3><pre><code><span class="class"><span class="keyword">class</span> <span class="title">D</span><span class="params">(B,C)</span>:</span>
+    <span class="function"><span class="keyword">def</span> <span class="title">go</span><span class="params">(self)</span>:</span>
+        super(D, self).go()
+        <span class="keyword">print</span> <span class="string">"go D go!"</span>
+    <span class="function"><span class="keyword">def</span> <span class="title">stop</span><span class="params">(self)</span>:</span>
+        super(D, self).stop()
+        <span class="keyword">print</span> <span class="string">"stop D stop!"</span>
+    <span class="function"><span class="keyword">def</span> <span class="title">pause</span><span class="params">(self)</span>:</span>
+        <span class="keyword">print</span> <span class="string">"wait D wait!"</span>
+
+<span class="class"><span class="keyword">class</span> <span class="title">E</span><span class="params">(B,C)</span>:</span> <span class="keyword">pass</span>
+
+a = A()
+b = B()
+c = C()
+d = D()
+e = E()
+
+<span class="comment"># 说明下列代码的输出结果</span>
+
+a.go()
+b.go()
+c.go()
+d.go()
+e.go()
+
+a.stop()
+</code></pre><p><strong>为什么提这个问题？</strong></p>
+<p>因为面向对象的编程真的真的很重要。不骗你。答对这道问题说明你理解了继承和Python中super函数的用法。</p>
+<p><strong>答案</strong></p>
+<pre><code>a.go()
+<span class="preprocessor"># go A go!</span>
+
+b.go()
+<span class="preprocessor"># go A go!</span>
+<span class="preprocessor"># go B go!</span>
+
+c.go()
+<span class="preprocessor"># go A go!</span>
+<span class="preprocessor"># go C go!</span>
+
+d.go()
+<span class="preprocessor"># go A go!</span>
+<span class="preprocessor"># go C go!</span>
+<span class="preprocessor"># go B go!</span>
+<span class="preprocessor"># go D go!</span>
+
+e.go()
+<span class="preprocessor"># go A go!</span>
+<span class="preprocessor"># go C go!</span>
+<span class="preprocessor"># go B go!</span>
+
+a.stop()
+<span class="preprocessor"># stop A stop!</span>
+
+b.stop()
+<span class="preprocessor"># stop A stop!</span>
+
+c.stop()
+<span class="preprocessor"># stop A stop!</span>
+<span class="preprocessor"># stop C stop!</span>
+
+d.stop()
+<span class="preprocessor"># stop A stop!</span>
+<span class="preprocessor"># stop C stop!</span>
+<span class="preprocessor"># stop D stop!</span>
+
+e.stop()
+<span class="preprocessor"># stop A stop!</span>
+
+a.pause()
+<span class="preprocessor"># ... Exception: Not Implemented</span>
+
+b.pause()
+<span class="preprocessor"># ... Exception: Not Implemented</span>
+
+c.pause()
+<span class="preprocessor"># ... Exception: Not Implemented</span>
+
+d.pause()
+<span class="preprocessor"># wait D wait!</span>
+
+e.pause()
+<span class="preprocessor"># ...Exception: Not Implemented</span>
+</code></pre><h3 id="说明下面代码的输出结果">说明下面代码的输出结果</h3><pre><code><span class="class"><span class="keyword">class</span> <span class="title">Node</span><span class="params">(object)</span>:</span>
+    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,sName)</span>:</span>
+        self._lChildren = []
+        self.sName = sName
+    <span class="function"><span class="keyword">def</span> <span class="title">__repr__</span><span class="params">(self)</span>:</span>
+        <span class="keyword">return</span> <span class="string">"&lt;Node '{}'&gt;"</span>.format(self.sName)
+    <span class="function"><span class="keyword">def</span> <span class="title">append</span><span class="params">(self,*args,**kwargs)</span>:</span>
+        self._lChildren.append(*args,**kwargs)
+    <span class="function"><span class="keyword">def</span> <span class="title">print_all_1</span><span class="params">(self)</span>:</span>
+        <span class="keyword">print</span> self
+        <span class="keyword">for</span> oChild <span class="keyword">in</span> self._lChildren:
+            oChild.print_all_1()
+    <span class="function"><span class="keyword">def</span> <span class="title">print_all_2</span><span class="params">(self)</span>:</span>
+        <span class="function"><span class="keyword">def</span> <span class="title">gen</span><span class="params">(o)</span>:</span>
+            lAll = [o,]
+            <span class="keyword">while</span> lAll:
+                oNext = lAll.pop(<span class="number">0</span>)
+                lAll.extend(oNext._lChildren)
+                <span class="keyword">yield</span> oNext
+        <span class="keyword">for</span> oNode <span class="keyword">in</span> gen(self):
+            <span class="keyword">print</span> oNode
+
+oRoot = Node(<span class="string">"root"</span>)
+oChild1 = Node(<span class="string">"child1"</span>)
+oChild2 = Node(<span class="string">"child2"</span>)
+oChild3 = Node(<span class="string">"child3"</span>)
+oChild4 = Node(<span class="string">"child4"</span>)
+oChild5 = Node(<span class="string">"child5"</span>)
+oChild6 = Node(<span class="string">"child6"</span>)
+oChild7 = Node(<span class="string">"child7"</span>)
+oChild8 = Node(<span class="string">"child8"</span>)
+oChild9 = Node(<span class="string">"child9"</span>)
+oChild10 = Node(<span class="string">"child10"</span>)
+
+oRoot.append(oChild1)
+oRoot.append(oChild2)
+oRoot.append(oChild3)
+oChild1.append(oChild4)
+oChild1.append(oChild5)
+oChild2.append(oChild6)
+oChild4.append(oChild7)
+oChild3.append(oChild8)
+oChild3.append(oChild9)
+oChild6.append(oChild10)
+
+<span class="comment"># 说明下面代码的输出结果</span>
+
+oRoot.print_all_1()
+oRoot.print_all_2()
+</code></pre><p><strong>为什么提这个问题？</strong></p>
+<p>因为对象的精髓就在于组合（composition）与对象构造（object construction）。对象需要有组合成分构成，而且得以某种方式初始化。这里也涉及到递归和生成器（generator）的使用。</p>
+<p>生成器是很棒的数据类型。你可以只通过构造一个很长的列表，然后打印列表的内容，就可以取得与print_all_2类似的功能。生成器还有一个好处，就是不用占据很多内存。</p>
+<p>有一点还值得指出，就是print_all_1会以深度优先（depth-first）的方式遍历树(tree),而print_all_2则是宽度优先（width-first）。有时候，一种遍历方式比另一种更合适。但这要看你的应用的具体情况。</p>
+<p><strong>答案</strong></p>
+<p><code>oRoot.print_all_1()</code>会打印下面的结果：</p>
+<pre><code>&lt;Node <span class="quoted">'root</span><span class="quoted">'&gt;</span>
+&lt;Node <span class="quoted">'child1</span><span class="quoted">'&gt;</span>
+&lt;Node <span class="quoted">'child4</span><span class="quoted">'&gt;</span>
+&lt;Node <span class="quoted">'child7</span><span class="quoted">'&gt;</span>
+&lt;Node <span class="quoted">'child5</span><span class="quoted">'&gt;</span>
+&lt;Node <span class="quoted">'child2</span><span class="quoted">'&gt;</span>
+&lt;Node <span class="quoted">'child6</span><span class="quoted">'&gt;</span>
+&lt;Node <span class="quoted">'child10</span><span class="quoted">'&gt;</span>
+&lt;Node <span class="quoted">'child3</span><span class="quoted">'&gt;</span>
+&lt;Node <span class="quoted">'child8</span><span class="quoted">'&gt;</span>
+&lt;Node <span class="quoted">'child9</span><span class="quoted">'&gt;</span>
+</code></pre><p><code>oRoot.print_all_1()</code>会打印下面的结果：</p>
+<pre><code>&lt;Node <span class="quoted">'root</span><span class="quoted">'&gt;</span>
+&lt;Node <span class="quoted">'child1</span><span class="quoted">'&gt;</span>
+&lt;Node <span class="quoted">'child2</span><span class="quoted">'&gt;</span>
+&lt;Node <span class="quoted">'child3</span><span class="quoted">'&gt;</span>
+&lt;Node <span class="quoted">'child4</span><span class="quoted">'&gt;</span>
+&lt;Node <span class="quoted">'child5</span><span class="quoted">'&gt;</span>
+&lt;Node <span class="quoted">'child6</span><span class="quoted">'&gt;</span>
+&lt;Node <span class="quoted">'child8</span><span class="quoted">'&gt;</span>
+&lt;Node <span class="quoted">'child9</span><span class="quoted">'&gt;</span>
+&lt;Node <span class="quoted">'child7</span><span class="quoted">'&gt;</span>
+&lt;Node <span class="quoted">'child10</span><span class="quoted">'&gt;</span>
+</code></pre><h3 id="简要描述Python的垃圾回收机制（garbage_collection）">简要描述Python的垃圾回收机制（garbage collection）</h3><p><strong>答案</strong></p>
+<p>这里能说的很多。你应该提到下面几个主要的点：</p>
+<ul>
+<li>Python在内存中存储了每个对象的引用计数（reference<br>count）。如果计数值变成0，那么相应的对象就会消失，分配给该对象的内存就会释放出来用作他用。</li>
+<li>偶尔也会出现引用循环（reference<br>cycle）。垃圾回收器会定时寻找这个循环，并将其回收。举个例子，假设有两个对象o1和o2，而且符合o1.x == o2和o2.x == o1这两个条件。如果o1和o2没有其他代码引用，那么它们就不应该继续存在。但它们的引用计数都是1。</li>
+<li>Python中使用了某些启发式算法（heuristics）来加速垃圾回收。例如，越晚创建的对象更有可能被回收。对象被创建之后，垃圾回收器会分配它们所属的代（generation）。每个对象都会被分配一个代，而被分配更年轻代的对象是优先被处理的。</li>
+</ul>
+<h3 id="将下面的函数按照执行效率高低排序">将下面的函数按照执行效率高低排序</h3><p>它们都接受由0至1之间的数字构成的列表作为输入。这个列表可以很长。一个输入列表的示例如下：[random.random() for i in range(100000)]。你如何证明自己的答案是正确的。</p>
+<pre><code>def <span class="function"><span class="title">f1</span><span class="params">(lIn)</span></span>:
+    l1 = <span class="function"><span class="title">sorted</span><span class="params">(lIn)</span></span>
+    l2 = [<span class="tag">i</span> <span class="keyword">for</span> <span class="tag">i</span> <span class="keyword">in</span> l1 <span class="keyword">if</span> i&lt;<span class="number">0.5</span>]
+    return [i*<span class="tag">i</span> <span class="keyword">for</span> <span class="tag">i</span> <span class="keyword">in</span> l2]
+
+def <span class="function"><span class="title">f2</span><span class="params">(lIn)</span></span>:
+    l1 = [<span class="tag">i</span> <span class="keyword">for</span> <span class="tag">i</span> <span class="keyword">in</span> lIn <span class="keyword">if</span> i&lt;<span class="number">0.5</span>]
+    l2 = <span class="function"><span class="title">sorted</span><span class="params">(l1)</span></span>
+    return [i*<span class="tag">i</span> <span class="keyword">for</span> <span class="tag">i</span> <span class="keyword">in</span> l2]
+
+def <span class="function"><span class="title">f3</span><span class="params">(lIn)</span></span>:
+    l1 = [i*<span class="tag">i</span> <span class="keyword">for</span> <span class="tag">i</span> <span class="keyword">in</span> lIn]
+    l2 = <span class="function"><span class="title">sorted</span><span class="params">(l1)</span></span>
+    return [<span class="tag">i</span> <span class="keyword">for</span> <span class="tag">i</span> <span class="keyword">in</span> l1 <span class="keyword">if</span> i&lt;(<span class="number">0.5</span>*<span class="number">0.5</span>)]
+</code></pre><p><strong>为什么提这个问题？</strong></p>
+<p>定位并避免代码瓶颈是非常有价值的技能。想要编写许多高效的代码，最终都要回答常识上来——在上面的例子中，如果列表较小的话，很明显是先进行排序更快，因此如果你可以在排序前先进行筛选，那通常都是比较好的做法。其他不显而易见的问题仍然可以通过恰当的工具来定位。因此了解这些工具是有好处的。</p>
+<p><strong>答案：</strong></p>
+<p>按执行效率从高到低排列：f2、f1和f3。要证明这个答案是对的，你应该知道如何分析自己代码的性能。Python中有一个很好的程序分析包，可以满足这个需求。</p>
+<pre><code>import cProfile
+lIn = [random.<span class="function"><span class="title">random</span><span class="params">()</span></span> <span class="keyword">for</span> <span class="tag">i</span> <span class="keyword">in</span> <span class="function"><span class="title">range</span><span class="params">(<span class="number">100000</span>)</span></span>]
+cProfile.<span class="function"><span class="title">run</span><span class="params">(<span class="string">'f1(lIn)'</span>)</span></span>
+cProfile.<span class="function"><span class="title">run</span><span class="params">(<span class="string">'f2(lIn)'</span>)</span></span>
+cProfile.<span class="function"><span class="title">run</span><span class="params">(<span class="string">'f3(lIn)'</span>)</span></span>
+</code></pre><p>为了向大家进行完整地说明，下面给出上述分析代码的输出结果：</p>
+<pre><code>&gt;&gt;&gt; <span class="filename">cProfile.run('f1(lIn)')
+         4 function calls in 0.045 seconds
+
+   Ordered by</span>: standard name
+
+   <span class="header"><span class="keyword">ncalls</span>  <span class="keyword">tottime</span>  percall  <span class="keyword">cumtime</span>  percall <span class="keyword">filename</span>:lineno(function)</span>
+        <span class="number">1</span>    <span class="number">0.009</span>    <span class="number">0.009</span>    <span class="number">0.044</span>    <span class="number">0.044</span> &lt;stdin&gt;:<span class="number">1</span><span class="function">(<span class="title">f1</span>)</span>
+        <span class="number">1</span>    <span class="number">0.001</span>    <span class="number">0.001</span>    <span class="number">0.045</span>    <span class="number">0.045</span> &lt;string&gt;:<span class="number">1</span><span class="function">(&lt;<span class="title">module</span>&gt;)</span>
+        <span class="number">1</span>    <span class="number">0.000</span>    <span class="number">0.000</span>    <span class="number">0.000</span>    <span class="number">0.000</span> {<span class="built_in">method <span class="string">'disable'</span> of <span class="string">'_lsprof.Profiler'</span> objects</span>}
+        <span class="number">1</span>    <span class="number">0.035</span>    <span class="number">0.035</span>    <span class="number">0.035</span>    <span class="number">0.035</span> {<span class="built_in">sorted</span>}
+
+&gt;&gt;&gt; <span class="filename">cProfile.run('f2(lIn)')
+         4 function calls in 0.024 seconds
+
+   Ordered by</span>: standard name
+
+   <span class="header"><span class="keyword">ncalls</span>  <span class="keyword">tottime</span>  percall  <span class="keyword">cumtime</span>  percall <span class="keyword">filename</span>:lineno(function)</span>
+        <span class="number">1</span>    <span class="number">0.008</span>    <span class="number">0.008</span>    <span class="number">0.023</span>    <span class="number">0.023</span> &lt;stdin&gt;:<span class="number">1</span><span class="function">(<span class="title">f2</span>)</span>
+        <span class="number">1</span>    <span class="number">0.001</span>    <span class="number">0.001</span>    <span class="number">0.024</span>    <span class="number">0.024</span> &lt;string&gt;:<span class="number">1</span><span class="function">(&lt;<span class="title">module</span>&gt;)</span>
+        <span class="number">1</span>    <span class="number">0.000</span>    <span class="number">0.000</span>    <span class="number">0.000</span>    <span class="number">0.000</span> {<span class="built_in">method <span class="string">'disable'</span> of <span class="string">'_lsprof.Profiler'</span> objects</span>}
+        <span class="number">1</span>    <span class="number">0.016</span>    <span class="number">0.016</span>    <span class="number">0.016</span>    <span class="number">0.016</span> {<span class="built_in">sorted</span>}
+
+&gt;&gt;&gt; <span class="filename">cProfile.run('f3(lIn)')
+         4 function calls in 0.055 seconds
+
+   Ordered by</span>: standard name
+
+   <span class="header"><span class="keyword">ncalls</span>  <span class="keyword">tottime</span>  percall  <span class="keyword">cumtime</span>  percall <span class="keyword">filename</span>:lineno(function)</span>
+        <span class="number">1</span>    <span class="number">0.016</span>    <span class="number">0.016</span>    <span class="number">0.054</span>    <span class="number">0.054</span> &lt;stdin&gt;:<span class="number">1</span><span class="function">(<span class="title">f3</span>)</span>
+        <span class="number">1</span>    <span class="number">0.001</span>    <span class="number">0.001</span>    <span class="number">0.055</span>    <span class="number">0.055</span> &lt;string&gt;:<span class="number">1</span><span class="function">(&lt;<span class="title">module</span>&gt;)</span>
+        <span class="number">1</span>    <span class="number">0.000</span>    <span class="number">0.000</span>    <span class="number">0.000</span>    <span class="number">0.000</span> {<span class="built_in">method <span class="string">'disable'</span> of <span class="string">'_lsprof.Profiler'</span> objects</span>}
+        <span class="number">1</span>    <span class="number">0.038</span>    <span class="number">0.038</span>    <span class="number">0.038</span>    <span class="number">0.038</span> {<span class="built_in">sorted</span>}
+</code></pre><h3 id="你有过失败的经历吗？">你有过失败的经历吗？</h3><p><strong>为什么提这个问题？</strong></p>
+<p>恰当地回答这个问题说明你用于承认错误，为自己的错误负责，并且能够从错误中学习。如果你想变得对别人有帮助的话，所有这些都是特别重要的。如果你真的是个完人，那就太糟了，回答这个问题的时候你可能都有点创意了。</p>
+<p><strong>错误的答案</strong></p>
+<p>我从来没有失败过！</p>
+<h3 id="你有实施过个人项目吗？">你有实施过个人项目吗？</h3><p>如果做过个人项目，这说明从更新自己的技能水平方面来看，你愿意比最低要求付出更多的努力。如果你有维护的个人项目，工作之外也坚持编码，那么你的雇主就更可能把你视作为会增值的资产。即使他们不问这个问题，我也认为谈谈这个话题很有帮助。</p>
 
     
   </div>
@@ -591,7 +1065,7 @@ pip list --outdated | grep '^[a-z]* (' | cut -d <span class="string">" "</span> 
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Python_Docs"><span class="nav-number">1.</span> <span class="nav-text">Python Docs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#技术博客"><span class="nav-number">2.</span> <span class="nav-text">技术博客</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#练习资源"><span class="nav-number">3.</span> <span class="nav-text">练习资源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#学习资料"><span class="nav-number">4.</span> <span class="nav-text">学习资料</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用库"><span class="nav-number">5.</span> <span class="nav-text">常用库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pip_常用命令"><span class="nav-number">6.</span> <span class="nav-text">pip 常用命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IDE与编辑器"><span class="nav-number">7.</span> <span class="nav-text">IDE与编辑器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#论坛与网站"><span class="nav-number">8.</span> <span class="nav-text">论坛与网站</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#经验教训"><span class="nav-number">9.</span> <span class="nav-text">经验教训</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#os_库"><span class="nav-number">9.1.</span> <span class="nav-text">os 库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实用代码"><span class="nav-number">10.</span> <span class="nav-text">实用代码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#性能分析使用cProfile模块"><span class="nav-number">10.1.</span> <span class="nav-text">性能分析使用cProfile模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一维数组变二维"><span class="nav-number">10.2.</span> <span class="nav-text">一维数组变二维</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二维矩阵转置"><span class="nav-number">10.3.</span> <span class="nav-text">二维矩阵转置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用zip合并相邻的列表项"><span class="nav-number">10.4.</span> <span class="nav-text">使用zip合并相邻的列表项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用zip反转字典"><span class="nav-number">10.5.</span> <span class="nav-text">使用zip反转字典</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#random-sample(list,_n)通常用来产生不重复的n位数字"><span class="nav-number">10.6.</span> <span class="nav-text">random.sample(list, n)通常用来产生不重复的n位数字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#enumerate会将数组或列表组成一个索引序列"><span class="nav-number">10.7.</span> <span class="nav-text">enumerate会将数组或列表组成一个索引序列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#判断一个数是不是素数"><span class="nav-number">10.8.</span> <span class="nav-text">判断一个数是不是素数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多序列同时迭代"><span class="nav-number">10.9.</span> <span class="nav-text">多序列同时迭代</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#嵌套序列变平"><span class="nav-number">10.10.</span> <span class="nav-text">嵌套序列变平</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#迭代多个有序排列数组（多路归并排序）"><span class="nav-number">10.11.</span> <span class="nav-text">迭代多个有序排列数组（多路归并排序）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一行筛质数："><span class="nav-number">10.12.</span> <span class="nav-text">一行筛质数：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#读取_csv_文件："><span class="nav-number">10.13.</span> <span class="nav-text">读取 csv 文件：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对_array_按照第二列降序排序并取前_10_个："><span class="nav-number">10.14.</span> <span class="nav-text">对 array 按照第二列降序排序并取前 10 个：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对两个字符串（这里假设等长）做异或操作："><span class="nav-number">10.15.</span> <span class="nav-text">对两个字符串（这里假设等长）做异或操作：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#转置矩阵："><span class="nav-number">10.16.</span> <span class="nav-text">转置矩阵：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#简易Web服务："><span class="nav-number">10.17.</span> <span class="nav-text">简易Web服务：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#链式比较："><span class="nav-number">10.18.</span> <span class="nav-text">链式比较：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#真值测试"><span class="nav-number">10.19.</span> <span class="nav-text">真值测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字典默认值"><span class="nav-number">10.20.</span> <span class="nav-text">字典默认值</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Python_Docs"><span class="nav-number">1.</span> <span class="nav-text">Python Docs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#技术博客"><span class="nav-number">2.</span> <span class="nav-text">技术博客</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#练习资源"><span class="nav-number">3.</span> <span class="nav-text">练习资源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#学习资料"><span class="nav-number">4.</span> <span class="nav-text">学习资料</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用库"><span class="nav-number">5.</span> <span class="nav-text">常用库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pip_常用命令"><span class="nav-number">6.</span> <span class="nav-text">pip 常用命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IDE与编辑器"><span class="nav-number">7.</span> <span class="nav-text">IDE与编辑器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#论坛与网站"><span class="nav-number">8.</span> <span class="nav-text">论坛与网站</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#经验教训"><span class="nav-number">9.</span> <span class="nav-text">经验教训</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#os_库"><span class="nav-number">9.1.</span> <span class="nav-text">os 库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实用代码"><span class="nav-number">10.</span> <span class="nav-text">实用代码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#性能分析使用cProfile模块"><span class="nav-number">10.1.</span> <span class="nav-text">性能分析使用cProfile模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一维数组变二维"><span class="nav-number">10.2.</span> <span class="nav-text">一维数组变二维</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二维矩阵转置"><span class="nav-number">10.3.</span> <span class="nav-text">二维矩阵转置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用zip合并相邻的列表项"><span class="nav-number">10.4.</span> <span class="nav-text">使用zip合并相邻的列表项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用zip反转字典"><span class="nav-number">10.5.</span> <span class="nav-text">使用zip反转字典</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#random-sample(list,_n)通常用来产生不重复的n位数字"><span class="nav-number">10.6.</span> <span class="nav-text">random.sample(list, n)通常用来产生不重复的n位数字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#enumerate会将数组或列表组成一个索引序列"><span class="nav-number">10.7.</span> <span class="nav-text">enumerate会将数组或列表组成一个索引序列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#判断一个数是不是素数"><span class="nav-number">10.8.</span> <span class="nav-text">判断一个数是不是素数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多序列同时迭代"><span class="nav-number">10.9.</span> <span class="nav-text">多序列同时迭代</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#嵌套序列变平"><span class="nav-number">10.10.</span> <span class="nav-text">嵌套序列变平</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#迭代多个有序排列数组（多路归并排序）"><span class="nav-number">10.11.</span> <span class="nav-text">迭代多个有序排列数组（多路归并排序）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一行筛质数"><span class="nav-number">10.12.</span> <span class="nav-text">一行筛质数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#读取_csv_文件"><span class="nav-number">10.13.</span> <span class="nav-text">读取 csv 文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对_array_按照第二列降序排序并取前_10_个"><span class="nav-number">10.14.</span> <span class="nav-text">对 array 按照第二列降序排序并取前 10 个</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对两个字符串（这里假设等长）做异或操作"><span class="nav-number">10.15.</span> <span class="nav-text">对两个字符串（这里假设等长）做异或操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#转置矩阵"><span class="nav-number">10.16.</span> <span class="nav-text">转置矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#简易Web服务"><span class="nav-number">10.17.</span> <span class="nav-text">简易Web服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#链式比较："><span class="nav-number">10.18.</span> <span class="nav-text">链式比较：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#真值测试"><span class="nav-number">10.19.</span> <span class="nav-text">真值测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字典默认值"><span class="nav-number">10.20.</span> <span class="nav-text">字典默认值</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#面试宝典"><span class="nav-number">11.</span> <span class="nav-text">面试宝典</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#到底什么是Python？"><span class="nav-number">11.1.</span> <span class="nav-text">到底什么是Python？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#补充缺失的代码"><span class="nav-number">11.2.</span> <span class="nav-text">补充缺失的代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#阅读下面的代码，写出A0，A1至An的最终值"><span class="nav-number">11.3.</span> <span class="nav-text">阅读下面的代码，写出A0，A1至An的最终值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python的多线程是个好主意吗？"><span class="nav-number">11.4.</span> <span class="nav-text">Python的多线程是个好主意吗？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#你如何管理不同版本的代码？"><span class="nav-number">11.5.</span> <span class="nav-text">你如何管理不同版本的代码？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下面代码会输出什么？"><span class="nav-number">11.6.</span> <span class="nav-text">下面代码会输出什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#猴子补丁（monkey_patching）是什么？这种做法好吗？"><span class="nav-number">11.7.</span> <span class="nav-text">猴子补丁（monkey patching）是什么？这种做法好吗？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解释*args，**kwargs的含义与用途"><span class="nav-number">11.8.</span> <span class="nav-text">解释*args，**kwargs的含义与用途</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍@classmethod,_@staticmethod,_@property"><span class="nav-number">11.9.</span> <span class="nav-text">介绍@classmethod, @staticmethod, @property</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#说明下列代码的输出结果"><span class="nav-number">11.10.</span> <span class="nav-text">说明下列代码的输出结果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#说明下面代码的输出结果"><span class="nav-number">11.11.</span> <span class="nav-text">说明下面代码的输出结果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#简要描述Python的垃圾回收机制（garbage_collection）"><span class="nav-number">11.12.</span> <span class="nav-text">简要描述Python的垃圾回收机制（garbage collection）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#将下面的函数按照执行效率高低排序"><span class="nav-number">11.13.</span> <span class="nav-text">将下面的函数按照执行效率高低排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#你有过失败的经历吗？"><span class="nav-number">11.14.</span> <span class="nav-text">你有过失败的经历吗？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#你有实施过个人项目吗？"><span class="nav-number">11.15.</span> <span class="nav-text">你有实施过个人项目吗？</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
