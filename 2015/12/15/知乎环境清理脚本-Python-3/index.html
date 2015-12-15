@@ -1,0 +1,914 @@
+<!doctype html>
+<html class="theme-next   use-motion ">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+    <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Python,玄学,知乎," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="岁月如歌" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+
+
+
+
+
+
+<meta name="description" content="缘起书接上文：《纷争世事无穷尽》，昨晚写了简单的脚本，先在本机运行几天，排除各类Bug后再挂到SAE。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="知乎环境清理脚本-Python 3">
+<meta property="og:url" content="http://lovenight.github.io/2015/12/15/知乎环境清理脚本-Python-3/index.html">
+<meta property="og:site_name" content="岁月如歌">
+<meta property="og:description" content="缘起书接上文：《纷争世事无穷尽》，昨晚写了简单的脚本，先在本机运行几天，排除各类Bug后再挂到SAE。">
+<meta property="og:updated_time" content="2015-12-15T01:56:56.250Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="知乎环境清理脚本-Python 3">
+<meta name="twitter:description" content="缘起书接上文：《纷争世事无穷尽》，昨晚写了简单的脚本，先在本机运行几天，排除各类Bug后再挂到SAE。">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'always',
+    motion: true
+  };
+</script>
+
+  <title> 知乎环境清理脚本-Python 3 | 岁月如歌 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">岁月如歌</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">莫厌追欢笑语频，寻思离乱好伤神。闲来屈指从头数，得见清平有几人</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-android">
+          <a href="/Android" rel="section">
+            
+              <i class="menu-item-icon fa fa-question-circle fa-fw"></i> <br />
+            
+            Android
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-python">
+          <a href="/Python" rel="section">
+            
+              <i class="menu-item-icon fa fa-question-circle fa-fw"></i> <br />
+            
+            python
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-api">
+          <a href="/API" rel="section">
+            
+              <i class="menu-item-icon fa fa-question-circle fa-fw"></i> <br />
+            
+            API
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-notes">
+          <a href="/Notes" rel="section">
+            
+              <i class="menu-item-icon fa fa-question-circle fa-fw"></i> <br />
+            
+            Notes
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-links">
+          <a href="/Links" rel="section">
+            
+              <i class="menu-item-icon fa fa-question-circle fa-fw"></i> <br />
+            
+            Links
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/About" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <form class="site-search-form">
+    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+  </form>
+
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','/js/st.js','_st');
+
+  _st('install', 'p1N1m5xSatBPY6xBpi2o','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                知乎环境清理脚本-Python 3
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-12-15T09:28:21+08:00" content="2015-12-15">
+              2015-12-15
+            </time>
+          </span>
+
+          
+            <span id="busuanzi_container_page_pv">&nbsp;&nbsp;|&nbsp;&nbsp;阅读量 <span id="busuanzi_value_page_pv"></span> 次</span>
+          
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/编程/" itemprop="url" rel="index">
+                    <span itemprop="name">编程</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/编程/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/12/15/知乎环境清理脚本-Python-3/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/15/知乎环境清理脚本-Python-3/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><h1 id="缘起">缘起</h1><p>书接上文：<a href="http://lovenight.github.io/2015/12/14/%E7%BA%B7%E4%BA%89%E4%B8%96%E4%BA%8B%E6%97%A0%E7%A9%B7%E5%B0%BD/">《纷争世事无穷尽》</a>，昨晚写了简单的脚本，先在本机运行几天，排除各类Bug后再挂到SAE。</p>
+<a id="more"></a>
+<p>由于网址总数不多（一万七千左右），没用Bloom过滤器，直接使用txt保存+set查重复。SAE上貌似不能直接创建文件，得改成使用数据库。另外SAE只支持Python 2.7，还得改一些语法。</p>
+<hr>
+<h1 id="说明">说明</h1><h2 id="功能简介">功能简介</h2><p>忽略已存在的提问，仅扫描并举报新出现的提问。</p>
+<p>脚本中一共有三个类：</p>
+<ul>
+<li><strong>ZhiHuClient</strong>：登录类，维护一个登录知乎的session。首次使用时需要调用<code>ZhiHuClient().login(username, password)</code>方法登录并生成Cookies，人肉识别验证码。以后就可以直接用Cookies登录了。</li>
+<li><strong>Topics</strong>：待扫描的话题类。</li>
+<li><strong>Scanner</strong>：扫描和举报的工具类，脚本入口是<code>scanning()</code>方法。首次使用时需调用<code>firstScanning()</code>方法抓取已存在的问题网址。</li>
+</ul>
+<p>完成初始化后，每次启动脚本只需一行代码：</p>
+<pre><code><span class="function"><span class="title">Scanner</span><span class="params">()</span></span>.<span class="function"><span class="title">scanning</span><span class="params">()</span></span>
+</code></pre><p>输出如下：</p>
+<pre><code>==================================================
+检测到cookie文件，直接使用cookie登录
+已读取 checkedURLs <span class="number">16931</span> 个
+开始扫描
+已举报： 一晚上都梦到一个女孩，而且我们走了一路，吻了一路，我是爱上她了么？ - 知乎 <span class="number">2015</span>-<span class="number">12</span>-<span class="number">15</span> <span class="number">09</span>:<span class="number">17</span>:<span class="number">08</span>
+已举报： 请问大神这是什么东西？ - 知乎 <span class="number">2015</span>-<span class="number">12</span>-<span class="number">15</span> <span class="number">09</span>:<span class="number">50</span>:<span class="number">05</span>
+</code></pre><h2 id="改进空间">改进空间</h2><ol>
+<li><code>Scanner</code>类的<code>canReport()</code>方法用于检测一个问题是否符合举报条件；<code>getReason()</code>方法判断举报原因。这两个规则还没开始写，目前一律以「针对具体病情的求药问药」为理由举报所有问题。</li>
+<li>添加判断和举报回答的功能。</li>
+<li>保存网址改成保存到数据库</li>
+<li>改成Python 2.7 的语法</li>
+</ol>
+<hr>
+<h1 id="ChangeLog">ChangeLog</h1><ul>
+<li>2015年12月14日，扫描和举报相关话题下所有新问题。</li>
+</ul>
+<hr>
+<h1 id="源代码">源代码</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br><span class="line">336</span><br><span class="line">337</span><br><span class="line">338</span><br><span class="line">339</span><br><span class="line">340</span><br><span class="line">341</span><br><span class="line">342</span><br><span class="line">343</span><br><span class="line">344</span><br><span class="line">345</span><br><span class="line">346</span><br><span class="line">347</span><br><span class="line">348</span><br><span class="line">349</span><br><span class="line">350</span><br><span class="line">351</span><br><span class="line">352</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">__author__ = <span class="string">"loveNight"</span></span><br><span class="line">__version__ = <span class="string">"beta 1.0"</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line"><span class="keyword">import</span> subprocess</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup <span class="keyword">as</span> BS</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ZhiHuClient</span><span class="params">(object)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="string">"""连接知乎的工具类，维护一个Session</span><br><span class="line">    2015.11.11</span><br><span class="line"></span><br><span class="line">    用法：</span><br><span class="line">    client = ZhiHuClient()</span><br><span class="line">    # 第一次使用时需要调用此方法登录一次，生成cookie文件</span><br><span class="line">    # 以后可以跳过这一步</span><br><span class="line">    client.login("username", "password")</span><br><span class="line">    soup = BS(client.open(r"http://www.zhihu.com/").text, "lxml")</span><br><span class="line">    # 输出登录后的用户名</span><br><span class="line">    print(soup.find("span", class_="name").getText())</span><br><span class="line">    # 输出登录后的网页</span><br><span class="line">    print(client.open(r"http://www.zhihu.com/").text.encode("gbk", "ignore").decode("gbk"))</span><br><span class="line">    """</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 网址参数是账号类型</span></span><br><span class="line">    TYPE_PHONE_NUM = <span class="string">"phone_num"</span></span><br><span class="line">    TYPE_EMAIL = <span class="string">"email"</span></span><br><span class="line">    loginURL = <span class="string">r"http://www.zhihu.com/login/&#123;0&#125;"</span></span><br><span class="line">    homeURL = <span class="string">r"http://www.zhihu.com"</span></span><br><span class="line">    captchaURL = <span class="string">r"http://www.zhihu.com/captcha.gif"</span></span><br><span class="line"></span><br><span class="line">    headers = &#123;</span><br><span class="line">        <span class="string">"User-Agent"</span>: <span class="string">"Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36"</span>,</span><br><span class="line">        <span class="string">"Accept"</span>: <span class="string">"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"</span>,</span><br><span class="line">        <span class="string">"Accept-Encoding"</span>: <span class="string">"gzip, deflate"</span>,</span><br><span class="line">        <span class="string">"Host"</span>: <span class="string">"www.zhihu.com"</span>,</span><br><span class="line">        <span class="string">"Upgrade-Insecure-Requests"</span>: <span class="string">"1"</span>,</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    captchaFile = os.path.join(sys.path[<span class="number">0</span>], <span class="string">"captcha.gif"</span>)</span><br><span class="line">    cookieFile = os.path.join(sys.path[<span class="number">0</span>], <span class="string">"cookie"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        os.chdir(sys.path[<span class="number">0</span>])  <span class="comment"># 设置脚本所在目录为当前工作目录</span></span><br><span class="line"></span><br><span class="line">        self.__session = requests.Session()</span><br><span class="line">        self.__session.headers = self.headers  <span class="comment"># 用self调用类变量是防止将来类改名</span></span><br><span class="line">        <span class="comment"># 若已经有 cookie 则直接登录</span></span><br><span class="line">        self.__cookie = self.__loadCookie()</span><br><span class="line">        <span class="keyword">if</span> self.__cookie:</span><br><span class="line">            print(<span class="string">"检测到cookie文件，直接使用cookie登录"</span>)</span><br><span class="line">            self.__session.cookies.update(self.__cookie)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            print(<span class="string">"没有找到cookie文件，请调用login方法登录一次！"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 登录</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">login</span><span class="params">(self, username, password)</span>:</span></span><br><span class="line">        <span class="string">"""</span><br><span class="line">        验证码错误返回：</span><br><span class="line">        &#123;'errcode': 1991829, 'r': 1, 'data': &#123;'captcha': '请提交正确的验证码 :('&#125;, 'msg': '请提交正确的验证码 :('&#125;</span><br><span class="line">        登录成功返回：</span><br><span class="line">        &#123;'r': 0, 'msg': '登陆成功'&#125;</span><br><span class="line">        """</span></span><br><span class="line">        self.__username = username</span><br><span class="line">        self.__password = password</span><br><span class="line">        self.__loginURL = self.loginURL.format(self.__getUsernameType())</span><br><span class="line">        <span class="comment"># 随便开个网页，获取登陆所需的_xsrf</span></span><br><span class="line">        html = self.open(self.homeURL).text</span><br><span class="line">        soup = BS(html, <span class="string">"lxml"</span>)  <span class="comment"># 需要第三方库lxml，也可以用标准库中的html.parser</span></span><br><span class="line">        _xsrf = soup.find(<span class="string">"input"</span>, &#123;<span class="string">"name"</span>: <span class="string">"_xsrf"</span>&#125;)[<span class="string">"value"</span>]</span><br><span class="line">        <span class="comment"># 下载验证码图片</span></span><br><span class="line">        <span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">            captcha = self.open(self.captchaURL).content</span><br><span class="line">            <span class="keyword">with</span> open(self.captchaFile, <span class="string">"wb"</span>) <span class="keyword">as</span> output:</span><br><span class="line">                output.write(captcha)</span><br><span class="line">            <span class="comment"># 人眼识别</span></span><br><span class="line">            print(<span class="string">"="</span> * <span class="number">50</span>)</span><br><span class="line">            print(<span class="string">"已打开验证码图片，请识别！"</span>)</span><br><span class="line">            subprocess.call(self.captchaFile, shell=<span class="keyword">True</span>)</span><br><span class="line">            captcha = input(<span class="string">"请输入验证码："</span>)</span><br><span class="line">            os.remove(self.captchaFile)</span><br><span class="line">            <span class="comment"># 发送POST请求</span></span><br><span class="line">            data = &#123;</span><br><span class="line">                <span class="string">"_xsrf"</span>: _xsrf,</span><br><span class="line">                <span class="string">"password"</span>: self.__password,</span><br><span class="line">                <span class="string">"remember_me"</span>: <span class="string">"true"</span>,</span><br><span class="line">                self.__getUsernameType(): self.__username,</span><br><span class="line">                <span class="string">"captcha"</span>: captcha</span><br><span class="line">            &#125;</span><br><span class="line">            res = self.__session.post(self.__loginURL, data=data)</span><br><span class="line">            print(<span class="string">"="</span> * <span class="number">50</span>)</span><br><span class="line">            <span class="comment"># print(res.text) # 输出脚本信息，调试用</span></span><br><span class="line">            <span class="keyword">if</span> res.json()[<span class="string">"r"</span>] == <span class="number">0</span>:</span><br><span class="line">                print(<span class="string">"登录成功"</span>)</span><br><span class="line">                self.__saveCookie()</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                print(<span class="string">"登录失败"</span>)</span><br><span class="line">                print(<span class="string">"错误信息 ---&gt;"</span>, res.json()[<span class="string">"msg"</span>])</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__getUsernameType</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">"""判断用户名类型</span><br><span class="line">        经测试，网页的判断规则是纯数字为phone_num，其他为email</span><br><span class="line">        """</span></span><br><span class="line">        <span class="keyword">if</span> self.__username.isdigit():</span><br><span class="line">            <span class="keyword">return</span> self.TYPE_PHONE_NUM</span><br><span class="line">        <span class="keyword">return</span> self.TYPE_EMAIL</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__saveCookie</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">"""cookies 序列化到文件</span><br><span class="line">        即把dict对象转化成字符串保存</span><br><span class="line">        """</span></span><br><span class="line">        <span class="keyword">with</span> open(self.cookieFile, <span class="string">"w"</span>) <span class="keyword">as</span> output:</span><br><span class="line">            cookies = self.__session.cookies.get_dict()</span><br><span class="line">            json.dump(cookies, output)</span><br><span class="line">            print(<span class="string">"="</span> * <span class="number">50</span>)</span><br><span class="line">            print(<span class="string">"已在同目录下生成cookie文件："</span>, self.cookieFile)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__loadCookie</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">"""读取cookie文件，返回反序列化后的dict对象，没有则返回None"""</span></span><br><span class="line">        <span class="keyword">if</span> os.path.exists(self.cookieFile):</span><br><span class="line">            print(<span class="string">"="</span> * <span class="number">50</span>)</span><br><span class="line">            <span class="keyword">with</span> open(self.cookieFile, <span class="string">"r"</span>) <span class="keyword">as</span> f:</span><br><span class="line">                cookie = json.load(f)</span><br><span class="line">                <span class="keyword">return</span> cookie</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">None</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">open</span><span class="params">(self, url, delay=<span class="number">0</span>, timeout=<span class="number">10</span>)</span>:</span></span><br><span class="line">        <span class="string">"""打开网页，返回Response对象"""</span></span><br><span class="line">        <span class="keyword">if</span> delay:</span><br><span class="line">            time.sleep(delay)</span><br><span class="line">        <span class="keyword">return</span> self.__session.get(url, timeout=timeout)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getSession</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self.__session</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Topics</span><span class="params">(object)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="string">"""待扫描的话题类，从topics.json文件中读取</span><br><span class="line"></span><br><span class="line">    用法：</span><br><span class="line">    t = Topics()</span><br><span class="line">    topics = t.topics</span><br><span class="line">    topics.update(dict2)</span><br><span class="line">    t.save2File</span><br><span class="line">    # 也可以这样更新</span><br><span class="line">    t.save2File(dict2)</span><br><span class="line">    """</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, filename=<span class="string">"topics.json"</span>)</span>:</span></span><br><span class="line">        self.wholeFilename = os.path.join(sys.path[<span class="number">0</span>], filename)</span><br><span class="line">        <span class="keyword">with</span> open(self.wholeFilename, <span class="string">'r'</span>, encoding=<span class="string">'utf-8'</span>) <span class="keyword">as</span> f:</span><br><span class="line">            <span class="keyword">try</span>:</span><br><span class="line">                self.topics = json.load(f)</span><br><span class="line">            <span class="keyword">except</span> Exception:</span><br><span class="line">                <span class="comment"># 如果文件为空或出错，则重新初始化</span></span><br><span class="line">                self.topics = &#123;</span><br><span class="line">                    <span class="number">19699134</span>:<span class="string">"术数"</span>,</span><br><span class="line">                    <span class="number">19564692</span>:<span class="string">"占卜"</span>,</span><br><span class="line">                    <span class="number">19659169</span>:<span class="string">"玄学"</span></span><br><span class="line">                &#125;</span><br><span class="line">                self.save2File()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">save2File</span><span class="params">(self, topic_dicts=None)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> topic_dicts:</span><br><span class="line">            self.topics.update(topic_dicts)</span><br><span class="line">        <span class="keyword">with</span> open(self.wholeFilename, <span class="string">'w'</span>, encoding=<span class="string">'utf-8'</span>) <span class="keyword">as</span> f:</span><br><span class="line">            json.dump(self.topics, f)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Scanner</span><span class="params">(object)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="string">"""扫描类，用于执行扫描操作</span><br><span class="line">    由于数据量不大，直接把某话题下所有的问题都存进txt文件，不使用布隆过滤器</span><br><span class="line">    """</span></span><br><span class="line">    re_questionId = re.compile(<span class="string">r'data-id="(\d+)"'</span>)</span><br><span class="line">    re_xsrf = re.compile(<span class="string">r'name="_xsrf"\s+value="([^"]*?)"'</span>)</span><br><span class="line">    re_maxPage = re.compile(<span class="string">r'href="\?page=(\d+)"'</span>)</span><br><span class="line"></span><br><span class="line">    reportURL = <span class="string">r'https://www.zhihu.com/report'</span></span><br><span class="line">    questionListUrl = <span class="string">r'https://www.zhihu.com/topic/&#123;topicId&#125;/questions?page=&#123;page&#125;'</span></span><br><span class="line">    URL_PREFIX = <span class="string">r'https://www.zhihu.com'</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        client = ZhiHuClient()</span><br><span class="line">        self.session = client.getSession()</span><br><span class="line">        self.open = client.open</span><br><span class="line">        self.post = self.session.post</span><br><span class="line">        self.topics = Topics().topics</span><br><span class="line">        self.scannedUrlFile = os.path.join(sys.path[<span class="number">0</span>], <span class="string">"Scanned.txt"</span>)</span><br><span class="line">        <span class="keyword">if</span> os.path.isfile(self.scannedUrlFile):</span><br><span class="line">            <span class="keyword">with</span> open(self.scannedUrlFile, <span class="string">'r'</span>, encoding = <span class="string">'utf-8'</span>) <span class="keyword">as</span> f:</span><br><span class="line">                self.checkedURLs = set(f.read().strip().split(<span class="string">'\n'</span>))</span><br><span class="line">                print(<span class="string">"已读取 checkedURLs %s 个"</span> % len(self.checkedURLs))</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            self.checkedURLs = set()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">scanning</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">"""持续扫描"""</span></span><br><span class="line">        print(<span class="string">"开始扫描"</span>)</span><br><span class="line">        <span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">            <span class="keyword">for</span> topicId <span class="keyword">in</span> self.topics.keys():</span><br><span class="line">                page = <span class="number">1</span></span><br><span class="line">                flag = <span class="keyword">True</span></span><br><span class="line">                <span class="keyword">while</span> flag:</span><br><span class="line">                    url = self.questionListUrl.format(topicId = topicId, page=page)</span><br><span class="line">                    html = self.open(url).text</span><br><span class="line">                    soup = BS(html, <span class="string">"html.parser"</span>)</span><br><span class="line">                    tags = soup(<span class="string">"a"</span>, class_=<span class="string">"question_link"</span>)</span><br><span class="line">                    questionURLs = [self.URL_PREFIX + x[<span class="string">"href"</span>] <span class="keyword">for</span> x <span class="keyword">in</span> tags]</span><br><span class="line">                    <span class="keyword">for</span> x <span class="keyword">in</span> questionURLs:</span><br><span class="line">                        <span class="keyword">if</span> x <span class="keyword">in</span> self.checkedURLs:</span><br><span class="line">                            flag = <span class="keyword">False</span></span><br><span class="line">                            <span class="keyword">break</span></span><br><span class="line">                        <span class="keyword">else</span>:</span><br><span class="line">                            self.reportQuestion(x)</span><br><span class="line">                            self.checkedURLs.add(x)</span><br><span class="line">                    page += <span class="number">1</span></span><br><span class="line">            <span class="comment"># 写入文件</span></span><br><span class="line">            self.saveCheckedURls()</span><br><span class="line">            time.sleep(<span class="number">60</span>) <span class="comment"># 间隔一分钟</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reportQuestion</span><span class="params">(self, questionURL)</span>:</span></span><br><span class="line">        <span class="string">"""检查问题，符合条件则举报"""</span></span><br><span class="line">        html = self.open(questionURL).text</span><br><span class="line">        <span class="keyword">if</span> self.canReport(html):</span><br><span class="line">            postData = self.getPostData(html)</span><br><span class="line">            res = self.post(self.reportURL, data = postData, timeout = <span class="number">15</span>)</span><br><span class="line">            print(<span class="string">"已举报： %s %s"</span> % (BS(html,<span class="string">"html.parser"</span>).find(<span class="string">"title"</span>).getText().strip(), str(datetime.datetime.now())[:-<span class="number">7</span>]))</span><br><span class="line">            <span class="keyword">return</span> res.json()[<span class="string">"msg"</span>]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getPostData</span><span class="params">(self, html)</span>:</span></span><br><span class="line">        <span class="string">"""构造举报用的Post请求</span><br><span class="line">        """</span></span><br><span class="line">        questionId = self.re_questionId.findall(html)[<span class="number">0</span>]</span><br><span class="line">        xsrf = self.re_xsrf.findall(html)[<span class="number">0</span>]</span><br><span class="line">        postData = &#123;</span><br><span class="line">            <span class="string">"type"</span>:<span class="string">"question"</span>,</span><br><span class="line">            <span class="string">"id"</span>:questionId,</span><br><span class="line">            <span class="string">"reason"</span>:self.getReason(html),</span><br><span class="line">            <span class="string">"_xsrf"</span>:xsrf</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> postData</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getReason</span><span class="params">(self, html)</span>:</span></span><br><span class="line">        <span class="string">"""从问题描述中判断举报原因</span><br><span class="line"></span><br><span class="line">        暂时一律使用「代为完成的个人任务」，慢慢改进算法</span><br><span class="line">        原因代号：</span><br><span class="line">        10005 问题表意不明</span><br><span class="line">        10006 代为完成的个人任务</span><br><span class="line">        10007 投票、征集类问题</span><br><span class="line">        10008 包含主观个人判断</span><br><span class="line">        10009 包含未经证实的传言</span><br><span class="line">        10010 针对具体病情的求药问药</span><br><span class="line">        """</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">"10010"</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">canReport</span><span class="params">(self, html)</span>:</span></span><br><span class="line">        <span class="string">"""符合举报条件</span><br><span class="line">        以后慢慢改进算法，目前一律返回True</span><br><span class="line">        """</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">True</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">firstScanning</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">"""脚本首次运行时扫描一次，找出扫描话题下所有已经存在的问题"""</span></span><br><span class="line">        <span class="keyword">for</span> topicId <span class="keyword">in</span> self.topics.keys():</span><br><span class="line">            self.checkedURLs |= set(self.getQuestionUrls(topicId))</span><br><span class="line">        self.saveCheckedURls()</span><br><span class="line">        print(<span class="string">"第一次扫描完成!"</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">saveCheckedURls</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">"""保存已扫描URL</span><br><span class="line">        SAE上貌似不能直接保存文件，需要使用数据库，届时再改，先在本机运行几天</span><br><span class="line">        """</span></span><br><span class="line">        <span class="keyword">with</span> open(self.scannedUrlFile, <span class="string">'w'</span>, encoding = <span class="string">'utf-8'</span>) <span class="keyword">as</span> f:</span><br><span class="line">            f.write(<span class="string">"\n"</span>.join(self.checkedURLs))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getQuestionUrls</span><span class="params">(self, topicId)</span>:</span></span><br><span class="line">        <span class="string">"""返回指定话题下所有的问题URL列表</span><br><span class="line">        为免爬得太快被封，使用单线程</span><br><span class="line">        """</span></span><br><span class="line">        urls = []</span><br><span class="line">        <span class="comment"># 获取最大页数</span></span><br><span class="line">        url = self.questionListUrl.format(topicId = topicId, page = <span class="number">1</span>)</span><br><span class="line">        pageNums = [int(x) <span class="keyword">for</span> x <span class="keyword">in</span> self.re_maxPage.findall(self.open(url).text)]</span><br><span class="line">        maxPage = max(pageNums)</span><br><span class="line">        pageURLs = (self.questionListUrl.format(topicId = topicId, page = x) <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">1</span>, maxPage+<span class="number">1</span>))</span><br><span class="line">        <span class="keyword">for</span> url <span class="keyword">in</span> pageURLs:</span><br><span class="line">            print(<span class="string">"正在扫描 %s 话题下的网址： %s"</span> %(self.topics[topicId], url))</span><br><span class="line">            time.sleep(<span class="number">0.3</span>)</span><br><span class="line">            <span class="keyword">try</span>:</span><br><span class="line">                html = self.open(url).text</span><br><span class="line">            <span class="keyword">except</span> Exception:</span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">            soup = BS(html, <span class="string">"html.parser"</span>)</span><br><span class="line">            tags = soup(<span class="string">"a"</span>, class_=<span class="string">"question_link"</span>)</span><br><span class="line">            questionURLs = [self.URL_PREFIX + x[<span class="string">"href"</span>] <span class="keyword">for</span> x <span class="keyword">in</span> tags]</span><br><span class="line">            urls.extend(questionURLs)</span><br><span class="line">        <span class="keyword">return</span> urls</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    <span class="comment"># client = ZhiHuClient()</span></span><br><span class="line">    <span class="comment"># 第一次使用时需要调用此方法登录一次，生成cookie文件</span></span><br><span class="line">    <span class="comment"># 以后可以跳过这一步</span></span><br><span class="line">    <span class="comment"># client.login("username", "password")</span></span><br><span class="line">    <span class="comment"># soup = BS(client.open(r"http://www.zhihu.com/").text, "lxml")</span></span><br><span class="line">    <span class="comment"># print(soup.find("span", class_="name").getText())</span></span><br><span class="line">    <span class="comment"># print(client.open(r"http://www.zhihu.com/").text.encode("gbk", "ignore").decode("gbk"))</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    s = Scanner()</span><br><span class="line">    <span class="comment"># 首次运行脚本时初始化，将已有话题的网址存到文件中。</span></span><br><span class="line">    <span class="comment"># s.firstScanning()</span></span><br><span class="line">    s = s.scanning()</span><br></pre></td></tr></table></figure>
+</span>
+      
+
+
+
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Python/" rel="tag">#Python</a>
+          
+            <a href="/tags/玄学/" rel="tag">#玄学</a>
+          
+            <a href="/tags/知乎/" rel="tag">#知乎</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/12/14/纷争世事无穷尽/" rel="next" title="纷争世事无穷尽">
+                <i class="fa fa-chevron-left"></i> 纷争世事无穷尽
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+        </div>
+
+        
+
+
+        
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2015/12/15/知乎环境清理脚本-Python-3/"
+           data-title="知乎环境清理脚本-Python 3" data-url="http://lovenight.github.io/2015/12/15/知乎环境清理脚本-Python-3/">
+      </div>
+    
+  </div>
+
+
+      </div>
+
+      
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/avatar.jpg" alt="loveNight" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">loveNight</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">自古求真皆寂寞，唯挑心灯伴夜霭</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">25</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">41</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/loveNight" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> Github
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/p/1005051069913250" target="_blank">
+                  
+                    <i class="fa fa-weibo"></i> Weibo
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="mailto:286242151@qq.com" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> Email
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://segmentfault.com/u/xuxian" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> SegmentFault
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/wu-wu-4-90" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> Zhihu
+                  
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+            <p class="site-author-name">友情链接</p>
+            
+              <span class="links-of-author-item">
+                <a href="http://blog.csdn.net/kinglearnjava" target="_blank">我的CSDN博客</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://blog.sina.com.cn/u/1069913250" target="_blank">我的新浪博客</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.tajok.com" target="_blank">韬的博客</a>
+              </span>
+            
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#缘起"><span class="nav-number">1.</span> <span class="nav-text">缘起</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#说明"><span class="nav-number">2.</span> <span class="nav-text">说明</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#功能简介"><span class="nav-number">2.1.</span> <span class="nav-text">功能简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#改进空间"><span class="nav-number">2.2.</span> <span class="nav-text">改进空间</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ChangeLog"><span class="nav-number">3.</span> <span class="nav-text">ChangeLog</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#源代码"><span class="nav-number">4.</span> <span class="nav-text">源代码</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+      
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">loveNight
+
+  &nbsp;&nbsp;|&nbsp;&nbsp;<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256738554'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1256738554' type='text/javascript'%3E%3C/script%3E"));</script>
+
+  &nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/sitemap.xml">Google网站地图</a></span>
+  &nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/baidusitemap.xml">百度网站地图</a></span>
+
+  </span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+&nbsp;&nbsp;|&nbsp;&nbsp;本站总点击 <span id="busuanzi_value_site_pv"></span> 次
+&nbsp;&nbsp;|&nbsp;&nbsp;您是第 <span id="busuanzi_value_site_uv"></span> 位访客
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"jwg"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '/js/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+
+
+    
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
+
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post' || CONFIG.sidebar === 'always') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  <script type="text/javascript" src="/js/bootstrap.js"></script>
+
+  
+  
+
+  
+  
+
+</body>
+</html>
