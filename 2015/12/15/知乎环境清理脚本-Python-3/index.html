@@ -61,7 +61,7 @@
 <meta property="og:site_name" content="岁月如歌">
 <meta property="og:description" content="缘起书接上文：《纷争世事无穷尽》，昨晚写了简单的脚本，先在本机运行几天，排除各类Bug后再挂到SAE。
 由于网址总数不多（一万七千左右），没用Bloom过滤器，直接使用txt保存+set查重复。SAE上貌似不能直接创建文件，得改成使用数据库。另外SAE只支持Python 2.7，还得改一些语法。">
-<meta property="og:updated_time" content="2015-12-15T02:02:20.578Z">
+<meta property="og:updated_time" content="2015-12-15T02:07:46.859Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="知乎环境清理脚本-Python 3">
 <meta name="twitter:description" content="缘起书接上文：《纷争世事无穷尽》，昨晚写了简单的脚本，先在本机运行几天，排除各类Bug后再挂到SAE。
@@ -381,6 +381,7 @@
 已举报： 请问大神这是什么东西？ - 知乎 <span class="number">2015</span>-<span class="number">12</span>-<span class="number">15</span> <span class="number">09</span>:<span class="number">50</span>:<span class="number">05</span>
 </code></pre><h2 id="改进空间">改进空间</h2><ol>
 <li><code>Scanner</code>类的<code>canReport()</code>方法用于检测一个问题是否符合举报条件；<code>getReason()</code>方法判断举报原因。这两个规则还没开始写，目前一律以「针对具体病情的求药问药」为理由举报所有问题。</li>
+<li>知乎管理员会私信回复举报结果。添加读取和保存举报结果的功能。</li>
 <li>添加判断和举报回答的功能。</li>
 <li>保存网址改成保存到数据库</li>
 <li>改成Python 2.7 的语法</li>
