@@ -4,7 +4,7 @@
   <subtitle><![CDATA[莫厌追欢笑语频，寻思离乱好伤神。闲来屈指从头数，得见清平有几人]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://lovenight.github.io/"/>
-  <updated>2015-12-15T03:38:52.906Z</updated>
+  <updated>2015-12-16T07:48:44.046Z</updated>
   <id>http://lovenight.github.io/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://lovenight.github.io/2015/12/15/%E7%9F%A5%E4%B9%8E%E7%8E%AF%E5%A2%83%E6%B8%85%E7%90%86%E8%84%9A%E6%9C%AC-Python-3/"/>
     <id>http://lovenight.github.io/2015/12/15/知乎环境清理脚本-Python-3/</id>
     <published>2015-12-15T01:28:21.000Z</published>
-    <updated>2015-12-15T03:38:52.906Z</updated>
+    <updated>2015-12-16T07:48:44.046Z</updated>
     <content type="html"><![CDATA[<h1 id="缘起">缘起</h1><p>书接上文：<a href="http://lovenight.github.io/2015/12/14/%E7%BA%B7%E4%BA%89%E4%B8%96%E4%BA%8B%E6%97%A0%E7%A9%B7%E5%B0%BD/">《纷争世事无穷尽》</a>，昨晚写了简单的脚本，先在本机运行几天，排除各类Bug后再挂到SAE。</p>
 <p>由于网址总数不多（一万七千左右），没用Bloom过滤器，直接使用txt保存+set查重复。SAE上貌似不能直接创建文件，得改成使用数据库。另外SAE只支持Python 2.7，还得改一些语法。</p>
 <a id="more"></a>
@@ -36,16 +36,22 @@
 </code></pre><p>输出如下：</p>
 <pre><code>==================================================
 检测到cookie文件，直接使用cookie登录
+已登陆账号： ........
 已读取 checkedURLs <span class="number">16931</span> 个
 开始扫描
-已举报： 一晚上都梦到一个女孩，而且我们走了一路，吻了一路，我是爱上她了么？ - 知乎 <span class="number">2015</span>-<span class="number">12</span>-<span class="number">15</span> <span class="number">09</span>:<span class="number">17</span>:<span class="number">08</span>
-已举报： 请问大神这是什么东西？ - 知乎 <span class="number">2015</span>-<span class="number">12</span>-<span class="number">15</span> <span class="number">09</span>:<span class="number">50</span>:<span class="number">05</span>
-已举报： 谁知道这是怎么回事？ - 知乎 <span class="number">2015</span>-<span class="number">12</span>-<span class="number">15</span> <span class="number">10</span>:<span class="number">32</span>:<span class="number">58</span>
-已举报： 求帮看事业线有点长、与感情线交汇的手相，女生? - 知乎 <span class="number">2015</span>-<span class="number">12</span>-<span class="number">15</span> <span class="number">10</span>:<span class="number">48</span>:<span class="number">22</span>
-已举报： 迷茫社会小青年的八字！? - 知乎 <span class="number">2015</span>-<span class="number">12</span>-<span class="number">15</span> <span class="number">10</span>:<span class="number">51</span>:<span class="number">26</span>
-已举报： 马上就要有个孩子了，一下子感觉责任大了起来，工作却一直没什么起色，请帮忙看看我面相，后面的命运会怎样? - 知乎 <span class="number">2015</span>-<span class="number">12</span>-<span class="number">15</span> <span class="number">11</span>:<span class="number">05</span>:<span class="number">47</span>
-</code></pre><h2 id="改进空间">改进空间</h2><ol>
-<li><code>Scanner</code>类的<code>canReport()</code>方法用于检测一个问题是否符合举报条件；<code>getReason()</code>方法判断举报原因。这两个规则还没开始写，目前一律以「针对具体病情的求药问药」为理由举报所有问题。</li>
+已举报： 壬申、癸卯、戊申、乙卯，男，求先生看看事业……? <span class="number">2015</span>-<span class="number">12</span>-<span class="number">16</span> <span class="number">12</span>:<span class="number">03</span>:<span class="number">07</span>
+已举报： 请帮忙看看这个八字，地支三合火，水为用神，又要走伤官大运 有点怕？ <span class="number">2015</span>-<span class="number">12</span>-<span class="number">16</span> <span class="number">12</span>:<span class="number">22</span>:<span class="number">47</span>
+已举报： 请各位高手随缘看一下婚姻和事业，以后发展怎么样？ <span class="number">2015</span>-<span class="number">12</span>-<span class="number">16</span> <span class="number">12</span>:<span class="number">39</span>:<span class="number">16</span>
+已举报： 能不能解释我做过的一些能预示未来的梦？ <span class="number">2015</span>-<span class="number">12</span>-<span class="number">16</span> <span class="number">12</span>:<span class="number">46</span>:<span class="number">29</span>
+已举报： 有没有算命的骗子在街上误拉住一位易学大师算命，反倒被大师算得跪地求解的事件？ <span class="number">2015</span>-<span class="number">12</span>-<span class="number">16</span> <span class="number">12</span>:<span class="number">53</span>:<span class="number">41</span>
+已举报： 老婆要生了，求个宝宝的名字，姓于，多谢？ <span class="number">2015</span>-<span class="number">12</span>-<span class="number">16</span> <span class="number">13</span>:<span class="number">39</span>:<span class="number">11</span>
+已举报： 麻烦大师帮忙看看手相？ <span class="number">2015</span>-<span class="number">12</span>-<span class="number">16</span> <span class="number">13</span>:<span class="number">49</span>:<span class="number">33</span>
+已举报： 求大神帮忙想个老人居住的地方的名字，复古，自然，朴实，有活力的？ <span class="number">2015</span>-<span class="number">12</span>-<span class="number">16</span> <span class="number">13</span>:<span class="number">55</span>:<span class="number">46</span>
+已举报： 从命理学角度看，如梵高这般死后才被世人承认而获得成就的人生可以被推断出来吗？ <span class="number">2015</span>-<span class="number">12</span>-<span class="number">16</span> <span class="number">14</span>:<span class="number">10</span>:<span class="number">14</span>
+已举报： 求算子嗣？ <span class="number">2015</span>-<span class="number">12</span>-<span class="number">16</span> <span class="number">14</span>:<span class="number">21</span>:<span class="number">35</span>
+</code></pre><p>每天不定时会集中收到私信通知处理结果，在<a href="https://www.zhihu.com/community/report" target="_blank" rel="external">https://www.zhihu.com/community/report</a>可以看到本账号举报结果汇总：<br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/12/16/15/40/46/%E4%B8%BE%E6%8A%A5%E7%BB%93%E6%9E%9C.jpg" alt="举报结果.jpg"><br>脚本跑了一天半，举报了120个左右的新问题，关闭率在95%以上。从图上最后一列可以发现，虽然脚本一律以「针对具体病情的求药问药」为理由举报所有问题，但是管理员接到举报，自己也会判断属于哪一类。所以不再需要在脚本中加入判断逻辑。</p>
+<h2 id="改进空间">改进空间</h2><ol>
+<li><del><code>Scanner</code>类的<code>canReport()</code>方法用于检测一个问题是否符合举报条件；<code>getReason()</code>方法判断举报原因。这两个规则还没开始写，目前一律以「针对具体病情的求药问药」为理由举报所有问题。</del>管理员自己会判断</li>
 <li>知乎管理员会私信回复举报结果。添加读取和保存举报结果的功能。</li>
 <li>添加判断和举报回答的功能。</li>
 <li>保存网址改成保存到数据库</li>
