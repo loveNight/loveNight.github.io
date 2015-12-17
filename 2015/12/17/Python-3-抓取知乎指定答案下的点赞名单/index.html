@@ -67,7 +67,7 @@ https://www.zhihu.com/answer/26236952/voters_profile
 26236952是此答案对应的aid:">
 <meta property="og:image" content="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/12/17/15/4/19/aid.png">
 <meta property="og:image" content="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/12/17/15/18/37/%E5%9B%9B%E9%9B%B6%E7%94%A8%E6%88%B7.png">
-<meta property="og:updated_time" content="2015-12-17T07:20:40.843Z">
+<meta property="og:updated_time" content="2015-12-17T07:23:13.812Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python 3 抓取知乎指定答案下的点赞名单">
 <meta name="twitter:description" content="抓包分析以「如何看待《万万没想到西游篇》大电影在知乎上被众多大神唾弃的现象？ - 张兆杰的回答」为例。
@@ -379,65 +379,42 @@ https://www.zhihu.com/answer/26236952/voters_profile
 </code></pre><p>正好是next指向的网址。</p>
 <p>每次GET请求返回的JSON数据都包含了10个点赞用户的信息，单个用户的信息如下：</p>
 <pre><code><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"zm-profile-card clearfix no-hovercard"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"zg-right"</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">button</span> <span class="attribute">data-follow</span>=<span class="value">"m:button"</span> <span class="attribute">data-id</span>=<span class="value">"6b500d547283f3cc186eafff2a8033b4"</span>
-        <span class="attribute">class</span>=<span class="value">"zg-btn zg-btn-follow zm-rich-follow-btn small nth-0"</span>&gt;</span>
-            关注她
-        <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">title</span>=<span class="value">"薛定谔的喵"</span> <span class="attribute">data-tip</span>=<span class="value">"p$t$fang-ting-20-32"</span> <span class="attribute">class</span>=<span class="value">"zm-item-link-avatar"</span>
-    <span class="attribute">target</span>=<span class="value">"_blank"</span> <span class="attribute">href</span>=<span class="value">"/people/fang-ting-20-32"</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"https://pic1.zhimg.com/52ae34056536f4088c7667890f14aaa8_m.jpg"</span>
-        <span class="attribute">class</span>=<span class="value">"zm-item-img-avatar"</span> /&gt;</span>
-    <span class="tag">&lt;/<span class="title">a</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"body"</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"author ellipsis"</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">a</span> <span class="attribute">data-tip</span>=<span class="value">"p$t$fang-ting-20-32"</span> <span class="attribute">href</span>=<span class="value">"https://www.zhihu.com/people/fang-ting-20-32"</span>
-            <span class="attribute">target</span>=<span class="value">"_blank"</span> <span class="attribute">class</span>=<span class="value">"zg-link"</span> <span class="attribute">title</span>=<span class="value">"薛定谔的喵"</span>&gt;</span>
-                薛定谔的喵
-            <span class="tag">&lt;/<span class="title">a</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"bio hidden-phone"</span>&gt;</span>
-                世界那么大，我来看看！
-            <span class="tag">&lt;/<span class="title">span</span>&gt;</span>
-        <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"status"</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">span</span>&gt;</span>
-                    13 赞同
-                <span class="tag">&lt;/<span class="title">span</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">span</span>&gt;</span>
-                    6 感谢
-                <span class="tag">&lt;/<span class="title">span</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"hidden-phone"</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"/people/fang-ting-20-32/asks"</span> <span class="attribute">target</span>=<span class="value">"_blank"</span>&gt;</span>
-                    0 提问
-                <span class="tag">&lt;/<span class="title">a</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"hidden-phone"</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"/people/fang-ting-20-32/answers"</span> <span class="attribute">target</span>=<span class="value">"_blank"</span>&gt;</span>
-                    19 回答
-                <span class="tag">&lt;/<span class="title">a</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-        <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"zg-right"</span>&gt;</span>
+<span class="tag">&lt;<span class="title">button</span> <span class="attribute">data-follow</span>=<span class="value">"m:button"</span> <span class="attribute">data-id</span>=<span class="value">"6b500d547283f3cc186eafff2a8033b4"</span> <span class="attribute">class</span>=<span class="value">"zg-btn zg-btn-follow zm-rich-follow-btn small nth-0"</span>&gt;</span>关注她<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;<span class="title">a</span> <span class="attribute">title</span>=<span class="value">"薛定谔的喵"</span>
+<span class="attribute">data-tip</span>=<span class="value">"p$t$fang-ting-20-32"</span>
+<span class="attribute">class</span>=<span class="value">"zm-item-link-avatar"</span>
+<span class="attribute">target</span>=<span class="value">"_blank"</span>
+<span class="attribute">href</span>=<span class="value">"/people/fang-ting-20-32"</span>&gt;</span>
+<span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"https://pic1.zhimg.com/52ae34056536f4088c7667890f14aaa8_m.jpg"</span> <span class="attribute">class</span>=<span class="value">"zm-item-img-avatar"</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"body"</span>&gt;</span>
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"author ellipsis"</span>&gt;</span>
+<span class="tag">&lt;<span class="title">a</span> <span class="attribute">data-tip</span>=<span class="value">"p$t$fang-ting-20-32"</span> <span class="attribute">href</span>=<span class="value">"https://www.zhihu.com/people/fang-ting-20-32"</span> <span class="attribute">target</span>=<span class="value">"_blank"</span> <span class="attribute">class</span>=<span class="value">"zg-link"</span> <span class="attribute">title</span>=<span class="value">"薛定谔的喵"</span>&gt;</span>薛定谔的喵<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+<span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"bio hidden-phone"</span>&gt;</span>世界那么大，我来看看！<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"status"</span>&gt;</span>
+<span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">span</span>&gt;</span>13 赞同<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+<span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">span</span>&gt;</span>6 感谢<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+<span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"hidden-phone"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"/people/fang-ting-20-32/asks"</span> <span class="attribute">target</span>=<span class="value">"_blank"</span>&gt;</span>0 提问<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+<span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"hidden-phone"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"/people/fang-ting-20-32/answers"</span> <span class="attribute">target</span>=<span class="value">"_blank"</span>&gt;</span>19 回答<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 </code></pre><p>由于0回答则必然0赞同0感谢，只须提取提问和回答数。</p>
 <p>如果是匿名用户：</p>
 <pre><code>&lt;<span class="keyword">div</span> <span class="type">class</span>=<span class="string">"zm-profile-card clearfix no-hovercard"</span>&gt;
-    &lt;span <span class="type">class</span>=<span class="string">"zm-item-link-avatar"</span>&gt;
-        &lt;img title=<span class="string">"匿名用户"</span> <span class="type">class</span>=<span class="string">"zm-item-img-avatar"</span> src=<span class="string">"https://pic2.zhimg.com/aadd7b895_m.jpg"</span>
-        /&gt;
-    &lt;/span&gt;
-    &lt;<span class="keyword">div</span> <span class="type">class</span>=<span class="string">"body"</span>&gt;
-        匿名用户
-    &lt;/<span class="keyword">div</span>&gt;
+&lt;span <span class="type">class</span>=<span class="string">"zm-item-link-avatar"</span>&gt;
+&lt;img title=<span class="string">"匿名用户"</span> <span class="type">class</span>=<span class="string">"zm-item-img-avatar"</span> src=<span class="string">"https://pic2.zhimg.com/aadd7b895_m.jpg"</span>/&gt;
+&lt;/span&gt;
+&lt;<span class="keyword">div</span> <span class="type">class</span>=<span class="string">"body"</span>&gt;
+匿名用户
+&lt;/<span class="keyword">div</span>&gt;
 &lt;/<span class="keyword">div</span>&gt;
 </code></pre><hr>
 <h1 id="使用说明">使用说明</h1><pre><code><span class="number">1.</span> 答案对应的aid需要自己在网页源码中找
-<span class="number">2.</span> 如果需要获取完成的抓取结果，将下面save这一行取消注释
+<span class="number">2.</span> 如果需要获取完整的抓取结果，将下面save这一行取消注释
     <span class="preprocessor"># 想看完整结果可以保存到csv文件，用Excel查看</span>
     <span class="preprocessor"># save(infos, aid)</span>
 <span class="number">3.</span> 首次使用时需要运行 ZhiHuClient().login(username, password) 登录一次，以后不需要
