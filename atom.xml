@@ -4,7 +4,7 @@
   <subtitle><![CDATA[莫厌追欢笑语频，寻思离乱好伤神。闲来屈指从头数，得见清平有几人]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://lovenight.github.io/"/>
-  <updated>2016-02-02T06:38:25.500Z</updated>
+  <updated>2016-02-02T07:57:58.953Z</updated>
   <id>http://lovenight.github.io/</id>
   
   <author>
@@ -13,6 +13,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[推荐一个Chrome插件——RSS Feed Reader]]></title>
+    <link href="http://lovenight.github.io/2016/02/02/%E6%8E%A8%E8%8D%90%E4%B8%80%E4%B8%AAChrome%E6%8F%92%E4%BB%B6%E2%80%94%E2%80%94RSS-Feed-Reader/"/>
+    <id>http://lovenight.github.io/2016/02/02/推荐一个Chrome插件——RSS-Feed-Reader/</id>
+    <published>2016-02-02T07:46:26.000Z</published>
+    <updated>2016-02-02T07:57:58.953Z</updated>
+    <content type="html"><![CDATA[<p>平时关注很多博客，要挨个去查看更新不现实。感谢IE，十年前就提供了RSS功能，订阅后会有提示。现在习惯用Chrome，需要装个插件：<a href="https://chrome.google.com/webstore/detail/rss-feed-reader/pnjaodmkngahhkoihejjehlcdlnohgmp?hl=zh-CN" target="_blank" rel="external">RSS Feed Reader</a></p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/2/2/15/54/28/RSS%20Feed%20Reader.jpg" alt="RSS Feed Reader.jpg"></p>
+<p>右上角加号上的1表示浏览器当前页面有一个RSS源，点加号就可以订阅它。第一行的「岁月如歌」是我的博客，右侧的1表示更新了一篇新日志。</p>
+<p>目前该插件有一个BUG，Android目录下的某个博客的所有文章，每次打开浏览器都被识别为新文章。没研究过是怎么回事。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>平时关注很多博客，要挨个去查看更新不现实。感谢IE，十年前就提供了RSS功能，订阅后会有提示。现在习惯用Chrome，需要装个插件：<a href="https://chrome.google.com/webstore/detail/rss-feed-reader/pnja]]>
+    </summary>
+    
+      <category term="Chrome" scheme="http://lovenight.github.io/tags/Chrome/"/>
+    
+      <category term="RSS" scheme="http://lovenight.github.io/tags/RSS/"/>
+    
+      <category term="实用" scheme="http://lovenight.github.io/categories/%E5%AE%9E%E7%94%A8/"/>
+    
+      <category term="工具" scheme="http://lovenight.github.io/categories/%E5%AE%9E%E7%94%A8/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[算命的结论真的会影响某些人一生吗？]]></title>
