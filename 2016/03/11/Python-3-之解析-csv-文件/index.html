@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="玄学,知乎,纷争," />
+  <meta name="keywords" content="loveNight, Android, Python, 神锋" />
 
 
 
@@ -53,22 +53,25 @@
 
 
 
-<meta name="description" content="一朝天子一朝臣，庆丰帝登基后，大搞权力清洗，把蛤蛤派系的人抓了不少，年初蛤的长子也因「身体原因」被退休。近来东中校友郭广昌在机场被带走失联，据说也与政治站队有关，今天终于在公众场合露面，但仍然祸福难料。
-江湖的乌烟瘴气一点也不逊于朝堂。近年来中九流的江湖术士们纷纷改头换面，以奇谈怪事吸引粉丝，进而拉帮结派，互相吹捧，打广告接客。古代术数学数年才能出师，今人数周数月就敢出来伸手要钱，败坏风气。为打压">
+<meta name="description" content="csv文件简介逗号分隔值（Comma-Separated Values，CSV，有时也称为字符分隔值，因为分隔字符也可以不是逗号），其文件以纯文本形式存储表格数据（数字和文本），也可以用Excel打开。
+CSV并不是一种单一的、定义明确的格式（尽管RFC 4180有一个被通常使用的定义）。因此在实践中，术语CSV泛指具有以下特征的任何文件：
+
+纯文本，使用某个字符集，比如ASCII、Unicode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="纷争世事无穷尽">
-<meta property="og:url" content="http://lovenight.github.io/2015/12/14/纷争世事无穷尽/index.html">
+<meta property="og:title" content="Python 3 之解析 csv 文件">
+<meta property="og:url" content="http://lovenight.github.io/2016/03/11/Python-3-之解析-csv-文件/index.html">
 <meta property="og:site_name" content="岁月如歌">
-<meta property="og:description" content="一朝天子一朝臣，庆丰帝登基后，大搞权力清洗，把蛤蛤派系的人抓了不少，年初蛤的长子也因「身体原因」被退休。近来东中校友郭广昌在机场被带走失联，据说也与政治站队有关，今天终于在公众场合露面，但仍然祸福难料。
-江湖的乌烟瘴气一点也不逊于朝堂。近年来中九流的江湖术士们纷纷改头换面，以奇谈怪事吸引粉丝，进而拉帮结派，互相吹捧，打广告接客。古代术数学数年才能出师，今人数周数月就敢出来伸手要钱，败坏风气。为打压">
-<meta property="og:image" content="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/12/14/14/5/21/%E7%9F%A5%E4%B9%8E%E7%8E%84%E5%AD%A6%E4%B9%B1%E8%B1%A1.jpg">
-<meta property="og:image" content="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/12/14/14/11/54/%E8%AF%85%E5%92%92.jpg">
-<meta property="og:image" content="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/12/15/10/40/39/%E6%AF%94%E5%85%B1%E4%BA%A7%E5%85%9A%E6%9B%B4%E5%87%B6.jpg">
-<meta property="og:updated_time" content="2015-12-15T03:08:51.343Z">
+<meta property="og:description" content="csv文件简介逗号分隔值（Comma-Separated Values，CSV，有时也称为字符分隔值，因为分隔字符也可以不是逗号），其文件以纯文本形式存储表格数据（数字和文本），也可以用Excel打开。
+CSV并不是一种单一的、定义明确的格式（尽管RFC 4180有一个被通常使用的定义）。因此在实践中，术语CSV泛指具有以下特征的任何文件：
+
+纯文本，使用某个字符集，比如ASCII、Unicode">
+<meta property="og:updated_time" content="2016-03-11T03:32:21.625Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="纷争世事无穷尽">
-<meta name="twitter:description" content="一朝天子一朝臣，庆丰帝登基后，大搞权力清洗，把蛤蛤派系的人抓了不少，年初蛤的长子也因「身体原因」被退休。近来东中校友郭广昌在机场被带走失联，据说也与政治站队有关，今天终于在公众场合露面，但仍然祸福难料。
-江湖的乌烟瘴气一点也不逊于朝堂。近年来中九流的江湖术士们纷纷改头换面，以奇谈怪事吸引粉丝，进而拉帮结派，互相吹捧，打广告接客。古代术数学数年才能出师，今人数周数月就敢出来伸手要钱，败坏风气。为打压">
+<meta name="twitter:title" content="Python 3 之解析 csv 文件">
+<meta name="twitter:description" content="csv文件简介逗号分隔值（Comma-Separated Values，CSV，有时也称为字符分隔值，因为分隔字符也可以不是逗号），其文件以纯文本形式存储表格数据（数字和文本），也可以用Excel打开。
+CSV并不是一种单一的、定义明确的格式（尽管RFC 4180有一个被通常使用的定义）。因此在实践中，术语CSV泛指具有以下特征的任何文件：
+
+纯文本，使用某个字符集，比如ASCII、Unicode">
 
 
 
@@ -80,7 +83,7 @@
   };
 </script>
 
-  <title> 纷争世事无穷尽 | 岁月如歌 </title>
+  <title> Python 3 之解析 csv 文件 | 岁月如歌 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -291,7 +294,7 @@
             
             
               
-                纷争世事无穷尽
+                Python 3 之解析 csv 文件
               
             
           </h1>
@@ -300,8 +303,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-12-14T10:26:27+08:00" content="2015-12-14">
-              2015-12-14
+            <time itemprop="dateCreated" datetime="2016-03-11T11:29:02+08:00" content="2016-03-11">
+              2016-03-11
             </time>
           </span>
 
@@ -310,40 +313,13 @@
           
 
           
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/随笔/" itemprop="url" rel="index">
-                    <span itemprop="name">随笔</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/随笔/杂感/" itemprop="url" rel="index">
-                    <span itemprop="name">杂感</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
 
           
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/12/14/纷争世事无穷尽/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/14/纷争世事无穷尽/" itemprop="commentsCount"></span>
+                <a href="/2016/03/11/Python-3-之解析-csv-文件/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/11/Python-3-之解析-csv-文件/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -362,16 +338,17 @@
       
 
       
-        <span itemprop="articleBody"><p>一朝天子一朝臣，庆丰帝登基后，大搞权力清洗，把蛤蛤派系的人抓了不少，年初蛤的长子也因「身体原因」被退休。近来东中校友郭广昌在机场被带走失联，据说也与政治站队有关，今天终于在公众场合露面，但仍然祸福难料。</p>
-<p>江湖的乌烟瘴气一点也不逊于朝堂。近年来中九流的江湖术士们纷纷改头换面，以奇谈怪事吸引粉丝，进而拉帮结派，互相吹捧，打广告接客。古代术数学数年才能出师，今人数周数月就敢出来伸手要钱，败坏风气。为打压竞争对手，专门买一批小号刷反对与没有帮助，又时不时挑起各类争端，趁机用各种形式扬己贬他。原本冷清的知乎玄学话题，被这些生意人搞得充满废戾气与铜臭。很难想象这帮人一边高举「学易先修德」的大旗，一边扎堆看到不爽的就开撕，心里是怎么想的。</p>
+        <span itemprop="articleBody"><h2 id="csv文件简介">csv文件简介</h2><p>逗号分隔值（Comma-Separated Values，CSV，有时也称为字符分隔值，因为分隔字符也可以不是逗号），其文件以纯文本形式存储表格数据（数字和文本），也可以用Excel打开。</p>
+<p>CSV并不是一种单一的、定义明确的格式（尽管RFC 4180有一个被通常使用的定义）。因此在实践中，术语CSV泛指具有以下特征的任何文件：</p>
+<ul>
+<li>纯文本，使用某个字符集，比如ASCII、Unicode、EBCDIC或GB2312；</li>
+<li>由记录组成（典型的是每行一条记录）；</li>
+<li>每条记录被分隔符分隔为字段（典型分隔符有逗号、分号或制表符；有时分隔符可以包括可选的空格）；</li>
+<li>每条记录都有同样的字段序列。</li>
+</ul>
 <a id="more"></a>
-<p>以前经常在玄学类话题下玩，后来耻于与小人为伍，不关注相关话题有段时间了，今天在「未归类话题」的推送中看到如下帖子，点进来一看：</p>
-<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/12/14/14/5/21/%E7%9F%A5%E4%B9%8E%E7%8E%84%E5%AD%A6%E4%B9%B1%E8%B1%A1.jpg" alt="知乎玄学乱象.jpg"></p>
-<p>乖乖得不得了，一个帖子就诅咒上了。这家伙当年以修行类怪谈、道理吸粉，后来经常指责质疑者断人财路，又主张把知乎上所有术士们组织成一个行业协会，厘定价格，统一分配客户资源，以抵御龙隐等论坛的人来抢饭碗（地域歧视升级版，社区歧视，把别人当假想敌）。现在则更进一步，直接对反对者施以恶咒，美其名曰代师惩戒。</p>
-<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/12/14/14/11/54/%E8%AF%85%E5%92%92.jpg" alt="诅咒.jpg"></p>
-<p>有法皆可破，如果对有修行的人施恶咒，当心害人不成反妨己。这德性，也只能用来欺负一些没有门路的普通人。别人只是发个帖子，不予理会便是，何须「师门出头」？怎么学起黑社会来，一语不合就让你不好过。这是以佛道儒等标榜自己的人该做的事吗？</p>
-<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/12/15/10/40/39/%E6%AF%94%E5%85%B1%E4%BA%A7%E5%85%9A%E6%9B%B4%E5%87%B6.jpg" alt="比共产党更凶.jpg"></p>
-<p>知乎对此类问题的管理一向是不举报就不管，一举报就关闭问题。这两天抽空写个脚本，挂到新浪SAE上，专门扫描相关问题与回答，符合条件一律举报，算是为净化网络环境尽一份力。</p>
+<h2 id="Python_解析_CSV">Python 解析 CSV</h2><p>使用标准库 csv。由于csv库有自己的换行符，需要把open方法的<code>newline</code>设置为空，否则在Excel中会出现数据隔行。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> csv</span><br><span class="line"></span><br><span class="line"><span class="comment"># 写入</span></span><br><span class="line"><span class="keyword">with</span> open(filename, <span class="string">'w'</span>, encoding=<span class="string">'utf-8'</span>, newline=<span class="string">''</span>) <span class="keyword">as</span> f:</span><br><span class="line">    writer = csv.writer(f)</span><br><span class="line">    writer.writerow(row)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取</span></span><br><span class="line"><span class="keyword">with</span> open(filename, <span class="string">'r'</span>, encoding=<span class="string">'utf-8'</span>, newline=<span class="string">''</span>) <span class="keyword">as</span> f:</span><br><span class="line">    reader = csv.reader(f)</span><br><span class="line">    <span class="keyword">for</span> _ <span class="keyword">in</span> reader:</span><br><span class="line">        print(_)</span><br></pre></td></tr></table></figure>
 </span>
       
 
@@ -381,32 +358,18 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/玄学/" rel="tag">#玄学</a>
-          
-            <a href="/tags/知乎/" rel="tag">#知乎</a>
-          
-            <a href="/tags/纷争/" rel="tag">#纷争</a>
-          
-        </div>
-      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/12/10/Android笔记之Notification/" rel="next" title="Android笔记之Notification">
-                <i class="fa fa-chevron-left"></i> Android笔记之Notification
+              <a href="/2016/02/02/推荐一个Chrome插件——RSS-Feed-Reader/" rel="next" title="推荐一个Chrome插件——RSS Feed Reader">
+                <i class="fa fa-chevron-left"></i> 推荐一个Chrome插件——RSS Feed Reader
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/12/15/知乎环境清理脚本-Python-3/" rel="prev" title="知乎环境清理脚本-Python 3">
-                知乎环境清理脚本-Python 3 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -456,8 +419,8 @@
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/12/14/纷争世事无穷尽/"
-           data-title="纷争世事无穷尽" data-url="http://lovenight.github.io/2015/12/14/纷争世事无穷尽/">
+      <div class="ds-thread" data-thread-key="2016/03/11/Python-3-之解析-csv-文件/"
+           data-title="Python 3 之解析 csv 文件" data-url="http://lovenight.github.io/2016/03/11/Python-3-之解析-csv-文件/">
       </div>
     
   </div>
@@ -611,7 +574,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#csv文件简介"><span class="nav-number">1.</span> <span class="nav-text">csv文件简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python_解析_CSV"><span class="nav-number">2.</span> <span class="nav-text">Python 解析 CSV</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
