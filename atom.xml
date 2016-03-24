@@ -4,7 +4,7 @@
   <subtitle><![CDATA[莫厌追欢笑语频，寻思离乱好伤神。闲来屈指从头数，得见清平有几人]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://lovenight.github.io/"/>
-  <updated>2016-03-11T03:32:21.625Z</updated>
+  <updated>2016-03-24T05:34:44.640Z</updated>
   <id>http://lovenight.github.io/</id>
   
   <author>
@@ -15,11 +15,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[梅花易测网友长相]]></title>
+    <link href="http://lovenight.github.io/2016/03/24/%E6%A2%85%E8%8A%B1%E6%98%93%E6%B5%8B%E7%BD%91%E5%8F%8B%E9%95%BF%E7%9B%B8/"/>
+    <id>http://lovenight.github.io/2016/03/24/梅花易测网友长相/</id>
+    <published>2016-03-24T05:17:01.000Z</published>
+    <updated>2016-03-24T05:34:44.640Z</updated>
+    <content type="html"><![CDATA[<p>被易友缠着测长相，无奈起卦说了几句。</p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/3/24/13/14/7/%E6%B5%8B%E9%95%BF%E7%9B%B8.jpg" alt="测长相.jpg"></p>
+<p>离为丽，临日又得月生旺，说明人长得挺漂亮，脸上红扑扑的。坤为肉，坤卦算是半旺，是不是肉肉的圆脸？（鹅蛋脸，下巴有点尖）</p>
+<p>离卦又为目。离变出乾，乾为散。但是卦中又找不到代表眼镜框的象。那么要么不戴眼镜，要么是戴隐形眼镜的。不过这里离卦比较旺，视力不差，不戴眼镜也没问题。断眼睛有散光，但是又没戴眼镜。（对）</p>
+<p>一般北方人比较高，卦中离又旺相，不过寅卯入空，不会太高。坤又为低。互见坎艮，坎六艮止，止于六，166左右吧。（167）</p>
+<p>离为头部，离卦有向外扩展的趋势，离旺，可以引申为头发比较长。下坤为小为多，头发又长又密。离互坎，坎为陷，说明头发没有扎住，是散开的。（对方发了照片，确实如此）</p>
+<p>三至五爻连互为未济，未济是最后一卦，表示终而复始。你是不是最近想去理发啊？或者美发？总之是去弄头发？（原本是过腰长发，去年看到白血病小孩的新闻，就剪成短发捐了。现在头发又过肩，打算再去剪了捐掉）</p>
+<p>后面没再细断。前阵子感觉水平到了瓶颈，但是今天这一卦似乎明白了什么，但是那种体会又说不出来。先记着。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>被易友缠着测长相，无奈起卦说了几句。</p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/3/24/13/14/7/%E6%B5%8B%E9%95%BF%E7%9B%B8.jpg" alt="测长相]]>
+    </summary>
+    
+      <category term="梅花易" scheme="http://lovenight.github.io/tags/%E6%A2%85%E8%8A%B1%E6%98%93/"/>
+    
+      <category term="术数" scheme="http://lovenight.github.io/categories/%E6%9C%AF%E6%95%B0/"/>
+    
+      <category term="梅花易" scheme="http://lovenight.github.io/categories/%E6%9C%AF%E6%95%B0/%E6%A2%85%E8%8A%B1%E6%98%93/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[Python 3 之解析 csv 文件]]></title>
     <link href="http://lovenight.github.io/2016/03/11/Python-3-%E4%B9%8B%E8%A7%A3%E6%9E%90-csv-%E6%96%87%E4%BB%B6/"/>
     <id>http://lovenight.github.io/2016/03/11/Python-3-之解析-csv-文件/</id>
     <published>2016-03-11T03:29:02.000Z</published>
-    <updated>2016-03-11T03:32:21.625Z</updated>
+    <updated>2016-03-23T00:52:12.578Z</updated>
     <content type="html"><![CDATA[<h2 id="csv文件简介">csv文件简介</h2><p>逗号分隔值（Comma-Separated Values，CSV，有时也称为字符分隔值，因为分隔字符也可以不是逗号），其文件以纯文本形式存储表格数据（数字和文本），也可以用Excel打开。</p>
 <p>CSV并不是一种单一的、定义明确的格式（尽管RFC 4180有一个被通常使用的定义）。因此在实践中，术语CSV泛指具有以下特征的任何文件：</p>
 <ul>
@@ -43,6 +71,14 @@
 </ul>]]>
     
     </summary>
+    
+      <category term="Python" scheme="http://lovenight.github.io/tags/Python/"/>
+    
+      <category term="csv" scheme="http://lovenight.github.io/tags/csv/"/>
+    
+      <category term="编程" scheme="http://lovenight.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="Python" scheme="http://lovenight.github.io/categories/%E7%BC%96%E7%A8%8B/Python/"/>
     
   </entry>
   

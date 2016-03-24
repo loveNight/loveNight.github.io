@@ -300,6 +300,127 @@
             
               
                 
+                <a class="post-title-link" href="/2015/11/23/Python-模拟登录新浪微博/" itemprop="url">
+                  Python 模拟登录新浪微博的两种方法
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-11-23T19:32:14+08:00" content="2015-11-23">
+              2015-11-23
+            </time>
+          </span>
+
+          
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/编程/" itemprop="url" rel="index">
+                    <span itemprop="name">编程</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/编程/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/11/23/Python-模拟登录新浪微博/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/23/Python-模拟登录新浪微博/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>最近在学习使用<a href="http://sae.sina.com.cn/">SAE</a>，打算往上面放一个微博抢沙发的脚本，需要登录状态才能使用<a href="http://open.weibo.com/wiki/%E5%BE%AE%E5%8D%9AAPI">微博API</a>。解决方法有两个，一是浏览器登录，手动复制cookie，二是模拟登录。我选择后者。</p>
+<p>网上搜到一份教程，<a href="http://www.jb51.net/article/46053.htm">《python使用rsa加密算法模块模拟新浪微博登录》</a>，非常复杂。对照着做的过程中，自己又找出一个简单的登录方法。两种方法都登录成功，记录如下：</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/11/23/Python-模拟登录新浪微博/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+
+
+
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2015/11/22/趣图收集/" itemprop="url">
                   趣图收集
                 </a>
@@ -1378,131 +1499,6 @@ RecursionError: maximum recursion depth exceeded
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/11/11/Python模拟登录知乎/" itemprop="url">
-                  Python 3 模拟登录知乎
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-11-11T21:06:08+08:00" content="2015-11-11">
-              2015-11-11
-            </time>
-          </span>
-
-          
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/编程/" itemprop="url" rel="index">
-                    <span itemprop="name">编程</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/编程/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/11/11/Python模拟登录知乎/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/11/Python模拟登录知乎/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h2 id="缘起">缘起</h2><p>最近发现知乎的登录界面改了，抓包看了看，果然登录方式也变了，会根据用户名字符串发送不同字段的POST。中午研究了一会，写了个登录知乎的工具类，可以自动处理Cookie，维持登录状态。目前仅实现登录和打开网页的功能。</p>
-<h2 id="依赖的第三方库">依赖的第三方库</h2><ul>
-<li><code>requests</code></li>
-<li><code>BeautifulSoup</code></li>
-<li><code>lxml</code> 这个不装没关系，把<code>__login()</code>方法中的<code>lxml</code>改成<code>html.parser</code>即可。</li>
-</ul>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/11/Python模拟登录知乎/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-
-
-
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
 
   </section>
 
@@ -1549,7 +1545,7 @@ RecursionError: maximum recursion depth exceeded
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">32</span>
+              <span class="site-state-item-count">33</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1563,7 +1559,7 @@ RecursionError: maximum recursion depth exceeded
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">51</span>
+              <span class="site-state-item-count">52</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
