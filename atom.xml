@@ -4,7 +4,7 @@
   <subtitle><![CDATA[莫厌追欢笑语频，寻思离乱好伤神。闲来屈指从头数，得见清平有几人]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://lovenight.github.io/"/>
-  <updated>2016-07-01T07:43:31.453Z</updated>
+  <updated>2016-07-29T02:22:37.312Z</updated>
   <id>http://lovenight.github.io/</id>
   
   <author>
@@ -13,6 +13,152 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[累赘的朋友圈]]></title>
+    <link href="http://lovenight.github.io/2016/07/21/%E7%B4%AF%E8%B5%98%E7%9A%84%E6%9C%8B%E5%8F%8B%E5%9C%88/"/>
+    <id>http://lovenight.github.io/2016/07/21/累赘的朋友圈/</id>
+    <published>2016-07-21T02:45:51.000Z</published>
+    <updated>2016-07-29T02:22:37.312Z</updated>
+    <content type="html"><![CDATA[<p>记得以前刚用QQ的时候非常新鲜好奇，加了一堆同学朋友，每次上线都能看到一大堆人，挨个寒暄问好。当时打字速度快，连续开八个窗口聊天也应付得过来。但是时间一长，隐身的人越来越多，以至于出现一个能显示隐身好友的修改版QQ。还有一些显隐技巧，比如弹视频，如果对方马上关闭就说明隐身登录。</p>
+<p>为什么会出现如此大规模的隐身状态呢？也许是新鲜劲过去后，累赘感显现了出来，一上线就一堆人发来消息，跟他们其实也没什么好聊的，但不回消息也不好；就算别人不发来消息，以前你上线都会主动给对方打招呼聊几句，现在打不打？这些难题都可以用隐身登录轻松解决。时间一长，大家彼此心照不宣。好友列表看着一堆灰头像，其实个个都在线。要是真的发了消息，也马上会有回应。</p>
+<p>可是，真没什么话好说。</p>
+<p>记得QQ空间里曾经有棵虚拟的大树，有好友进来浇水才能使它成长。这也成为热衷QQ空间时期，加好友的动力之一。后来QQ空间到处都充斥着转载，我不再看别人，也关闭了自己的空间。那这么多好友，留着有什么意义呢？</p>
+<p>同学都在各自的同学群里，几百年不联系，偶尔有事在群里找也一样。各类网友时间一长都不再联络，连以前怎么加的对方都不记得了，以后也不会说话。于是在一个百无聊赖的日子里，我把QQ上近两百好友删得只剩十个。</p>
+<p>后来出现了微信，微信相较于QQ最大的区别，是没有在线离线等状态，一下子就排除了隐身的困境，再加上注册简单方便以及语音、摇一摇等功能，很快盖过了QQ，成为人们联系的第一选择。微信上的好友越加越多，绝大多数都是些僵尸号，从来不会联系，以后也不会有交集，对方的心情、私事、感慨，我都没兴趣看。那我加了干吗呢？超过两个月没联系的，我也全清了。</p>
+<p>落了片白茫茫大地真干净。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>记得以前刚用QQ的时候非常新鲜好奇，加了一堆同学朋友，每次上线都能看到一大堆人，挨个寒暄问好。当时打字速度快，连续开八个窗口聊天也应付得过来。但是时间一长，隐身的人越来越多，以至于出现一个能显示隐身好友的修改版QQ。还有一些显隐技巧，比如弹视频，如果对方马上关闭就说明隐身登]]>
+    </summary>
+    
+      <category term="人生的经验" scheme="http://lovenight.github.io/tags/%E4%BA%BA%E7%94%9F%E7%9A%84%E7%BB%8F%E9%AA%8C/"/>
+    
+      <category term="随笔" scheme="http://lovenight.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="杂感" scheme="http://lovenight.github.io/categories/%E9%9A%8F%E7%AC%94/%E6%9D%82%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Python 3 黑板客爬虫闯关]]></title>
+    <link href="http://lovenight.github.io/2016/07/18/Python-3-%E9%BB%91%E6%9D%BF%E5%AE%A2%E7%88%AC%E8%99%AB%E9%97%AF%E5%85%B3/"/>
+    <id>http://lovenight.github.io/2016/07/18/Python-3-黑板客爬虫闯关/</id>
+    <published>2016-07-18T06:30:56.000Z</published>
+    <updated>2016-07-18T06:39:00.437Z</updated>
+    <content type="html"><![CDATA[<p>Python 版本是3.5</p>
+<h1 id="第一关">第一关</h1><p><a href="http://www.heibanke.com/lesson/crawler_ex00/" target="_blank" rel="external">http://www.heibanke.com/lesson/crawler_ex00/</a></p>
+<p>每页都会出现新数字，这一关考的就是获取网页和解析内容，非常简单：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line"><span class="comment"># 第一题网址</span></span><br><span class="line">Q1_url = <span class="string">r'http://www.heibanke.com/lesson/crawler_ex00/'</span></span><br><span class="line"></span><br><span class="line">url = Q1_url</span><br><span class="line">num_re = re.compile(<span class="string">r'&lt;h3&gt;[^\d&lt;]*?(\d+)[^\d&lt;]*?&lt;/h3'</span>)</span><br><span class="line"><span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">    print(<span class="string">'正在读取网址 '</span>, url)</span><br><span class="line">    html = requests.get(url).text</span><br><span class="line">    num = num_re.findall(html)</span><br><span class="line">    <span class="keyword">if</span> len(num) == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        url = Q1_url + num[<span class="number">0</span>]</span><br><span class="line">print(<span class="string">'结束！'</span>)</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>输出：</p>
+<pre><code>正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">19016</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">13579</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">43396</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">39642</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">96911</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">30965</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">67917</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">22213</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">72586</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">48151</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">53639</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">10963</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">65392</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">36133</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">72324</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">57633</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">91251</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">87016</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">77055</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">30366</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">83679</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">31388</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">99446</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">69428</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">34798</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">16780</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">36499</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">21070</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">96749</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">71822</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">48739</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">62816</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">80182</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">68171</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">45458</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">56056</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">87450</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">52695</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">36675</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">25997</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">73222</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">93891</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">29052</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">72996</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">73999</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">23814</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">98084</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">51103</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">39603</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">34316</span>
+结束！
+</code></pre><p>访问最后一个网址，提示：恭喜你,你找到了答案.继续你的爬虫之旅吧！</p>
+<p>OK，进入下一关。</p>
+<h1 id="第二关">第二关</h1><p><a href="http://www.heibanke.com/lesson/crawler_ex01/" target="_blank" rel="external">http://www.heibanke.com/lesson/crawler_ex01/</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line"><span class="comment"># 爬虫闯关第二关网址</span></span><br><span class="line">Q2_url = <span class="string">r'http://www.heibanke.com/lesson/crawler_ex01/'</span></span><br><span class="line"></span><br><span class="line">username = <span class="string">'king'</span></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">31</span>):</span><br><span class="line">    print(<span class="string">'正在猜密码： '</span>, x)</span><br><span class="line">    data = &#123;</span><br><span class="line">        <span class="string">'username'</span>:username,</span><br><span class="line">        <span class="string">'password'</span>:x</span><br><span class="line">    &#125;</span><br><span class="line">    html = requests.post(Q2_url, data = data).text</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> <span class="string">'错误'</span> <span class="keyword">in</span> html:</span><br><span class="line">        print(<span class="string">'密码是 '</span>, x)</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
+<p>输出：</p>
+<pre><code>密码是  <span class="number">26</span>
+</code></pre><p>回到登录网址，输入密码过关！</p>
+<h1 id="第三关">第三关</h1><p><a href="http://www.heibanke.com/lesson/crawler_ex02/" target="_blank" rel="external">http://www.heibanke.com/lesson/crawler_ex02/</a></p>
+<p>这一关需要登录，随便注册一个账号，在爬虫中要用。另外要注意Post中不能少了csrfmiddlewaretoken。上一关中虽然有这一项，但是不加也可以。不过这一关里必须加上这个参数。</p>
+<p>header必须加上Cookie。</p>
+<p>以上信息是把每一步获取的网页源码控制台打印，然后分析出来的。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line"><span class="comment"># 爬虫闯关第三关</span></span><br><span class="line">Q3_url = <span class="string">r'http://www.heibanke.com/lesson/crawler_ex02/'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录后网址</span></span><br><span class="line">login_url = <span class="string">r'http://www.heibanke.com/lesson/crawler_ex02/'</span></span><br><span class="line"></span><br><span class="line">username = 自己注册</span><br><span class="line">password = 自己注册</span><br><span class="line"></span><br><span class="line">data = &#123;</span><br><span class="line">    <span class="string">'username'</span>:username,</span><br><span class="line">    <span class="string">'password'</span>:password,</span><br><span class="line">    <span class="string">'csrfmiddlewaretoken'</span>:<span class="string">'CAb4NKnA31NhzjgdPpBfbsIbKIJ1lG8V'</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">'Cookie'</span>:<span class="string">'sessionid=qx5zdoytvpf2qbtsz2i51hs69zakiu3h; csrftoken=CAb4NKnA31NhzjgdPpBfbsIbKIJ1lG8V'</span></span><br><span class="line">&#125;</span><br><span class="line">s = requests.Session()</span><br><span class="line">s.headers.update(headers)</span><br><span class="line">html = s.post(login_url, data = data).text</span><br><span class="line"><span class="comment"># print(html)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">20</span>, <span class="number">31</span>):</span><br><span class="line">    data = &#123;</span><br><span class="line">        <span class="string">'username'</span>:username,</span><br><span class="line">        <span class="string">'password'</span>:x,</span><br><span class="line">        <span class="string">'csrfmiddlewaretoken'</span>:<span class="string">'CAb4NKnA31NhzjgdPpBfbsIbKIJ1lG8V'</span></span><br><span class="line">    &#125;</span><br><span class="line">    print(<span class="string">'正在猜密码： '</span>, x)</span><br><span class="line">    html = s.post(login_url, data = data).text</span><br><span class="line">    <span class="comment"># print(html)</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> <span class="string">'错误'</span> <span class="keyword">in</span> html:</span><br><span class="line">        print(<span class="string">'密码是 '</span>, x)</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
+<p>输出：</p>
+<pre><code>正在猜密码：  <span class="number">1</span>
+正在猜密码：  <span class="number">2</span>
+正在猜密码：  <span class="number">3</span>
+正在猜密码：  <span class="number">4</span>
+正在猜密码：  <span class="number">5</span>
+正在猜密码：  <span class="number">6</span>
+正在猜密码：  <span class="number">7</span>
+正在猜密码：  <span class="number">8</span>
+正在猜密码：  <span class="number">9</span>
+正在猜密码：  <span class="number">10</span>
+正在猜密码：  <span class="number">11</span>
+正在猜密码：  <span class="number">12</span>
+正在猜密码：  <span class="number">13</span>
+正在猜密码：  <span class="number">14</span>
+正在猜密码：  <span class="number">15</span>
+正在猜密码：  <span class="number">16</span>
+正在猜密码：  <span class="number">17</span>
+正在猜密码：  <span class="number">18</span>
+正在猜密码：  <span class="number">19</span>
+密码是  <span class="number">19</span>
+</code></pre><p>手动输密码过关！</p>
+<h1 id="第四关">第四关</h1><p>这一关的逻辑设置得很奇怪，找作者问了也没看明白。不做了。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Python 版本是3.5</p>
+<h1 id="第一关">第一关</h1><p><a href="http://www.heibanke.com/lesson/crawler_ex00/">http://www.heibanke.com/lesson/crawler_ex00/</a></p>
+<p>每页都会出现新数字，这一关考的就是获取网页和解析内容，非常简单：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line"><span class="comment"># 第一题网址</span></span><br><span class="line">Q1_url = <span class="string">r'http://www.heibanke.com/lesson/crawler_ex00/'</span></span><br><span class="line"></span><br><span class="line">url = Q1_url</span><br><span class="line">num_re = re.compile(<span class="string">r'&lt;h3&gt;[^\d&lt;]*?(\d+)[^\d&lt;]*?&lt;/h3'</span>)</span><br><span class="line"><span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">    print(<span class="string">'正在读取网址 '</span>, url)</span><br><span class="line">    html = requests.get(url).text</span><br><span class="line">    num = num_re.findall(html)</span><br><span class="line">    <span class="keyword">if</span> len(num) == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        url = Q1_url + num[<span class="number">0</span>]</span><br><span class="line">print(<span class="string">'结束！'</span>)</span><br></pre></td></tr></table></figure>]]>
+    
+    </summary>
+    
+      <category term="Python" scheme="http://lovenight.github.io/tags/Python/"/>
+    
+      <category term="爬虫" scheme="http://lovenight.github.io/tags/%E7%88%AC%E8%99%AB/"/>
+    
+      <category term="黑板客" scheme="http://lovenight.github.io/tags/%E9%BB%91%E6%9D%BF%E5%AE%A2/"/>
+    
+      <category term="编程" scheme="http://lovenight.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="Python" scheme="http://lovenight.github.io/categories/%E7%BC%96%E7%A8%8B/Python/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[李鸿章临终遗诗]]></title>

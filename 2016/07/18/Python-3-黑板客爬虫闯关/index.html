@@ -1,0 +1,988 @@
+<!doctype html>
+<html class="theme-next   use-motion ">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+    <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Python,爬虫,黑板客," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="岁月如歌" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+
+
+
+
+
+
+<meta name="description" content="Python 版本是3.5
+第一关http://www.heibanke.com/lesson/crawler_ex00/
+每页都会出现新数字，这一关考的就是获取网页和解析内容，非常简单：
+1234567891011121314151617import requestsimport re# 第一题网址Q1_url = r&apos;http://www.heibanke.com/lesson/crawler">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python 3 黑板客爬虫闯关">
+<meta property="og:url" content="http://lovenight.github.io/2016/07/18/Python-3-黑板客爬虫闯关/index.html">
+<meta property="og:site_name" content="岁月如歌">
+<meta property="og:description" content="Python 版本是3.5
+第一关http://www.heibanke.com/lesson/crawler_ex00/
+每页都会出现新数字，这一关考的就是获取网页和解析内容，非常简单：
+1234567891011121314151617import requestsimport re# 第一题网址Q1_url = r&apos;http://www.heibanke.com/lesson/crawler">
+<meta property="og:updated_time" content="2016-07-18T06:39:00.437Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python 3 黑板客爬虫闯关">
+<meta name="twitter:description" content="Python 版本是3.5
+第一关http://www.heibanke.com/lesson/crawler_ex00/
+每页都会出现新数字，这一关考的就是获取网页和解析内容，非常简单：
+1234567891011121314151617import requestsimport re# 第一题网址Q1_url = r&apos;http://www.heibanke.com/lesson/crawler">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'always',
+    motion: true
+  };
+</script>
+
+  <title> Python 3 黑板客爬虫闯关 | 岁月如歌 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">岁月如歌</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">莫厌追欢笑语频，寻思离乱好伤神。闲来屈指从头数，得见清平有几人</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-android">
+          <a href="/Android" rel="section">
+            
+              <i class="menu-item-icon fa fa-question-circle fa-fw"></i> <br />
+            
+            Android
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-python">
+          <a href="/Python" rel="section">
+            
+              <i class="menu-item-icon fa fa-question-circle fa-fw"></i> <br />
+            
+            python
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-api">
+          <a href="/API" rel="section">
+            
+              <i class="menu-item-icon fa fa-question-circle fa-fw"></i> <br />
+            
+            API
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-notes">
+          <a href="/Notes" rel="section">
+            
+              <i class="menu-item-icon fa fa-question-circle fa-fw"></i> <br />
+            
+            Notes
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-links">
+          <a href="/Links" rel="section">
+            
+              <i class="menu-item-icon fa fa-question-circle fa-fw"></i> <br />
+            
+            Links
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/About" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <form class="site-search-form">
+    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+  </form>
+
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','/js/st.js','_st');
+
+  _st('install', 'p1N1m5xSatBPY6xBpi2o','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Python 3 黑板客爬虫闯关
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-07-18T14:30:56+08:00" content="2016-07-18">
+              2016-07-18
+            </time>
+          </span>
+
+          
+            <span id="busuanzi_container_page_pv">&nbsp;&nbsp;|&nbsp;&nbsp;阅读量 <span id="busuanzi_value_page_pv"></span> 次</span>
+          
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/编程/" itemprop="url" rel="index">
+                    <span itemprop="name">编程</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/编程/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/18/Python-3-黑板客爬虫闯关/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/18/Python-3-黑板客爬虫闯关/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p>Python 版本是3.5</p>
+<h1 id="第一关">第一关</h1><p><a href="http://www.heibanke.com/lesson/crawler_ex00/" target="_blank" rel="external">http://www.heibanke.com/lesson/crawler_ex00/</a></p>
+<p>每页都会出现新数字，这一关考的就是获取网页和解析内容，非常简单：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line"><span class="comment"># 第一题网址</span></span><br><span class="line">Q1_url = <span class="string">r'http://www.heibanke.com/lesson/crawler_ex00/'</span></span><br><span class="line"></span><br><span class="line">url = Q1_url</span><br><span class="line">num_re = re.compile(<span class="string">r'&lt;h3&gt;[^\d&lt;]*?(\d+)[^\d&lt;]*?&lt;/h3'</span>)</span><br><span class="line"><span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">    print(<span class="string">'正在读取网址 '</span>, url)</span><br><span class="line">    html = requests.get(url).text</span><br><span class="line">    num = num_re.findall(html)</span><br><span class="line">    <span class="keyword">if</span> len(num) == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        url = Q1_url + num[<span class="number">0</span>]</span><br><span class="line">print(<span class="string">'结束！'</span>)</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>输出：</p>
+<pre><code>正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">19016</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">13579</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">43396</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">39642</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">96911</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">30965</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">67917</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">22213</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">72586</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">48151</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">53639</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">10963</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">65392</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">36133</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">72324</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">57633</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">91251</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">87016</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">77055</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">30366</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">83679</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">31388</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">99446</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">69428</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">34798</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">16780</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">36499</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">21070</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">96749</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">71822</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">48739</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">62816</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">80182</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">68171</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">45458</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">56056</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">87450</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">52695</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">36675</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">25997</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">73222</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">93891</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">29052</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">72996</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">73999</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">23814</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">98084</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">51103</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">39603</span>
+正在读取网址  <span class="symbol">http:</span>/<span class="regexp">/www.heibanke.com/lesson</span><span class="regexp">/crawler_ex00/</span><span class="number">34316</span>
+结束！
+</code></pre><p>访问最后一个网址，提示：恭喜你,你找到了答案.继续你的爬虫之旅吧！</p>
+<p>OK，进入下一关。</p>
+<h1 id="第二关">第二关</h1><p><a href="http://www.heibanke.com/lesson/crawler_ex01/" target="_blank" rel="external">http://www.heibanke.com/lesson/crawler_ex01/</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line"><span class="comment"># 爬虫闯关第二关网址</span></span><br><span class="line">Q2_url = <span class="string">r'http://www.heibanke.com/lesson/crawler_ex01/'</span></span><br><span class="line"></span><br><span class="line">username = <span class="string">'king'</span></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">31</span>):</span><br><span class="line">    print(<span class="string">'正在猜密码： '</span>, x)</span><br><span class="line">    data = &#123;</span><br><span class="line">        <span class="string">'username'</span>:username,</span><br><span class="line">        <span class="string">'password'</span>:x</span><br><span class="line">    &#125;</span><br><span class="line">    html = requests.post(Q2_url, data = data).text</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> <span class="string">'错误'</span> <span class="keyword">in</span> html:</span><br><span class="line">        print(<span class="string">'密码是 '</span>, x)</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
+<p>输出：</p>
+<pre><code>密码是  <span class="number">26</span>
+</code></pre><p>回到登录网址，输入密码过关！</p>
+<h1 id="第三关">第三关</h1><p><a href="http://www.heibanke.com/lesson/crawler_ex02/" target="_blank" rel="external">http://www.heibanke.com/lesson/crawler_ex02/</a></p>
+<p>这一关需要登录，随便注册一个账号，在爬虫中要用。另外要注意Post中不能少了csrfmiddlewaretoken。上一关中虽然有这一项，但是不加也可以。不过这一关里必须加上这个参数。</p>
+<p>header必须加上Cookie。</p>
+<p>以上信息是把每一步获取的网页源码控制台打印，然后分析出来的。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line"><span class="comment"># 爬虫闯关第三关</span></span><br><span class="line">Q3_url = <span class="string">r'http://www.heibanke.com/lesson/crawler_ex02/'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录后网址</span></span><br><span class="line">login_url = <span class="string">r'http://www.heibanke.com/lesson/crawler_ex02/'</span></span><br><span class="line"></span><br><span class="line">username = 自己注册</span><br><span class="line">password = 自己注册</span><br><span class="line"></span><br><span class="line">data = &#123;</span><br><span class="line">    <span class="string">'username'</span>:username,</span><br><span class="line">    <span class="string">'password'</span>:password,</span><br><span class="line">    <span class="string">'csrfmiddlewaretoken'</span>:<span class="string">'CAb4NKnA31NhzjgdPpBfbsIbKIJ1lG8V'</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">'Cookie'</span>:<span class="string">'sessionid=qx5zdoytvpf2qbtsz2i51hs69zakiu3h; csrftoken=CAb4NKnA31NhzjgdPpBfbsIbKIJ1lG8V'</span></span><br><span class="line">&#125;</span><br><span class="line">s = requests.Session()</span><br><span class="line">s.headers.update(headers)</span><br><span class="line">html = s.post(login_url, data = data).text</span><br><span class="line"><span class="comment"># print(html)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">20</span>, <span class="number">31</span>):</span><br><span class="line">    data = &#123;</span><br><span class="line">        <span class="string">'username'</span>:username,</span><br><span class="line">        <span class="string">'password'</span>:x,</span><br><span class="line">        <span class="string">'csrfmiddlewaretoken'</span>:<span class="string">'CAb4NKnA31NhzjgdPpBfbsIbKIJ1lG8V'</span></span><br><span class="line">    &#125;</span><br><span class="line">    print(<span class="string">'正在猜密码： '</span>, x)</span><br><span class="line">    html = s.post(login_url, data = data).text</span><br><span class="line">    <span class="comment"># print(html)</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> <span class="string">'错误'</span> <span class="keyword">in</span> html:</span><br><span class="line">        print(<span class="string">'密码是 '</span>, x)</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
+<p>输出：</p>
+<pre><code>正在猜密码：  <span class="number">1</span>
+正在猜密码：  <span class="number">2</span>
+正在猜密码：  <span class="number">3</span>
+正在猜密码：  <span class="number">4</span>
+正在猜密码：  <span class="number">5</span>
+正在猜密码：  <span class="number">6</span>
+正在猜密码：  <span class="number">7</span>
+正在猜密码：  <span class="number">8</span>
+正在猜密码：  <span class="number">9</span>
+正在猜密码：  <span class="number">10</span>
+正在猜密码：  <span class="number">11</span>
+正在猜密码：  <span class="number">12</span>
+正在猜密码：  <span class="number">13</span>
+正在猜密码：  <span class="number">14</span>
+正在猜密码：  <span class="number">15</span>
+正在猜密码：  <span class="number">16</span>
+正在猜密码：  <span class="number">17</span>
+正在猜密码：  <span class="number">18</span>
+正在猜密码：  <span class="number">19</span>
+密码是  <span class="number">19</span>
+</code></pre><p>手动输密码过关！</p>
+<h1 id="第四关">第四关</h1><p>这一关的逻辑设置得很奇怪，找作者问了也没看明白。不做了。</p>
+</span>
+      
+
+
+
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Python/" rel="tag">#Python</a>
+          
+            <a href="/tags/爬虫/" rel="tag">#爬虫</a>
+          
+            <a href="/tags/黑板客/" rel="tag">#黑板客</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/01/李鸿章临终遗诗/" rel="next" title="李鸿章临终遗诗">
+                <i class="fa fa-chevron-left"></i> 李鸿章临终遗诗
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/07/21/累赘的朋友圈/" rel="prev" title="累赘的朋友圈">
+                累赘的朋友圈 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+        </div>
+
+        
+
+
+        
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/07/18/Python-3-黑板客爬虫闯关/"
+           data-title="Python 3 黑板客爬虫闯关" data-url="http://lovenight.github.io/2016/07/18/Python-3-黑板客爬虫闯关/">
+      </div>
+    
+  </div>
+
+
+      </div>
+
+      
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/avatar.jpg" alt="loveNight" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">loveNight</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">自古求真皆寂寞，唯挑心灯伴夜霭</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">36</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">21</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">62</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/loveNight" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> Github
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/p/1005051069913250" target="_blank">
+                  
+                    <i class="fa fa-weibo"></i> Weibo
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="mailto:286242151@qq.com" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> Email
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://segmentfault.com/u/xuxian" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> SegmentFault
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/wu-wu-4-90" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> Zhihu
+                  
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+            <p class="site-author-name">友情链接</p>
+            
+              <span class="links-of-author-item">
+                <a href="http://blog.csdn.net/kinglearnjava" target="_blank">我的CSDN博客</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://blog.sina.com.cn/u/1069913250" target="_blank">我的新浪博客</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.tajok.com" target="_blank">韬的博客</a>
+              </span>
+            
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第一关"><span class="nav-number">1.</span> <span class="nav-text">第一关</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第二关"><span class="nav-number">2.</span> <span class="nav-text">第二关</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第三关"><span class="nav-number">3.</span> <span class="nav-text">第三关</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第四关"><span class="nav-number">4.</span> <span class="nav-text">第四关</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+      
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">loveNight
+
+  &nbsp;&nbsp;|&nbsp;&nbsp;<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256738554'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1256738554' type='text/javascript'%3E%3C/script%3E"));</script>
+
+  &nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/sitemap.xml">Google网站地图</a></span>
+  &nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/baidusitemap.xml">百度网站地图</a></span>
+
+  </span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+&nbsp;&nbsp;|&nbsp;&nbsp;本站总点击 <span id="busuanzi_value_site_pv"></span> 次
+&nbsp;&nbsp;|&nbsp;&nbsp;您是第 <span id="busuanzi_value_site_uv"></span> 位访客
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"jwg"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '/js/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+
+
+    
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
+
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post' || CONFIG.sidebar === 'always') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  <script type="text/javascript" src="/js/bootstrap.js"></script>
+
+  
+  
+
+  
+  
+
+</body>
+</html>
