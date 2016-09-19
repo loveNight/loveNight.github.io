@@ -4,7 +4,7 @@
   <subtitle><![CDATA[莫厌追欢笑语频，寻思离乱好伤神。闲来屈指从头数，得见清平有几人]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://lovenight.github.io/"/>
-  <updated>2016-08-02T07:38:40.062Z</updated>
+  <updated>2016-09-19T06:19:13.531Z</updated>
   <id>http://lovenight.github.io/</id>
   
   <author>
@@ -15,20 +15,101 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[科学上网总结]]></title>
+    <link href="http://lovenight.github.io/2016/09/19/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E6%80%BB%E7%BB%93/"/>
+    <id>http://lovenight.github.io/2016/09/19/科学上网总结/</id>
+    <published>2016-09-19T05:51:01.000Z</published>
+    <updated>2016-09-19T06:19:13.531Z</updated>
+    <content type="html"><![CDATA[<p>去年底写过一篇翻墙总结，其中的Hosts修改工具早已停止更新。ShadowSocks也被公司屏蔽掉，只能在家里用用。最近用了蓝灯，蛮方便，可惜只能用于网页浏览。最近整理了些新资料。</p>
+<a id="more"></a>
+<hr>
+<h1 id="蓝灯Lantern">蓝灯Lantern</h1><p><a href="http://lanterncn.cn/" target="_blank" rel="external">Lantern中国站</a></p>
+<p>下载安装后，打开软件即可使用，无须设置。每人有800M的免费流量，用完限速，也可购买。</p>
+<hr>
+<h1 id="ShadowSocks">ShadowSocks</h1><h2 id="下载">下载</h2><ul>
+<li>官网：<a href="https://shadowsocks.org/en/index.html" target="_blank" rel="external">shadowsocks.org</a><br>如果官网打不开，可以在下面的网站找找。</li>
+</ul>
+<h2 id="免费账号：">免费账号：</h2><ul>
+<li><a href="http://www.ishadowsocks.com/" target="_blank" rel="external">http://www.ishadowsocks.com/</a>  注意：每6小时更换一次密码</li>
+</ul>
+<h2 id="收费账号：">收费账号：</h2><ul>
+<li><a href="https://shadowsocks.com/" target="_blank" rel="external">Shadowsocks.com</a>：我目前正在用这家的账号，<strong>注意这不是shadowsocks官网</strong></li>
+<li><a href="http://www.godusevpn.net/" target="_blank" rel="external">佛跳墙</a></li>
+</ul>
+<h2 id="使用方法：">使用方法：</h2><p>直接把我CSDN博客上发过的图片扒过来：<br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/30/18/29/5/1.png" alt="1.png"><br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/30/18/29/5/2.png" alt="2.png"></p>
+<p>不用的时候退出软件即可。</p>
+<hr>
+<h1 id="逗比根据地">逗比根据地</h1><p><a href="https://www.dou-bi.co/" target="_blank" rel="external">逗比根据地</a>，这是某大神的个人博客，专研花式科学上网。以上两款软件失效时，可以到这里找找解决方法。</p>
+<p>作者自述：</p>
+<blockquote>
+<p>目前我这个网站主要是面向科学上网的小白用户，对小白提供更容易理解更详细的入门科学上网技术教程。<br>教程都是挺简单的，太难的我也很少写，主要是想到当初我刚开始接触科学上网的时候，那种小白找东西无力的感觉。<br>我会尽量把各种教程写全一些，保证初次接触科学上网的用户能够更快的适应科学上网，同时教程大多都是免费或者低成本的，保证可以以最少的资金来学习了解科学上网！</p>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>去年底写过一篇翻墙总结，其中的Hosts修改工具早已停止更新。ShadowSocks也被公司屏蔽掉，只能在家里用用。最近用了蓝灯，蛮方便，可惜只能用于网页浏览。最近整理了些新资料。</p>]]>
+    
+    </summary>
+    
+      <category term="Hosts" scheme="http://lovenight.github.io/tags/Hosts/"/>
+    
+      <category term="ShadowSocks" scheme="http://lovenight.github.io/tags/ShadowSocks/"/>
+    
+      <category term="翻墙" scheme="http://lovenight.github.io/tags/%E7%BF%BB%E5%A2%99/"/>
+    
+      <category term="实用" scheme="http://lovenight.github.io/categories/%E5%AE%9E%E7%94%A8/"/>
+    
+      <category term="翻墙" scheme="http://lovenight.github.io/categories/%E5%AE%9E%E7%94%A8/%E7%BF%BB%E5%A2%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[git push报错Bad file number的解决方法]]></title>
+    <link href="http://lovenight.github.io/2016/09/19/git-push%E6%8A%A5%E9%94%99Bad-file-number%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
+    <id>http://lovenight.github.io/2016/09/19/git-push报错Bad-file-number的解决方法/</id>
+    <published>2016-09-19T05:27:12.000Z</published>
+    <updated>2016-09-19T05:40:21.203Z</updated>
+    <content type="html"><![CDATA[<h1 id="错误提示">错误提示</h1><pre><code>ssh:connect <span class="keyword">to</span> host github.com port <span class="number">22</span>:bad <span class="type">file</span> <span class="type">number</span>
+</code></pre><hr>
+<h1 id="解决方法">解决方法</h1><p>将端口修改为 443</p>
+<p>1.打开<code>~\.ssh\config</code>文件（~为你的系统当前用户文件夹），如果没有就新建一个，内容为</p>
+<pre><code>Host github<span class="class">.com</span>
+Hostname ssh<span class="class">.github</span><span class="class">.com</span>
+Port <span class="number">443</span>
+</code></pre><p>2.关闭并重启终端。再次push即可看到成功提示</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="错误提示">错误提示</h1><pre><code>ssh:connect <span class="keyword">to</span> host github.com port <span class="number">22</span>:bad <span ]]>
+    </summary>
+    
+      <category term="Git" scheme="http://lovenight.github.io/tags/Git/"/>
+    
+      <category term="hexo" scheme="http://lovenight.github.io/tags/hexo/"/>
+    
+      <category term="编程" scheme="http://lovenight.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="Git" scheme="http://lovenight.github.io/categories/%E7%BC%96%E7%A8%8B/Git/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[王宗昱：道教的六天说]]></title>
     <link href="http://lovenight.github.io/2016/08/02/%E7%8E%8B%E5%AE%97%E6%98%B1%EF%BC%9A%E9%81%93%E6%95%99%E7%9A%84%E5%85%AD%E5%A4%A9%E8%AF%B4/"/>
     <id>http://lovenight.github.io/2016/08/02/王宗昱：道教的六天说/</id>
     <published>2016-08-02T07:24:46.000Z</published>
-    <updated>2016-08-02T07:38:40.062Z</updated>
+    <updated>2016-09-19T05:54:38.609Z</updated>
     <content type="html"><![CDATA[<p><em>前言：尽信《书》，不如无《书》。经文、论文未必句句是真。然瑕不掩瑜，读完可对六天有大致的了解。</em></p>
 <p>道教的六天说</p>
 <p>王宗昱</p>
 <p>“六天”这个概念在早期道教的经典里是经常见到的，道教对它的批判也是显而易见的。然而，中国学术界对这个概念及其在道教史上的演化一直没有作出深入的讨论[1]。“六天”这个本出于儒家的概念何以在道教中这么重要，反而鲜见于儒家经典，道教对它的批判传达给了我们什么信息？</p>
 <p>一、六天的来历</p>
 <p>在正史和儒家的经典里，我目前见到的最早的言及“六天”一词的材料是《礼记》孔颖达疏和《旧唐书》[2]。《礼记·郊特牲》孔疏中说：</p>
+<blockquote>
 <p>先儒说郊，其义有二。案《圣证论》以天体无二，郊即圜丘，圜丘即郊。郑氏以为天有六天，丘郊各异。今具载郑义兼以王氏难。郑氏谓天有六天，天为至极之尊，其体只应是一。而郑氏以为六者，指其尊极清虚之体其实是一，论其五行生育之功则别有五。以五配一，故为六天。[3]</p>
+</blockquote>
 <p>《旧唐书·礼仪志》中所录贞观二年礼部尚书许敬宗的奏文中有云：</p>
+<blockquote>
 <p>二年七月，礼部尚书许敬宗与礼官等又奏议：据祠令及新礼，并用郑玄六天之议，圆丘祀昊天上帝，南郊祭太微感帝，明堂祭太微五帝。谨按郑玄此义，唯据纬书，所说六天，皆谓星象，而昊天上帝，不属穹苍。故注《月令》及《周官》，皆谓圆丘所祭昊天上帝为北辰耀魄宝。考其所说，舛谬特深。按《周易》云：日月丽于天，百谷草木丽于地。又云：在天成象，在地成形。足明辰象非天，草木非地。《毛诗传》云：元气昊大，则称昊天。此则苍天为体，不入星辰之例。且天地各一，是曰两仪。天尚无二，焉得有六。[4]</p>
+</blockquote>
 <p>由上面的材料可知，六天指的是以郑玄为代表的儒家对官方祭礼的解释。并且，上文所言六天均未明言该辞出于郑玄，止是王肃等人对郑玄主张所用的一种代称。虽然现存《孝经》、《礼记》和《周官》等书的郑玄注文中均未有“六天”字样，但循其文义并质之史书，可知“六天”所蕴涵的内容确然为郑玄之主张，信乎不诬。</p>
 <a id="more"></a>
 <p>古代皇帝对天神即“禘”的祭祀由来已久。上天是帝王的祖先，也是该氏族的祖先。郑玄注《礼记·大传》时解释了“禘”之义：“大祭其先祖所由生，谓郊祀天也[5]。”这之中当然糅合了该氏族或当时官方的历史观。这个天后来被称为皇天上帝或昊天上帝。五帝同样也是帝王的祖先，应该是这些历史观逐渐积淀的产物。徐旭生认为，直到战国前期，五帝的名称尚未出现，因为在《左传》、《国语》、《论语》、《墨子》《孟子》、中均不见此名称[6]。五帝一辞出现后其具体所指在相当长一段时间内亦无定论。这种指称传说中五个帝王的“五帝”在后代被人叫做“五人帝”。随着五行说的发展，出现了五方帝的观念。五方帝是否为配合五人帝而出现？尚未见证据。据《史记·封禅书》记载：“二年，东击项籍而还入关，问：故秦时上帝祠何帝也？对曰：四帝，有白、青、黄、赤帝之祠。高祖曰：吾闻天有五帝，而有四，何也？莫知其说。于是高祖曰：吾知之矣，乃待我而具五也。乃立黑帝祠，命曰北畤。有司进祠，上不亲往。悉招故秦祝官，复置太祝、太宰，如其故仪礼。[7]”这条材料既说明秦时的五方帝崇拜未能完备，也说明汉高祖所言之五方帝或许未与五人帝相对应。五方帝之出现自有渊源。即使秦人之祭白帝也并非出于五方观念。徐旭生之分析可资参考[8]。然而，刘邦以秦人祀四帝为怪而齐之以五帝当然是受了五方观念的支配。</p>
@@ -117,9 +198,13 @@
 <p>“六天”这个概念在早期道教的经典里是经常见到的，道教对它的批判也是显而易见的。然而，中国学术界对这个概念及其在道教史上的演化一直没有作出深入的讨论[1]。“六天”这个本出于儒家的概念何以在道教中这么重要，反而鲜见于儒家经典，道教对它的批判传达给了我们什么信息？</p>
 <p>一、六天的来历</p>
 <p>在正史和儒家的经典里，我目前见到的最早的言及“六天”一词的材料是《礼记》孔颖达疏和《旧唐书》[2]。《礼记·郊特牲》孔疏中说：</p>
+<blockquote>
 <p>先儒说郊，其义有二。案《圣证论》以天体无二，郊即圜丘，圜丘即郊。郑氏以为天有六天，丘郊各异。今具载郑义兼以王氏难。郑氏谓天有六天，天为至极之尊，其体只应是一。而郑氏以为六者，指其尊极清虚之体其实是一，论其五行生育之功则别有五。以五配一，故为六天。[3]</p>
+</blockquote>
 <p>《旧唐书·礼仪志》中所录贞观二年礼部尚书许敬宗的奏文中有云：</p>
+<blockquote>
 <p>二年七月，礼部尚书许敬宗与礼官等又奏议：据祠令及新礼，并用郑玄六天之议，圆丘祀昊天上帝，南郊祭太微感帝，明堂祭太微五帝。谨按郑玄此义，唯据纬书，所说六天，皆谓星象，而昊天上帝，不属穹苍。故注《月令》及《周官》，皆谓圆丘所祭昊天上帝为北辰耀魄宝。考其所说，舛谬特深。按《周易》云：日月丽于天，百谷草木丽于地。又云：在天成象，在地成形。足明辰象非天，草木非地。《毛诗传》云：元气昊大，则称昊天。此则苍天为体，不入星辰之例。且天地各一，是曰两仪。天尚无二，焉得有六。[4]</p>
+</blockquote>
 <p>由上面的材料可知，六天指的是以郑玄为代表的儒家对官方祭礼的解释。并且，上文所言六天均未明言该辞出于郑玄，止是王肃等人对郑玄主张所用的一种代称。虽然现存《孝经》、《礼记》和《周官》等书的郑玄注文中均未有“六天”字样，但循其文义并质之史书，可知“六天”所蕴涵的内容确然为郑玄之主张，信乎不诬。</p>]]>
     
     </summary>
@@ -336,6 +421,156 @@
       <category term="编程" scheme="http://lovenight.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
     
       <category term="Python" scheme="http://lovenight.github.io/categories/%E7%BC%96%E7%A8%8B/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[搬家]]></title>
+    <link href="http://lovenight.github.io/2016/04/25/%E6%90%AC%E4%BA%86%E6%96%B0%E4%BD%8F%E5%A4%84/"/>
+    <id>http://lovenight.github.io/2016/04/25/搬了新住处/</id>
+    <published>2016-04-24T23:34:49.000Z</published>
+    <updated>2016-04-28T01:39:21.953Z</updated>
+    <content type="html"><![CDATA[<p>上周四房东突然毁约说下月起不租了，只好临时找新的住处，周日终于安定下来。这一通找房、搬家路上想了很多也拍了很多。</p>
+<a id="more"></a>
+<hr>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/25/8/24/42/%E7%8E%89%E6%B3%89%E6%A0%A1%E5%8C%BA%E8%A5%BF%E5%8D%97%E8%A7%92.jpg" alt="玉泉校区西南角.jpg"><br>这是玉泉校区西南角，以前从没来过。从学校正门口下车，一路走到这里大约花了二十多分钟，已经放弃在这里租房了，出行太不方便。不过景色可人，起兴浏览一番。</p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/25/8/24/42/%E7%8E%89%E6%B3%89%E6%A0%A1%E5%8C%BA%E8%A5%BF%E5%8D%97%E8%A7%922.jpg" alt="玉泉校区西南角2.jpg"><br>上一张照片往右拐，不知道何时建了一个休闲山庄。可惜最近没有闲下来的心思，手头还有许多事情要做。</p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/25/8/24/42/%E7%8E%89%E6%B3%89%E6%A0%A1%E5%8C%BA%E8%A5%BF%E5%8D%97%E8%A7%923.jpg" alt="玉泉校区西南角3.jpg"></p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/25/8/24/42/%E7%8E%89%E6%B3%89%E6%A0%A1%E5%8C%BA%E8%A5%BF%E5%8D%97%E8%A7%924.jpg" alt="玉泉校区西南角4.jpg"><br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/25/8/24/42/%E7%8E%89%E6%B3%89%E6%A0%A1%E5%8C%BA%E8%A5%BF%E5%8D%97%E8%A7%925.jpg" alt="玉泉校区西南角5.jpg"><br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/25/8/24/42/%E7%8E%89%E6%B3%89%E6%A0%A1%E5%8C%BA%E8%A5%BF%E5%8D%97%E8%A7%927.jpg" alt="玉泉校区西南角7.jpg"></p>
+<p>上面几张都是青芝坞，玉泉校区南门外的住宿+吃喝圣地，毗邻植物园，东南不远处就是西湖，风景绝佳之处。</p>
+<hr>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/25/8/50/26/%E6%91%86%E5%9C%B0%E6%91%8A.jpg" alt="摆地摊.jpg"><br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/25/8/50/26/%E4%BA%AC%E6%9D%AD%E5%A4%A7%E8%BF%90%E6%B2%B3.jpg" alt="京杭大运河.jpg"></p>
+<p>周四晚去朝晖看房路过这里，年轻人在摆地摊。</p>
+<hr>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/26/15/26/8/%E7%A7%9F%E6%88%BF.jpg" alt="租房.jpg"></p>
+<p>周六借了表妹的VPN，进学校论坛逛了一圈，看到这个帖子，现在的年轻人们真有干劲。群里信息太少，最后我在豆瓣上找到了房子。</p>
+<hr>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/25/9/4/20/%E5%85%A8%E9%83%A8%E5%AE%B6%E5%BD%93.jpg" alt="全部家当.jpg"><br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/25/9/4/20/%E5%8E%9F%E4%BD%8F%E5%A4%84.jpg" alt="原住处.jpg"><br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/26/15/24/36/%E8%87%B3%E5%B0%8A%E5%AE%9D2.jpg" alt="至尊宝2.jpg"><br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/26/15/24/36/%E5%AD%99%E6%82%9F%E7%A9%BA.jpg?imageMogr2/thumbnail/500x500" alt="孙悟空.jpg"></p>
+<p>收拾东西，终于要搬离这个住了三年的地方，是结束也是新的开始。三年来走了很多弯路。现在要戴上紧箍咒，重新做回孙悟空。</p>
+<hr>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/26/15/29/32/%E6%AF%9B%E5%B7%BE.jpg?imageMogr2/thumbnail/500x500" alt="毛巾.jpg"></p>
+<p>某同学婚礼上拿回来的，以为就是一个小狗形的装饰品，摆了一个月后告诉我这是毛巾。</p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/26/15/29/32/%E4%BF%9D%E6%B9%BF%E9%9C%9C.jpg?imageMogr2/thumbnail/500x500" alt="保湿霜.jpg"></p>
+<p>母亲给的保湿霜，但我没这种习惯，看到就不想用。</p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/26/15/34/23/%E8%8D%AF%E4%B8%8D%E8%83%BD%E5%81%9C.jpg?imageMogr2/thumbnail/500x500" alt="药不能停.jpg"></p>
+<p>下雨没带伞，困在医院里，心情很低落。旁边的老太太说看不清楚药品的标签，接连拿出几个药盒问我。回答了几句，心情也好了一点，果然助人为快乐之本，但是我总是把事情搞砸，就连最好的朋友也全都闹过矛盾。也许不再交新朋友才适合我。</p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/26/15/35/38/%E5%8F%AA%E7%9C%8B%E4%BA%86%E5%BC%80%E5%A4%B4%E7%9A%84%E4%B9%A6.jpg?imageMogr2/thumbnail/500x500" alt="只看了开头的书.jpg"></p>
+<p>这些书我都只看了开头，没有细读。以前是没心境，但这段时间发生了这么多事，我想终于可以安下心来做事了。虽然现在还不平静，但我感觉也快了。最近做什么事都没劲，这样的状态也挺好，可以让我慢慢死心踏地看道书和练功。这次搬的新住处，看房子的时候通道阴阴的，我反而特别喜欢，有种住在阴暗角落的感觉，颇符合现在的心情。以前我的新浪博客名叫「长夜未央」，因为习惯躲在黑暗里，不想走到台面上去和人打交道。接触的人多，是非也多，过错往往在我身上，说话做事不动脑子。</p>
+<p>古龙笔下有个「大老板朱停」，心宽体胖，做任何事情都会先停下来想一想，想得多了，就没什么事情是非做不可的。我也应该停一停，就停在黑夜中吧。</p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/26/15/47/37/%E7%A7%AF%E7%B4%AF%E4%BA%86%E5%9B%9B%E5%B9%B4%E7%9A%84%E4%B8%80%E6%AF%9B%E7%A1%AC%E5%B8%81.jpg?imageMogr2/thumbnail/500x500" alt="积累了四年的一毛硬币.jpg"></p>
+<p>积累了四年的一毛硬币，打算抽空去银行换。</p>
+<hr>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/26/15/35/38/%E9%97%A8%E7%A6%81.jpg?imageMogr2/thumbnail/500x500" alt="门禁.jpg"></p>
+<p>房东给我的时候，我以为是个挂件。原来这是门禁卡，便于携带。</p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/26/15/36/40/%E4%BA%AC%E6%9D%AD%E5%A4%A7%E8%BF%90%E6%B2%B3%EF%BC%81.jpg" alt="京杭大运河！.jpg"><br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/26/15/36/40/%E6%96%B0%E5%AE%B6%E7%AC%AC%E4%B8%80%E5%A4%9C.jpg" alt="新家第一夜.jpg"></p>
+<p>窗外是京杭大运河。杨坚杨广父子兴洛阳、开运河、三征高丽，敝在当代功在千秋，背了所有骂名，好处全被李唐接收。</p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/26/15/48/18/%E5%BA%8A%E5%A4%B4%E4%B8%80%E5%A0%86%E5%90%83%E7%9A%84.jpg?imageMogr2/thumbnail/500x500" alt="床头一堆吃的.jpg"></p>
+<p>新家第一天晚上。平时吃得不多，这些可以撑两个星期了。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>上周四房东突然毁约说下月起不租了，只好临时找新的住处，周日终于安定下来。这一通找房、搬家路上想了很多也拍了很多。</p>]]>
+    
+    </summary>
+    
+      <category term="搬家" scheme="http://lovenight.github.io/tags/%E6%90%AC%E5%AE%B6/"/>
+    
+      <category term="随笔" scheme="http://lovenight.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="杂谈" scheme="http://lovenight.github.io/categories/%E9%9A%8F%E7%AC%94/%E6%9D%82%E8%B0%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[近期生活]]></title>
+    <link href="http://lovenight.github.io/2016/04/18/%E8%BF%91%E6%9C%9F%E7%94%9F%E6%B4%BB/"/>
+    <id>http://lovenight.github.io/2016/04/18/近期生活/</id>
+    <published>2016-04-18T06:56:19.000Z</published>
+    <updated>2016-04-18T08:00:28.750Z</updated>
+    <content type="html"><![CDATA[<p>本来打算把这个博客打造成编程技术博客，但无奈近期没什么心思研究编程。最近手机老是报容量不够，删了一些不常用的APP也没用，才发现照片太多，于是清理出来传到新浪博客相册，又挑一部分放这里。</p>
+<a id="more"></a>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="http://music.163.com/outchain/player?type=2&id=95858&auto=1&height=66"></iframe>
+
+
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/18/15/36/56/%E5%A7%91%E5%A9%86%E7%94%9F%E6%97%A5.jpg" alt="姑婆生日.jpg"></p>
+<p>兰溪的姑婆生日。</p>
+<hr>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/18/14/59/44/%E4%BD%8F%E5%9C%A8%E7%94%B0%E9%87%8C%E7%9A%84%E6%B1%9F%E8%A5%BF%E4%BD%AC.jpg" alt="住在田里的江西佬.jpg"></p>
+<p>乡下种田收益越来越低，村民们纷纷外出打工，江西佬们闻讯而来，承包农田种起了西瓜、樟树。又在田里搭了棚子过日子。</p>
+<hr>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/18/15/1/38/%E4%BD%8F%E5%A4%84%E9%99%84%E8%BF%91%E7%9A%84%E5%85%AC%E5%9B%AD.jpg" alt="住处附近的公园.jpg"><br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/18/15/1/38/%E4%BD%8F%E5%A4%84%E9%99%84%E8%BF%91%E7%9A%84%E5%85%AC%E5%9B%AD2.jpg" alt="住处附近的公园2.jpg"><br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/18/15/1/38/%E4%BD%8F%E5%A4%84%E9%99%84%E8%BF%91%E7%9A%84%E5%85%AC%E5%9B%AD3.jpg" alt="住处附近的公园3.jpg"></p>
+<p>住处附近的公园，景色很美，可惜近来思绪纷乱，无心欣赏。</p>
+<hr>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/18/15/4/16/%E8%AF%B8%E6%9A%A8%E7%9A%84%E8%A1%97%E4%BA%AD.jpg?imageMogr2/thumbnail/500x500" alt="诸暨的街亭.jpg"></p>
+<p>年后来杭州，路遇街亭。</p>
+<hr>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/18/15/5/34/%E4%BA%91%E5%BC%80%E8%A7%81%E6%97%A5.jpg" alt="云开见日.jpg"></p>
+<p>忘了当时什么心情。最近一两年的心情都不美丽。</p>
+<hr>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/18/15/6/56/%E9%9B%A8%E4%B8%AD%E6%82%9F%E6%B0%B4.jpg?imageMogr2/thumbnail/500x500" alt="雨中悟水.jpg"></p>
+<p>把心念系在水上，久而久之心也会平静下来。与持咒、数息、观照摄心一样，都依靠专注使自己达到内心的平静。用志不分，乃凝于神。</p>
+<hr>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/18/15/10/16/%E5%B0%8F%E7%BE%8E%E5%A5%B3%E7%8E%A9%E6%89%8B%E6%9C%BA.jpg?imageMogr2/thumbnail/500x500" alt="小美女玩手机.jpg"><br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/18/15/10/16/%E5%B0%8F%E7%BE%8E%E5%A5%B3.jpg?imageMogr2/thumbnail/500x500" alt="小美女.jpg"><br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/18/15/10/16/%E5%B0%8F%E7%BE%8E%E5%A5%B3%E5%90%83%E9%A5%AD%E5%89%8D.jpg?imageMogr2/thumbnail/500x500" alt="小美女吃饭前.jpg"><br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/18/15/10/16/%E5%B0%8F%E7%BE%8E%E5%A5%B3%E5%92%8C%E8%88%85%E8%88%85%E4%B8%80%E8%B5%B7%E8%8D%A1%E7%A7%8B%E5%8D%83.jpg?imageMogr2/thumbnail/500x500" alt="小美女和舅舅一起荡秋千.jpg"><br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/18/15/10/16/%E5%B0%8F%E7%BE%8E%E5%A5%B3%E6%9D%A5%E6%8B%9C%E5%B9%B4.jpg?imageMogr2/thumbnail/500x500" alt="小美女来拜年.jpg"><br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/18/15/10/16/%E5%B0%8F%E7%BE%8E%E5%A5%B3%E5%B9%B4%E5%90%8E%E5%9B%9E%E6%9D%AD%E5%B7%9E.jpg?imageMogr2/thumbnail/500x500" alt="小美女年后回杭州.jpg"></p>
+<p>小美女最近快三周岁了</p>
+<hr>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/18/15/11/47/%E4%B8%8E%E5%90%8C%E5%AD%A6%E7%BD%91%E5%90%A7%E4%BA%94%E8%BF%9E%E5%9D%90.jpg" alt="与同学网吧五连坐.jpg"></p>
+<p>去年国庆期间贾爷来杭州，约了一波大学同学网吧五连坐。</p>
+<hr>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/18/15/12/30/%E8%A5%BF%E6%B9%96%E6%96%87%E5%8C%96%E5%B9%BF%E5%9C%BA1.jpg" alt="西湖文化广场1.jpg"><br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/18/15/12/30/%E8%A5%BF%E6%B9%96%E6%96%87%E5%8C%96%E5%B9%BF%E5%9C%BA2.jpg" alt="西湖文化广场2.jpg"><br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/18/15/12/30/%E8%A5%BF%E6%B9%96%E6%96%87%E5%8C%96%E5%B9%BF%E5%9C%BA3.jpg" alt="西湖文化广场3.jpg"></p>
+<p>西湖文化广场。</p>
+<hr>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/18/15/21/12/%E8%90%BD%E9%B9%A4%E5%B1%B1%E5%B1%B1%E6%B6%A7.jpg?imageMogr2/thumbnail/500x500" alt="落鹤山山涧.jpg"><br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/18/15/21/12/%E8%90%BD%E9%B9%A4%E5%B1%B1%E5%BA%95%E6%B0%B4%E6%BD%AD.jpg?imageMogr2/thumbnail/500x500" alt="落鹤山底水潭.jpg"><br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/18/15/21/12/%E8%90%BD%E9%B9%A4%E5%B1%B1%E9%A1%B6%E4%B8%8B%E7%9C%BA.jpg" alt="落鹤山顶下眺.jpg"><br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/18/15/21/12/%E8%90%BD%E9%B9%A4%E5%B1%B1%E7%89%8C%E6%A5%BC.jpg" alt="落鹤山牌楼.jpg"></p>
+<p>当天穿得太多，走到半山腰就热得不行，于是下山走了。姑姑和姑父两人继续上山游玩。</p>
+<hr>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/18/15/22/56/%E8%B7%AF%E8%BE%B9%E4%B9%B0%E7%9A%84%E6%B3%A1%E6%B3%A1%E7%B3%96.jpg?imageMogr2/thumbnail/500x500" alt="路边买的泡泡糖.jpg"></p>
+<p>东阳方言叫它「泡泡糖」，不知道普通话叫什么。</p>
+<hr>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/18/15/23/34/%E9%87%91%E6%B0%8F%E5%AE%97%E7%A5%A0.jpg" alt="金氏宗祠.jpg"></p>
+<p>金氏宗祠。曾经也是宋徽宗敕封的「江南第一家」。后因郡内大水，子孙散居浙江各地。</p>
+<hr>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/18/15/25/5/%E8%B7%AF%E8%BF%87%E9%92%B1%E5%A1%98%E6%B1%9F.jpg" alt="路过钱塘江.jpg"></p>
+<p>去年拍过上游的衢江，这次拍了下游。</p>
+<hr>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/18/15/27/7/%E6%BB%B4%E6%B0%B4%E6%88%90%E5%86%B0.jpg" alt="滴水成冰.jpg"></p>
+<p>冷</p>
+<hr>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/18/15/28/11/%E5%9F%8E%E7%AB%99%E7%9A%84%E9%98%B2%E6%9A%B4%E8%BD%A6.jpg" alt="城站的防暴车.jpg"></p>
+<p>还有持枪巡逻的阿sir们，没敢拍。</p>
+<hr>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/18/15/29/3/%E4%BD%A0%E7%9F%A5%E9%81%93%E5%AE%89%E5%88%A9%E5%90%97%EF%BC%9F.jpg" alt="你知道安利吗？.jpg"></p>
+<p>终于见到了大名鼎鼎的安利！</p>
+<hr>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/18/15/31/0/%E8%8D%89%E6%9C%A8%E6%B7%B1%E6%B7%B1.jpg?imageMogr2/thumbnail/500x500" alt="草木深深.jpg"></p>
+<p>回玉泉校区游荡。还爬了老和山，下山后接到同学电话，原来是上山前见到我的踪影，现在来电确认。</p>
+<hr>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/18/15/32/15/%E5%9F%8E%E9%9A%8D%E9%98%81.jpg" alt="城隍阁.jpg"><br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/18/15/32/15/%E5%9F%8E%E9%9A%8D%E9%98%81-%E4%B8%9C%E5%8D%97%E5%BD%A2%E8%83%9C.jpg" alt="城隍阁-东南形胜.jpg"><br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/18/15/32/15/%E5%9F%8E%E9%9A%8D%E9%98%81%E7%9C%8B%E5%BB%B6%E5%AE%89%E8%B7%AF.jpg" alt="城隍阁看延安路.jpg"></p>
+<p>城隍阁。</p>
+<hr>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/18/15/33/25/%E7%81%AB%E7%81%B6.jpg?imageMogr2/thumbnail/500x500" alt="火灶.jpg"></p>
+<p>过年在家烧火灶</p>
+<hr>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/18/15/33/46/%E5%89%AA%E4%BA%86%E7%9F%AD%E5%8F%91.jpg?imageMogr2/thumbnail/500x500" alt="剪了短发.jpg"></p>
+<p>剪了短发，自拍一张。</p>
+<hr>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/18/15/35/8/%E5%A7%90%E5%A7%90%E5%AE%B6%E6%A5%BC%E4%B8%8B%E7%94%B5%E6%A2%AF%E5%8F%A3.jpg?imageMogr2/thumbnail/500x500" alt="姐姐家楼下电梯口.jpg"></p>
+<p>姐姐家楼下电梯口</p>
+<hr>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/18/15/35/35/%E5%90%B4%E5%B1%B1%E5%BA%99%E4%BC%9A%E4%B9%8B%E6%9D%BF%E8%93%9D%E6%A0%B9.jpg" alt="吴山庙会之板蓝根.jpg"></p>
+<p>吴山庙会。板蓝根还能这么吃？</p>
+<hr>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/18/15/36/2/%E6%9D%A8%E5%9C%A3%E5%88%9A%E9%A2%86%E8%AF%81.jpg?imageMogr2/thumbnail/500x500" alt="杨圣刚领证.jpg"></p>
+<p>老同学领证结婚，一块吃了一顿饭</p>
+<hr>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/4/18/15/36/38/%E6%8B%9C%E5%B9%B4%E4%B8%AD.jpg" alt="拜年中.jpg"></p>
+<p>亲戚家拜年</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>本来打算把这个博客打造成编程技术博客，但无奈近期没什么心思研究编程。最近手机老是报容量不够，删了一些不常用的APP也没用，才发现照片太多，于是清理出来传到新浪博客相册，又挑一部分放这里。</p>]]>
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://lovenight.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="瞬间" scheme="http://lovenight.github.io/categories/%E9%9A%8F%E7%AC%94/%E7%9E%AC%E9%97%B4/"/>
     
   </entry>
   

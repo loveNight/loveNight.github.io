@@ -300,6 +300,498 @@
             
               
                 
+                <a class="post-title-link" href="/2015/12/08/Android真机调试时DDMS无法查看-data目录/" itemprop="url">
+                  Android真机调试时DDMS无法查看/data目录
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-12-08T16:38:16+08:00" content="2015-12-08">
+              2015-12-08
+            </time>
+          </span>
+
+          
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/编程/" itemprop="url" rel="index">
+                    <span itemprop="name">编程</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/编程/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/12/08/Android真机调试时DDMS无法查看-data目录/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/08/Android真机调试时DDMS无法查看-data目录/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <h1 id="问题与解决方法">问题与解决方法</h1><p>如题。<code>/data</code>的文件权限是<code>drwxrwx--x</code>。</p>
+<ul>
+<li>第一位d代表文件类型，d是directory目录；</li>
+<li>后三位rwx代表创建者的权限，r读，w写，x执行</li>
+<li>再后三rwx位代表同组者的权限</li>
+<li>最后三位–x是其他人的权限，这里只有x执行，将它改成rwx即可。</li>
+</ul>
+<p>在cmd中运行adb命令</p>
+<pre><code>adb <span class="keyword">shell</span> <span class="keyword">su</span> -c <span class="string">"chmod 777 /data"</span>
+</code></pre><p>子目录需要使用同样的命令修改权限才可操作。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/12/08/Android真机调试时DDMS无法查看-data目录/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+
+
+
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/12/06/自占与王DY相亲发展如何/" itemprop="url">
+                  自占此次相亲结果如何
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-12-06T18:43:34+08:00" content="2015-12-06">
+              2015-12-06
+            </time>
+          </span>
+
+          
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/术数/" itemprop="url" rel="index">
+                    <span itemprop="name">术数</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/术数/六爻/" itemprop="url" rel="index">
+                    <span itemprop="name">六爻</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/12/06/自占与王DY相亲发展如何/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/06/自占与王DY相亲发展如何/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>过段时间与西后里的王DY见面，自占将来会不会有发展。</p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/12/6/18/46/3/%E4%B8%8E%E7%8E%8BDY%E6%9C%89%E6%B2%A1%E6%9C%89%E5%8F%91%E5%B1%95.jpg" alt="与王DY有没有发展.jpg"></p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/12/06/自占与王DY相亲发展如何/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+
+
+
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/12/01/bat拖曳获取文件信息/" itemprop="url">
+                  bat拖曳获取文件信息
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-12-01T00:19:51+08:00" content="2015-12-01">
+              2015-12-01
+            </time>
+          </span>
+
+          
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/编程/" itemprop="url" rel="index">
+                    <span itemprop="name">编程</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/编程/bat/" itemprop="url" rel="index">
+                    <span itemprop="name">bat</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/12/01/bat拖曳获取文件信息/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/01/bat拖曳获取文件信息/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>有时候我们需要使用命令行处理文件，需要定期、多次重复时，手动输入或者复制粘贴路径和文件名效率非常低下。此时可以使用bat命令减轻工作量。</p>
+<p>bat是Windows下的批处理文件，每一行都是一条DOS命令。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/12/01/bat拖曳获取文件信息/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+
+
+
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/11/30/翻墙三策/" itemprop="url">
+                  翻墙三策
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-11-30T16:44:18+08:00" content="2015-11-30">
+              2015-11-30
+            </time>
+          </span>
+
+          
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/实用/" itemprop="url" rel="index">
+                    <span itemprop="name">实用</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/实用/翻墙/" itemprop="url" rel="index">
+                    <span itemprop="name">翻墙</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/11/30/翻墙三策/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/30/翻墙三策/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p><blockquote class="blockquote-center">将仲子兮，无逾我墙，无折我树桑。岂敢爱之？畏我诸兄。——《国风·郑风·将仲子》</blockquote><br>天朝早早建了高墙，将不少网站挡在墙外。有段时间也对外面的世界非常好奇，正好邮箱里时不时收到的反动邮件都会送一张梯子，看了看，墙外也没什么新鲜好玩的事物。</p>
+<p>接触编程之后经常要上各种国外网站，Google更是不可缺少的工具，准备一张梯子非常重要。Go-Agent风评不错，但是步骤繁琐，令人望而却步。目前找到这三种梯子：</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/11/30/翻墙三策/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+
+
+
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2015/11/30/Wifi连接Android真机调试/" itemprop="url">
                   Wifi连接Android真机调试
                 </a>
@@ -1012,492 +1504,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/11/17/拖曳文件上传到七牛的脚本/" itemprop="url">
-                  拖曳文件上传到七牛的Python脚本
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-11-17T20:23:45+08:00" content="2015-11-17">
-              2015-11-17
-            </time>
-          </span>
-
-          
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/编程/" itemprop="url" rel="index">
-                    <span itemprop="name">编程</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/编程/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/11/17/拖曳文件上传到七牛的脚本/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/17/拖曳文件上传到七牛的脚本/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>一直用<a href="http://www.qiniu.com/">七牛云存储</a>当图床，每次写博客需要插入图片时，都是打开网页手动上传，然后复制网址到文章中，图片多的时候就非常不方便。七牛虽然提供了上传工具，但是并没有反馈上传后的文件网址。于是自己写了一个。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/17/拖曳文件上传到七牛的脚本/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-
-
-
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/11/17/NexT主题生成的index-html只显示一篇文章的解决办法/" itemprop="url">
-                  NexT主题生成的index.html只显示一篇文章的解决办法
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-11-17T15:46:12+08:00" content="2015-11-17">
-              2015-11-17
-            </time>
-          </span>
-
-          
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/编程/" itemprop="url" rel="index">
-                    <span itemprop="name">编程</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/编程/hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">hexo</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/11/17/NexT主题生成的index-html只显示一篇文章的解决办法/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/17/NexT主题生成的index-html只显示一篇文章的解决办法/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>今天发现hexo博客public文件夹下的index.html只能显示最近的一篇文章。<code>hexo s</code>本地预览能正常显示，但是<code>hexo d</code>部署到服务器上，首页却只有最新的一篇文章。<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/17/NexT主题生成的index-html只显示一篇文章的解决办法/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-
-
-
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/11/17/Python笔记之subprocess——子进程模块/" itemprop="url">
-                  Python笔记之subprocess——子进程模块
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-11-17T00:09:31+08:00" content="2015-11-17">
-              2015-11-17
-            </time>
-          </span>
-
-          
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/编程/" itemprop="url" rel="index">
-                    <span itemprop="name">编程</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/编程/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/11/17/Python笔记之subprocess——子进程模块/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/17/Python笔记之subprocess——子进程模块/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>subprocess最早在2.4版本引入，用来代替多个旧模块和函数:</p>
-<blockquote>
-<p>os.system<br>os.open<br>os.spawn<em><br>os.popen</em><br>popen2.<em><br>commands.</em></p>
-</blockquote>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/17/Python笔记之subprocess——子进程模块/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-
-
-
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/11/16/Python-3-安装第三方库时出现编译错误/" itemprop="url">
-                  Python 3 安装第三方库时出现编译错误
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-11-16T13:59:56+08:00" content="2015-11-16">
-              2015-11-16
-            </time>
-          </span>
-
-          
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/编程/" itemprop="url" rel="index">
-                    <span itemprop="name">编程</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/编程/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/11/16/Python-3-安装第三方库时出现编译错误/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/16/Python-3-安装第三方库时出现编译错误/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>命令行安装 numpy</p>
-<pre><code>pip <span class="keyword">install</span> numpy
-</code></pre><p>出现如下错误：<br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/%E7%BC%96%E7%A8%8B/Python/Python%203%20%E5%AE%89%E8%A3%85%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E6%97%B6%E5%87%BA%E7%8E%B0%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF/numpy%E5%AE%89%E8%A3%85%E5%87%BA%E9%94%99.jpg" alt=""></p>
-<p>Python的部分库在安装时要临时编译，找不到编译器就报错。类似的库还有lxml等。根据提示装了Visual C++ 10.0 仍然报错。微软的网站上只找到 Python 2.7 用的VC编译器（我是Python 3.4）。经过一番搜索终于解决。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/16/Python-3-安装第三方库时出现编译错误/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-
-
-
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
 
   </section>
 
@@ -1544,21 +1550,21 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">36</span>
+              <span class="site-state-item-count">40</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">21</span>
+              <span class="site-state-item-count">23</span>
               <span class="site-state-item-name">分类</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">63</span>
+              <span class="site-state-item-count">65</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
