@@ -2366,7 +2366,7 @@ RecursionError: maximum recursion depth exceeded
     <link href="http://lovenight.github.io/2015/11/10/Hexo-3-1-1-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/"/>
     <id>http://lovenight.github.io/2015/11/10/Hexo-3-1-1-静态博客搭建指南/</id>
     <published>2015-11-10T06:46:41.000Z</published>
-    <updated>2016-08-12T01:08:50.765Z</updated>
+    <updated>2016-09-20T04:10:56.593Z</updated>
     <content type="html"><![CDATA[<p><strong>注意，本文适用于hexo 3.x 版本，与2.x略有出入！</strong></p>
 <p>GitHub Pages 本用于介绍托管在 GitHub 的项目，也可以用来搭建博客，有300M免费空间。</p>
 <p>hexo是一个基于Node.js的静态博客程序，可以方便的生成静态网页托管在github和Heroku上。作者是来自台湾的<a href="https://github.com/hexojs/hexo" target="_blank" rel="external">tommy351</a>。<br>优势：</p>
@@ -2478,6 +2478,7 @@ hexo <span class="keyword">n</span> == hexo new # 写文章
 </li>
 </ul>
 <h2 id="更换主题">更换主题</h2><p>默认主题太丑，换成<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">NexT</a>主题。</p>
+<p><strong>注意：此文使用的是NexT.Mist主题。</strong></p>
 <ul>
 <li>安装：在博客根目录下执行<code>git clone https://github.com/iissnan/hexo-theme-next.git themes/next</code>。</li>
 <li>启用：修改博客根目录下的<code>_config.yml</code>配置文件中的<code>theme</code>属性，将其设置为<code>next</code>。</li>
