@@ -2,9 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     
+    
   <url>
     <loc>http://lovenight.github.io/2015/11/10/Hexo-3-1-1-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/</loc>
-    <lastmod>2016-09-20T04:48:00.296Z</lastmod>
+    <lastmod>2016-09-20T07:09:35.250Z</lastmod>
     <data>
         <display>
         <title>Hexo 3.1.1 静态博客搭建指南</title>
@@ -84,7 +85,6 @@
     </data>
     </url>
 
-    
     
     
   <url>
@@ -797,7 +797,6 @@
     </data>
     </url>
 
-    
     
   <url>
     <loc>http://lovenight.github.io/2015/11/25/Python-%E5%8F%91%E6%96%B0%E6%B5%AA%E5%BE%AE%E5%8D%9A%E7%9A%84%E8%84%9A%E6%9C%AC/</loc>

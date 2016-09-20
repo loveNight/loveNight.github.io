@@ -126,7 +126,7 @@ Git Community Book 中文版：汇聚了Git社区的很多精华,
 工具
 正则表达式工具ExpressoRegexBuddy
 翻墙Hosts文件自动配置工具 软件及数据包下载ShadowSoc">
-<meta property="og:updated_time" content="2016-09-19T05:58:42.562Z">
+<meta property="og:updated_time" content="2016-09-20T07:23:29.343Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Links">
 <meta name="twitter:description" content="常用链接
@@ -158,8 +158,8 @@ Git Community Book 中文版：汇聚了Git社区的很多精华,
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: 0,
-      author: '博主'
+      userId: 14198272,
+      author: 'Author'
     }
   };
 </script>
@@ -297,16 +297,6 @@ Git Community Book 中文版：汇聚了Git社区的很多精华,
         </li>
       
         
-        <li class="menu-item menu-item-api">
-          <a href="/API" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-plug"></i> <br />
-            
-            API
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-notes">
           <a href="/Notes" rel="section">
             
@@ -418,6 +408,63 @@ Git Community Book 中文版：汇聚了Git社区的很多精华,
 <hr>
 <h1 id="美景">美景</h1><ul>
 <li><a href="http://www.douban.com/people/songlet/photos" target="_blank" rel="external">宋乐天的豆瓣相册</a></li>
+</ul>
+<hr>
+<h1 id="API">API</h1><h2 id="综合型API">综合型API</h2><ul>
+<li><a href="http://www.devstore.cn/" target="_blank" rel="external">DEV Store</a>：开发者服务商店</li>
+<li><a href="http://apistore.baidu.com/" target="_blank" rel="external">API Store</a>：百度出品，但是搜不到下面几个百度API，真是奇怪。</li>
+<li><a href="http://developer.baidu.com/map/index.php?title=car" target="_blank" rel="external">车联网API</a>：功能丰富，可用于手机</li>
+<li><a href="http://developer.baidu.com/map/index.php?title=webapi" target="_blank" rel="external">Web服务API</a>：包含IP定位、公交驾车路线、坐标转换等API</li>
+<li><a href="http://www.k780.com/api" target="_blank" rel="external">k780数据</a></li>
+<li><a href="http://www.apix.cn/" target="_blank" rel="external">apix.cn</a>：粗略浏览了一下，较有用的有汉字转拼音接口</li>
+<li><a href="http://www.91cha.com/" target="_blank" rel="external">91查</a></li>
+<li><a href="https://www.juhe.cn/" target="_blank" rel="external">聚合数据</a></li>
+</ul>
+<h2 id="天气API">天气API</h2><ul>
+<li><p><a href="http://openweather.weather.com.cn/" target="_blank" rel="external">气象局开放平台</a><br>说明：<br>需要注册认证才能使用。<br>未注册可以考虑解析网页：<a href="http://m.weather.com.cn/mweather/101210101.shtml" target="_blank" rel="external">http://m.weather.com.cn/mweather/101210101.shtml</a><br>XML接口根节点： <a href="http://flash.weather.com.cn/wmaps/xml/china.xml" target="_blank" rel="external">http://flash.weather.com.cn/wmaps/xml/china.xml</a><br>XML接口主要作用是递归获取全国几千个县以上单位的城市代码，如：<br>浙江的XML地址为：<a href="http://flash.weather.com.cn/wmaps/xml/zhejiang.xml" target="_blank" rel="external">http://flash.weather.com.cn/wmaps/xml/zhejiang.xml</a><br>杭州的XML地址为：<a href="http://flash.weather.com.cn/wmaps/xml/hangzhou.xml" target="_blank" rel="external">http://flash.weather.com.cn/wmaps/xml/hangzhou.xml</a><br>一次性获取全国+国外主要城市，8763个城市列表信息：<a href="http://mobile.weather.com.cn/js/citylist.xml" target="_blank" rel="external">http://mobile.weather.com.cn/js/citylist.xml</a><br>未来几天天气：<a href="http://m.weather.com.cn/atad/101010100.html" target="_blank" rel="external">http://m.weather.com.cn/atad/101010100.html</a> 若把城市代码换成杭州101210101就变成网页</p>
+</li>
+<li><p>新浪天气：<code>http://php.weather.sina.com.cn/iframe/index/w_cl.php?day=3&amp;city=杭州</code><br>返回如下：</p>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line">(<span class="keyword">function</span>() &#123;</span><br><span class="line">    var w = [];</span><br><span class="line">    w[<span class="string">'杭州'</span>] = [&#123;</span><br><span class="line">        s1: <span class="string">'阵雨'</span>,</span><br><span class="line">        s2: <span class="string">'小雨'</span>,</span><br><span class="line">        f1: <span class="string">'zhenyu'</span>,</span><br><span class="line">        f2: <span class="string">'xiaoyu'</span>,</span><br><span class="line">        t1: <span class="string">'16'</span>,</span><br><span class="line">        t2: <span class="string">'12'</span>,</span><br><span class="line">        p1: <span class="string">'≤3'</span>,</span><br><span class="line">        p2: <span class="string">'≤3'</span>,</span><br><span class="line">        d1: <span class="string">'无持续风向'</span>,</span><br><span class="line">        d2: <span class="string">'东北风'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        s1: <span class="string">'小雨'</span>,</span><br><span class="line">        s2: <span class="string">'阴'</span>,</span><br><span class="line">        f1: <span class="string">'xiaoyu'</span>,</span><br><span class="line">        f2: <span class="string">'yin'</span>,</span><br><span class="line">        t1: <span class="string">'16'</span>,</span><br><span class="line">        t2: <span class="string">'14'</span>,</span><br><span class="line">        p1: <span class="string">'≤3'</span>,</span><br><span class="line">        p2: <span class="string">'≤3'</span>,</span><br><span class="line">        d1: <span class="string">'东北风'</span>,</span><br><span class="line">        d2: <span class="string">'北风'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        s1: <span class="string">'阴'</span>,</span><br><span class="line">        s2: <span class="string">'阴'</span>,</span><br><span class="line">        f1: <span class="string">'yin'</span>,</span><br><span class="line">        f2: <span class="string">'yin'</span>,</span><br><span class="line">        t1: <span class="string">'18'</span>,</span><br><span class="line">        t2: <span class="string">'12'</span>,</span><br><span class="line">        p1: <span class="string">'≤3'</span>,</span><br><span class="line">        p2: <span class="string">'≤3'</span>,</span><br><span class="line">        d1: <span class="string">'北风'</span>,</span><br><span class="line">        d2: <span class="string">'北风'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        s1: <span class="string">'多云'</span>,</span><br><span class="line">        s2: <span class="string">'阴'</span>,</span><br><span class="line">        f1: <span class="string">'duoyun'</span>,</span><br><span class="line">        f2: <span class="string">'yin'</span>,</span><br><span class="line">        t1: <span class="string">'20'</span>,</span><br><span class="line">        t2: <span class="string">'14'</span>,</span><br><span class="line">        p1: <span class="string">'≤3'</span>,</span><br><span class="line">        p2: <span class="string">'≤3'</span>,</span><br><span class="line">        d1: <span class="string">'东南风'</span>,</span><br><span class="line">        d2: <span class="string">'东南风'</span></span><br><span class="line">    &#125;];</span><br><span class="line">    var add = &#123;</span><br><span class="line">        now: <span class="string">'2015-11-12 20:53:01'</span>,</span><br><span class="line">        time: <span class="string">'1447332781'</span>,</span><br><span class="line">        update: <span class="string">'北京时间11月12日17:40更新'</span>,</span><br><span class="line">        error: <span class="string">'0'</span>,</span><br><span class="line">        total: <span class="string">'1'</span></span><br><span class="line">    &#125;;</span><br><span class="line">    window.SWther = &#123;</span><br><span class="line">        w: w,</span><br><span class="line">        add: add</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;)(); //<span class="number">0</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>说明：</p>
+<blockquote>
+<ul>
+<li>s1:白天天气</li>
+<li>s2:夜间天气</li>
+<li>f1:白天天气拼音</li>
+<li>f2:夜间天气拼音</li>
+<li>t1:最高温度</li>
+<li>t2:最低温度</li>
+<li>p1:白天风力</li>
+<li>p2:夜间风力</li>
+<li>d1:白天风向</li>
+<li>d2:夜间风向</li>
+<li>now:现在时间</li>
+<li>time:时间戳</li>
+<li>update:更新时间</li>
+</ul>
+</blockquote>
+<p>天气图片：把天气API获取到的天气标志转换为拼音，比如“多云”，转换为拼音“duoyun“，然后根据下面的规则转换为图片地址</p>
+<blockquote>
+<p>小图（78<em>78）：<br>白天： <a href="http://php.weather.sina.com.cn/images/yb3/78_78/duoyun_0.png" target="_blank" rel="external">http://php.weather.sina.com.cn/images/yb3/78_78/duoyun_0.png</a><br>夜间： <a href="http://php.weather.sina.com.cn/images/yb3/78_78/duoyun_1.png" target="_blank" rel="external">http://php.weather.sina.com.cn/images/yb3/78_78/duoyun_1.png</a><br>大图180</em>180<br>白天：<a href="http://php.weather.sina.com.cn/images/yb3/180_180/duoyun_0.png" target="_blank" rel="external">http://php.weather.sina.com.cn/images/yb3/180_180/duoyun_0.png</a><br> 夜间：<a href="http://php.weather.sina.com.cn/images/yb3/180_180/duoyun_1.png" target="_blank" rel="external">http://php.weather.sina.com.cn/images/yb3/180_180/duoyun_1.png</a></p>
+</blockquote>
+<ul>
+<li><p>随身云天气API：简化版 <a href="http://wthrcdn.etouch.cn/weather_mini?citykey=101210101" target="_blank" rel="external">http://wthrcdn.etouch.cn/weather_mini?citykey=101210101</a><br>详细版 <a href="http://wthrcdn.etouch.cn/WeatherApi?citykey=101210101" target="_blank" rel="external">http://wthrcdn.etouch.cn/WeatherApi?citykey=101210101</a></p>
+</li>
+<li><p><a href="http://pm25.in/" target="_blank" rel="external">PM25.in</a> PM2.5指数，第三方提供pm2.5/pm10环境数据的网站，数据来源于中国国家环境监测中心，其接口使用需要申请KEY</p>
+</li>
+<li><p><a href="http://www.haoservice.com/docs/6" target="_blank" rel="external">Hao Service</a> 天气</p>
+</li>
+</ul>
+<h2 id="其他API">其他API</h2><ul>
+<li>[搜狐IP地址查询]<a href="http://pv.sohu.com/cityjson?ie=utf-8" target="_blank" rel="external">http://pv.sohu.com/cityjson?ie=utf-8</a><br>详细版：<a href="http://txt.go.sohu.com/ip/soip" target="_blank" rel="external">http://txt.go.sohu.com/ip/soip</a></li>
+<li><a href="http://open.weibo.com/wiki/%E5%BE%AE%E5%8D%9AAPI" target="_blank" rel="external">新浪微博</a></li>
+<li><a href="https://github.com/izzyleung/ZhihuDailyPurify/wiki/%E7%9F%A5%E4%B9%8E%E6%97%A5%E6%8A%A5-API-%E5%88%86%E6%9E%90" target="_blank" rel="external">知乎日报</a> 知乎日报</li>
+<li><a href="https://www.anotherhome.net/api/zhihu/" target="_blank" rel="external">另一个知乎日报</a> 返回 XML</li>
+<li><a href="http://developers.douban.com/wiki/?title=tutorial" target="_blank" rel="external">豆瓣</a> 附<a href="http://www.douban.com/service/apidoc/reference/" target="_blank" rel="external">豆瓣API参考手册</a></li>
+<li><a href="http://string2pinyin.sinaapp.com/doc.html" target="_blank" rel="external">中文转拼音</a></li>
+<li><a href="https://msdn.microsoft.com/zh-cn/library/office/dn575425.aspx" target="_blank" rel="external">OneNote API 入门</a></li>
 </ul>
 
     
@@ -726,10 +773,6 @@ Git Community Book 中文版：汇聚了Git社区的很多精华,
     })();
   </script>
 
-  
-    
-    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-    <script src="/js/src/hook-duoshuo.js"></script>
   
 
 
