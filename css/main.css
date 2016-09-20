@@ -1,3 +1,153 @@
+/*博主标记 CSS开始*/
+.sskadmin {
+  background-color: #00a67c !important;
+  border-color: #01b171 !important;
+  border-radius: 4px;
+  padding: 0 5px !important;
+  opacity: 1;
+}
+/*博主标记 CSS结束*/
+/*多说UA开始*/
+span.ua {
+  margin: 0 1px !important;
+  color: #fff !important;
+/*text-transform: Capitalize!important;
+    float: right!important;
+    line-height: 18px!important;*/
+}
+.ua_other.os_other {
+  background-color: #ccc !important;
+  color: #fff;
+  border: 1px solid #bbb !important;
+  border-radius: 4px;
+}
+.ua_ie {
+  background-color: #428bca !important;
+  border-color: #357ebd !important;
+  border-radius: 4px;
+  padding: 0 5px !important;
+}
+.ua_firefox {
+  background-color: #f0ad4e !important;
+  border-color: #eea236 !important;
+  border-radius: 4px;
+  padding: 0 5px !important;
+}
+.ua_maxthon {
+  background-color: #7373b9 !important;
+  border-color: #7373b9 !important;
+  border-radius: 4px;
+  padding: 0 5px !important;
+}
+.ua_ucweb {
+  background-color: #ff740f !important;
+  border-color: #d43f3a !important;
+  border-radius: 4px;
+  padding: 0 5px !important;
+}
+.ua_sogou {
+  background-color: #78ace9 !important;
+  border-color: #4cae4c !important;
+  border-radius: 4px;
+  padding: 0 5px !important;
+}
+.ua_2345explorer {
+  background-color: #2478b8 !important;
+  border-color: #4cae4c !important;
+  border-radius: 4px;
+  padding: 0 5px !important;
+}
+.ua_2345chrome {
+  background-color: #f9d024 !important;
+  border-color: #4cae4c !important;
+  border-radius: 4px;
+  padding: 0 5px !important;
+}
+.ua_mi {
+  background-color: #ff4a00 !important;
+  border-color: #4cae4c !important;
+  border-radius: 4px;
+  padding: 0 5px !important;
+}
+.ua_lbbrowser {
+  background-color: #fc9d2e !important;
+  border-color: #4cae4c !important;
+  border-radius: 4px;
+  padding: 0 5px !important;
+}
+.ua_chrome {
+  background-color: #ee6252 !important;
+  border-color: #4cae4c !important;
+  border-radius: 4px;
+  padding: 0 5px !important;
+}
+.ua_qq {
+  background-color: #3d88a8 !important;
+  border-color: #4cae4c !important;
+  border-radius: 4px;
+  padding: 0 5px !important;
+}
+.ua_apple {
+  background-color: #e95620 !important;
+  border-color: #4cae4c !important;
+  border-radius: 4px;
+  padding: 0 5px !important;
+}
+.ua_opera {
+  background-color: #d9534f !important;
+  border-color: #d43f3a !important;
+  border-radius: 4px;
+  padding: 0 5px !important;
+}
+.os_vista,
+.os_2000,
+.os_windows,
+.os_xp,
+.os_7,
+.os_8,
+.os_8_1 {
+  background-color: #39b3d7 !important;
+  border-color: #46b8da !important;
+  border-radius: 4px;
+  padding: 0 5px !important;
+}
+.os_android {
+  background-color: #98c13d !important;
+  border-color: #01b171 !important;
+  border-radius: 4px;
+  padding: 0 5px !important;
+}
+.os_ubuntu {
+  background-color: #dd4814 !important;
+  border-color: #01b171 !important;
+  border-radius: 4px;
+  padding: 0 5px !important;
+}
+.os_linux {
+  background-color: #3a3a3a !important;
+  border-color: #1f1f1f !important;
+  border-radius: 4px;
+  padding: 0 5px !important;
+}
+.os_mac {
+  background-color: #666 !important;
+  border-color: #1f1f1f !important;
+  border-radius: 4px;
+  padding: 0 5px !important;
+}
+.os_unix {
+  background-color: #060 !important;
+  border-color: #1f1f1f !important;
+  border-radius: 4px;
+  padding: 0 5px !important;
+}
+.os_nokia {
+  background-color: #014485 !important;
+  border-color: #1f1f1f !important;
+  border-radius: 4px;
+  padding: 0 5px !important;
+}
+/*多说UA结束*/
 /* normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif; /* 1 */
@@ -1549,7 +1699,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #1cad0a;
+  background: #73ff40;
 }
 .links-of-blogroll {
   font-size: 13px;
