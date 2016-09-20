@@ -1,5 +1,11 @@
 <!doctype html>
-<html class="theme-next   use-motion ">
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -21,18 +27,45 @@
 
 
 
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
 
-    <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
 
 
 
 <link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="Excel,VBA,Word," />
@@ -46,7 +79,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
 
 
 
@@ -70,27 +103,29 @@ Visual Basic for Applications（VBA）是微软开发出来在其桌面应用程
 
 
 <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Mist',
-    sidebar: 'always',
-    motion: true
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
   };
 </script>
+
+
+
+
+  <link rel="canonical" href="http://lovenight.github.io/2015/12/10/自己写的实用VBA代码合集/"/>
 
   <title> 自己写的实用VBA代码合集 | 岁月如歌 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-  <!--[if lte IE 8]>
-  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
-    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
-           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
-           style='margin-left:auto;margin-right:auto;display: block;'/>
-    </a>
-  </div>
-<![endif]-->
   
 
 
@@ -98,7 +133,16 @@ Visual Basic for Applications（VBA）是微软开发出来在其桌面应用程
 
 
 
-  <div class="container one-column page-post-detail">
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -112,7 +156,7 @@ Visual Basic for Applications（VBA）是微软开发出来在其桌面应用程
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
-  <p class="site-subtitle">莫厌追欢笑语频，寻思离乱好伤神。闲来屈指从头数，得见清平有几人</p>
+  <p class="site-subtitle"></p>
 </div>
 
 <div class="site-nav-toggle">
@@ -127,13 +171,13 @@ Visual Basic for Applications（VBA）是微软开发出来在其桌面应用程
   
 
   
-    <ul id="menu" class="menu menu-left">
+    <ul id="menu" class="menu">
       
         
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
           </a>
@@ -143,7 +187,7 @@ Visual Basic for Applications（VBA）是微软开发出来在其桌面应用程
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
           </a>
@@ -153,7 +197,7 @@ Visual Basic for Applications（VBA）是微软开发出来在其桌面应用程
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
             
-              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
             分类
           </a>
@@ -163,7 +207,7 @@ Visual Basic for Applications（VBA）是微软开发出来在其桌面应用程
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
           </a>
@@ -173,7 +217,7 @@ Visual Basic for Applications（VBA）是微软开发出来在其桌面应用程
         <li class="menu-item menu-item-android">
           <a href="/Android" rel="section">
             
-              <i class="menu-item-icon fa fa-question-circle fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-android"></i> <br />
             
             Android
           </a>
@@ -183,9 +227,9 @@ Visual Basic for Applications（VBA）是微软开发出来在其桌面应用程
         <li class="menu-item menu-item-python">
           <a href="/Python" rel="section">
             
-              <i class="menu-item-icon fa fa-question-circle fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-rocket"></i> <br />
             
-            python
+            Python
           </a>
         </li>
       
@@ -193,7 +237,7 @@ Visual Basic for Applications（VBA）是微软开发出来在其桌面应用程
         <li class="menu-item menu-item-api">
           <a href="/API" rel="section">
             
-              <i class="menu-item-icon fa fa-question-circle fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-plug"></i> <br />
             
             API
           </a>
@@ -203,7 +247,7 @@ Visual Basic for Applications（VBA）是微软开发出来在其桌面应用程
         <li class="menu-item menu-item-notes">
           <a href="/Notes" rel="section">
             
-              <i class="menu-item-icon fa fa-question-circle fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-book"></i> <br />
             
             Notes
           </a>
@@ -213,7 +257,7 @@ Visual Basic for Applications（VBA）是微软开发出来在其桌面应用程
         <li class="menu-item menu-item-links">
           <a href="/Links" rel="section">
             
-              <i class="menu-item-icon fa fa-question-circle fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />
             
             Links
           </a>
@@ -223,7 +267,7 @@ Visual Basic for Applications（VBA）是微软开发出来在其桌面应用程
         <li class="menu-item menu-item-about">
           <a href="/About" rel="section">
             
-              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
             关于
           </a>
@@ -231,6 +275,16 @@ Visual Basic for Applications（VBA）是微软开发出来在其桌面应用程
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="st-search-show-outputs">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
       
     </ul>
   
@@ -238,17 +292,15 @@ Visual Basic for Applications（VBA）是微软开发出来在其桌面应用程
   
     <div class="site-search">
       
-  
   <form class="site-search-form">
-    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
-  </form>
-
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
 
 <script type="text/javascript">
   (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
     (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
     e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
-  })(window,document,'script','/js/st.js','_st');
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
 
   _st('install', 'p1N1m5xSatBPY6xBpi2o','2.0.0');
 </script>
@@ -264,8 +316,9 @@ Visual Basic for Applications（VBA）是微软开发出来在其桌面应用程
 
     <main id="main" class="main">
       <div class="main-inner">
-        <div id="content" class="content">
-          
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
 
   <div id="posts" class="posts-expand">
     
@@ -296,19 +349,22 @@ Visual Basic for Applications（VBA）是微软开发出来在其桌面应用程
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-12-10T13:36:56+08:00" content="2015-12-10">
               2015-12-10
             </time>
           </span>
 
           
-            <span id="busuanzi_container_page_pv">&nbsp;&nbsp;|&nbsp;&nbsp;阅读量 <span id="busuanzi_value_page_pv"></span> 次</span>
-          
-
-          
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/编程/" itemprop="url" rel="index">
@@ -348,18 +404,27 @@ Visual Basic for Applications（VBA）是微软开发出来在其桌面应用程
 
           
 
+          
+          
+
+          
+              &nbsp; | &nbsp;
+              <span class="page-pv"><i class="fa fa-file-o"></i>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+              </span>
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
-        <span itemprop="articleBody"><p>以前工作需要研究过一段时间的VBA，写了一些宏，大大简化了Word和Excel的操作。现整理记录如下，以备不时之需。</p>
+        <p>以前工作需要研究过一段时间的VBA，写了一些宏，大大简化了Word和Excel的操作。现整理记录如下，以备不时之需。</p>
 <p>Visual Basic for Applications（VBA）是微软开发出来在其桌面应用程序中执行通用的自动化(OLE)任务的编程语言。主要能用来扩展Windows的应用程式功能，特别是Microsoft Office软件，如Word、Excel、Access、Powerpoint。在以上程序中按下Alt+F11即可打开VBA专用的IDE，无需额外安装。</p>
 <p>如果不明白一个操作如何用代码实现，可以使用录制宏的功能，手动操作一次，查看宏代码并精简——录制得到的代码包括了大量可以删除的默认设置。</p>
 <p>IDE中将光标定位到某个函数，按下F1可看到该函数的全中文帮助，非常方便。</p>
@@ -378,11 +443,27 @@ Visual Basic for Applications（VBA）是微软开发出来在其桌面应用程
 <h1 id="Excel按指定列升序排列">Excel按指定列升序排列</h1><figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">With</span> wbf.Sort</span><br><span class="line">    .SortFields.Clear</span><br><span class="line">    .SortFields.Add <span class="keyword">Key</span>:=Range(<span class="string">"B1"</span>), SortOn:=xlSortOnValues, <span class="keyword">Order</span>:=xlAscending <span class="comment">'descending，递减。Ascending，递增</span></span><br><span class="line">    .SetRange Range(<span class="string">"A1"</span>).CurrentRegion <span class="comment">'排序区域</span></span><br><span class="line">    .Header = xlGuess <span class="comment">'第一行包含标题</span></span><br><span class="line">    .MatchCase = <span class="literal">False</span> <span class="comment">'不区分大小写</span></span><br><span class="line">    .Orientation = xlTopToBottom</span><br><span class="line">    .SortMethod = xlPinYin</span><br><span class="line">    .Apply</span><br><span class="line"><span class="keyword">End</span> <span class="keyword">With</span></span><br></pre></td></tr></table></figure>
 <h1 id="Excel汇总同目录文件">Excel汇总同目录文件</h1><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">Sub HzWb()</span><br><span class="line">    Dim bt As Range, r As Long, c As Long</span><br><span class="line">    r = 1    '1 是表头的行数</span><br><span class="line">    c = 8    '8 是表头的列数</span><br><span class="line">    Range(Cells(r + 1, "A"), Cells(65536, c)).ClearContents    ' 清除汇总表中原表数据</span><br><span class="line">    Application.ScreenUpdating = False</span><br><span class="line">    Dim FileName As String, wb As Workbook, Erow As Long, fn As String, arr As Variant</span><br><span class="line">    FileName = Dir(ThisWorkbook.Path &amp; "\*.xls") '返回一个Excel文件，可匹配到.xlsx</span><br><span class="line">    Do While FileName &lt;&gt; ""</span><br><span class="line">        If FileName &lt;&gt; ThisWorkbook.Name Then    ' 判断文件是否是本工作簿</span><br><span class="line">            Erow = Range("A1").CurrentRegion.Rows.Count + 1    ' 取得汇总表中第一条空行行号</span><br><span class="line">            fn = ThisWorkbook.Path &amp; "\" &amp; FileName</span><br><span class="line">            Set wb = GetObject(fn)    ' 将fn 代表的工作簿对象赋给变量</span><br><span class="line">            Set sht = wb.Worksheets(1)    ' 汇总的是第1 张工作表</span><br><span class="line">            ' 将数据表中的记录保存在arr 数组里</span><br><span class="line">            arr = sht.Range(sht.Cells(r + 1, "A"), sht.Cells(65536, "B").End(xlUp).Offset(0, 8))</span><br><span class="line">            ' 将数组arr 中的数据写入工作表</span><br><span class="line">            Cells(Erow, "A").Resize(UBound(arr, 1), UBound(arr, 2)) = arr</span><br><span class="line">            wb.Close False</span><br><span class="line">        End If</span><br><span class="line">        FileName = Dir    ' 用Dir 函数取得其他文件名，并赋给变量</span><br><span class="line">    Loop</span><br><span class="line">    Application.ScreenUpdating = True</span><br><span class="line">End Sub</span><br></pre></td></tr></table></figure>
 <h1 id="Excel_将指定数据另存为txt文件">Excel 将指定数据另存为txt文件</h1><figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">'新建一张表用于存放待保存的数据</span></span><br><span class="line"><span class="keyword">Set</span> wbTmp = ThisWorkbook.Worksheets.Add(after:=wb)</span><br><span class="line"></span><br><span class="line"><span class="comment">'复制待保存的数据</span></span><br><span class="line">wb.Cells(<span class="number">2</span> + iJx, <span class="string">"C"</span>).Resize(iSc, <span class="number">1</span>).Copy wbTmp.Cells(<span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">wb.Cells(<span class="number">2</span> + iJx, <span class="string">"R"</span>).Resize(iSc, <span class="number">1</span>).Copy wbTmp.Cells(<span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">'将新表复制出来成为一个单独的文件并另存为txt</span></span><br><span class="line">wbTmp.Copy</span><br><span class="line">ActiveWorkbook.SaveAs FileName:=ThisWorkbook.Path &amp; <span class="string">"\自定义文件名.txt"</span>, FileFormat:=xlText, CreateBackup:=<span class="literal">False</span></span><br><span class="line"></span><br><span class="line"><span class="comment">'关闭上一步出现的新Workbook</span></span><br><span class="line">ActiveWorkbook.Close <span class="literal">False</span></span><br><span class="line"></span><br><span class="line"><span class="comment">'删除原文件中的临时表</span></span><br><span class="line">wbTmp.Delete</span><br></pre></td></tr></table></figure>
-</span>
+
       
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/wechat-qrcode.jpg" alt="loveNight wechat" style="width: 200px; max-width: 100%;"/>
+    <div>我的微信公众号，放一些有趣的内容，不定期更新。</div>
+</div>
 
 
+      
+    </div>
 
+    <div>
+      
+        
+
+      
     </div>
 
     <footer class="post-footer">
@@ -454,12 +535,11 @@ Visual Basic for Applications（VBA）是微软开发出来在其桌面应用程
   </div>
 
 
-        </div>
+          </div>
+          
 
-        
 
-
-        
+          
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2015/12/10/自己写的实用VBA代码合集/"
@@ -469,10 +549,9 @@ Visual Basic for Applications（VBA）是微软开发出来在其桌面应用程
   </div>
 
 
-      </div>
-
-      
+        </div>
         
+          
   
   <div class="sidebar-toggle">
     <div class="sidebar-toggle-line-wrap">
@@ -500,10 +579,12 @@ Visual Basic for Applications（VBA）是微软开发出来在其桌面应用程
 
       <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="/images/avatar.jpg" alt="loveNight" itemprop="image"/>
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="loveNight" />
           <p class="site-author-name" itemprop="name">loveNight</p>
+          <p class="site-description motion-element" itemprop="description">自古求真皆寂寞，唯挑心灯伴夜霭</p>
         </div>
-        <p class="site-description motion-element" itemprop="description">自古求真皆寂寞，唯挑心灯伴夜霭</p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
@@ -512,19 +593,23 @@ Visual Basic for Applications（VBA）是微软开发出来在其桌面应用程
             </a>
           </div>
 
-          <div class="site-state-item site-state-categories">
-            <a href="/categories">
-              <span class="site-state-item-count">23</span>
-              <span class="site-state-item-name">分类</span>
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-name">分类</span>
               </a>
-          </div>
+            </div>
+          
 
-          <div class="site-state-item site-state-tags">
-            <a href="/tags">
-              <span class="site-state-item-count">65</span>
-              <span class="site-state-item-name">标签</span>
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">65</span>
+                <span class="site-state-item-name">标签</span>
               </a>
-          </div>
+            </div>
+          
 
         </nav>
 
@@ -541,42 +626,47 @@ Visual Basic for Applications（VBA）是微软开发出来在其桌面应用程
           
             
               <span class="links-of-author-item">
-                <a href="https://github.com/loveNight" target="_blank">
+                <a href="https://github.com/loveNight" target="_blank" title="Github">
                   
-                    <i class="fa fa-globe"></i> Github
+                    <i class="fa fa-fw fa-globe"></i>
                   
+                  Github
                 </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://weibo.com/p/1005051069913250" target="_blank">
+                <a href="http://weibo.com/p/1005051069913250" target="_blank" title="Weibo">
                   
-                    <i class="fa fa-weibo"></i> Weibo
+                    <i class="fa fa-fw fa-weibo"></i>
                   
+                  Weibo
                 </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="mailto:286242151@qq.com" target="_blank">
+                <a href="mailto:286242151@qq.com" target="_blank" title="Email">
                   
-                    <i class="fa fa-globe"></i> Email
+                    <i class="fa fa-fw fa-globe"></i>
                   
+                  Email
                 </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://segmentfault.com/u/xuxian" target="_blank">
+                <a href="http://segmentfault.com/u/xuxian" target="_blank" title="SegmentFault">
                   
-                    <i class="fa fa-globe"></i> SegmentFault
+                    <i class="fa fa-fw fa-globe"></i>
                   
+                  SegmentFault
                 </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://www.zhihu.com/people/wu-wu-4-90" target="_blank">
+                <a href="http://www.zhihu.com/people/wu-wu-4-90" target="_blank" title="Zhihu">
                   
-                    <i class="fa fa-globe"></i> Zhihu
+                    <i class="fa fa-fw fa-globe"></i>
                   
+                  Zhihu
                 </a>
               </span>
             
@@ -586,32 +676,35 @@ Visual Basic for Applications（VBA）是微软开发出来在其桌面应用程
         
         
 
-        <div class="links-of-author motion-element">
-          
-            <p class="site-author-name">友情链接</p>
-            
-              <span class="links-of-author-item">
-                <a href="http://blog.csdn.net/kinglearnjava" target="_blank">我的CSDN博客</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://blog.sina.com.cn/u/1069913250" target="_blank">我的新浪博客</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://www.tajok.com" target="_blank">韬的博客</a>
-              </span>
-            
-          
-        </div>
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/kinglearnjava" title="我的CSDN博客" target="_blank">我的CSDN博客</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.sina.com.cn/u/1069913250" title="我的新浪博客" target="_blank">我的新浪博客</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.tajok.com" title="韬的博客" target="_blank">韬的博客</a>
+                </li>
+              
+            </ul>
+          </div>
+        
 
       </section>
 
       
         <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc-indicator-top post-toc-indicator">
-            <i class="fa fa-angle-double-up"></i>
-          </div>
           <div class="post-toc">
             
               
@@ -620,9 +713,6 @@ Visual Basic for Applications（VBA）是微软开发出来在其桌面应用程
               <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#遍历所有已打开的word文档"><span class="nav-number">1.</span> <span class="nav-text">遍历所有已打开的word文档</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Word_将目录下所有文档转换为txt，并删除原文档"><span class="nav-number">2.</span> <span class="nav-text">Word 将目录下所有文档转换为txt，并删除原文档</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#获取网页源代码"><span class="nav-number">3.</span> <span class="nav-text">获取网页源代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#汉字编码成URL用的字符串"><span class="nav-number">4.</span> <span class="nav-text">汉字编码成URL用的字符串</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Excel合并相同文件名的单元格，不同文件名的行填充不同的背景色"><span class="nav-number">5.</span> <span class="nav-text">Excel合并相同文件名的单元格，不同文件名的行填充不同的背景色</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#若同目录下不存在某文件夹，则创建"><span class="nav-number">6.</span> <span class="nav-text">若同目录下不存在某文件夹，则创建</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Word替换昨日今日去年之类的字眼"><span class="nav-number">7.</span> <span class="nav-text">Word替换昨日今日去年之类的字眼</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#提取word文档里的图片"><span class="nav-number">8.</span> <span class="nav-text">提取word文档里的图片</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Word_删除新闻中的多余代码和文字"><span class="nav-number">9.</span> <span class="nav-text">Word 删除新闻中的多余代码和文字</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Excel双击则复制单元格内容到剪切板"><span class="nav-number">10.</span> <span class="nav-text">Excel双击则复制单元格内容到剪切板</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#用对话框打开Excel文件"><span class="nav-number">11.</span> <span class="nav-text">用对话框打开Excel文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Excel按指定列升序排列"><span class="nav-number">12.</span> <span class="nav-text">Excel按指定列升序排列</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Excel汇总同目录文件"><span class="nav-number">13.</span> <span class="nav-text">Excel汇总同目录文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Excel_将指定数据另存为txt文件"><span class="nav-number">14.</span> <span class="nav-text">Excel 将指定数据另存为txt文件</span></a></li></ol></div>
             
           </div>
-          <div class="post-toc-indicator-bottom post-toc-indicator">
-            <i class="fa fa-angle-double-down"></i>
-          </div>
         </section>
       
 
@@ -630,7 +720,8 @@ Visual Basic for Applications（VBA）是微软开发出来在其桌面应用程
   </aside>
 
 
-      
+        
+      </div>
     </main>
 
     <footer id="footer" class="footer">
@@ -640,60 +731,121 @@ Visual Basic for Applications（VBA）是微软开发出来在其桌面应用程
   &copy;  2015 - 
   <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
-    <i class="icon-next-heart fa fa-heart"></i>
+    <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">loveNight
-
-  &nbsp;&nbsp;|&nbsp;&nbsp;<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256738554'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1256738554' type='text/javascript'%3E%3C/script%3E"));</script>
-
-  &nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/sitemap.xml">Google网站地图</a></span>
-  &nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/baidusitemap.xml">百度网站地图</a></span>
-
-  </span>
+  <span class="author" itemprop="copyrightHolder">loveNight</span>
 </div>
 
 <div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
+    NexT.Pisces
   </a>
 </div>
 
+        
 
-&nbsp;&nbsp;|&nbsp;&nbsp;本站总点击 <span id="busuanzi_value_site_pv"></span> 次
-&nbsp;&nbsp;|&nbsp;&nbsp;您是第 <span id="busuanzi_value_site_uv"></span> 位访客
+<div class="busuanzi-count">
 
-<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
-</script>
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<script>
-(function(){
-    var bp = document.createElement('script');
-    bp.src = '//push.zhanzhang.baidu.com/push.js';
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
 
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
 
 
+
+        
       </div>
     </footer>
 
-    <div class="back-to-top"></div>
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
   </div>
 
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
   <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 
   
-  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
-    
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
 
   
     
@@ -705,204 +857,35 @@ Visual Basic for Applications（VBA）是微软开发出来在其桌面应用程
       var ds = document.createElement('script');
       ds.type = 'text/javascript';ds.async = true;
       ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '/js/embed.js';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
       ds.charset = 'UTF-8';
       (document.getElementsByTagName('head')[0]
       || document.getElementsByTagName('body')[0]).appendChild(ds);
     })();
   </script>
+
+  
     
-     
-
-
-    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
   
 
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
 
 
-  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
-<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
-
-<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
 
 
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
   
-<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
 
+  
 
-<script type="text/javascript" id="sidebar.toc.highlight">
-  $(document).ready(function () {
-    var tocSelector = '.post-toc';
-    var $tocSelector = $(tocSelector);
-    var activeCurrentSelector = '.active-current';
+  
 
-    $tocSelector
-      .on('activate.bs.scrollspy', function () {
-        var $currentActiveElement = $(tocSelector + ' .active').last();
-
-        removeCurrentActiveClass();
-        $currentActiveElement.addClass('active-current');
-
-        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
-      })
-      .on('clear.bs.scrollspy', function () {
-        removeCurrentActiveClass();
-      });
-
-    function removeCurrentActiveClass () {
-      $(tocSelector + ' ' + activeCurrentSelector)
-        .removeClass(activeCurrentSelector.substring(1));
-    }
-
-    function processTOC () {
-      getTOCMaxHeight();
-      toggleTOCOverflowIndicators();
-    }
-
-    function getTOCMaxHeight () {
-      var height = $('.sidebar').height() -
-                   $tocSelector.position().top -
-                   $('.post-toc-indicator-bottom').height();
-
-      $tocSelector.css('height', height);
-
-      return height;
-    }
-
-    function toggleTOCOverflowIndicators () {
-      tocOverflowIndicator(
-        '.post-toc-indicator-top',
-        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
-      );
-
-      tocOverflowIndicator(
-        '.post-toc-indicator-bottom',
-        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
-      )
-    }
-
-    $(document).on('sidebar.motion.complete', function () {
-      processTOC();
-    });
-
-    $('body').scrollspy({ target: tocSelector });
-    $(window).on('resize', function () {
-      if ( $('.sidebar').hasClass('sidebar-active') ) {
-        processTOC();
-      }
-    });
-
-    onScroll($tocSelector);
-
-    function onScroll (element) {
-      element.on('mousewheel DOMMouseScroll', function (event) {
-          var oe = event.originalEvent;
-          var delta = oe.wheelDelta || -oe.detail;
-
-          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
-          event.preventDefault();
-
-          toggleTOCOverflowIndicators();
-      });
-    }
-
-    function tocOverflowIndicator (indicator, action) {
-      var $indicator = $(indicator);
-      var opacity = action === 'show' ? 1 : 0;
-      $indicator.velocity ?
-        $indicator.velocity('stop').velocity({
-          opacity: opacity
-        }, { duration: 100 }) :
-        $indicator.stop().animate({
-          opacity: opacity
-        }, 100);
-    }
-
-  });
+  
+<script type="text/javascript" async src="//push.zhanzhang.baidu.com/push.js">
 </script>
 
-<script type="text/javascript" id="sidebar.nav">
-  $(document).ready(function () {
-    var html = $('html');
-    var TAB_ANIMATE_DURATION = 200;
-    var hasVelocity = $.isFunction(html.velocity);
-
-    $('.sidebar-nav li').on('click', function () {
-      var item = $(this);
-      var activeTabClassName = 'sidebar-nav-active';
-      var activePanelClassName = 'sidebar-panel-active';
-      if (item.hasClass(activeTabClassName)) {
-        return;
-      }
-
-      var currentTarget = $('.' + activePanelClassName);
-      var target = $('.' + item.data('target'));
-
-      hasVelocity ?
-        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
-          target
-            .velocity('stop')
-            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
-            .addClass(activePanelClassName);
-        }) :
-        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
-          currentTarget.hide();
-          target
-            .stop()
-            .css({'opacity': 0, 'display': 'block'})
-            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
-              currentTarget.removeClass(activePanelClassName);
-              target.addClass(activePanelClassName);
-            });
-        });
-
-      item.siblings().removeClass(activeTabClassName);
-      item.addClass(activeTabClassName);
-    });
-
-    $('.post-toc a').on('click', function (e) {
-      e.preventDefault();
-      var targetSelector = escapeSelector(this.getAttribute('href'));
-      var offset = $(targetSelector).offset().top;
-      hasVelocity ?
-        html.velocity('stop').velocity('scroll', {
-          offset: offset  + 'px',
-          mobileHA: false
-        }) :
-        $('html, body').stop().animate({
-          scrollTop: offset
-        }, 500);
-    });
-
-    // Expand sidebar on post detail page by default, when post has a toc.
-    motionMiddleWares.sidebar = function () {
-      var $tocContent = $('.post-toc-content');
-      if (CONFIG.sidebar === 'post' || CONFIG.sidebar === 'always') {
-        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
-          displaySidebar();
-        }
-      }
-    };
-  });
-</script>
-
-
-
-  <script type="text/javascript" src="/js/bootstrap.js"></script>
-
-  
-  
-
-  
-  
 
 </body>
 </html>

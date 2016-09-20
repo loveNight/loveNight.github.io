@@ -1,5 +1,11 @@
 <!doctype html>
-<html class="theme-next   use-motion ">
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -21,18 +27,45 @@
 
 
 
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
 
-    <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
 
 
 
 <link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="loveNight, Android, Python, 神锋" />
@@ -46,7 +79,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
 
 
 
@@ -66,29 +99,29 @@
 
 
 <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Mist',
-    sidebar: 'always',
-    motion: true
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
   };
 </script>
 
-  <title>
-  loveNight, Android, Python, 神锋 - 岁月如歌 - 自古求真皆寂寞，唯挑心灯伴夜霭
-</title>
+
+
+
+  <link rel="canonical" href="http://lovenight.github.io/page/4/"/>
+
+  <title> 岁月如歌 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-  <!--[if lte IE 8]>
-  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
-    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
-           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
-           style='margin-left:auto;margin-right:auto;display: block;'/>
-    </a>
-  </div>
-<![endif]-->
   
 
 
@@ -96,9 +129,18 @@
 
 
 
-  <div class="container one-column 
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left 
    page-home 
-">
+ ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -112,7 +154,7 @@
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
-  <p class="site-subtitle">莫厌追欢笑语频，寻思离乱好伤神。闲来屈指从头数，得见清平有几人</p>
+  <p class="site-subtitle"></p>
 </div>
 
 <div class="site-nav-toggle">
@@ -127,13 +169,13 @@
   
 
   
-    <ul id="menu" class="menu menu-left">
+    <ul id="menu" class="menu">
       
         
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
           </a>
@@ -143,7 +185,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
           </a>
@@ -153,7 +195,7 @@
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
             
-              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
             分类
           </a>
@@ -163,7 +205,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
           </a>
@@ -173,7 +215,7 @@
         <li class="menu-item menu-item-android">
           <a href="/Android" rel="section">
             
-              <i class="menu-item-icon fa fa-question-circle fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-android"></i> <br />
             
             Android
           </a>
@@ -183,9 +225,9 @@
         <li class="menu-item menu-item-python">
           <a href="/Python" rel="section">
             
-              <i class="menu-item-icon fa fa-question-circle fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-rocket"></i> <br />
             
-            python
+            Python
           </a>
         </li>
       
@@ -193,7 +235,7 @@
         <li class="menu-item menu-item-api">
           <a href="/API" rel="section">
             
-              <i class="menu-item-icon fa fa-question-circle fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-plug"></i> <br />
             
             API
           </a>
@@ -203,7 +245,7 @@
         <li class="menu-item menu-item-notes">
           <a href="/Notes" rel="section">
             
-              <i class="menu-item-icon fa fa-question-circle fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-book"></i> <br />
             
             Notes
           </a>
@@ -213,7 +255,7 @@
         <li class="menu-item menu-item-links">
           <a href="/Links" rel="section">
             
-              <i class="menu-item-icon fa fa-question-circle fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />
             
             Links
           </a>
@@ -223,7 +265,7 @@
         <li class="menu-item menu-item-about">
           <a href="/About" rel="section">
             
-              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
             关于
           </a>
@@ -231,6 +273,16 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="st-search-show-outputs">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
       
     </ul>
   
@@ -238,17 +290,15 @@
   
     <div class="site-search">
       
-  
   <form class="site-search-form">
-    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
-  </form>
-
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
 
 <script type="text/javascript">
   (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
     (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
     e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
-  })(window,document,'script','/js/st.js','_st');
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
 
   _st('install', 'p1N1m5xSatBPY6xBpi2o','2.0.0');
 </script>
@@ -264,20 +314,10 @@
 
     <main id="main" class="main">
       <div class="main-inner">
-        <div id="content" class="content">
-          
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
   <section id="posts" class="posts-expand">
-
-    
-
-    
-    
-      
-      
-
-      
-    
-
     
       
 
@@ -310,17 +350,22 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-11-17T20:23:45+08:00" content="2015-11-17">
               2015-11-17
             </time>
           </span>
 
           
-
-          
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/编程/" itemprop="url" rel="index">
@@ -360,12 +405,16 @@
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
@@ -374,15 +423,20 @@
         
           <p>一直用<a href="http://www.qiniu.com/">七牛云存储</a>当图床，每次写博客需要插入图片时，都是打开网页手动上传，然后复制网址到文章中，图片多的时候就非常不方便。七牛虽然提供了上传工具，但是并没有反馈上传后的文件网址。于是自己写了一个。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/17/拖曳文件上传到七牛的脚本/#more" rel="contents">
+            <a class="btn" href="/2015/11/17/拖曳文件上传到七牛的脚本/" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
       
+    </div>
 
+    <div>
+      
+    </div>
 
-
+    <div>
+      
     </div>
 
     <footer class="post-footer">
@@ -430,17 +484,22 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-11-17T15:46:12+08:00" content="2015-11-17">
               2015-11-17
             </time>
           </span>
 
           
-
-          
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/编程/" itemprop="url" rel="index">
@@ -480,12 +539,16 @@
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
@@ -494,15 +557,20 @@
         
           <p>今天发现hexo博客public文件夹下的index.html只能显示最近的一篇文章。<code>hexo s</code>本地预览能正常显示，但是<code>hexo d</code>部署到服务器上，首页却只有最新的一篇文章。<br>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/17/NexT主题生成的index-html只显示一篇文章的解决办法/#more" rel="contents">
+            <a class="btn" href="/2015/11/17/NexT主题生成的index-html只显示一篇文章的解决办法/" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
       
+    </div>
 
+    <div>
+      
+    </div>
 
-
+    <div>
+      
     </div>
 
     <footer class="post-footer">
@@ -550,17 +618,22 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-11-17T00:09:31+08:00" content="2015-11-17">
               2015-11-17
             </time>
           </span>
 
           
-
-          
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/编程/" itemprop="url" rel="index">
@@ -600,12 +673,16 @@
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
@@ -617,15 +694,20 @@
 <p>os.system<br>os.open<br>os.spawn<em><br>os.popen</em><br>popen2.<em><br>commands.</em></p>
 </blockquote>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/17/Python笔记之subprocess——子进程模块/#more" rel="contents">
+            <a class="btn" href="/2015/11/17/Python笔记之subprocess——子进程模块/" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
       
+    </div>
 
+    <div>
+      
+    </div>
 
-
+    <div>
+      
     </div>
 
     <footer class="post-footer">
@@ -673,17 +755,22 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-11-16T13:59:56+08:00" content="2015-11-16">
               2015-11-16
             </time>
           </span>
 
           
-
-          
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/编程/" itemprop="url" rel="index">
@@ -723,12 +810,16 @@
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
@@ -740,15 +831,20 @@
 </code></pre><p>出现如下错误：<br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/%E7%BC%96%E7%A8%8B/Python/Python%203%20%E5%AE%89%E8%A3%85%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E6%97%B6%E5%87%BA%E7%8E%B0%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF/numpy%E5%AE%89%E8%A3%85%E5%87%BA%E9%94%99.jpg" alt=""></p>
 <p>Python的部分库在安装时要临时编译，找不到编译器就报错。类似的库还有lxml等。根据提示装了Visual C++ 10.0 仍然报错。微软的网站上只找到 Python 2.7 用的VC编译器（我是Python 3.4）。经过一番搜索终于解决。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/16/Python-3-安装第三方库时出现编译错误/#more" rel="contents">
+            <a class="btn" href="/2015/11/16/Python-3-安装第三方库时出现编译错误/" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
       
+    </div>
 
+    <div>
+      
+    </div>
 
-
+    <div>
+      
     </div>
 
     <footer class="post-footer">
@@ -796,17 +892,22 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-11-15T18:58:36+08:00" content="2015-11-15">
               2015-11-15
             </time>
           </span>
 
           
-
-          
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/编程/" itemprop="url" rel="index">
@@ -846,12 +947,16 @@
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
@@ -861,15 +966,20 @@
           <p>今天来搜一搜「他」：<a href="http://www.baidu.com/s?wd=%E9%95%BF%E8%80%85%E8%9B%A4&amp;tn=87048150_dg&amp;ie=utf8">百度图片搜索结果</a>。<br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/%E7%BC%96%E7%A8%8B/Python/Python%203%20%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B8%8B%E8%BD%BD%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87%E6%90%9C%E7%B4%A2%E7%BB%93%E6%9E%9C%E4%BB%96.png" alt="搜索结果"></p>
 <h2 id="下载简单页面">下载简单页面</h2><p>查看网页源码，发现同一张图片有四种网址：</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/15/Python-3-多线程下载百度图片搜索结果/#more" rel="contents">
+            <a class="btn" href="/2015/11/15/Python-3-多线程下载百度图片搜索结果/" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
       
+    </div>
 
+    <div>
+      
+    </div>
 
-
+    <div>
+      
     </div>
 
     <footer class="post-footer">
@@ -917,17 +1027,22 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-11-14T23:30:23+08:00" content="2015-11-14">
               2015-11-14
             </time>
           </span>
 
           
-
-          
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/编程/" itemprop="url" rel="index">
@@ -967,12 +1082,16 @@
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
@@ -982,15 +1101,20 @@
           <p>晚上忽然想到个问题，解析Json数据，用正则式和json包，哪个更快？</p>
 <p>写了段代码测试：</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/14/Python-3-json与正则式解析速度测试/#more" rel="contents">
+            <a class="btn" href="/2015/11/14/Python-3-json与正则式解析速度测试/" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
       
+    </div>
 
+    <div>
+      
+    </div>
 
-
+    <div>
+      
     </div>
 
     <footer class="post-footer">
@@ -1038,17 +1162,22 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-11-12T19:54:47+08:00" content="2015-11-12">
               2015-11-12
             </time>
           </span>
 
           
-
-          
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/编程/" itemprop="url" rel="index">
@@ -1088,12 +1217,16 @@
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
@@ -1110,15 +1243,20 @@
 RecursionError: maximum recursion depth exceeded
 </code></pre>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/12/Python Queue的RecursionError解决办法/#more" rel="contents">
+            <a class="btn" href="/2015/11/12/Python Queue的RecursionError解决办法/" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
       
+    </div>
 
+    <div>
+      
+    </div>
 
-
+    <div>
+      
     </div>
 
     <footer class="post-footer">
@@ -1166,17 +1304,22 @@ RecursionError: maximum recursion depth exceeded
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-11-11T21:06:08+08:00" content="2015-11-11">
               2015-11-11
             </time>
           </span>
 
           
-
-          
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/编程/" itemprop="url" rel="index">
@@ -1216,12 +1359,16 @@ RecursionError: maximum recursion depth exceeded
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
@@ -1235,15 +1382,20 @@ RecursionError: maximum recursion depth exceeded
 <li><code>lxml</code> 这个不装没关系，把<code>__login()</code>方法中的<code>lxml</code>改成<code>html.parser</code>即可。</li>
 </ul>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/11/Python模拟登录知乎/#more" rel="contents">
+            <a class="btn" href="/2015/11/11/Python模拟登录知乎/" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
       
+    </div>
 
+    <div>
+      
+    </div>
 
-
+    <div>
+      
     </div>
 
     <footer class="post-footer">
@@ -1291,17 +1443,22 @@ RecursionError: maximum recursion depth exceeded
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-11-10T14:46:41+08:00" content="2015-11-10">
               2015-11-10
             </time>
           </span>
 
           
-
-          
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/编程/" itemprop="url" rel="index">
@@ -1341,12 +1498,16 @@ RecursionError: maximum recursion depth exceeded
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
@@ -1360,15 +1521,20 @@ RecursionError: maximum recursion depth exceeded
 <p>生成静态页面快<br>支持 Markdown<br>兼容于 Windows, Mac &amp; Linux<br>部署方便。日常使用仅需五个命令。<br>高扩展性、自订性，文件少、小，易理解</p>
 </blockquote>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/10/Hexo-3-1-1-静态博客搭建指南/#more" rel="contents">
+            <a class="btn" href="/2015/11/10/Hexo-3-1-1-静态博客搭建指南/" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
       
+    </div>
 
+    <div>
+      
+    </div>
 
-
+    <div>
+      
     </div>
 
     <footer class="post-footer">
@@ -1416,17 +1582,22 @@ RecursionError: maximum recursion depth exceeded
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-11-09T15:56:26+08:00" content="2015-11-09">
               2015-11-09
             </time>
           </span>
 
           
-
-          
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/随笔/" itemprop="url" rel="index">
@@ -1466,12 +1637,16 @@ RecursionError: maximum recursion depth exceeded
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
@@ -1482,15 +1657,20 @@ RecursionError: maximum recursion depth exceeded
 <p>稍后把此次博客搭建心得整理好发出来。</p>
 <p>以前用新浪的博客，可惜不支持代码块和Markdown，主题近十年没怎么变化，三天两头收到无聊的纸条、转发消息。后来转战CSDN，主题和Markdown非常丑，右上角定期出现广告，没法取消。有次还无故封了博客，找管理员询问得知是误操作。试了博客园，后台有无用的新闻、文章、日志分类，无法取消，默认的代码块不显示行数，Markdown比CSDN还丑。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/09/HelloWorld/#more" rel="contents">
+            <a class="btn" href="/2015/11/09/HelloWorld/" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
       
+    </div>
 
+    <div>
+      
+    </div>
 
-
+    <div>
+      
     </div>
 
     <footer class="post-footer">
@@ -1507,7 +1687,6 @@ RecursionError: maximum recursion depth exceeded
 
 
     
-
   </section>
 
   
@@ -1517,17 +1696,15 @@ RecursionError: maximum recursion depth exceeded
 
 
 
+          </div>
+          
+
+
+          
+
         </div>
-
         
-
-
-        
-
-      </div>
-
-      
-        
+          
   
   <div class="sidebar-toggle">
     <div class="sidebar-toggle-line-wrap">
@@ -1546,10 +1723,12 @@ RecursionError: maximum recursion depth exceeded
 
       <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="/images/avatar.jpg" alt="loveNight" itemprop="image"/>
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="loveNight" />
           <p class="site-author-name" itemprop="name">loveNight</p>
+          <p class="site-description motion-element" itemprop="description">自古求真皆寂寞，唯挑心灯伴夜霭</p>
         </div>
-        <p class="site-description motion-element" itemprop="description">自古求真皆寂寞，唯挑心灯伴夜霭</p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
@@ -1558,19 +1737,23 @@ RecursionError: maximum recursion depth exceeded
             </a>
           </div>
 
-          <div class="site-state-item site-state-categories">
-            <a href="/categories">
-              <span class="site-state-item-count">23</span>
-              <span class="site-state-item-name">分类</span>
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-name">分类</span>
               </a>
-          </div>
+            </div>
+          
 
-          <div class="site-state-item site-state-tags">
-            <a href="/tags">
-              <span class="site-state-item-count">65</span>
-              <span class="site-state-item-name">标签</span>
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">65</span>
+                <span class="site-state-item-name">标签</span>
               </a>
-          </div>
+            </div>
+          
 
         </nav>
 
@@ -1587,42 +1770,47 @@ RecursionError: maximum recursion depth exceeded
           
             
               <span class="links-of-author-item">
-                <a href="https://github.com/loveNight" target="_blank">
+                <a href="https://github.com/loveNight" target="_blank" title="Github">
                   
-                    <i class="fa fa-globe"></i> Github
+                    <i class="fa fa-fw fa-globe"></i>
                   
+                  Github
                 </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://weibo.com/p/1005051069913250" target="_blank">
+                <a href="http://weibo.com/p/1005051069913250" target="_blank" title="Weibo">
                   
-                    <i class="fa fa-weibo"></i> Weibo
+                    <i class="fa fa-fw fa-weibo"></i>
                   
+                  Weibo
                 </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="mailto:286242151@qq.com" target="_blank">
+                <a href="mailto:286242151@qq.com" target="_blank" title="Email">
                   
-                    <i class="fa fa-globe"></i> Email
+                    <i class="fa fa-fw fa-globe"></i>
                   
+                  Email
                 </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://segmentfault.com/u/xuxian" target="_blank">
+                <a href="http://segmentfault.com/u/xuxian" target="_blank" title="SegmentFault">
                   
-                    <i class="fa fa-globe"></i> SegmentFault
+                    <i class="fa fa-fw fa-globe"></i>
                   
+                  SegmentFault
                 </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://www.zhihu.com/people/wu-wu-4-90" target="_blank">
+                <a href="http://www.zhihu.com/people/wu-wu-4-90" target="_blank" title="Zhihu">
                   
-                    <i class="fa fa-globe"></i> Zhihu
+                    <i class="fa fa-fw fa-globe"></i>
                   
+                  Zhihu
                 </a>
               </span>
             
@@ -1632,24 +1820,30 @@ RecursionError: maximum recursion depth exceeded
         
         
 
-        <div class="links-of-author motion-element">
-          
-            <p class="site-author-name">友情链接</p>
-            
-              <span class="links-of-author-item">
-                <a href="http://blog.csdn.net/kinglearnjava" target="_blank">我的CSDN博客</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://blog.sina.com.cn/u/1069913250" target="_blank">我的新浪博客</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://www.tajok.com" target="_blank">韬的博客</a>
-              </span>
-            
-          
-        </div>
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/kinglearnjava" title="我的CSDN博客" target="_blank">我的CSDN博客</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.sina.com.cn/u/1069913250" title="我的新浪博客" target="_blank">我的新浪博客</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.tajok.com" title="韬的博客" target="_blank">韬的博客</a>
+                </li>
+              
+            </ul>
+          </div>
+        
 
       </section>
 
@@ -1659,7 +1853,8 @@ RecursionError: maximum recursion depth exceeded
   </aside>
 
 
-      
+        
+      </div>
     </main>
 
     <footer id="footer" class="footer">
@@ -1669,60 +1864,117 @@ RecursionError: maximum recursion depth exceeded
   &copy;  2015 - 
   <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
-    <i class="icon-next-heart fa fa-heart"></i>
+    <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">loveNight
-
-  &nbsp;&nbsp;|&nbsp;&nbsp;<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256738554'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1256738554' type='text/javascript'%3E%3C/script%3E"));</script>
-
-  &nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/sitemap.xml">Google网站地图</a></span>
-  &nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/baidusitemap.xml">百度网站地图</a></span>
-
-  </span>
+  <span class="author" itemprop="copyrightHolder">loveNight</span>
 </div>
 
 <div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
+    NexT.Pisces
   </a>
 </div>
 
+        
 
-&nbsp;&nbsp;|&nbsp;&nbsp;本站总点击 <span id="busuanzi_value_site_pv"></span> 次
-&nbsp;&nbsp;|&nbsp;&nbsp;您是第 <span id="busuanzi_value_site_uv"></span> 位访客
+<div class="busuanzi-count">
 
-<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
-</script>
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<script>
-(function(){
-    var bp = document.createElement('script');
-    bp.src = '//push.zhanzhang.baidu.com/push.js';
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
 
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
 
 
+
+        
       </div>
     </footer>
 
-    <div class="back-to-top"></div>
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
   </div>
 
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
   <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 
   
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
   
 
   
-    
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
 
   
     
@@ -1734,43 +1986,35 @@ RecursionError: maximum recursion depth exceeded
       var ds = document.createElement('script');
       ds.type = 'text/javascript';ds.async = true;
       ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '/js/embed.js';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
       ds.charset = 'UTF-8';
       (document.getElementsByTagName('head')[0]
       || document.getElementsByTagName('body')[0]).appendChild(ds);
     })();
   </script>
+
+  
     
-     
-
-
-    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
   
 
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
 
 
-  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
-<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
-
-<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
 
 
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-
-  <script type="text/javascript" src="/js/bootstrap.js"></script>
 
   
   
 
   
+
   
+
+  
+<script type="text/javascript" async src="//push.zhanzhang.baidu.com/push.js">
+</script>
+
 
 </body>
 </html>

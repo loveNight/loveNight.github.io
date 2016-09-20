@@ -1,5 +1,11 @@
 <!doctype html>
-<html class="theme-next   use-motion ">
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -21,18 +27,45 @@
 
 
 
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
 
-    <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
 
 
 
 <link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="loveNight, Android, Python, 神锋" />
@@ -46,7 +79,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
 
 
 
@@ -66,29 +99,29 @@
 
 
 <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Mist',
-    sidebar: 'always',
-    motion: true
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
   };
 </script>
 
-  <title>
-  loveNight, Android, Python, 神锋 - 岁月如歌 - 自古求真皆寂寞，唯挑心灯伴夜霭
-</title>
+
+
+
+  <link rel="canonical" href="http://lovenight.github.io/page/3/"/>
+
+  <title> 岁月如歌 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-  <!--[if lte IE 8]>
-  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
-    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
-           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
-           style='margin-left:auto;margin-right:auto;display: block;'/>
-    </a>
-  </div>
-<![endif]-->
   
 
 
@@ -96,9 +129,18 @@
 
 
 
-  <div class="container one-column 
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left 
    page-home 
-">
+ ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -112,7 +154,7 @@
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
-  <p class="site-subtitle">莫厌追欢笑语频，寻思离乱好伤神。闲来屈指从头数，得见清平有几人</p>
+  <p class="site-subtitle"></p>
 </div>
 
 <div class="site-nav-toggle">
@@ -127,13 +169,13 @@
   
 
   
-    <ul id="menu" class="menu menu-left">
+    <ul id="menu" class="menu">
       
         
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
           </a>
@@ -143,7 +185,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
           </a>
@@ -153,7 +195,7 @@
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
             
-              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
             分类
           </a>
@@ -163,7 +205,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
           </a>
@@ -173,7 +215,7 @@
         <li class="menu-item menu-item-android">
           <a href="/Android" rel="section">
             
-              <i class="menu-item-icon fa fa-question-circle fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-android"></i> <br />
             
             Android
           </a>
@@ -183,9 +225,9 @@
         <li class="menu-item menu-item-python">
           <a href="/Python" rel="section">
             
-              <i class="menu-item-icon fa fa-question-circle fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-rocket"></i> <br />
             
-            python
+            Python
           </a>
         </li>
       
@@ -193,7 +235,7 @@
         <li class="menu-item menu-item-api">
           <a href="/API" rel="section">
             
-              <i class="menu-item-icon fa fa-question-circle fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-plug"></i> <br />
             
             API
           </a>
@@ -203,7 +245,7 @@
         <li class="menu-item menu-item-notes">
           <a href="/Notes" rel="section">
             
-              <i class="menu-item-icon fa fa-question-circle fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-book"></i> <br />
             
             Notes
           </a>
@@ -213,7 +255,7 @@
         <li class="menu-item menu-item-links">
           <a href="/Links" rel="section">
             
-              <i class="menu-item-icon fa fa-question-circle fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />
             
             Links
           </a>
@@ -223,7 +265,7 @@
         <li class="menu-item menu-item-about">
           <a href="/About" rel="section">
             
-              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
             关于
           </a>
@@ -231,6 +273,16 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="st-search-show-outputs">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
       
     </ul>
   
@@ -238,17 +290,15 @@
   
     <div class="site-search">
       
-  
   <form class="site-search-form">
-    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
-  </form>
-
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
 
 <script type="text/javascript">
   (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
     (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
     e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
-  })(window,document,'script','/js/st.js','_st');
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
 
   _st('install', 'p1N1m5xSatBPY6xBpi2o','2.0.0');
 </script>
@@ -264,20 +314,10 @@
 
     <main id="main" class="main">
       <div class="main-inner">
-        <div id="content" class="content">
-          
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
   <section id="posts" class="posts-expand">
-
-    
-
-    
-    
-      
-      
-
-      
-    
-
     
       
 
@@ -310,17 +350,22 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-12-08T16:38:16+08:00" content="2015-12-08">
               2015-12-08
             </time>
           </span>
 
           
-
-          
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/编程/" itemprop="url" rel="index">
@@ -360,12 +405,16 @@
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
@@ -383,15 +432,20 @@
 <pre><code>adb <span class="keyword">shell</span> <span class="keyword">su</span> -c <span class="string">"chmod 777 /data"</span>
 </code></pre><p>子目录需要使用同样的命令修改权限才可操作。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/08/Android真机调试时DDMS无法查看-data目录/#more" rel="contents">
+            <a class="btn" href="/2015/12/08/Android真机调试时DDMS无法查看-data目录/" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
       
+    </div>
 
+    <div>
+      
+    </div>
 
-
+    <div>
+      
     </div>
 
     <footer class="post-footer">
@@ -439,17 +493,22 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-12-06T18:43:34+08:00" content="2015-12-06">
               2015-12-06
             </time>
           </span>
 
           
-
-          
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/术数/" itemprop="url" rel="index">
@@ -489,12 +548,16 @@
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
@@ -504,15 +567,20 @@
           <p>过段时间与西后里的王DY见面，自占将来会不会有发展。</p>
 <p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/12/6/18/46/3/%E4%B8%8E%E7%8E%8BDY%E6%9C%89%E6%B2%A1%E6%9C%89%E5%8F%91%E5%B1%95.jpg" alt="与王DY有没有发展.jpg"></p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/06/自占与王DY相亲发展如何/#more" rel="contents">
+            <a class="btn" href="/2015/12/06/自占与王DY相亲发展如何/" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
       
+    </div>
 
+    <div>
+      
+    </div>
 
-
+    <div>
+      
     </div>
 
     <footer class="post-footer">
@@ -560,17 +628,22 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-12-01T00:19:51+08:00" content="2015-12-01">
               2015-12-01
             </time>
           </span>
 
           
-
-          
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/编程/" itemprop="url" rel="index">
@@ -610,12 +683,16 @@
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
@@ -625,15 +702,20 @@
           <p>有时候我们需要使用命令行处理文件，需要定期、多次重复时，手动输入或者复制粘贴路径和文件名效率非常低下。此时可以使用bat命令减轻工作量。</p>
 <p>bat是Windows下的批处理文件，每一行都是一条DOS命令。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/01/bat拖曳获取文件信息/#more" rel="contents">
+            <a class="btn" href="/2015/12/01/bat拖曳获取文件信息/" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
       
+    </div>
 
+    <div>
+      
+    </div>
 
-
+    <div>
+      
     </div>
 
     <footer class="post-footer">
@@ -681,17 +763,22 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-11-30T16:44:18+08:00" content="2015-11-30">
               2015-11-30
             </time>
           </span>
 
           
-
-          
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/实用/" itemprop="url" rel="index">
@@ -731,12 +818,16 @@
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
@@ -746,15 +837,20 @@
           <p><blockquote class="blockquote-center">将仲子兮，无逾我墙，无折我树桑。岂敢爱之？畏我诸兄。——《国风·郑风·将仲子》</blockquote><br>天朝早早建了高墙，将不少网站挡在墙外。有段时间也对外面的世界非常好奇，正好邮箱里时不时收到的反动邮件都会送一张梯子，看了看，墙外也没什么新鲜好玩的事物。</p>
 <p>接触编程之后经常要上各种国外网站，Google更是不可缺少的工具，准备一张梯子非常重要。Go-Agent风评不错，但是步骤繁琐，令人望而却步。目前找到这三种梯子：</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/30/翻墙三策/#more" rel="contents">
+            <a class="btn" href="/2015/11/30/翻墙三策/" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
       
+    </div>
 
+    <div>
+      
+    </div>
 
-
+    <div>
+      
     </div>
 
     <footer class="post-footer">
@@ -802,17 +898,22 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-11-30T16:29:43+08:00" content="2015-11-30">
               2015-11-30
             </time>
           </span>
 
           
-
-          
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/编程/" itemprop="url" rel="index">
@@ -852,12 +953,16 @@
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
@@ -867,15 +972,20 @@
           <p>一向使用真机调试，数据线用久了有些接触不良，动作幅度一大，adb就断开链接。再买一根数据线是下下策，干脆买了个360随身Wifi，将手机通过Wifi连上电脑进行调试。没有数据线的牵绊轻松了许多。</p>
 <p>电脑与手机用其他方式连在同一个局域网中也可以使用下面的方法。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/30/Wifi连接Android真机调试/#more" rel="contents">
+            <a class="btn" href="/2015/11/30/Wifi连接Android真机调试/" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
       
+    </div>
 
+    <div>
+      
+    </div>
 
-
+    <div>
+      
     </div>
 
     <footer class="post-footer">
@@ -923,17 +1033,22 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-11-30T10:04:37+08:00" content="2015-11-30">
               2015-11-30
             </time>
           </span>
 
           
-
-          
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/编程/" itemprop="url" rel="index">
@@ -973,12 +1088,16 @@
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
@@ -996,15 +1115,20 @@
 <hr>
 <h1 id="技巧">技巧</h1><p><code>-用户</code>或<code>-User</code>后缀的菜单项，其对应的配置文件都保存在<code>Packages\User</code>文件夹下，将它们上传到Github，便于同步。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/30/我的Sublime-Text-3-配置/#more" rel="contents">
+            <a class="btn" href="/2015/11/30/我的Sublime-Text-3-配置/" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
       
+    </div>
 
+    <div>
+      
+    </div>
 
-
+    <div>
+      
     </div>
 
     <footer class="post-footer">
@@ -1052,17 +1176,22 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-11-28T23:52:06+08:00" content="2015-11-28">
               2015-11-28
             </time>
           </span>
 
           
-
-          
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/随笔/" itemprop="url" rel="index">
@@ -1102,12 +1231,16 @@
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
@@ -1117,15 +1250,20 @@
           <p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/29/4/2/35/%E9%B2%9C%E8%8A%B1.jpg" alt="鲜花.jpg"></p>
 <p>年龄一大，难免要操心终生大事——操心的不是我，而是各路亲戚。我只想着如何避免这些事，老婆孩子是一条枷锁，使自己的下半生不得自由。可惜事与愿违，越来越大的压力，使我很难再坚持这样的做法。母亲身体不好，每次谈及这方面的事，总是说自己这几年还可以帮忙带带小孩，再晚就带不动了。听到心里总感觉无限心酸。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/28/白云外的一阵风/#more" rel="contents">
+            <a class="btn" href="/2015/11/28/白云外的一阵风/" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
       
+    </div>
 
+    <div>
+      
+    </div>
 
-
+    <div>
+      
     </div>
 
     <footer class="post-footer">
@@ -1173,17 +1311,22 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-11-25T13:30:24+08:00" content="2015-11-25">
               2015-11-25
             </time>
           </span>
 
           
-
-          
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/编程/" itemprop="url" rel="index">
@@ -1223,12 +1366,16 @@
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
@@ -1238,15 +1385,20 @@
           <p>在研究完<a href="http://lovenight.github.io/2015/11/23/Python-%E6%A8%A1%E6%8B%9F%E7%99%BB%E5%BD%95%E6%96%B0%E6%B5%AA%E5%BE%AE%E5%8D%9A/">《Python 模拟登录新浪微博的两种方法》</a>后继续捣鼓微博API，发现限制很多。比如查看好友列表只能返回30%，每小时微博、评论、转发数只能十五条。</p>
 <p>前者可能是为了保护自家的微博APP，新浪微博APP的烂是出了名的，什么功能都想做，都想往里塞。以前经常用它刷微博，但是当它的无用功能越来越多之后，渐渐放弃了，顺便连微博也很少上——微博上到处都是转发了N遍的老段子，走了人人网衰落的老路。题外话略去不谈，下面放上目前的研究成果。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/25/Python-发新浪微博的脚本/#more" rel="contents">
+            <a class="btn" href="/2015/11/25/Python-发新浪微博的脚本/" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
       
+    </div>
 
+    <div>
+      
+    </div>
 
-
+    <div>
+      
     </div>
 
     <footer class="post-footer">
@@ -1294,17 +1446,22 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-11-23T19:32:14+08:00" content="2015-11-23">
               2015-11-23
             </time>
           </span>
 
           
-
-          
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/编程/" itemprop="url" rel="index">
@@ -1344,12 +1501,16 @@
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
@@ -1359,15 +1520,20 @@
           <p>最近在学习使用<a href="http://sae.sina.com.cn/">SAE</a>，打算往上面放一个微博抢沙发的脚本，需要登录状态才能使用<a href="http://open.weibo.com/wiki/%E5%BE%AE%E5%8D%9AAPI">微博API</a>。解决方法有两个，一是浏览器登录，手动复制cookie，二是模拟登录。我选择后者。</p>
 <p>网上搜到一份教程，<a href="http://www.jb51.net/article/46053.htm">《python使用rsa加密算法模块模拟新浪微博登录》</a>，非常复杂。对照着做的过程中，自己又找出一个简单的登录方法。两种方法都登录成功，记录如下：</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/23/Python-模拟登录新浪微博/#more" rel="contents">
+            <a class="btn" href="/2015/11/23/Python-模拟登录新浪微博/" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
       
+    </div>
 
+    <div>
+      
+    </div>
 
-
+    <div>
+      
     </div>
 
     <footer class="post-footer">
@@ -1415,17 +1581,22 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-11-22T11:49:21+08:00" content="2015-11-22">
               2015-11-22
             </time>
           </span>
 
           
-
-          
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/随笔/" itemprop="url" rel="index">
@@ -1465,12 +1636,16 @@
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
@@ -1479,15 +1654,20 @@
         
           <blockquote class="blockquote-center">收集一些有趣、有触动的图片，不定期更新</blockquote>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/22/趣图收集/#more" rel="contents">
+            <a class="btn" href="/2015/11/22/趣图收集/" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
       
+    </div>
 
+    <div>
+      
+    </div>
 
-
+    <div>
+      
     </div>
 
     <footer class="post-footer">
@@ -1504,7 +1684,6 @@
 
 
     
-
   </section>
 
   
@@ -1514,17 +1693,15 @@
 
 
 
+          </div>
+          
+
+
+          
+
         </div>
-
         
-
-
-        
-
-      </div>
-
-      
-        
+          
   
   <div class="sidebar-toggle">
     <div class="sidebar-toggle-line-wrap">
@@ -1543,10 +1720,12 @@
 
       <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="/images/avatar.jpg" alt="loveNight" itemprop="image"/>
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="loveNight" />
           <p class="site-author-name" itemprop="name">loveNight</p>
+          <p class="site-description motion-element" itemprop="description">自古求真皆寂寞，唯挑心灯伴夜霭</p>
         </div>
-        <p class="site-description motion-element" itemprop="description">自古求真皆寂寞，唯挑心灯伴夜霭</p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
@@ -1555,19 +1734,23 @@
             </a>
           </div>
 
-          <div class="site-state-item site-state-categories">
-            <a href="/categories">
-              <span class="site-state-item-count">23</span>
-              <span class="site-state-item-name">分类</span>
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-name">分类</span>
               </a>
-          </div>
+            </div>
+          
 
-          <div class="site-state-item site-state-tags">
-            <a href="/tags">
-              <span class="site-state-item-count">65</span>
-              <span class="site-state-item-name">标签</span>
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">65</span>
+                <span class="site-state-item-name">标签</span>
               </a>
-          </div>
+            </div>
+          
 
         </nav>
 
@@ -1584,42 +1767,47 @@
           
             
               <span class="links-of-author-item">
-                <a href="https://github.com/loveNight" target="_blank">
+                <a href="https://github.com/loveNight" target="_blank" title="Github">
                   
-                    <i class="fa fa-globe"></i> Github
+                    <i class="fa fa-fw fa-globe"></i>
                   
+                  Github
                 </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://weibo.com/p/1005051069913250" target="_blank">
+                <a href="http://weibo.com/p/1005051069913250" target="_blank" title="Weibo">
                   
-                    <i class="fa fa-weibo"></i> Weibo
+                    <i class="fa fa-fw fa-weibo"></i>
                   
+                  Weibo
                 </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="mailto:286242151@qq.com" target="_blank">
+                <a href="mailto:286242151@qq.com" target="_blank" title="Email">
                   
-                    <i class="fa fa-globe"></i> Email
+                    <i class="fa fa-fw fa-globe"></i>
                   
+                  Email
                 </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://segmentfault.com/u/xuxian" target="_blank">
+                <a href="http://segmentfault.com/u/xuxian" target="_blank" title="SegmentFault">
                   
-                    <i class="fa fa-globe"></i> SegmentFault
+                    <i class="fa fa-fw fa-globe"></i>
                   
+                  SegmentFault
                 </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://www.zhihu.com/people/wu-wu-4-90" target="_blank">
+                <a href="http://www.zhihu.com/people/wu-wu-4-90" target="_blank" title="Zhihu">
                   
-                    <i class="fa fa-globe"></i> Zhihu
+                    <i class="fa fa-fw fa-globe"></i>
                   
+                  Zhihu
                 </a>
               </span>
             
@@ -1629,24 +1817,30 @@
         
         
 
-        <div class="links-of-author motion-element">
-          
-            <p class="site-author-name">友情链接</p>
-            
-              <span class="links-of-author-item">
-                <a href="http://blog.csdn.net/kinglearnjava" target="_blank">我的CSDN博客</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://blog.sina.com.cn/u/1069913250" target="_blank">我的新浪博客</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://www.tajok.com" target="_blank">韬的博客</a>
-              </span>
-            
-          
-        </div>
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/kinglearnjava" title="我的CSDN博客" target="_blank">我的CSDN博客</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.sina.com.cn/u/1069913250" title="我的新浪博客" target="_blank">我的新浪博客</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.tajok.com" title="韬的博客" target="_blank">韬的博客</a>
+                </li>
+              
+            </ul>
+          </div>
+        
 
       </section>
 
@@ -1656,7 +1850,8 @@
   </aside>
 
 
-      
+        
+      </div>
     </main>
 
     <footer id="footer" class="footer">
@@ -1666,60 +1861,117 @@
   &copy;  2015 - 
   <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
-    <i class="icon-next-heart fa fa-heart"></i>
+    <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">loveNight
-
-  &nbsp;&nbsp;|&nbsp;&nbsp;<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256738554'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1256738554' type='text/javascript'%3E%3C/script%3E"));</script>
-
-  &nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/sitemap.xml">Google网站地图</a></span>
-  &nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/baidusitemap.xml">百度网站地图</a></span>
-
-  </span>
+  <span class="author" itemprop="copyrightHolder">loveNight</span>
 </div>
 
 <div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
+    NexT.Pisces
   </a>
 </div>
 
+        
 
-&nbsp;&nbsp;|&nbsp;&nbsp;本站总点击 <span id="busuanzi_value_site_pv"></span> 次
-&nbsp;&nbsp;|&nbsp;&nbsp;您是第 <span id="busuanzi_value_site_uv"></span> 位访客
+<div class="busuanzi-count">
 
-<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
-</script>
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<script>
-(function(){
-    var bp = document.createElement('script');
-    bp.src = '//push.zhanzhang.baidu.com/push.js';
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
 
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
 
 
+
+        
       </div>
     </footer>
 
-    <div class="back-to-top"></div>
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
   </div>
 
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
   <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 
   
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
   
 
   
-    
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
 
   
     
@@ -1731,43 +1983,35 @@
       var ds = document.createElement('script');
       ds.type = 'text/javascript';ds.async = true;
       ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '/js/embed.js';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
       ds.charset = 'UTF-8';
       (document.getElementsByTagName('head')[0]
       || document.getElementsByTagName('body')[0]).appendChild(ds);
     })();
   </script>
+
+  
     
-     
-
-
-    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
   
 
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
 
 
-  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
-<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
-
-<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
 
 
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-
-  <script type="text/javascript" src="/js/bootstrap.js"></script>
 
   
   
 
   
+
   
+
+  
+<script type="text/javascript" async src="//push.zhanzhang.baidu.com/push.js">
+</script>
+
 
 </body>
 </html>
