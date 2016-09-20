@@ -2,6 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     
+  <url>
+    <loc>http://lovenight.github.io/2016/09/20/test2/</loc>
+    <lastmod>2016-09-20T07:40:13.687Z</lastmod>
+    <data>
+        <display>
+        <title>test2</title>
+        <pubTime>2016-09-20T07:39:42.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>http://lovenight.github.io/2015/11/10/Hexo-3-1-1-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/</loc>
@@ -489,31 +504,6 @@
 
     
   <url>
-    <loc>http://lovenight.github.io/2015/12/06/%E8%87%AA%E5%8D%A0%E4%B8%8E%E7%8E%8BDY%E7%9B%B8%E4%BA%B2%E5%8F%91%E5%B1%95%E5%A6%82%E4%BD%95/</loc>
-    <lastmod>2015-12-17T00:46:15.484Z</lastmod>
-    <data>
-        <display>
-        <title>自占此次相亲结果如何</title>
-        <pubTime>2015-12-06T10:43:34.000Z</pubTime>
-        
-        <tag>六爻 </tag>
-         
-        <tag>相亲 </tag>
-         
-         
-           
-             
-              <breadCrumb title="术数" url="http://lovenight.github.io/categories/%E6%9C%AF%E6%95%B0/"/>
-          
-             
-              <breadCrumb title="六爻" url="http://lovenight.github.io/categories/%E6%9C%AF%E6%95%B0/%E5%85%AD%E7%88%BB/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://lovenight.github.io/2015/11/11/Python%E6%A8%A1%E6%8B%9F%E7%99%BB%E5%BD%95%E7%9F%A5%E4%B9%8E/</loc>
     <lastmod>2015-12-17T00:46:15.484Z</lastmod>
     <data>
@@ -532,6 +522,31 @@
           
              
               <breadCrumb title="Python" url="http://lovenight.github.io/categories/%E7%BC%96%E7%A8%8B/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://lovenight.github.io/2015/12/06/%E8%87%AA%E5%8D%A0%E4%B8%8E%E7%8E%8BDY%E7%9B%B8%E4%BA%B2%E5%8F%91%E5%B1%95%E5%A6%82%E4%BD%95/</loc>
+    <lastmod>2015-12-17T00:46:15.484Z</lastmod>
+    <data>
+        <display>
+        <title>自占此次相亲结果如何</title>
+        <pubTime>2015-12-06T10:43:34.000Z</pubTime>
+        
+        <tag>六爻 </tag>
+         
+        <tag>相亲 </tag>
+         
+         
+           
+             
+              <breadCrumb title="术数" url="http://lovenight.github.io/categories/%E6%9C%AF%E6%95%B0/"/>
+          
+             
+              <breadCrumb title="六爻" url="http://lovenight.github.io/categories/%E6%9C%AF%E6%95%B0/%E5%85%AD%E7%88%BB/"/>
           
         </display>
     </data>
