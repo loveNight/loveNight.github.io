@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://lovenight.github.io/"/>
-  <updated>2016-09-27T01:25:47.078Z</updated>
+  <updated>2016-09-27T10:23:15.156Z</updated>
   <id>http://lovenight.github.io/</id>
   
   <author>
@@ -13,6 +13,58 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Windows下 Python 2 与 Python 3 共存]]></title>
+    <link href="http://lovenight.github.io/2016/09/27/Windows%E4%B8%8B-Python-2-%E4%B8%8E-Python-3-%E5%85%B1%E5%AD%98/"/>
+    <id>http://lovenight.github.io/2016/09/27/Windows下-Python-2-与-Python-3-共存/</id>
+    <published>2016-09-27T07:23:05.000Z</published>
+    <updated>2016-09-27T10:23:15.156Z</updated>
+    <content type="html"><![CDATA[<p>一向用Python 3，最近研究微信公众号开发，各云平台只支持Python 2.7，想用其他版本需要自己搭建环境。而网上又搜不到Python 3开发微信公众号的资料。暂打算先使用Python 2.7，有空学习Docker后再迁移到Python 3。</p>
+<h1 id="Python_2_与_Python_3_共存">Python 2 与 Python 3 共存</h1><p>安装 Python 3.3 以上的版本时，Python会在<code>C:\Windows</code>文件夹下安装启动器<code>py.exe</code>。双击脚本调用的就是这个程序：<br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/9/27/17/59/21/Python%E8%BF%90%E8%A1%8C%E7%AA%97%E5%8F%A3.jpg" alt="Python运行窗口.jpg"></p>
+<p>如果系统中同时存在 Python 2 和 Python 3，可用它指定版本来运行代码：</p>
+<pre><code><span class="keyword">py</span> -<span class="number">2</span> helloworld.<span class="keyword">py</span>
+<span class="keyword">py</span> -<span class="number">3</span> helloworld.<span class="keyword">py</span>
+</code></pre><p>2和3即是版本。</p>
+<p>每次都添加参数太麻烦，直接在Python脚本第一行指定版本：</p>
+<pre><code><span class="shebang">#! python3</span>
+</code></pre><a id="more"></a>
+<p>可以双击，也可以命令行运行：</p>
+<pre><code><span class="keyword">py</span> helloworld.<span class="keyword">py</span>
+</code></pre><p>如果没有在首行指定版本而用上述命令运行或双击，则默认调用Python 2</p>
+<p>使用pip：</p>
+<pre><code>py -2 -m pip <span class="operator"><span class="keyword">install</span> requests
+py -<span class="number">3</span> -<span class="keyword">m</span> pip <span class="keyword">install</span> requests</span>
+</code></pre><p><code>-m pip</code> 表示运行 pip 模块</p>
+<p>原有的<code>python</code>和<code>pip</code>命令仍然有效，默认执行哪一个版本呢？看环境变量中路径的先后次序。</p>
+<pre><code><span class="attribute">C</span>:\Python34\;<span class="attribute">C</span>:\Python34\Scripts;<span class="attribute">C</span>:\Python27\;<span class="attribute">C</span>:\Python27\Scripts;
+</code></pre><p>如上则调用Python 3</p>
+<ul>
+<li><a href="https://www.zhihu.com/question/21653286" target="_blank" rel="external">同时装了Python3和Python2，怎么用pip？</a></li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>一向用Python 3，最近研究微信公众号开发，各云平台只支持Python 2.7，想用其他版本需要自己搭建环境。而网上又搜不到Python 3开发微信公众号的资料。暂打算先使用Python 2.7，有空学习Docker后再迁移到Python 3。</p>
+<h1 id="Python_2_与_Python_3_共存">Python 2 与 Python 3 共存</h1><p>安装 Python 3.3 以上的版本时，Python会在<code>C:\Windows</code>文件夹下安装启动器<code>py.exe</code>。双击脚本调用的就是这个程序：<br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/9/27/17/59/21/Python%E8%BF%90%E8%A1%8C%E7%AA%97%E5%8F%A3.jpg" alt="Python运行窗口.jpg"></p>
+<p>如果系统中同时存在 Python 2 和 Python 3，可用它指定版本来运行代码：</p>
+<pre><code><span class="keyword">py</span> -<span class="number">2</span> helloworld.<span class="keyword">py</span>
+<span class="keyword">py</span> -<span class="number">3</span> helloworld.<span class="keyword">py</span>
+</code></pre><p>2和3即是版本。</p>
+<p>每次都添加参数太麻烦，直接在Python脚本第一行指定版本：</p>
+<pre><code><span class="shebang">#! python3</span>
+</code></pre>]]>
+    
+    </summary>
+    
+      <category term="Python" scheme="http://lovenight.github.io/tags/Python/"/>
+    
+      <category term="virtualenv" scheme="http://lovenight.github.io/tags/virtualenv/"/>
+    
+      <category term="编程" scheme="http://lovenight.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="Python" scheme="http://lovenight.github.io/categories/%E7%BC%96%E7%A8%8B/Python/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Hexo报错Template render error: tag name expected]]></title>
@@ -3096,7 +3148,7 @@ RecursionError: maximum recursion depth exceeded
     <link href="http://lovenight.github.io/2015/11/10/Hexo-3-1-1-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/"/>
     <id>http://lovenight.github.io/2015/11/10/Hexo-3-1-1-静态博客搭建指南/</id>
     <published>2015-11-10T06:46:41.000Z</published>
-    <updated>2016-09-26T00:10:56.218Z</updated>
+    <updated>2016-09-27T13:49:40.828Z</updated>
     <content type="html"><![CDATA[<p><strong>注意，本文适用于hexo 3.x 版本，与2.x略有出入！</strong></p>
 <p>GitHub Pages 本用于介绍托管在 GitHub 的项目，也可以用来搭建博客，有300M免费空间。</p>
 <p>hexo是一个基于Node.js的静态博客程序，可以方便的生成静态网页托管在github和Heroku上。作者是来自台湾的<a href="https://github.com/hexojs/hexo" target="_blank" rel="external">tommy351</a>。<br>优势：</p>
@@ -3270,12 +3322,76 @@ hexo <span class="keyword">new</span> page <span class="string">"API"</span>
 <h2 id="使Page也自动弹出侧栏">使Page也自动弹出侧栏</h2><p>上一步中只有主页和文章页才会弹侧栏，自己添加的Page却不会。打开<code>\themes\next\layout\page.swig</code>，找到底部的<br><figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="collection">&#123;% block sidebar %&#125;</span></span><br><span class="line">    <span class="collection">&#123;<span class="collection">&#123; sidebar_template.render<span class="list">(<span class="keyword">false</span>)</span> &#125;</span>&#125;</span></span><br><span class="line"><span class="collection">&#123;% endblock %&#125;</span></span><br></pre></td></tr></table></figure></p>
 <p>把<code>false</code>改成<code>true</code>。这时不管有没有目录，都会弹出侧栏。需要让它根据目录的度来决定是否弹出，继续修改，结果如下：<br><figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"></span><span class="template_tag">&#123;% <span class="keyword">block</span> sidebar %&#125;</span><span class="xml"></span><br><span class="line">    </span><span class="variable">&#123;&#123; sidebar_template.render(true) &#125;&#125;</span><span class="xml"></span><br><span class="line"></span><span class="template_tag">&#123;% <span class="keyword">endblock</span> %&#125;</span><span class="xml"></span><br><span class="line"></span><br><span class="line"></span><span class="template_tag">&#123;% <span class="keyword">block</span> script_extra %&#125;</span><span class="xml"></span><br><span class="line">  </span><span class="template_tag">&#123;% <span class="keyword">include</span> '_scripts/pages/post-details.swig' %&#125;</span><span class="xml"></span><br><span class="line"></span><span class="template_tag">&#123;% <span class="keyword">endblock</span> %&#125;</span><span class="xml"></span></span><br></pre></td></tr></table></figure></p>
 <p>直接使用与文章页（post-details）相同的侧栏设置。</p>
+<h2 id="修改页面宽度">修改页面宽度</h2><p>现在一般都用宽屏显示器，博客页面两侧留白太多，调整一下宽度。<br>打开<code>\themes\next\source\css\_common\components\post\post-expand.styl</code>文件，找到</p>
+<pre><code><span class="constant">@media</span> (<span class="built_in">max</span>-width: <span class="number">767</span>px)
+</code></pre><p>改为</p>
+<pre><code><span class="constant">@media</span> (<span class="built_in">max</span>-width: <span class="number">1080</span>px)
+</code></pre><p>打开<code>\themes\next\source\css\ _variables\base.styl</code>文件，找到</p>
+<pre><code><span class="variable">$main-desktop</span>                   = <span class="number">960</span>px
+<span class="variable">$main-desktop-large</span>             = <span class="number">1200</span>px
+<span class="variable">$content-desktop</span>                = <span class="number">700</span>px
+</code></pre><p>修改<code>$main-desktop</code>和<code>$content-desktop</code>的数值：</p>
+<pre><code><span class="variable">$main-desktop</span>                   = <span class="number">1080</span>px
+<span class="variable">$main-desktop-large</span>             = <span class="number">1200</span>px
+<span class="variable">$content-desktop</span>                = <span class="number">810</span>px
+</code></pre><p>Next.Mist主题的文章宽度至此改完了。如果你用的是Next.Pisces，还需要继续修改。<br>打开<code>\themes\next\source\css\_schemes\Pisces\_layout.styl</code>文件，将第4行的<code>width</code>改为<code>1080px</code>，修改后如下：</p>
+<pre><code><span class="class">.header</span> <span class="rules">{
+  <span class="rule"><span class="attribute">position</span>:<span class="value"> relative</span></span>;
+  <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">0</span> auto</span></span>;
+  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">1080px</span></span></span>;</span>
+</code></pre><h2 id="修改字体大小">修改字体大小</h2><p>打开<code>\themes\next\source\css\ _variables\base.styl</code>文件，将<code>$font-size-base</code>改成16px：</p>
+<pre><code><span class="variable">$font-size-base</span>           = <span class="number">16</span>px
+</code></pre><h2 id="修改网页配色">修改网页配色</h2><h3 id="添加自定义颜色">添加自定义颜色</h3><p>取色可以用QQ，以<a href="http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/001431937554888869fb52b812243dda6103214cd61d0c2000" target="_blank" rel="external">廖雪峰的官方网站</a>为例，我想取其中代码块的颜色。打开QQ按<code>Ctrl+Alt+A</code>开始截图，将鼠标移到文字上，按住<code>Ctrl</code>键即可看到该颜色的16进制代码为：</p>
+<p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/9/27/21/30/21/QQ%E5%8F%96%E8%89%B2.jpg" alt="QQ取色.jpg"></p>
+<p>文字毕竟太细，鼠标很难准确移到笔画上，也可以改用Chrome的审查元素取色。按F12，先点箭头，再点代码块：<br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/9/27/21/38/36/Chrome%E5%8F%96%E8%89%B2.jpg" alt="Chrome取色.jpg"></p>
+<p>style选项卡中就出现了字体颜色和背景色：<br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/9/27/21/41/8/Chrome%E5%8F%96%E8%89%B22.jpg" alt="Chrome取色2.jpg"></p>
+<p>继续修改上一步中的<code>\themes\next\source\css\ _variables\base.styl</code>文件，找到文件开头的<code>colors for use across theme</code>，加入自定义颜色：</p>
+<pre><code><span class="comment">// Colors</span>
+<span class="comment">// colors for use across theme.</span>
+<span class="comment">// --------------------------------------------------</span>
+<span class="variable">$whitesmoke</span>   = <span class="hexcolor">#f5f5f5</span>
+<span class="variable">$gainsboro</span>    = <span class="hexcolor">#eee</span>
+<span class="variable">$gray</span>-lighter = <span class="hexcolor">#ddd</span>
+<span class="variable">$grey</span>-light   = <span class="hexcolor">#ccc</span>
+<span class="variable">$grey</span>         = <span class="hexcolor">#bbb</span>
+<span class="variable">$grey</span>-dark    = <span class="hexcolor">#999</span>
+<span class="variable">$grey</span>-dim     = <span class="hexcolor">#666</span>
+<span class="variable">$black</span>-light  = <span class="hexcolor">#555</span>
+<span class="variable">$black</span>-dim    = <span class="hexcolor">#333</span>
+<span class="variable">$black</span>-deep   = <span class="hexcolor">#222</span>
+<span class="variable">$red</span>          = <span class="hexcolor">#ff2a2a</span>
+<span class="variable">$blue</span>-bright  = <span class="hexcolor">#87daff</span>
+<span class="variable">$blue</span>         = <span class="hexcolor">#0684bd</span>
+<span class="variable">$blue</span>-deep    = <span class="hexcolor">#262a30</span>
+<span class="variable">$orange</span>       = <span class="hexcolor">#fc6423</span>
+<span class="comment">// 下面是我自定义的颜色</span>
+<span class="variable">$my</span>-link-blue = <span class="hexcolor">#0593d3</span>  <span class="comment">//链接颜色</span>
+<span class="variable">$my</span>-link-hover-blue = <span class="hexcolor">#0477ab</span>  <span class="comment">//鼠标悬停后颜色</span>
+<span class="variable">$my</span>-code-foreground = <span class="hexcolor">#dd0055</span>  <span class="comment">// 用``围出的代码块字体颜色</span>
+<span class="variable">$my</span>-code-<span class="attribute">background</span> = <span class="hexcolor">#eee</span>  <span class="comment">// 用``围出的代码块背景颜色</span>
+</code></pre><h3 id="修改超链接颜色">修改超链接颜色</h3><p>改掉这几行：</p>
+<pre><code>// Global link color.
+<span class="variable">$link-color</span>                   = <span class="variable">$my-link-blue</span>
+<span class="variable">$link-hover-color</span>             = <span class="variable">$my-link-hover-blue</span>
+<span class="variable">$link-decoration-color</span>        = <span class="variable">$gray-lighter</span>
+<span class="variable">$link-decoration-hover-color</span>  = <span class="variable">$my-link-hover-blue</span>
+</code></pre><p>效果如图：<br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/9/27/21/43/42/%E6%94%B9%E8%B6%85%E9%93%BE%E6%8E%A5%E9%A2%9C%E8%89%B2%E6%95%88%E6%9E%9C%E5%9B%BE.jpg" alt="改超链接颜色效果图.jpg"></p>
+<h3 id="修改小型代码块颜色">修改小型代码块颜色</h3><p>修改<code>$code-background</code>和<code>$code-foreground</code>的值：</p>
+<pre><code>// Code &amp; Code Blocks
+// 用``围出的代码块
+// --------------------------------------------------
+<span class="variable">$code-font-family</span>               = <span class="variable">$font-family-monospace</span>
+<span class="variable">$code-font-size</span>                 = <span class="number">15</span>px
+<span class="variable">$code-background</span>                = <span class="variable">$my-code-background</span>
+<span class="variable">$code-foreground</span>                = <span class="variable">$my-code-foreground</span>
+<span class="variable">$code-border-radius</span>             = <span class="number">4</span>px
+</code></pre><p>效果如图：<br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2016/9/27/21/47/12/%E4%BB%A3%E7%A0%81%E5%9D%97%E6%95%88%E6%9E%9C.jpg" alt="代码块效果.jpg"></p>
 <h2 id="替换字体库网址">替换字体库网址</h2><p>使用中发现网站打开速度巨慢，一开始以为是Github的原因，但是本地调试时也要一分钟才能打开。使用Chrome抓包发现：<br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/%E7%BC%96%E7%A8%8B/hexo/Hexo%20NexT%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E8%AE%BE%E7%BD%AE/%E5%B7%A8%E6%85%A2%E7%9A%84%E6%89%93%E5%BC%80%E9%80%9F%E5%BA%A6.png" alt="巨慢无比的打开速度"></p>
 <p>57.04 秒！</p>
 <p>在<code>\themes\next</code>目录执行命令</p>
 <pre><code><span class="keyword">grep</span> <span class="string">'css?family'</span> -r .<span class="regexp">/</span>
 </code></pre><p>可以找到罪魁祸首就在<code>\themes\next\layout\_partials\head.swig</code>文件中：<br><figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"></span><span class="template_tag">&#123;% <span class="keyword">if</span> theme.use_font_lato %&#125;</span><span class="xml"></span><br><span class="line">  </span><span class="template_tag">&#123;% <span class="keyword">if</span> config.<span class="keyword">language</span> === 'zh-Hans' %&#125;</span><span class="xml"></span><br><span class="line">    <span class="tag">&lt;<span class="title">link</span> <span class="attribute">href</span>=<span class="value">'//fonts.lug.ustc.edu.cn/css?family=Lato:300,400,700,400italic&amp;subset=latin,latin-ext'</span> <span class="attribute">rel</span>=<span class="value">'stylesheet'</span> <span class="attribute">type</span>=<span class="value">'text/css'</span>&gt;</span></span><br><span class="line">  </span><span class="template_tag">&#123;% <span class="keyword">else</span> %&#125;</span><span class="xml"></span><br><span class="line">    <span class="tag">&lt;<span class="title">link</span> <span class="attribute">href</span>=<span class="value">'//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&amp;subset=latin,latin-ext'</span> <span class="attribute">rel</span>=<span class="value">'stylesheet'</span> <span class="attribute">type</span>=<span class="value">'text/css'</span>&gt;</span></span><br><span class="line">  </span><span class="template_tag">&#123;% <span class="keyword">endif</span> %&#125;</span><span class="xml"></span><br><span class="line"></span><span class="template_tag">&#123;% <span class="keyword">endif</span> %&#125;</span><span class="xml"></span></span><br></pre></td></tr></table></figure></p>
-<p>作者的原意是想让语言设置为简体的用户都连接到中国科技大学的免费字体库，其他用户链接到Google，没想到这个链接挂了。使用<a href="http://ping.chinaz.com/" target="_blank" rel="external">Ping检测工具</a>可以看到<code>fonts.googleapis.com</code>被解析到了北京的服务器，速度相当快，所以我们直接使用Google的字体库就可以了：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if theme.use_font_lato %&#125;&#10;    &#60;link href=&#39;//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&#38;subset=latin,latin-ext&#39; rel=&#39;stylesheet&#39; type=&#39;text/css&#39;&#62;&#10;&#123;% endif %&#125;</span><br></pre></td></tr></table></figure></p>
+<p>作者的原意是想让语言设置为简体的用户都连接到中国科技大学的免费字体库，其他用户链接到Google，没想到这个链接挂了。使用<a href="http://ping.chinaz.com/" target="_blank" rel="external">Ping检测工具</a>可以看到<code>fonts.googleapis.com</code>被解析到了北京的服务器，速度相当快，所以我们直接使用Google的字体库就可以了：<br><figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"></span><span class="template_tag">&#123;% <span class="keyword">if</span> theme.use_font_lato %&#125;</span><span class="xml"></span><br><span class="line">    <span class="tag">&lt;<span class="title">link</span> <span class="attribute">href</span>=<span class="value">'//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&amp;subset=latin,latin-ext'</span> <span class="attribute">rel</span>=<span class="value">'stylesheet'</span> <span class="attribute">type</span>=<span class="value">'text/css'</span>&gt;</span></span><br><span class="line"></span><span class="template_tag">&#123;% <span class="keyword">endif</span> %&#125;</span><span class="xml"></span></span><br></pre></td></tr></table></figure></p>
 <h2 id="修改底栏">修改底栏</h2><p>先准备一些代码。<a href="http://www.cnzz.com" target="_blank" rel="external">站长统计</a>，注册并获取统计代码：</p>
 <pre><code>&amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp;
 &lt;script <span class="keyword">type</span>=<span class="string">"text/javascript"</span>&gt;
@@ -3394,6 +3510,7 @@ hexo <span class="keyword">new</span> page <span class="string">"API"</span>
 <li><a href="http://wsgzao.github.io/post/duoshuo" target="_blank" rel="external">多说自定义CSS动感头像和多说评论显示User Agent的那些小事</a></li>
 <li><a href="http://www.vsay.cn/one-more-custom-css-lets-you-say-comments-city.html" target="_blank" rel="external">多说自定义CSS 让你的多说评论动感起来</a></li>
 <li><a href="http://moxfive.xyz/2015/09/29/duoshuo-style/" target="_blank" rel="external">多说样式折腾记录 — 添加 UA 浏览器标识、旋转头像等</a></li>
+<li><a href="https://haiyusun.github.io/2016/09/21/%E5%9F%BA%E4%BA%8EHexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%B9%B6%E9%83%A8%E7%BD%B2%E5%88%B0Github-Pages/" target="_blank" rel="external">基于Hexo搭建博客并部署到Github Pages</a></li>
 </ul>
 ]]></content>
     <summary type="html">
@@ -3418,7 +3535,7 @@ hexo <span class="keyword">new</span> page <span class="string">"API"</span>
     
       <category term="编程" scheme="http://lovenight.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
     
-      <category term="hexo" scheme="http://lovenight.github.io/categories/%E7%BC%96%E7%A8%8B/hexo/"/>
+      <category term="Hexo" scheme="http://lovenight.github.io/categories/%E7%BC%96%E7%A8%8B/Hexo/"/>
     
   </entry>
   
