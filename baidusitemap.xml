@@ -2,6 +2,89 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     
+  <url>
+    <loc>http://lovenight.github.io/2016/09/27/Windows%E4%B8%8B-Python-2-%E4%B8%8E-Python-3-%E5%85%B1%E5%AD%98/</loc>
+    <lastmod>2016-09-27T23:53:38.671Z</lastmod>
+    <data>
+        <display>
+        <title>Windows下 Python 2 与 Python 3 共存</title>
+        <pubTime>2016-09-27T07:23:05.000Z</pubTime>
+        
+        <tag>Python </tag>
+         
+        <tag>virtualenv </tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://lovenight.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="Python" url="http://lovenight.github.io/categories/%E7%BC%96%E7%A8%8B/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://lovenight.github.io/2015/11/16/Python-3-%E5%AE%89%E8%A3%85%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E6%97%B6%E5%87%BA%E7%8E%B0%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF/</loc>
+    <lastmod>2016-09-27T23:53:38.671Z</lastmod>
+    <data>
+        <display>
+        <title>Python 3 安装第三方库报错Unable to find vcvarsall.bat</title>
+        <pubTime>2015-11-16T05:59:56.000Z</pubTime>
+        
+        <tag>Python </tag>
+         
+        <tag>lxml </tag>
+         
+        <tag>numpy </tag>
+         
+        <tag>vcvarsall.bat </tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://lovenight.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="Python" url="http://lovenight.github.io/categories/%E7%BC%96%E7%A8%8B/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://lovenight.github.io/2016/06/15/Python-3-urllib%E3%80%81requests%E3%80%81BeautifulSoup%E7%94%A8%E6%B3%95%E7%AE%80%E4%BB%8B/</loc>
+    <lastmod>2016-09-27T23:53:38.656Z</lastmod>
+    <data>
+        <display>
+        <title>Python 3 urllib、requests、BeautifulSoup用法简介</title>
+        <pubTime>2016-06-15T07:42:57.000Z</pubTime>
+        
+        <tag>BeautifulSoup </tag>
+         
+        <tag>Python </tag>
+         
+        <tag>requests </tag>
+         
+        <tag>urllib </tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://lovenight.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="Python" url="http://lovenight.github.io/categories/%E7%BC%96%E7%A8%8B/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>http://lovenight.github.io/2015/11/10/Hexo-3-1-1-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/</loc>
@@ -28,31 +111,6 @@
           
              
               <breadCrumb title="Hexo" url="http://lovenight.github.io/categories/%E7%BC%96%E7%A8%8B/Hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://lovenight.github.io/2016/09/27/Windows%E4%B8%8B-Python-2-%E4%B8%8E-Python-3-%E5%85%B1%E5%AD%98/</loc>
-    <lastmod>2016-09-27T10:23:15.156Z</lastmod>
-    <data>
-        <display>
-        <title>Windows下 Python 2 与 Python 3 共存</title>
-        <pubTime>2016-09-27T07:23:05.000Z</pubTime>
-        
-        <tag>Python </tag>
-         
-        <tag>virtualenv </tag>
-         
-         
-           
-             
-              <breadCrumb title="编程" url="http://lovenight.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
-          
-             
-              <breadCrumb title="Python" url="http://lovenight.github.io/categories/%E7%BC%96%E7%A8%8B/Python/"/>
           
         </display>
     </data>
@@ -269,35 +327,6 @@
           
              
               <breadCrumb title="奇文共欣赏" url="http://lovenight.github.io/categories/%E9%9A%8F%E7%AC%94/%E5%A5%87%E6%96%87%E5%85%B1%E6%AC%A3%E8%B5%8F/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://lovenight.github.io/2016/06/15/Python-3-urllib%E3%80%81requests%E3%80%81BeautifulSoup%E7%94%A8%E6%B3%95%E7%AE%80%E4%BB%8B/</loc>
-    <lastmod>2016-06-15T07:55:45.140Z</lastmod>
-    <data>
-        <display>
-        <title>Python 3 urllib、requests、BeautifulSoup用法简介</title>
-        <pubTime>2016-06-15T07:42:57.000Z</pubTime>
-        
-        <tag>BeautifulSoup </tag>
-         
-        <tag>Python </tag>
-         
-        <tag>requests </tag>
-         
-        <tag>urllib </tag>
-         
-         
-           
-             
-              <breadCrumb title="编程" url="http://lovenight.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
-          
-             
-              <breadCrumb title="Python" url="http://lovenight.github.io/categories/%E7%BC%96%E7%A8%8B/Python/"/>
           
         </display>
     </data>
@@ -946,35 +975,6 @@
         <tag>Python </tag>
          
         <tag>七牛云存储 </tag>
-         
-         
-           
-             
-              <breadCrumb title="编程" url="http://lovenight.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
-          
-             
-              <breadCrumb title="Python" url="http://lovenight.github.io/categories/%E7%BC%96%E7%A8%8B/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://lovenight.github.io/2015/11/16/Python-3-%E5%AE%89%E8%A3%85%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E6%97%B6%E5%87%BA%E7%8E%B0%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF/</loc>
-    <lastmod>2015-11-17T09:03:00.640Z</lastmod>
-    <data>
-        <display>
-        <title>Python 3 安装第三方库时出现编译错误</title>
-        <pubTime>2015-11-16T05:59:56.000Z</pubTime>
-        
-        <tag>Python </tag>
-         
-        <tag>lxml </tag>
-         
-        <tag>numpy </tag>
-         
-        <tag>vcvarsall.bat </tag>
          
          
            
