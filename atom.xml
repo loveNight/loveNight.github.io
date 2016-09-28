@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://lovenight.github.io/"/>
-  <updated>2016-09-28T02:16:56.578Z</updated>
+  <updated>2016-09-28T01:05:25.031Z</updated>
   <id>http://lovenight.github.io/</id>
   
   <author>
@@ -13,24 +13,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title><![CDATA[修改Host翻墙上Github]]></title>
-    <link href="http://lovenight.github.io/2016/09/28/%E4%BF%AE%E6%94%B9Host%E7%BF%BB%E5%A2%99%E4%B8%8AGithub/"/>
-    <id>http://lovenight.github.io/2016/09/28/修改Host翻墙上Github/</id>
-    <published>2016-09-28T01:24:41.000Z</published>
-    <updated>2016-09-28T02:16:56.578Z</updated>
-    <content type="html"><![CDATA[<p>Hosts文件的基本内容和语法<br>blog.renren.com/share/121004692/8289456893</p>
-<p>非常全面的讲解Hosts文件<br><a href="http://www.cnblogs.com/zgx/archive/2009/03/10/1408017.html" target="_blank" rel="external">http://www.cnblogs.com/zgx/archive/2009/03/10/1408017.html</a></p>
-<p>获取Hosts<br><a href="https://github.com/racaljk/hosts/blob/master/hosts" target="_blank" rel="external">https://github.com/racaljk/hosts/blob/master/hosts</a><br>上一链接的raw版本：<br><a href="https://raw.githubusercontent.com/racaljk/hosts/master/hosts" target="_blank" rel="external">https://raw.githubusercontent.com/racaljk/hosts/master/hosts</a><br>coding镜像：<br><a href="https://coding.net/u/scaffrey/p/hosts/git/blob/master/hosts" target="_blank" rel="external">https://coding.net/u/scaffrey/p/hosts/git/blob/master/hosts</a><br><a href="https://coding.net/u/scaffrey/p/hosts/git/raw/master/hosts" target="_blank" rel="external">https://coding.net/u/scaffrey/p/hosts/git/raw/master/hosts</a></p>
-<p><a href="http://www.xiabingbao.com/node/2015/03/27/node-hosts" target="_blank" rel="external">http://www.xiabingbao.com/node/2015/03/27/node-hosts</a></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>Hosts文件的基本内容和语法<br>blog.renren.com/share/121004692/8289456893</p>
-<p>非常全面的讲解Hosts文件<br><a href="http://www.cnblogs.com/zgx/archive/2009/0]]>
-    </summary>
-    
-  </entry>
   
   <entry>
     <title><![CDATA[Windows下 Python 2 与 Python 3 共存]]></title>
