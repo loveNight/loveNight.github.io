@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://lovenight.github.io/"/>
-  <updated>2016-09-28T01:05:25.031Z</updated>
+  <updated>2016-09-28T02:16:56.578Z</updated>
   <id>http://lovenight.github.io/</id>
   
   <author>
@@ -13,6 +13,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[修改Host翻墙上Github]]></title>
+    <link href="http://lovenight.github.io/2016/09/28/%E4%BF%AE%E6%94%B9Host%E7%BF%BB%E5%A2%99%E4%B8%8AGithub/"/>
+    <id>http://lovenight.github.io/2016/09/28/修改Host翻墙上Github/</id>
+    <published>2016-09-28T01:24:41.000Z</published>
+    <updated>2016-09-28T02:16:56.578Z</updated>
+    <content type="html"><![CDATA[<p>Hosts文件的基本内容和语法<br>blog.renren.com/share/121004692/8289456893</p>
+<p>非常全面的讲解Hosts文件<br><a href="http://www.cnblogs.com/zgx/archive/2009/03/10/1408017.html" target="_blank" rel="external">http://www.cnblogs.com/zgx/archive/2009/03/10/1408017.html</a></p>
+<p>获取Hosts<br><a href="https://github.com/racaljk/hosts/blob/master/hosts" target="_blank" rel="external">https://github.com/racaljk/hosts/blob/master/hosts</a><br>上一链接的raw版本：<br><a href="https://raw.githubusercontent.com/racaljk/hosts/master/hosts" target="_blank" rel="external">https://raw.githubusercontent.com/racaljk/hosts/master/hosts</a><br>coding镜像：<br><a href="https://coding.net/u/scaffrey/p/hosts/git/blob/master/hosts" target="_blank" rel="external">https://coding.net/u/scaffrey/p/hosts/git/blob/master/hosts</a><br><a href="https://coding.net/u/scaffrey/p/hosts/git/raw/master/hosts" target="_blank" rel="external">https://coding.net/u/scaffrey/p/hosts/git/raw/master/hosts</a></p>
+<p><a href="http://www.xiabingbao.com/node/2015/03/27/node-hosts" target="_blank" rel="external">http://www.xiabingbao.com/node/2015/03/27/node-hosts</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Hosts文件的基本内容和语法<br>blog.renren.com/share/121004692/8289456893</p>
+<p>非常全面的讲解Hosts文件<br><a href="http://www.cnblogs.com/zgx/archive/2009/0]]>
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Windows下 Python 2 与 Python 3 共存]]></title>
@@ -783,7 +801,7 @@ Template render error: tag name expected
     <link href="http://lovenight.github.io/2016/09/19/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E6%80%BB%E7%BB%93/"/>
     <id>http://lovenight.github.io/2016/09/19/科学上网总结/</id>
     <published>2016-09-19T05:51:01.000Z</published>
-    <updated>2016-09-27T01:25:47.078Z</updated>
+    <updated>2016-09-28T01:52:16.031Z</updated>
     <content type="html"><![CDATA[<p>去年底写过一篇翻墙总结，其中的Hosts修改工具早已停止更新。ShadowSocks也被公司屏蔽掉，只能在家里用用。最近用了蓝灯，蛮方便，可惜只能用于网页浏览。最近整理了些新资料。</p>
 <a id="more"></a>
 <hr>
@@ -803,6 +821,11 @@ Template render error: tag name expected
 </ul>
 <h2 id="使用方法：">使用方法：</h2><p>直接把我CSDN博客上发过的图片扒过来：<br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/30/18/29/5/1.png" alt="1.png"><br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/2015/11/30/18/29/5/2.png" alt="2.png"></p>
 <p>不用的时候退出软件即可。</p>
+<hr>
+<h1 id="修改Host">修改Host</h1><ul>
+<li><a href="http://htcui.com/4938.html" target="_blank" rel="external">2016年最新Google hosts 持续更新|屏蔽网站和APP广告|登陆谷歌、GooglePlay、脸书、推特、Github必备</a>亲测可用。</li>
+<li><a href="http://laod.cn/hosts/2016-google-hosts.html" target="_blank" rel="external">2016 Google hosts 持续更新</a> 这个我没用过</li>
+</ul>
 <hr>
 <h1 id="逗比根据地">逗比根据地</h1><p><a href="https://www.dou-bi.co/" target="_blank" rel="external">逗比根据地</a>，这是某大神的个人博客，专研花式科学上网。以上两款软件失效时，可以到这里找找解决方法。</p>
 <p>作者自述：</p>
