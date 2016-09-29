@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://lovenight.github.io/Python/index.html</loc>
+    <lastmod>2016-09-29T09:12:45.093Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://lovenight.github.io/2016/09/25/Python-3-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2016-09-29T02:44:19.578Z</lastmod>
   </url>
@@ -49,11 +54,6 @@
   <url>
     <loc>http://lovenight.github.io/404.html</loc>
     <lastmod>2016-09-27T14:10:51.656Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://lovenight.github.io/Python/index.html</loc>
-    <lastmod>2016-09-27T05:22:23.375Z</lastmod>
   </url>
   
   <url>
