@@ -109,7 +109,7 @@
 
 
 安装与配置官网下载">
-<meta property="og:updated_time" content="2016-09-27T01:25:47.078Z">
+<meta property="og:updated_time" content="2016-09-29T02:44:19.578Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python 3 学习笔记">
 <meta name="twitter:description" content="初学Python的时候整理的学习笔记。
@@ -895,7 +895,7 @@
 <p>要注意摘要算法不是加密算法，不能用于加密（因为无法通过摘要反推明文），只能用于防篡改，但是它的单向计算特性决定了可以在不存储明文口令的情况下验证用户口令。</p>
 <hr>
 <h3 id="itertools">itertools</h3><p>Python的内建模块itertools提供了非常有用的用于操作迭代对象的函数。</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import itertools&#10;&#10;# &#20174;3&#24320;&#22987;&#30340;&#33258;&#28982;&#25968;&#24207;&#21015;&#10;itertools.count(3)&#10;&#10;# &#25226;&#20256;&#20837;&#30340;&#19968;&#20010;&#24207;&#21015;&#26080;&#38480;&#37325;&#22797;&#19979;&#21435;&#10;itertools.cycle(&#39;ABC&#39;) # &#39;A&#39;,&#39;B&#39;,&#39;C&#39;....&#10;&#10;# &#37325;&#22797;&#19968;&#20010;&#20803;&#32032;&#65292;&#22914;&#26524;&#30465;&#30053;&#31532;&#20108;&#20010;&#21442;&#25968;&#21017;&#26080;&#38480;&#37325;&#22797;&#10;ns = itertools.repeat(&#39;A&#39;, 3)&#10;&#10;# &#36890;&#36807;takewhile()&#31561;&#20989;&#25968;&#21462;&#20986;&#19968;&#20010;&#26377;&#38480;&#30340;&#24207;&#21015;&#10;natuals = itertools.count(1)&#10;ns = itertools.takewhile(lambda x: x &#60;= 10, natuals)&#10;&#10;# chain()&#25226;&#19968;&#32452;&#36845;&#20195;&#23545;&#35937;&#20018;&#32852;&#36215;&#26469;&#65292;&#24418;&#25104;&#19968;&#20010;&#26356;&#22823;&#30340;&#36845;&#20195;&#22120;&#10;itertools.chain(&#39;ABC&#39;, &#39;XYZ&#39;)&#10;&#10;# groupby()&#25226;&#36845;&#20195;&#22120;&#20013;&#30456;&#37051;&#30340;&#37325;&#22797;&#20803;&#32032;&#25361;&#20986;&#26469;&#25918;&#22312;&#19968;&#36215;&#10;# &#21482;&#35201;&#20316;&#29992;&#20110;&#20989;&#25968;&#30340;&#20004;&#20010;&#20803;&#32032;&#36820;&#22238;&#30340;&#20540;&#30456;&#31561;&#65292;&#36825;&#20004;&#20010;&#20803;&#32032;&#23601;&#34987;&#35748;&#20026;&#26159;&#22312;&#19968;&#32452;&#30340;&#10;itertools.groupby(&#39;AAABBBCCAAA&#39;)&#10;itertools.groupby(&#39;AaaBBbcCAAa&#39;, lambda c: c.upper())&#10;&#10;# &#25214;&#20986;&#25351;&#23450;&#24207;&#21015;&#20013;&#30340;&#25152;&#26377;2&#20010;&#20803;&#32032;&#30340;&#26377;&#24207;&#25490;&#21015;&#32452;&#21512;&#65292;&#36820;&#22238;tuple&#10;itertools.permutations([1,2,3], 2)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> itertools</span><br><span class="line"></span><br><span class="line"><span class="comment"># 从3开始的自然数序列</span></span><br><span class="line">itertools.count(<span class="number">3</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 把传入的一个序列无限重复下去</span></span><br><span class="line">itertools.cycle(<span class="string">'ABC'</span>) <span class="comment"># 'A','B','C'....</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 重复一个元素，如果省略第二个参数则无限重复</span></span><br><span class="line">ns = itertools.repeat(<span class="string">'A'</span>, <span class="number">3</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 通过takewhile()等函数取出一个有限的序列</span></span><br><span class="line">natuals = itertools.count(<span class="number">1</span>)</span><br><span class="line">ns = itertools.takewhile(<span class="keyword">lambda</span> x: x &lt;= <span class="number">10</span>, natuals)</span><br><span class="line"></span><br><span class="line"><span class="comment"># chain()把一组迭代对象串联起来，形成一个更大的迭代器</span></span><br><span class="line">itertools.chain(<span class="string">'ABC'</span>, <span class="string">'XYZ'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># groupby()把迭代器中相邻的重复元素挑出来放在一起</span></span><br><span class="line"><span class="comment"># 只要作用于函数的两个元素返回的值相等，这两个元素就被认为是在一组的</span></span><br><span class="line">itertools.groupby(<span class="string">'AAABBBCCAAA'</span>)</span><br><span class="line">itertools.groupby(<span class="string">'AaaBBbcCAAa'</span>, <span class="keyword">lambda</span> c: c.upper())</span><br><span class="line"></span><br><span class="line"><span class="comment"># 找出指定序列中的所有2个元素的有序排列组合，返回tuple</span></span><br><span class="line">itertools.permutations([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>], <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
 <hr>
 <h3 id="XML">XML</h3><p>操作XML有两种方法：DOM和SAX。DOM会把整个XML读入内存，解析为树，因此占用内存大，解析慢，优点是可以任意遍历树的节点。SAX是流模式，边读边解析，占用内存小，解析快，缺点是我们需要自己处理事件。<br>正常情况下，优先考虑SAX，因为DOM实在太占内存。</p>
 <p>当SAX解析器读到一个节点时：<code>&lt;a href=&quot;/&quot;&gt;python&lt;/a&gt;</code><br>会产生3个事件：<br>start_element事件，在读取<code>&lt;a href=&quot;/&quot;&gt;</code>时；<br>char_data事件，在读取<code>python</code>时；<br>end_element事件，在读取<code>&lt;/a&gt;</code>时。</p>
@@ -1242,7 +1242,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">44</span>
+              <span class="site-state-item-count">43</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1259,7 +1259,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">70</span>
+                <span class="site-state-item-count">66</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
