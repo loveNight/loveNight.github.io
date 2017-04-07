@@ -3907,6 +3907,7 @@ String[] <span class="function"><span class="title">split</span><span class="par
 </ul>
 <hr>
 <h1 id="工具">工具</h1><ul>
+<li><a href="https://coding.net/u/scaffrey/p/hosts/git/raw/master/hosts" target="_blank" rel="external">hosts定期更新</a></li>
 <li>正则表达式工具：<a href="http://www.codeproject.com/Articles/3669/Expresso-A-Tool-for-Building-and-Testing-Regular-E" target="_blank" rel="external">Expresso</a>  or  <a href="http://www.regexbuddy.com/" target="_blank" rel="external">RegexBuddy</a></li>
 <li>翻墙：<a href="https://www.anotherhome.net/1376" target="_blank" rel="external">Hosts文件自动配置工具</a>  or  <a href="https://shadowsocks.com/" target="_blank" rel="external">ShadowSocks</a>  or  <a href="https://coding.net/u/scaffrey/p/hosts/git" target="_blank" rel="external">scaffrey</a></li>
 <li><a href="http://p.codekk.com/" target="_blank" rel="external">codeKK</a>：开源分享、源码解析、框架设计、好文推荐、Android 内推</li>
