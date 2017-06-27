@@ -3346,8 +3346,8 @@ RecursionError: maximum recursion depth exceeded
     <link href="http://lovenight.github.io/2015/11/10/Hexo-3-1-1-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/"/>
     <id>http://lovenight.github.io/2015/11/10/Hexo-3-1-1-静态博客搭建指南/</id>
     <published>2015-11-10T06:46:41.000Z</published>
-    <updated>2016-09-28T09:06:13.781Z</updated>
-    <content type="html"><![CDATA[<p><strong>注意，本文适用于hexo 3.x 版本，与2.x略有出入！</strong></p>
+    <updated>2017-05-31T05:26:30.468Z</updated>
+    <content type="html"><![CDATA[<p><strong>注意，本文适用于hexo 3.x 版本，与2.x略有出入！</strong><br><strong>多说评论已经于2017年6月关闭，文中关于多说的内容可以忽略</strong></p>
 <p>GitHub Pages 本用于介绍托管在 GitHub 的项目，也可以用来搭建博客，有300M免费空间。</p>
 <p>hexo是一个基于Node.js的静态博客程序，可以方便的生成静态网页托管在github和Heroku上。作者是来自台湾的<a href="https://github.com/hexojs/hexo" target="_blank" rel="external">tommy351</a>。<br>优势：</p>
 <blockquote>
@@ -3712,7 +3712,7 @@ hexo <span class="keyword">new</span> page <span class="string">"API"</span>
 </ul>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p><strong>注意，本文适用于hexo 3.x 版本，与2.x略有出入！</strong></p>
+    <![CDATA[<p><strong>注意，本文适用于hexo 3.x 版本，与2.x略有出入！</strong><br><strong>多说评论已经于2017年6月关闭，文中关于多说的内容可以忽略</strong></p>
 <p>GitHub Pages 本用于介绍托管在 GitHub 的项目，也可以用来搭建博客，有300M免费空间。</p>
 <p>hexo是一个基于Node.js的静态博客程序，可以方便的生成静态网页托管在github和Heroku上。作者是来自台湾的<a href="https://github.com/hexojs/hexo">tommy351</a>。<br>优势：</p>
 <blockquote>
